@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AccountType</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountType</shortDescription>
+        <value>Loyalty</value>
+    </labels>
+    <labels>
+        <fullName>AccountTypeLoyalty</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountTypeLoyalty</shortDescription>
+        <value>Loyalty</value>
+    </labels>
+    <labels>
+        <fullName>AgeAndDateMisMatch</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AgeAndDateMisMatch</shortDescription>
+        <value>Let op: Aanmelden voor Mijn D.E kan alleen als je 12 jaar of ouder bent.</value>
+    </labels>
+    <labels>
+        <fullName>AgeLimitCheck</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AgeLimitCheck</shortDescription>
+        <value>Bevestig dat je 18 jaar of ouder bent</value>
+    </labels>
+    <labels>
+        <fullName>ArgumentsMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ArgumentsMissing</shortDescription>
+        <value>ValidationError</value>
+    </labels>
+    <labels>
+        <fullName>BlokkerPOS</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BlokkerPOS</shortDescription>
+        <value>Blokker POS</value>
+    </labels>
+    <labels>
+        <fullName>Brand</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Brand</shortDescription>
+        <value>Douwe Egberts</value>
+    </labels>
+    <labels>
+        <fullName>ChangePassword</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChangePassword</shortDescription>
+        <value>Wachtwoord aanmaken</value>
+    </labels>
+    <labels>
+        <fullName>CityCharLimit</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CityCharLimit</shortDescription>
+        <value>De plaatsnaam mag niet langer dan 40 karakters zijn</value>
+    </labels>
+    <labels>
+        <fullName>CityFormatIncorrect</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CityFormatIncorrect</shortDescription>
+        <value>Let op: gebruik alleen letters</value>
+    </labels>
+    <labels>
+        <fullName>CityNameMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CityNameMissing</shortDescription>
+        <value>Vul je plaatsnaam in</value>
+    </labels>
+    <labels>
+        <fullName>CommunityName</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CommunityName</shortDescription>
+        <value>DE</value>
+    </labels>
+    <labels>
+        <fullName>CommunityOwnerID</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CommunityOwnerID</shortDescription>
+        <value>0050Y000003SaBd</value>
+    </labels>
+    <labels>
+        <fullName>Community_DE_BaseURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community DE BaseURL</shortDescription>
+        <value>https://mijn.de.nl</value>
+    </labels>
+    <labels>
+        <fullName>ConsentAge</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsentAge</shortDescription>
+        <value>Ja, ik ben 16 jaar of ouder</value>
+    </labels>
+    <labels>
+        <fullName>ConsentStatusValues</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsentStatusValues</shortDescription>
+        <value>Active,Registered,Confirmed</value>
+    </labels>
+    <labels>
+        <fullName>ConsentText</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsentText</shortDescription>
+        <value>Test Consent Text</value>
+    </labels>
+    <labels>
+        <fullName>ConsentTextPart1</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsentTextPart1</shortDescription>
+        <value>Ja, ik word graag op de hoogte gehouden van toekomstige aanbiedingen, acties, evenementen, nieuwe producten en ander nieuws over Douwe Egberts</value>
+    </labels>
+    <labels>
+        <fullName>ConsentTextPart2</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsentTextPart2</shortDescription>
+        <value>Door aanmelding stem je in met onze</value>
+    </labels>
+    <labels>
+        <fullName>ConsentTextPart3</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsentTextPart3</shortDescription>
+        <value>Je geeft ons hiermee toestemming om je data te verwerken in lijn met de Europese data beschermings wetgeving</value>
+    </labels>
+    <labels>
+        <fullName>ConsentTextPart4</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsentTextPart4</shortDescription>
+        <value>en</value>
+    </labels>
+    <labels>
+        <fullName>ConsentTextVersion</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsentTextVersion</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Consent_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Consent text</shortDescription>
+        <value>Ja, ik wil regelmatig gepersonaliseerde berichten ontvangen over Douwe Egberts inclusief de producten, aanbiedingen en enquêtes. Ik zal e-mails en andere berichten ontvangen (online en op sociale media) op basis van mijn interesses en consumentengedrag (bijvoorbeeld cookies, trackers, aankoopgegevens). Om deze toestemming op elk moment in te trekken of voorkeuren te wijzigen, klikt u op de afmeldlink in een e-mail of in uw accountvoorkeuren. Zie ons</value>
+    </labels>
+    <labels>
+        <fullName>ConsumerExist</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsumerExist</shortDescription>
+        <value>DuplicateEmail</value>
+    </labels>
+    <labels>
+        <fullName>ConsumerNotFound</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsumerNotFound</shortDescription>
+        <value>ConsumerNotFound</value>
+    </labels>
+    <labels>
+        <fullName>Country</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Country</shortDescription>
+        <value>NL</value>
+    </labels>
+    <labels>
+        <fullName>DECommunityLandingPage</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DECommunityLandingPage</shortDescription>
+        <value>https://www.de.nl/</value>
+    </labels>
+    <labels>
+        <fullName>DECommunityProfile</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DECommunityProfile</shortDescription>
+        <value>DE External Identity User</value>
+    </labels>
+    <labels>
+        <fullName>DECommunityUserNamePostFix</fullName>
+        <categories>This variable is used to append &quot;.de.nl&quot; to username entered by Community User</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DECommunityUserNamePostFix</shortDescription>
+        <value>.de.nl</value>
+    </labels>
+    <labels>
+        <fullName>DEEmailAddressBlank</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEEmailAddressBlank</shortDescription>
+        <value>Vul je e-mailadres in</value>
+    </labels>
+    <labels>
+        <fullName>DEInvalidEmailAddress</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEInvalidEmailAddress</shortDescription>
+        <value>Het ingevulde e-mailadres is ongeldig</value>
+    </labels>
+    <labels>
+        <fullName>DELandingPageAfterPasswordSet</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DELandingPageAfterPasswordSet</shortDescription>
+        <value>https://www.de.nl/</value>
+    </labels>
+    <labels>
+        <fullName>DE_Change_Email_New_Template_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DE Change Email New Template ID</shortDescription>
+        <value>00X1v000000zMtEEAU</value>
+    </labels>
+    <labels>
+        <fullName>DE_Change_Email_Old_Template_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DE Change Email Old  Template ID</shortDescription>
+        <value>00X1v000000zMtFEAU</value>
+    </labels>
+    <labels>
+        <fullName>DE_Confirmation_Email_Template_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DE Confirmation Email Template ID</shortDescription>
+        <value>00X1v000000zMtGEAU</value>
+    </labels>
+    <labels>
+        <fullName>DE_Confirmation_Email_Template_Reminder_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DE Confirmation Email Template Reminder ID</shortDescription>
+        <value>00X1v000000zMt9EAE</value>
+    </labels>
+    <labels>
+        <fullName>DE_ExpiredPassword</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DE_ExpiredPassword</shortDescription>
+        <value>Wachtwoord verlopen</value>
+    </labels>
+    <labels>
+        <fullName>DE_password_invalid</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DE password invalid</shortDescription>
+        <value>Je wachtwoord moet uit minimaal 8 tekens bestaan, inclusief: 1 letter, 1 cijfer en ten minste één van deze speciale tekens !@#$%^&amp;*()_+-={}[]\\|;:\&apos;,.?/`~&gt;&lt;</value>
+    </labels>
+    <labels>
+        <fullName>DateOfBirthMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DateOfBirthMissing</shortDescription>
+        <value>Vul je geboortedatum in: dd-mm-jjjj</value>
+    </labels>
+    <labels>
+        <fullName>DelReason_Consent_Withdrawn</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DelReason Consent Withdrawn</shortDescription>
+        <value>Commercial Consent Withdrawn</value>
+    </labels>
+    <labels>
+        <fullName>DelReason_Consumer_Delete_Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DelReason Consumer Delete Account</shortDescription>
+        <value>Consumer deleted account/profile</value>
+    </labels>
+    <labels>
+        <fullName>DelReason_No_Commercial_Consent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Commercial Consent</shortDescription>
+        <value>No Commercial Consent</value>
+    </labels>
+    <labels>
+        <fullName>DelReason_No_Response_Consumer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DelReason No Response Consumer</shortDescription>
+        <value>DOI not confirmed</value>
+    </labels>
+    <labels>
+        <fullName>DelReason_Request_to_be_Forgotten</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DelReason Request to be Forgotten</shortDescription>
+        <value>Request to be forgotten</value>
+    </labels>
+    <labels>
+        <fullName>EmailAddressMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmailAddressMissing</shortDescription>
+        <value>Vul je e-mailadres in</value>
+    </labels>
+    <labels>
+        <fullName>EmailEncodingKey</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmailEncodingKey</shortDescription>
+        <value>ISO-8859-1</value>
+    </labels>
+    <labels>
+        <fullName>ExpirationDays</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExpirationDays</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>FirstNameCharLimit</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FirstNameCharLimit</shortDescription>
+        <value>Je voornaam mag niet langer dan 80 karakters zijn</value>
+    </labels>
+    <labels>
+        <fullName>FirstNameLettersOnly</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FirstNameLettersOnly</shortDescription>
+        <value>Alleen letters zijn toegestaan voor het invullen van je naam.</value>
+    </labels>
+    <labels>
+        <fullName>FutureDateMessage</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FutureDateMessage</shortDescription>
+        <value>De geboortedatum is in de toekomst, selecteer de juiste datum</value>
+    </labels>
+    <labels>
+        <fullName>GenderMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GenderMissing</shortDescription>
+        <value>Selecteer je geslacht</value>
+    </labels>
+    <labels>
+        <fullName>HouseNumberFormat</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HouseNumberFormat</shortDescription>
+        <value>Start met huisnummer en dan de toevoeging</value>
+    </labels>
+    <labels>
+        <fullName>HouseNumberMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HouseNumberMissing</shortDescription>
+        <value>Vul je huisnummer in</value>
+    </labels>
+    <labels>
+        <fullName>InvalidDate</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InvalidDate</shortDescription>
+        <value>Vul je geboortedatum in: dd-mm-jjjj</value>
+    </labels>
+    <labels>
+        <fullName>InvalidEmailAddress</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InvalidEmailAddress</shortDescription>
+        <value>Invalid Email Address</value>
+    </labels>
+    <labels>
+        <fullName>InvalidReCaptcha</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InvalidReCaptcha</shortDescription>
+        <value>De reCaptcha is onjuist. Probeer het opnieuw.</value>
+    </labels>
+    <labels>
+        <fullName>Jacques_Vabre_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jacques_Vabre_URL</shortDescription>
+        <value>https://www.jacques-vabre.com/</value>
+    </labels>
+    <labels>
+        <fullName>LanguageLocaleKey</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LanguageLocaleKey</shortDescription>
+        <value>nl_NL</value>
+    </labels>
+    <labels>
+        <fullName>LastNameCharLimit</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LastNameCharLimit</shortDescription>
+        <value>Je achternaam mag niet langer dan 80 karakters zijn</value>
+    </labels>
+    <labels>
+        <fullName>LastNameLettersOnly</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LastNameLettersOnly</shortDescription>
+        <value>Alleen letters zijn toegestaan voor het invullen van je naam.</value>
+    </labels>
+    <labels>
+        <fullName>LastNameMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LastNameMissing</shortDescription>
+        <value>Vul je achternaam in</value>
+    </labels>
+    <labels>
+        <fullName>LocaleSidKey</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LocaleSidKey</shortDescription>
+        <value>nl_NL</value>
+    </labels>
+    <labels>
+        <fullName>MDCCommunityUserNamePostFix</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MDCCommunityUserNamePostFix</shortDescription>
+        <value>.mdc.fr</value>
+    </labels>
+    <labels>
+        <fullName>MaskNickname</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MskNickname</shortDescription>
+        <value>xxxxxxxxx</value>
+    </labels>
+    <labels>
+        <fullName>MdCLandingPageAfterPasswordSet</fullName>
+        <categories>MdC Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MdCLandingPageAfterPasswordSet</shortDescription>
+        <value>https://www.maisonducafe.com/</value>
+    </labels>
+    <labels>
+        <fullName>MobileNumberFormat</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MobileNumberFormat</shortDescription>
+        <value>Start met +316 en dan het mobiele nummer</value>
+    </labels>
+    <labels>
+        <fullName>Move_Loyalty_Transactions_Authorization</fullName>
+        <categories>MoveLoyaltyTransactions</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Move Loyalty Transactions Authorization</shortDescription>
+        <value>00G1v000005NuRb</value>
+    </labels>
+    <labels>
+        <fullName>NewPasswordBlank</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewPasswordBlank</shortDescription>
+        <value>Voer een nieuw wachtwoord in.</value>
+    </labels>
+    <labels>
+        <fullName>Newsletter_arguments_are_missing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Newsletter arguments are missing</shortDescription>
+        <value>Newsletter arguments are missing.</value>
+    </labels>
+    <labels>
+        <fullName>OldPasswordBlank</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OldPasswordBlank</shortDescription>
+        <value>Voer het oude wachtwoord in</value>
+    </labels>
+    <labels>
+        <fullName>PasswordMinimumCriteria</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PasswordMinimumCriteria</shortDescription>
+        <value>Je wachtwoord moet uit minimaal 8 tekens bestaan, inclusief: 1 letter, 1 cijfer en ten minste één van deze speciale tekens !@#$%^&amp;*()_+-={}[]\\|;:\&apos;,.?/`~&gt;&lt;</value>
+    </labels>
+    <labels>
+        <fullName>PasswordMisMatch</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PasswordMisMatch</shortDescription>
+        <value>De twee wachtwoorden zijn niet hetzelfde</value>
+    </labels>
+    <labels>
+        <fullName>PasswordMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PasswordMissing</shortDescription>
+        <value>Vul je wachtwoord in</value>
+    </labels>
+    <labels>
+        <fullName>PhoneCharLimit</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PhoneCharLimit</shortDescription>
+        <value>Phone cannot exceed 40 characters</value>
+    </labels>
+    <labels>
+        <fullName>PostCodeFormatIncorrect</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostCodeFormatIncorrect</shortDescription>
+        <value>Vul je postcode in: bijvoorbeeld 1234 AB</value>
+    </labels>
+    <labels>
+        <fullName>PostalCodeMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostalCodeMissing</shortDescription>
+        <value>Vul je postcode in: bijvoorbeeld 1234 AB</value>
+    </labels>
+    <labels>
+        <fullName>PostalCodeRegex</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostalCodeRegex</shortDescription>
+        <value>^([0-9]{4}) ([A-Za-z]{2})</value>
+    </labels>
+    <labels>
+        <fullName>PrivacyPolicy</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PrivacyPolicy</shortDescription>
+        <value>Privacy Policy (https://www.de.nl/Privacypolicy).</value>
+    </labels>
+    <labels>
+        <fullName>PrivacyPolicyNumber</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PrivacyPolicyNumber</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>SetNewPassword</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SetNewPassword</shortDescription>
+        <value>Nieuw wachtwoord aanmaken</value>
+    </labels>
+    <labels>
+        <fullName>SourceBlokker</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SourceBlokker</shortDescription>
+        <value>Blokker POS</value>
+    </labels>
+    <labels>
+        <fullName>SourceDE_NL</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SourceDE_NL</shortDescription>
+        <value>DE.NL</value>
+    </labels>
+    <labels>
+        <fullName>StreetCharLimit</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StreetCharLimit</shortDescription>
+        <value>De straatnaam mag niet langer dan 200 karakters zijn</value>
+    </labels>
+    <labels>
+        <fullName>StreetMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StreetMissing</shortDescription>
+        <value>Vul je straatnaam in</value>
+    </labels>
+    <labels>
+        <fullName>SuccessMessage</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SuccessMessage</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>TimeZoneSidKey</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TimeZoneSidKey</shortDescription>
+        <value>Europe/Amsterdam</value>
+    </labels>
+    <labels>
+        <fullName>TransactionType</fullName>
+        <categories>MoveLoyaltyTransactions</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TransactionType</shortDescription>
+        <value>Merge</value>
+    </labels>
+    <labels>
+        <fullName>TransactionTypeDeposit</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TransactionTypeDeposit</shortDescription>
+        <value>Deposit</value>
+    </labels>
+    <labels>
+        <fullName>TransactionTypeRedeem</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TransactionTypeRedeem</shortDescription>
+        <value>Redeem</value>
+    </labels>
+    <labels>
+        <fullName>UnknownError</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UnknownError</shortDescription>
+        <value>UnknownError</value>
+    </labels>
+    <labels>
+        <fullName>Unknown_Error</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unknown Error</shortDescription>
+        <value>Unknown Error</value>
+    </labels>
+    <labels>
+        <fullName>UserEmailNotConfirmed</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserEmailNotConfirmed</shortDescription>
+        <value>Je hebt jouw e-mailadres nog niet bevestigd.
+Dit doe je via de link in de e-mail die je na je
+aanmelding van ons hebt ontvangen.</value>
+    </labels>
+    <labels>
+        <fullName>UserExist</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserExist</shortDescription>
+        <value>Dit e-mailadres is al gebruikt voor een Mijn D.E aanmelding</value>
+    </labels>
+    <labels>
+        <fullName>UserLoginFailMessage</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserLoginFailMessage</shortDescription>
+        <value>De combinatie van het e-mailadres en het wachtwoord is niet bij ons bekend.
+&lt;br&gt;
+LET OP: na meerdere verkeerde inlogpogingen wordt je account uit veiligheid vergrendeld.</value>
+    </labels>
+    <labels>
+        <fullName>UserLoginLocked</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserLoginLocked</shortDescription>
+        <value>Vanwege te veel mislukte inlogpogingen is je account momenteel voor de veiligheid vergrendeld.
+Om je account te ontgrendelen, moet je je wachtwoord opnieuw instellen.</value>
+    </labels>
+    <labels>
+        <fullName>UserNameMissing</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserNameMissing</shortDescription>
+        <value>Vul je e-mailadres in</value>
+    </labels>
+    <labels>
+        <fullName>VerifyPasswordEmpty</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VerifyPasswordEmpty</shortDescription>
+        <value>Herhaal je nieuwe wachtwoord.</value>
+    </labels>
+    <labels>
+        <fullName>change_password</fullName>
+        <categories>DE Community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>change_password</shortDescription>
+        <value>WACHTWOORD INSTELLEN</value>
+    </labels>
+    <labels>
+        <fullName>mskAlias</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Masking User Alias</shortDescription>
+        <value>xxxxx</value>
+    </labels>
+    <labels>
+        <fullName>mskEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Masking User Email</shortDescription>
+        <value>xxxx@xxxx.xxx</value>
+    </labels>
+    <labels>
+        <fullName>mskFirstName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Masking User First Name</shortDescription>
+        <value>xxxxxx</value>
+    </labels>
+    <labels>
+        <fullName>mskLastName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Masking User Last Name</shortDescription>
+        <value>xxxxxx</value>
+    </labels>
+    <labels>
+        <fullName>mskUsername</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Masking User Username</shortDescription>
+        <value>xxxx@xxxx.xxx</value>
+    </labels>
+    <labels>
+        <fullName>userIsInactive</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>userIsInactive</shortDescription>
+        <value>Je account is momenteel voor de veiligheid vergrendeld. Om je account te ontgrendelen moet je je wachtwoord opnieuw instellen.</value>
+    </labels>
+</CustomLabels>

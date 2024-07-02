@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bosch</fullName>
+        <default>false</default>
+        <label>Bosch</label>
+    </customValue>
+    <customValue>
+        <fullName>Cadbury</fullName>
+        <default>false</default>
+        <label>Cadbury</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Hag</fullName>
+        <default>false</default>
+        <label>Café Hag</label>
+    </customValue>
+    <customValue>
+        <fullName>Carambar</fullName>
+        <default>false</default>
+        <label>Carambar</label>
+    </customValue>
+    <customValue>
+        <fullName>Carte Noire</fullName>
+        <default>false</default>
+        <label>Carte Noire</label>
+    </customValue>
+    <customValue>
+        <fullName>Chai latte</fullName>
+        <default>false</default>
+        <label>Chai latte</label>
+    </customValue>
+    <customValue>
+        <fullName>Costa</fullName>
+        <default>false</default>
+        <label>Costa</label>
+    </customValue>
+    <customValue>
+        <fullName>Evergood</fullName>
+        <default>false</default>
+        <label>Evergood</label>
+    </customValue>
+    <customValue>
+        <fullName>Freia</fullName>
+        <default>false</default>
+        <label>Freia</label>
+    </customValue>
+    <customValue>
+        <fullName>Friele</fullName>
+        <default>false</default>
+        <label>Friele</label>
+    </customValue>
+    <customValue>
+        <fullName>Gevalia</fullName>
+        <default>false</default>
+        <label>Gevalia</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand&apos;mÞre</fullName>
+        <default>false</default>
+        <label>Grand&apos;mÞre</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand Mere</fullName>
+        <default>false</default>
+        <label>Grand Mere</label>
+    </customValue>
+    <customValue>
+        <fullName>Hag</fullName>
+        <default>false</default>
+        <label>Hag</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs</fullName>
+        <default>false</default>
+        <label>Jacobs</label>
+    </customValue>
+    <customValue>
+        <fullName>Kenco</fullName>
+        <default>false</default>
+        <label>Kenco</label>
+    </customValue>
+    <customValue>
+        <fullName>Koziol</fullName>
+        <default>false</default>
+        <label>Koziol</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or</fullName>
+        <default>false</default>
+        <label>L&apos;Or</label>
+    </customValue>
+    <customValue>
+        <fullName>Lacta</fullName>
+        <default>false</default>
+        <label>Lacta</label>
+    </customValue>
+    <customValue>
+        <fullName>Let</fullName>
+        <default>false</default>
+        <label>Let</label>
+    </customValue>
+    <customValue>
+        <fullName>Marabou</fullName>
+        <default>false</default>
+        <label>Marabou</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcilla</fullName>
+        <default>false</default>
+        <label>Marcilla</label>
+    </customValue>
+    <customValue>
+        <fullName>Maxwell House</fullName>
+        <default>false</default>
+        <label>Maxwell House</label>
+    </customValue>
+    <customValue>
+        <fullName>Milka</fullName>
+        <default>false</default>
+        <label>Milka</label>
+    </customValue>
+    <customValue>
+        <fullName>Oreo</fullName>
+        <default>false</default>
+        <label>Oreo</label>
+    </customValue>
+    <customValue>
+        <fullName>Ritzenhoff</fullName>
+        <default>false</default>
+        <label>Ritzenhoff</label>
+    </customValue>
+    <customValue>
+        <fullName>Saimaza</fullName>
+        <default>false</default>
+        <label>Saimaza</label>
+    </customValue>
+    <customValue>
+        <fullName>Starting pack</fullName>
+        <default>false</default>
+        <label>Starting pack</label>
+    </customValue>
+    <customValue>
+        <fullName>Suchard</fullName>
+        <default>false</default>
+        <label>Suchard</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo</fullName>
+        <default>false</default>
+        <label>Tassimo</label>
+    </customValue>
+    <customValue>
+        <fullName>Twinings</fullName>
+        <default>false</default>
+        <label>Twinings</label>
+    </customValue>
+    <customValue>
+        <fullName>WMF</fullName>
+        <default>false</default>
+        <label>WMF</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Senseo</fullName>
+        <default>false</default>
+        <label>Senseo</label>
+    </customValue>
+    <customValue>
+        <fullName>Douwe Egberts</fullName>
+        <default>false</default>
+        <label>Douwe Egberts</label>
+    </customValue>
+    <customValue>
+        <fullName>Pickwick</fullName>
+        <default>false</default>
+        <label>Pickwick</label>
+    </customValue>
+    <customValue>
+        <fullName>Angebote </fullName>
+        <default>false</default>
+        <label>Angebote </label>
+    </customValue>
+    <customValue>
+        <fullName>Maison du Café</fullName>
+        <default>false</default>
+        <label>Maison du Café</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacqmotte</fullName>
+        <default>false</default>
+        <label>Jacqmotte</label>
+    </customValue>
+    <customValue>
+        <fullName>Assorti</fullName>
+        <default>false</default>
+        <label>Assorti</label>
+    </customValue>
+    <customValue>
+        <fullName>Angebote</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Angebote</label>
+    </customValue>
+    <masterLabel>Product Brand</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

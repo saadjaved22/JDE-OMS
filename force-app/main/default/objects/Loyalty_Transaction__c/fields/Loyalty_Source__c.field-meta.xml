@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loyalty_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Loyalty Source</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consumer Relations</fullName>
+                <default>true</default>
+                <label>Consumer Relations</label>
+            </value>
+            <value>
+                <fullName>Blokker POS</fullName>
+                <default>false</default>
+                <label>Blokker POS</label>
+            </value>
+            <value>
+                <fullName>Blokker WebShop</fullName>
+                <default>false</default>
+                <label>Blokker WebShop</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+                <label>Campaign</label>
+            </value>
+            <value>
+                <fullName>Episerver</fullName>
+                <default>false</default>
+                <label>Episerver</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

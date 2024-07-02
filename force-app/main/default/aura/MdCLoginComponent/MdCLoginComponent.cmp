@@ -1,0 +1,77 @@
+<aura:component controller="MdCLoginController" implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" >    
+    <aura:attribute name="showError" type="Boolean" required="true" description="" default="false" access="private"/>
+    <aura:attribute name="errorMessage" type="String" required="false" description="" access="private"/>
+    <aura:attribute name="errors" type="String[]" required="false" description="" access="GLOBAL" />
+    <aura:attribute name="startUrl" type="String" required="false" description="The url you go to after a successful login - local only" />
+    <aura:attribute name="nonLocalStartUrl" type="String" required="false" description="The url you go to after login - non local" />
+    <aura:attribute name="usernameLabel" type="String" required="false" default="Username"/>
+    <aura:attribute name="passwordLabel" type="String" required="false" default="Password"/>
+    <aura:attribute name="loginButtonLabel" type="String" required="false" default="Log in"/>
+    <aura:attribute name="expid" type="String" required="false" description="The branding experience ID" />
+    <aura:attribute name="showGoBackLink" type="Boolean" required="false" description="Controls whether the link to return to previous page is shown." />
+    <aura:attribute name="goBackLinkLabel" type="String" required="false" description="Text for the go back link" />
+    <aura:attribute name="loginUrl" type="String" required="false" description="Stores the url when the user reaches this page." />
+    <aura:attribute name="forgotPasswordLabel" type="String" required="false" default="Forgot your password?"/>
+    <aura:attribute name="selfRegisterLabel" type="String" required="false" default="Not a member?"/>
+    <aura:attribute name="selfRegisterActionLabel" type="String" required="true" default="Create an account" />
+    <aura:attribute name="forgotPasswordUrl" type="String" required="false" default="/ForgotPassword"/>
+    <aura:attribute name="selfRegisterUrl" type="String" required="false" default="/SelfRegister"/>
+    <aura:attribute name="selfRegistrationEnabled" type="Boolean" required="false" default="true" />
+    <aura:attribute name="selfRegistrationEnabledText" type="String" required="false" default="true" />   
+    <aura:attribute name="isUsernamePasswordEnabled" type="Boolean" access="private"/>
+    <aura:attribute name="isSelfRegistrationEnabled" type="Boolean" access="private"/>
+    <aura:attribute name="communityForgotPasswordUrl" type="String" access="private"/>
+    <aura:attribute name="communitySelfRegisterUrl" type="String" access="private"/>  
+    <aura:dependency resource="c:setStartUrl" type="EVENT"/>
+    <aura:dependency resource="siteforce:registerQueryEventMap" type="EVENT"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.initialize}"/>
+    
+    <!--
+    <div class="debug">
+     isUsernamePasswordEnabled: {!v.isUsernamePasswordEnabled}
+    </div>
+    -->
+    
+    <div class="login-form">
+        <aura:renderIf isTrue="{!v.isUsernamePasswordEnabled}">
+            <aura:renderIf isTrue="{!v.showError}">
+                <div class="error">
+                    <aura:iteration aura:id="errors" items="{!v.errors}" var="error" indexVar="index">
+                        <ui:outputRichText aura:id="{!'error'+index}" value="{!error}"/>
+                    </aura:iteration>
+                </div>
+            </aura:renderIf>
+            
+            <div id="sfdc_username_container" class="sfdc">
+                <label for="username">{!v.usernameLabel}</label>
+                <ui:inputEmail value="" aura:id="username" placeholder="{!v.usernameLabel}" keyup="{!c.onKeyUp}" class="input sfdc_usernameinput sfdc"/>
+                <!--<ui:inputText />-->
+            </div>
+            
+            <div id="sfdc_password_container" class="sfdc">
+                <label for="password">{!v.passwordLabel}</label><br/>
+                <label style="font-size: 11.5px; color:#654321; text-align:center; font-stretch: condensed;" for="password">Afin d'assurer la sécurité de vos données, nous vous invitons à changer votre mot de passe tous les 6 mois.</label>
+                <ui:inputSecret value="" aura:id="password" placeholder="{!v.passwordLabel}" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc"/>
+            </div>
+            
+            <div id="sfdc_forgot" class="sfdc">
+                <span align="center"><a class="forgotLink" href="{!if(v.communityForgotPasswordUrl == null, v.forgotPasswordUrl, v.communityForgotPasswordUrl)}">{!v.forgotPasswordLabel}</a></span><br/>
+                <ui:button aura:id="submitButton" press="{!c.handleLogin}" class="sfdc_button" label="{!v.loginButtonLabel}" />
+                <aura:renderIf isTrue="{!v.selfRegistrationEnabled == true}">
+                    <span class="text-center">{!v.selfRegisterLabel}</span>
+                    <span  ><a class="registrationLink" href="{!if(v.communitySelfRegisterUrl == null, v.selfRegisterUrl, v.communitySelfRegisterUrl)}">&laquo;&nbsp;{!v.selfRegisterActionLabel}&nbsp;&raquo;</a></span>
+                    
+                   
+                </aura:renderIf>                            
+            </div>
+            
+            <aura:renderIf isTrue="{!v.showGoBackLink}">
+                <div class="goBackLink">
+                    <a href="" onclick="{!c.returnToPrevious}">{!v.goBackLinkLabel}</a>
+                </div>
+            </aura:renderIf>
+            
+        </aura:renderIf>
+    </div>
+</aura:component>

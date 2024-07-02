@@ -1,0 +1,301 @@
+.THIS  .login-icon {
+    color:#ccc;font-size:22px;
+}
+
+.THIS  button.sfdc_button {
+    width: 100%;
+    height: 42px;
+    margin: 0 0 15px 0;
+    color: #fff;
+    background: #C10318;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    font-size: 18px;
+    box-shadow: none;
+    font-family: 'Van Condensed', sans-serif;
+    font-weight: 300;
+    line-height: 42px;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: all 0.2s ease-out;
+}
+
+.THIS .uiButton--default .label {
+    color: #fff;
+    text-shadow:none;
+}
+
+.THIS button:hover {
+    background:#A80013;
+    cursor:pointer;
+}
+
+.THIS button.sfdc_button:disabled {
+    background:#9F9F9F;
+    cursor:inherit;
+}
+
+.THIS label {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.THIS #sfdc_username_container {
+    margin-top: 15px;
+}
+
+.THIS input {
+    margin: 4px 0 15px 0;
+    padding: 0 10px;
+    border: 1px solid #9F9F9F;
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+}
+
+.THIS input::placeholder {
+    color: #9F9F9F;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.THIS  a.forgotLink {
+ 	color: #000000;
+    font-family: 'Van Condensed',sans-serif;
+    font-size: 16px;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    margin: -5px 0 0px 0;
+}
+.THIS  a.forgotLink:hover {
+    color:#777;
+    text-decoration: none;
+}
+
+.THIS #sfdc_forgot a.forgotLink:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 0 -2px 4px;
+    background-image: url('/resource/MinjDEarrow');
+    background-size: 100% 100%;
+    filter: grayscale(100%);
+    
+    
+}
+
+
+.THIS #sfdc_forgot a.registrationLink {
+    color: #C10318;
+    font-family: 'Van Condensed',sans-serif;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.THIS #sfdc_forgot a.helpLink {
+	color: #C10318;
+	font-family: 'Van Condensed',sans-serif;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.THIS #sfdc_forgot a.helpLink:hover {
+    color:#777;
+    text-decoration: none;
+    
+} 
+
+
+.THIS #sfdc_forgot a.helpLink:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 0 -2px 4px;
+    background-image: url('/resource/MinjDEarrow');
+    background-size: 100% 100%;
+    filter: grayscale(100%);
+    
+    
+}
+
+.THIS #sfdc_forgot a.registrationLink:hover {
+    color: #A80013;
+    
+} 
+
+
+.THIS #sfdc_forgot a.registrationLink:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 0 -2px 4px;
+	background-image: url('/resource/MinjDEarrow');
+    background-size: 100% 100%;
+}
+
+.THIS label.uiLabel-hidden {
+    display:none;
+}
+
+.THIS .error {
+    background: #f8f0f1;
+    color: #C10318;
+    border: 1px solid #C10318;
+    border-radius: 3px;
+    font-family: 'Van Condensed',sans-serif;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+    line-height: 20px;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+@media (max-width: 410px){
+    .THIS #recaptchaContainer{
+        margin: 0 -12px;
+    }
+}
+
+@media (max-width: 330px){
+    .THIS #recaptchaContainer{
+        margin: 0 -22px;
+    }
+}
+.THIS .sfdc_button_loading {
+
+    width: 100%;
+    height: 42px;
+    margin: 0 0 15px 0;
+    color: #fff;
+    background: #C10318;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    font-size: 18px;
+    box-shadow: none;
+    font-family: 'Van Condensed', sans-serif;
+    font-weight: 300;
+    line-height: 42px;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: all 0.2s ease-out;
+}
+
+.THIS .lds-roller,
+.THIS .lds-roller div,
+.THIS .lds-roller div:after {
+  box-sizing: border-box;
+}
+.THIS .lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.THIS .lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 20px 20px;
+}
+.THIS .lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 3.6px;
+  height: 3.6px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -1.8px 0 0 -1.8px;
+}
+.THIS .lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.THIS .lds-roller div:nth-child(1):after {
+  top: 31.31371px;
+  left: 31.31371px;
+}
+.THIS .lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.THIS .lds-roller div:nth-child(2):after {
+  top: 33.85641px;
+  left: 28px;
+}
+.THIS .lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.THIS .lds-roller div:nth-child(3):after {
+  top: 35.45481px;
+  left: 24.1411px;
+}
+.THIS .lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.THIS .lds-roller div:nth-child(4):after {
+  top: 36px;
+  left: 20px;
+}
+.THIS .lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.THIS .lds-roller div:nth-child(5):after {
+  top: 35.45481px;
+  left: 15.8589px;
+}
+.THIS .lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.THIS .lds-roller div:nth-child(6):after {
+  top: 33.85641px;
+  left: 12px;
+}
+.THIS .lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.THIS .lds-roller div:nth-child(7):after {
+  top: 31.31371px;
+  left: 8.68629px;
+}
+.THIS .lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.THIS .lds-roller div:nth-child(8):after {
+  top: 28px;
+  left: 6.14359px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

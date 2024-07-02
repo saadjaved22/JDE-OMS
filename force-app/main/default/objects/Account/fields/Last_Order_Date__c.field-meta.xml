@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Order_Date__c</fullName>
+    <externalId>false</externalId>
+    <label>Last Order Date</label>
+    <summarizedField>Order__c.Start_Date__c</summarizedField>
+    <summaryForeignKey>Order__c.Customer__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

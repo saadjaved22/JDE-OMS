@@ -1,0 +1,2009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Account</fullName>
+    <active>true</active>
+    <label>Business Account</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertentie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event van%2Fbij klant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handelsbeurs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lijst van aankopen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overig</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tip van medewerker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Registration_Source__c</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intershop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDC%2EFR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sampling Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Registration_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deactivated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Average_Order_Value_Type__c</picklist>
+        <values>
+            <fullName>Bulk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extreme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heavy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Light</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Light</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very extreme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very heavy</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Brand__c</picklist>
+        <values>
+            <fullName>Douwe Egberts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hornimans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maison du Café</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maxwell House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moccona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pickwick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saimaza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Brewers_Selected__c</picklist>
+        <values>
+            <fullName>Automatique Brewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capsule Brewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expresso Brewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filter coffee pot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I do not have a brewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machine L%27OR Barista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other coffee pot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other pad%2Fcapsule Coffee appliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SENSEO Brewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo Brewer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>AT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EmailClickRecency__c</picklist>
+        <values>
+            <fullName>ActiveClicker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EmailOpenRecency__c</picklist>
+        <values>
+            <fullName>ActiveOpener</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Favorite_Brand__c</picklist>
+        <values>
+            <fullName>Bosch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cadbury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Hag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carambar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carte Noire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chai latte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Douwe Egberts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evergood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friele</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gevalia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grand Mere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grand%27mÞre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacqmotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Koziol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lacta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Let</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maison du Café</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marabou</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maxwell House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oreo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pickwick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ritzenhoff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saimaza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senseo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starting pack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suchard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twinings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Favorite_Flavour__c</picklist>
+        <values>
+            <fullName>Amazonas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Americano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Americano Grande</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Americano Smooth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Après-Midi D%27orient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barcelona Cafe Con Leche</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COSTA Cappuccino %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cadbury Hot Chocolate %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caffe Crema XL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caffè Crema Classico Xl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caffè Crema Intenso Xl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caffè Crema Mild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caffè Crema Mild Xl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caffé Crema Classico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caffé Crema Intenso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CafÚ Hag %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Au Lait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Con Leche</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Crema</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Crema Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Crema Classic Xl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Hag %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Largo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Long Aromatique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Long Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Long Décaféiné</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Long Délicat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Café Long Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccino 267%2E2G</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccino Ameretti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccino Carambar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccino Choco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccino Classico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccino Vanilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caramel Latte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carte Noire CafÚ Long Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carte Noire Café Long Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carte Noire Espresso Aromatique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carte Noire Latte Macchiato Caramel %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carte Noire Petit Dejeuner Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carte Noire Petit DÚjenuer Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chai Latte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chai Latte %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chocolate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City Range Bundle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Classique Xl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee lovers bundle DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee lovers bundle FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cortado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costa Americano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creamer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creamer From Milk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Darkroast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decaffeinated Expresso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desayuno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Descafeinado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Earl Grey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ebony</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English Breakfast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espressa Forza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresse Splendente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Decaffeinato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Delizioso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Fortissimo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Freddo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Macchiato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Macchiatto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Onyx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Or Rose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Papouasie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Ristretto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Ristretto Tripack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Satinato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Sontuoso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espresso Supremo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expresso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expresso Aromatique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expresso Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frokostkaffe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fruits Of The Forest Tea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Get me started-Bundle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grand%27mÞre Petit DÚjeuner %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grand%27mÞre Petit DÚjeuner %28x5%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grand%27mère Petit Déjeuner %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grand%27mère Petit Déjeuner %28x5%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Tea And Mint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot Chocolate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs CaffÞ Crema Classico XL %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs CaffÞ Crema Classico Xl %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs CaffÞ Crema Mild XL %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs CaffÞ Crema RU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs CaffÞ Crema XL CEEMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Caffè Crema Classico XL %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Caffè Crema Classico Xl %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Caffè Crema Mild XL %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Caffè Crema RU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Caffè Crema XL CEEMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Cappuccino Choco %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Cappuccino Classico %28Bundle DE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Cappuccino RU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Caramel Macchiato RU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Espresso RU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Espresso Ristretto Tripack %28Bundle DE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Kr%C3%B7nung XL %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Krönung XL %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Latte Macchiato Caramel %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Latte Macchiato RU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacobs Monarch %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenco Cappuccino %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenco Decaff Americano %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenco Mocha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenco Pure Colombian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenco Pure Colombian %2810x%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Krönung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Krönung Xl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27OR Café Long Classique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27OR Café Long Mild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Cappuccino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Classique XL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Espresso Classic Decaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Espresso Decaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Espresso Delizioso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Espresso Fortissima</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Espresso Fortissimo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Espresso Forza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Espresso Splendente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Latte Macchiato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or Lungo Profondo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Or XL Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%60OR assorti ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latte Macchiato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latte Macchiato Caramel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latte Macchiato Less Sweet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latte Macchiato Weniger Süß</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latte Machiatto Vanilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latte Vanilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lungo Elegante</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lungo Estretto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lungo Mattinata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lungo Profondo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIX Bundle DK Starting Pack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIX Bundle Danish Favorites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIX Bundle NO Starting Pack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIX Bundle Norvegians Favorites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIX Bundle SE Starting Pack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIX Bundle Swedish Favorites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macchiato Caramel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcilla CafÚ Largo %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcilla CafÚ con Leche %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcilla Café Largo %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcilla Café con Leche %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcilla Descafeinado %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marcilla Espresso %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maxwell House Americano %28Bundle FR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maxwell House Espresso %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medaille D%27Or</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium Roast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milano Espresso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milea Mellanrost XL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milk Chocolate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milka Chocolate %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milka Kakao RU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monarch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morning Cafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morning Café</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mörkrost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York Americano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Or Jaune</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oreo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Original Mellanrost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paris Cafe Long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petit Dejeuner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petit Dejeuner Doux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petit Dejeuner Intense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petit Dejeuner XL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petit Déjeuner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pure Colombian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick start assorti DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick start assorti ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick start assorti FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rich %26 Aromatic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ristretto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small coffee assorti ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small coffee assorti FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starter Bundle %28x11%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suchard Hot Chocolate %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Bundle DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Bundle ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Bundle FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Discount Bundle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TASSIMO VIVY 2 %28T140%29 Cream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TASSIMO VIVY 2 %28T140%29 Just Red</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TASSIMO VIVY 2 %28T140%29 Real Black</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TASSIMO VIVY 2 %28T140%29 Snow White</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TASSIMO VIVY 2 %28T140%29 Sweet Pink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo Cappuccino Carambar %28Bundle FR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo Creamer from Milk %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo Golden Bean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Cappuccino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Cappuccino %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Espresso Delizioso %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Espresso Delizioso %28x5%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Espresso Splendente %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Espresso Splendente %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Espresso Splendente %28x5%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Latte Macchiato %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Lungo Profondo %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Lungo Profondo %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo L%27OR Skinny Latte Macchiato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo Latte Macchiatto Baileys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo Paris Cafe Long %28Bundle DE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo l%27Or Espresso Decaf %28x3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo l%27Or Espresso Decaf %28x5%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo l%27Or Espresso Delizioso %28Bundle ES%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo l%27Or Espresso Fortissima %28Bundle ES%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo l%27Or Latte Macchiato %28Bundle ES%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tassimo l%27Or Lungo Profondo %28Bundle FR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twinings Chai Latte CEEMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twinings Earl Grey %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twinings Fruits of the Forest Tea %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twinings Green Tea and Mint %28x10%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanilla Latte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Velours Noir Cafe Long 16Px5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Étoile de Russie</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Favorite_Product_Group__c</picklist>
+        <values>
+            <fullName>Accessories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accessory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Affiliates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccino and Latte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cappuccinos %26 Lattes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capsules</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chocolate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speciality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tea</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Advisering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bankwezen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnologie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemische industrie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communicatie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Constructie%2Fbouw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailhandel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elektronica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energiesector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment%2Famusement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financiën</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gezondheidszorg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horeca%2Flogies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industriële fabricage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kleding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landbouw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistiek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinerieën</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milieu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-profitsector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nutsbedrijven</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onderwijs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overheid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overig</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreatie%2Ftoerisme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technologie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunicatie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verzekeringswezen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voedingsmiddelen en dranken</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Language__c</picklist>
+        <values>
+            <fullName>CATALAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Danish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dutch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estonian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latvian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lithuanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norwegian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norwegian Nynorsk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portuguese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swedish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukrainian</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Net_Promotor_Score_Source__c</picklist>
+        <values>
+            <fullName>Consultix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opt_in_Source__c</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Episerver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intershop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDC%2EFR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sampling Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zeta%2EMein%2ESenseo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opt_in_Status__c</picklist>
+        <values>
+            <fullName>Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opt-out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opt_out_Reason__c</picklist>
+        <values>
+            <fullName>Emails aren%27t interesting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I don%27t buy TASSIMO online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I stopped using my Tassimo machine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repetitive offers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too many emails</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Recency__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Churn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FrequentBuyers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NonBuyers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NonBuyersInactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NonBuyersNew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NonBuyersOld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RecentBuyers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Channel__c</picklist>
+        <values>
+            <fullName>a</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>b</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>c</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sample_Request_Source__c</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intershop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sampling Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Analist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concurrent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integratiedeskundige</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investeerder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Klant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overig</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wederverkoper</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Guest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newsletter Subscriber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sample Requestor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

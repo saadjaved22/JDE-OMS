@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HighCO_synced__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This denotes if the Customer account is found in HighCO CRM Platform. Specific for France brands.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This denotes if the Customer account is found in HighCO CRM Platform. Specific for France brands.</inlineHelpText>
+    <label>HighCO synced?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

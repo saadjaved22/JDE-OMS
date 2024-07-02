@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_Order_Value_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Average Order Value Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Very Light</fullName>
+                <default>false</default>
+                <label>Very Light</label>
+            </value>
+            <value>
+                <fullName>Light</fullName>
+                <default>false</default>
+                <label>Light</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Heavy</fullName>
+                <default>false</default>
+                <label>Heavy</label>
+            </value>
+            <value>
+                <fullName>Very heavy</fullName>
+                <default>false</default>
+                <label>Very heavy</label>
+            </value>
+            <value>
+                <fullName>Extreme</fullName>
+                <default>false</default>
+                <label>Extreme</label>
+            </value>
+            <value>
+                <fullName>Very extreme</fullName>
+                <default>false</default>
+                <label>Very extreme</label>
+            </value>
+            <value>
+                <fullName>Bulk</fullName>
+                <default>false</default>
+                <label>Bulk</label>
+            </value>
+            <value>
+                <fullName>Type 1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 1</label>
+            </value>
+            <value>
+                <fullName>Type 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 2</label>
+            </value>
+            <value>
+                <fullName>Type 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 3</label>
+            </value>
+            <value>
+                <fullName>Type 4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 4</label>
+            </value>
+            <value>
+                <fullName>Type 5</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 5</label>
+            </value>
+            <value>
+                <fullName>Type 6</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 6</label>
+            </value>
+            <value>
+                <fullName>Type 7</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 7</label>
+            </value>
+            <value>
+                <fullName>Type 8</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 8</label>
+            </value>
+            <value>
+                <fullName>a</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>a</label>
+            </value>
+            <value>
+                <fullName>b</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>b</label>
+            </value>
+            <value>
+                <fullName>c</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

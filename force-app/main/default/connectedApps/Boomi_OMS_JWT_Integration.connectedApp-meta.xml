@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>thomas.bakkum@jdecoffee.com</contactEmail>
+    <label>Boomi OMS JWT Integration</label>
+    <oauthConfig>
+        <callbackUrl>https://platform.boomi.com/account/jde-AI42D3/oauth2/callback</callbackUrl>
+        <certificate>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</certificate>
+        <consumerKey>3MVG9llQY5kM9T6fT_8uMtqYOceNI7jOItEHO35fxuHM2maPM8O0noLHC3lYfb_dGv2IV5gr4iUhUI5rFgBbO</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+        <scopes>CustomPermissions</scopes>
+        <scopes>Wave</scopes>
+        <scopes>Eclair</scopes>
+        <scopes>Pardot</scopes>
+        <scopes>Lightning</scopes>
+        <scopes>Content</scopes>
+        <scopes>CDPIngest</scopes>
+        <scopes>CDPProfile</scopes>
+        <scopes>CDPQuery</scopes>
+        <scopes>Chatbot</scopes>
+        <scopes>CDPSegment</scopes>
+        <scopes>CDPIdentityResolution</scopes>
+        <scopes>CDPCalculatedInsight</scopes>
+        <scopes>ForgotPassword</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+    <profileName>Boomi Integration</profileName>
+</ConnectedApp>

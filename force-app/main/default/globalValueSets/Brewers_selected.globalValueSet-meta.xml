@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Capsule Brewer</fullName>
+        <default>false</default>
+        <label>Capsule Brewer</label>
+    </customValue>
+    <customValue>
+        <fullName>SENSEO Brewer</fullName>
+        <default>false</default>
+        <label>SENSEO Brewer</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo Brewer</fullName>
+        <default>false</default>
+        <label>Tassimo Brewer</label>
+    </customValue>
+    <customValue>
+        <fullName>Automatique Brewer</fullName>
+        <default>false</default>
+        <label>Automatique Brewer</label>
+    </customValue>
+    <customValue>
+        <fullName>Expresso Brewer</fullName>
+        <default>false</default>
+        <label>Expresso Brewer</label>
+    </customValue>
+    <customValue>
+        <fullName>Other pad/capsule Coffee appliance</fullName>
+        <default>false</default>
+        <label>Other pad/capsule Coffee appliance</label>
+    </customValue>
+    <customValue>
+        <fullName>Filter coffee pot</fullName>
+        <default>false</default>
+        <label>Filter coffee pot</label>
+    </customValue>
+    <customValue>
+        <fullName>Other coffee pot</fullName>
+        <default>false</default>
+        <label>Other coffee pot</label>
+    </customValue>
+    <customValue>
+        <fullName>I do not have a brewer</fullName>
+        <default>false</default>
+        <label>I do not have a brewer</label>
+    </customValue>
+    <customValue>
+        <fullName>Machine L&apos;OR Barista</fullName>
+        <default>false</default>
+        <label>Machine L&apos;OR Barista</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tassimo</label>
+    </customValue>
+    <customValue>
+        <fullName>Senseo</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Senseo</label>
+    </customValue>
+    <description>Used to filter presentation on the web based on user choice of picklist values. This is not a brewer registration.</description>
+    <masterLabel>Brewers selected</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

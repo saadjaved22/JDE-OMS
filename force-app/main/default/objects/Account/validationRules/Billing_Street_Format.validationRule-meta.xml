@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Street_Format</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(NOT(ISBLANK( BillingStreet )) &amp;&amp; ISCHANGED(BillingStreet) , 
+IF(($Profile.Name = "JDE DTC Support Agent") &amp;&amp; 
+ISPICKVAL(Brand__c , "Douwe Egberts") , 
+IF(REGEX( BillingStreet , "([\\s\\S]*):([\\s\\S]*):([\\s\\S]*)"), false, 
+true) , 
+false), 
+false)</errorConditionFormula>
+    <errorMessage>Invalid Billing Street Format. Please follow this format Billing Street : House Number : House Letter.</errorMessage>
+</ValidationRule>

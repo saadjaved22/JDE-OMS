@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>CharityConsumerServiceAccess</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CharityConsumerServiceAccess</label>
+        <sharedTo>
+            <role>Global_Support</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>JDE_System_Admin</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

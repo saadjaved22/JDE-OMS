@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Automatique Brewer</masterLabel>
+        <translation>Machine à café automatique</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Capsule Brewer</masterLabel>
+        <translation>Machine à capsule</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Expresso Brewer</masterLabel>
+        <translation>Machine expresso</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Filter coffee pot</masterLabel>
+        <translation>Cafetière filtre</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>I do not have a brewer</masterLabel>
+        <translation>Je n&apos;ai pas de machine à café</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Machine L&apos;OR Barista</masterLabel>
+        <translation><!-- Machine L&apos;OR Barista --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other coffee pot</masterLabel>
+        <translation>Autre cafetière</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other pad/capsule Coffee appliance</masterLabel>
+        <translation>Autre machine à capsule/dosette</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SENSEO Brewer</masterLabel>
+        <translation>Machine SENSEO®</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tassimo Brewer</masterLabel>
+        <translation>Machine TASSIMO</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

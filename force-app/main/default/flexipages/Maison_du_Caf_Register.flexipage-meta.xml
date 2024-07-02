@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;Inscrivez-vous à la Maison du Café et économisez!&lt;/span&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:richTextInline</componentName>
+                <identifier>forceCommunity_richTextInline</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>ageConsentLabel</name>
+                    <value>Je confirme avoir 16 ans ou plus.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>applianceOwnershipLabel</name>
+                    <value>Je suis équipé de(s) la machine(s) suivante(s):</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>birthdateLabel</name>
+                    <value>Date de naissance</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>cityLabel</name>
+                    <value>Ville</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>confirmPasswordLabel</name>
+                    <value>Confirm Password</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consentText2</name>
+                    <value>En m’inscrivant, j&apos;accepte les</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consentText3</name>
+                    <value>ainsi que mes données personnelles soient traitées, notamment collectées, stockées, utilisées et transférées (transfert à l&apos;étranger y compris).</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consentTextCheckbox</name>
+                    <value>Oui, j&apos;aimerais être informé des astuces et conseils café, des promotions, des événements, des nouveaux produits et autres nouvelles de la part de Maison du Café.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>emailLabel</name>
+                    <value>Email</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>extraFieldsFieldSet</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>firstnameLabel</name>
+                    <value>Prénom</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>genderLabel</name>
+                    <value>Civilité*</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>housenumberLabel</name>
+                    <value>House Number</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>includePasswordField</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>lastnameLabel</name>
+                    <value>Nom</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>mobilenumberLabel</name>
+                    <value>Mobile Number</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>passwordLabel</name>
+                    <value>Create Password</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>postcodeLabel</name>
+                    <value>Code postal</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>privacyPolicyLabel</name>
+                    <value>Conditions Générales d’Utilisation</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>regConfirmUrl</name>
+                    <value>./CheckPasswordResetEmail</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>returnLabel</name>
+                    <value>RETOUR</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>startUrl</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>streetLabel</name>
+                    <value>Street</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>submitButtonLabel</name>
+                    <value>Soumettre</value>
+                </componentInstanceProperties>
+                <componentName>MdCSelfRegistration</componentName>
+                <identifier>MdCSelfRegistration</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>description</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>metaTags</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Register</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Register</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommSelfRegisterPage</type>
+</FlexiPage>

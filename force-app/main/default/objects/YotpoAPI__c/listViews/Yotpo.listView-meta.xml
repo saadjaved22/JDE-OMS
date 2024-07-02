@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yotpo</fullName>
+    <columns>NAME</columns>
+    <columns>Country__c</columns>
+    <columns>Language__c</columns>
+    <columns>Brand__c</columns>
+    <columns>Client_Id__c</columns>
+    <columns>Client_Secret__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Brand__c</field>
+        <operation>contains</operation>
+        <value>L&apos;or,Tassimo</value>
+    </filters>
+    <label>Yotpo</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>JDE_System_Admin</role>
+    </sharedTo>
+</ListView>

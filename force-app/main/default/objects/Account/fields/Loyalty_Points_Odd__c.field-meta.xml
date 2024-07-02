@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loyalty_Points_Odd__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(MOD( Loyalty_Total_Points__c , 2) = 0, false , true)</formula>
+    <label>Loyalty Points Odd</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

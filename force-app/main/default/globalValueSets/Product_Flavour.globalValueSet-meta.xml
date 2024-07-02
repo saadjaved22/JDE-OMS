@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Amazonas</fullName>
+        <default>false</default>
+        <label>Amazonas</label>
+    </customValue>
+    <customValue>
+        <fullName>Americano</fullName>
+        <default>false</default>
+        <label>Americano</label>
+    </customValue>
+    <customValue>
+        <fullName>Americano Grande</fullName>
+        <default>false</default>
+        <label>Americano Grande</label>
+    </customValue>
+    <customValue>
+        <fullName>Americano Smooth</fullName>
+        <default>false</default>
+        <label>Americano Smooth</label>
+    </customValue>
+    <customValue>
+        <fullName>Après-Midi D&apos;orient</fullName>
+        <default>false</default>
+        <label>Après-Midi D&apos;orient</label>
+    </customValue>
+    <customValue>
+        <fullName>Barcelona Cafe Con Leche</fullName>
+        <default>false</default>
+        <label>Barcelona Cafe Con Leche</label>
+    </customValue>
+    <customValue>
+        <fullName>Cadbury Hot Chocolate (x10)</fullName>
+        <default>false</default>
+        <label>Cadbury Hot Chocolate (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Café</fullName>
+        <default>false</default>
+        <label>Café</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Au Lait</fullName>
+        <default>false</default>
+        <label>Café Au Lait</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Con Leche</fullName>
+        <default>false</default>
+        <label>Café Con Leche</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Crema</fullName>
+        <default>false</default>
+        <label>Café Crema</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Crema Classic</fullName>
+        <default>false</default>
+        <label>Café Crema Classic</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Crema Classic Xl</fullName>
+        <default>false</default>
+        <label>Café Crema Classic Xl</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Hag (x10)</fullName>
+        <default>false</default>
+        <label>Café Hag (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Largo</fullName>
+        <default>false</default>
+        <label>Café Largo</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Long</fullName>
+        <default>false</default>
+        <label>Café Long</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Long Aromatique</fullName>
+        <default>false</default>
+        <label>Café Long Aromatique</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Long Classic</fullName>
+        <default>false</default>
+        <label>Café Long Classic</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Long Décaféiné</fullName>
+        <default>false</default>
+        <label>Café Long Décaféiné</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Long Délicat</fullName>
+        <default>false</default>
+        <label>Café Long Délicat</label>
+    </customValue>
+    <customValue>
+        <fullName>Café Long Intense</fullName>
+        <default>false</default>
+        <label>Café Long Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Caffé Crema Classico</fullName>
+        <default>false</default>
+        <label>Caffé Crema Classico</label>
+    </customValue>
+    <customValue>
+        <fullName>Caffè Crema Classico Xl</fullName>
+        <default>false</default>
+        <label>Caffè Crema Classico Xl</label>
+    </customValue>
+    <customValue>
+        <fullName>Caffé Crema Intenso</fullName>
+        <default>false</default>
+        <label>Caffé Crema Intenso</label>
+    </customValue>
+    <customValue>
+        <fullName>Caffè Crema Intenso Xl</fullName>
+        <default>false</default>
+        <label>Caffè Crema Intenso Xl</label>
+    </customValue>
+    <customValue>
+        <fullName>Caffè Crema Mild</fullName>
+        <default>false</default>
+        <label>Caffè Crema Mild</label>
+    </customValue>
+    <customValue>
+        <fullName>Caffè Crema Mild Xl</fullName>
+        <default>false</default>
+        <label>Caffè Crema Mild Xl</label>
+    </customValue>
+    <customValue>
+        <fullName>Caffe Crema XL</fullName>
+        <default>false</default>
+        <label>Caffe Crema XL</label>
+    </customValue>
+    <customValue>
+        <fullName>CafÚ Hag (x10)</fullName>
+        <default>false</default>
+        <label>CafÚ Hag (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cappuccino</fullName>
+        <default>false</default>
+        <label>Cappuccino</label>
+    </customValue>
+    <customValue>
+        <fullName>Cappuccino 267.2G</fullName>
+        <default>false</default>
+        <label>Cappuccino 267.2G</label>
+    </customValue>
+    <customValue>
+        <fullName>Cappuccino Ameretti</fullName>
+        <default>false</default>
+        <label>Cappuccino Ameretti</label>
+    </customValue>
+    <customValue>
+        <fullName>Cappuccino Carambar</fullName>
+        <default>false</default>
+        <label>Cappuccino Carambar</label>
+    </customValue>
+    <customValue>
+        <fullName>Cappuccino Choco</fullName>
+        <default>false</default>
+        <label>Cappuccino Choco</label>
+    </customValue>
+    <customValue>
+        <fullName>Cappuccino Classico</fullName>
+        <default>false</default>
+        <label>Cappuccino Classico</label>
+    </customValue>
+    <customValue>
+        <fullName>Cappuccino Vanilla</fullName>
+        <default>false</default>
+        <label>Cappuccino Vanilla</label>
+    </customValue>
+    <customValue>
+        <fullName>Caramel Latte</fullName>
+        <default>false</default>
+        <label>Caramel Latte</label>
+    </customValue>
+    <customValue>
+        <fullName>Carte Noire Café Long Intense</fullName>
+        <default>false</default>
+        <label>Carte Noire Café Long Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Carte Noire CafÚ Long Intense</fullName>
+        <default>false</default>
+        <label>Carte Noire CafÚ Long Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Carte Noire Espresso Aromatique</fullName>
+        <default>false</default>
+        <label>Carte Noire Espresso Aromatique</label>
+    </customValue>
+    <customValue>
+        <fullName>Carte Noire Latte Macchiato Caramel (x10)</fullName>
+        <default>false</default>
+        <label>Carte Noire Latte Macchiato Caramel (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Carte Noire Petit Dejeuner Intense</fullName>
+        <default>false</default>
+        <label>Carte Noire Petit Dejeuner Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Carte Noire Petit DÚjenuer Intense</fullName>
+        <default>false</default>
+        <label>Carte Noire Petit DÚjenuer Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Chai Latte</fullName>
+        <default>false</default>
+        <label>Chai Latte</label>
+    </customValue>
+    <customValue>
+        <fullName>Chai Latte (x10)</fullName>
+        <default>false</default>
+        <label>Chai Latte (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chocolate</fullName>
+        <default>false</default>
+        <label>Chocolate</label>
+    </customValue>
+    <customValue>
+        <fullName>City Range Bundle</fullName>
+        <default>false</default>
+        <label>City Range Bundle</label>
+    </customValue>
+    <customValue>
+        <fullName>Classic</fullName>
+        <default>false</default>
+        <label>Classic</label>
+    </customValue>
+    <customValue>
+        <fullName>Classique Xl</fullName>
+        <default>false</default>
+        <label>Classique Xl</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffee lovers bundle DE</fullName>
+        <default>false</default>
+        <label>Coffee lovers bundle DE</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffee lovers bundle FR</fullName>
+        <default>false</default>
+        <label>Coffee lovers bundle FR</label>
+    </customValue>
+    <customValue>
+        <fullName>Cortado</fullName>
+        <default>false</default>
+        <label>Cortado</label>
+    </customValue>
+    <customValue>
+        <fullName>Costa Americano</fullName>
+        <default>false</default>
+        <label>Costa Americano</label>
+    </customValue>
+    <customValue>
+        <fullName>COSTA Cappuccino (x10)</fullName>
+        <default>false</default>
+        <label>COSTA Cappuccino (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Creamer</fullName>
+        <default>false</default>
+        <label>Creamer</label>
+    </customValue>
+    <customValue>
+        <fullName>Creamer From Milk</fullName>
+        <default>false</default>
+        <label>Creamer From Milk</label>
+    </customValue>
+    <customValue>
+        <fullName>Darkroast</fullName>
+        <default>false</default>
+        <label>Darkroast</label>
+    </customValue>
+    <customValue>
+        <fullName>Decaf</fullName>
+        <default>false</default>
+        <label>Decaf</label>
+    </customValue>
+    <customValue>
+        <fullName>Decaffeinated Expresso</fullName>
+        <default>false</default>
+        <label>Decaffeinated Expresso</label>
+    </customValue>
+    <customValue>
+        <fullName>Desayuno</fullName>
+        <default>false</default>
+        <label>Desayuno</label>
+    </customValue>
+    <customValue>
+        <fullName>Descafeinado</fullName>
+        <default>false</default>
+        <label>Descafeinado</label>
+    </customValue>
+    <customValue>
+        <fullName>Earl Grey</fullName>
+        <default>false</default>
+        <label>Earl Grey</label>
+    </customValue>
+    <customValue>
+        <fullName>Ebony</fullName>
+        <default>false</default>
+        <label>Ebony</label>
+    </customValue>
+    <customValue>
+        <fullName>English Breakfast</fullName>
+        <default>false</default>
+        <label>English Breakfast</label>
+    </customValue>
+    <customValue>
+        <fullName>Espressa Forza</fullName>
+        <default>false</default>
+        <label>Espressa Forza</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresse Splendente</fullName>
+        <default>false</default>
+        <label>Espresse Splendente</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso</fullName>
+        <default>false</default>
+        <label>Espresso</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Classic</fullName>
+        <default>false</default>
+        <label>Espresso Classic</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Colombia</fullName>
+        <default>false</default>
+        <label>Espresso Colombia</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Decaffeinato</fullName>
+        <default>false</default>
+        <label>Espresso Decaffeinato</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Delizioso</fullName>
+        <default>false</default>
+        <label>Espresso Delizioso</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Fortissimo</fullName>
+        <default>false</default>
+        <label>Espresso Fortissimo</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Freddo</fullName>
+        <default>false</default>
+        <label>Espresso Freddo</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Macchiato</fullName>
+        <default>false</default>
+        <label>Espresso Macchiato</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Macchiatto</fullName>
+        <default>false</default>
+        <label>Espresso Macchiatto</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Onyx</fullName>
+        <default>false</default>
+        <label>Espresso Onyx</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Or Rose</fullName>
+        <default>false</default>
+        <label>Espresso Or Rose</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Papouasie</fullName>
+        <default>false</default>
+        <label>Espresso Papouasie</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Ristretto</fullName>
+        <default>false</default>
+        <label>Espresso Ristretto</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Ristretto Tripack</fullName>
+        <default>false</default>
+        <label>Espresso Ristretto Tripack</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Satinato</fullName>
+        <default>false</default>
+        <label>Espresso Satinato</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Sontuoso</fullName>
+        <default>false</default>
+        <label>Espresso Sontuoso</label>
+    </customValue>
+    <customValue>
+        <fullName>Espresso Supremo</fullName>
+        <default>false</default>
+        <label>Espresso Supremo</label>
+    </customValue>
+    <customValue>
+        <fullName>Étoile de Russie</fullName>
+        <default>false</default>
+        <label>Étoile de Russie</label>
+    </customValue>
+    <customValue>
+        <fullName>Expresso</fullName>
+        <default>false</default>
+        <label>Expresso</label>
+    </customValue>
+    <customValue>
+        <fullName>Expresso Aromatique</fullName>
+        <default>false</default>
+        <label>Expresso Aromatique</label>
+    </customValue>
+    <customValue>
+        <fullName>Expresso Intense</fullName>
+        <default>false</default>
+        <label>Expresso Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Frokostkaffe</fullName>
+        <default>false</default>
+        <label>Frokostkaffe</label>
+    </customValue>
+    <customValue>
+        <fullName>Fruits Of The Forest Tea</fullName>
+        <default>false</default>
+        <label>Fruits Of The Forest Tea</label>
+    </customValue>
+    <customValue>
+        <fullName>Get me started-Bundle</fullName>
+        <default>false</default>
+        <label>Get me started-Bundle</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand&apos;mère Petit Déjeuner (x3)</fullName>
+        <default>false</default>
+        <label>Grand&apos;mère Petit Déjeuner (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand&apos;mère Petit Déjeuner (x5)</fullName>
+        <default>false</default>
+        <label>Grand&apos;mère Petit Déjeuner (x5)</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand&apos;mÞre Petit DÚjeuner (x3)</fullName>
+        <default>false</default>
+        <label>Grand&apos;mÞre Petit DÚjeuner (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand&apos;mÞre Petit DÚjeuner (x5)</fullName>
+        <default>false</default>
+        <label>Grand&apos;mÞre Petit DÚjeuner (x5)</label>
+    </customValue>
+    <customValue>
+        <fullName>Green Tea And Mint</fullName>
+        <default>false</default>
+        <label>Green Tea And Mint</label>
+    </customValue>
+    <customValue>
+        <fullName>Hot Chocolate</fullName>
+        <default>false</default>
+        <label>Hot Chocolate</label>
+    </customValue>
+    <customValue>
+        <fullName>Intense</fullName>
+        <default>false</default>
+        <label>Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Caffè Crema Classico XL (x10)</fullName>
+        <default>false</default>
+        <label>Jacobs Caffè Crema Classico XL (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Caffè Crema Classico Xl (x3)</fullName>
+        <default>false</default>
+        <label>Jacobs Caffè Crema Classico Xl (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Caffè Crema Mild XL (x10)</fullName>
+        <default>false</default>
+        <label>Jacobs Caffè Crema Mild XL (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Caffè Crema RU</fullName>
+        <default>false</default>
+        <label>Jacobs Caffè Crema RU</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Caffè Crema XL CEEMA</fullName>
+        <default>false</default>
+        <label>Jacobs Caffè Crema XL CEEMA</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs CaffÞ Crema Classico XL (x10)</fullName>
+        <default>false</default>
+        <label>Jacobs CaffÞ Crema Classico XL (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs CaffÞ Crema Classico Xl (x3)</fullName>
+        <default>false</default>
+        <label>Jacobs CaffÞ Crema Classico Xl (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs CaffÞ Crema Mild XL (x10)</fullName>
+        <default>false</default>
+        <label>Jacobs CaffÞ Crema Mild XL (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs CaffÞ Crema RU</fullName>
+        <default>false</default>
+        <label>Jacobs CaffÞ Crema RU</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs CaffÞ Crema XL CEEMA</fullName>
+        <default>false</default>
+        <label>Jacobs CaffÞ Crema XL CEEMA</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Cappuccino Choco (x10)</fullName>
+        <default>false</default>
+        <label>Jacobs Cappuccino Choco (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Cappuccino Classico (Bundle DE)</fullName>
+        <default>false</default>
+        <label>Jacobs Cappuccino Classico (Bundle DE)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Cappuccino RU</fullName>
+        <default>false</default>
+        <label>Jacobs Cappuccino RU</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Caramel Macchiato RU</fullName>
+        <default>false</default>
+        <label>Jacobs Caramel Macchiato RU</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Espresso Ristretto Tripack (Bundle DE)</fullName>
+        <default>false</default>
+        <label>Jacobs Espresso Ristretto Tripack (Bundle DE)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Espresso RU</fullName>
+        <default>false</default>
+        <label>Jacobs Espresso RU</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Kr÷nung XL (x10)</fullName>
+        <default>false</default>
+        <label>Jacobs Kr÷nung XL (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Krönung XL (x10)</fullName>
+        <default>false</default>
+        <label>Jacobs Krönung XL (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Latte Macchiato Caramel (x10)</fullName>
+        <default>false</default>
+        <label>Jacobs Latte Macchiato Caramel (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Latte Macchiato RU</fullName>
+        <default>false</default>
+        <label>Jacobs Latte Macchiato RU</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacobs Monarch (x3)</fullName>
+        <default>false</default>
+        <label>Jacobs Monarch (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kenco Cappuccino (x3)</fullName>
+        <default>false</default>
+        <label>Kenco Cappuccino (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kenco Decaff Americano (x3)</fullName>
+        <default>false</default>
+        <label>Kenco Decaff Americano (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kenco Mocha</fullName>
+        <default>false</default>
+        <label>Kenco Mocha</label>
+    </customValue>
+    <customValue>
+        <fullName>Kenco Pure Colombian</fullName>
+        <default>false</default>
+        <label>Kenco Pure Colombian</label>
+    </customValue>
+    <customValue>
+        <fullName>Kenco Pure Colombian (10x)</fullName>
+        <default>false</default>
+        <label>Kenco Pure Colombian (10x)</label>
+    </customValue>
+    <customValue>
+        <fullName>Krönung</fullName>
+        <default>false</default>
+        <label>Krönung</label>
+    </customValue>
+    <customValue>
+        <fullName>Krönung Xl</fullName>
+        <default>false</default>
+        <label>Krönung Xl</label>
+    </customValue>
+    <customValue>
+        <fullName>L`OR assorti ES</fullName>
+        <default>false</default>
+        <label>L`OR assorti ES</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;OR Café Long Classique</fullName>
+        <default>false</default>
+        <label>L&apos;OR Café Long Classique</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;OR Café Long Mild</fullName>
+        <default>false</default>
+        <label>L&apos;OR Café Long Mild</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Cappuccino</fullName>
+        <default>false</default>
+        <label>L&apos;Or Cappuccino</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Classique XL</fullName>
+        <default>false</default>
+        <label>L&apos;Or Classique XL</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Espresso Classic Decaf</fullName>
+        <default>false</default>
+        <label>L&apos;Or Espresso Classic Decaf</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Espresso Decaf</fullName>
+        <default>false</default>
+        <label>L&apos;Or Espresso Decaf</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Espresso Delizioso</fullName>
+        <default>false</default>
+        <label>L&apos;Or Espresso Delizioso</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Espresso Fortissima</fullName>
+        <default>false</default>
+        <label>L&apos;Or Espresso Fortissima</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Espresso Fortissimo</fullName>
+        <default>false</default>
+        <label>L&apos;Or Espresso Fortissimo</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Espresso Forza</fullName>
+        <default>false</default>
+        <label>L&apos;Or Espresso Forza</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Espresso Splendente</fullName>
+        <default>false</default>
+        <label>L&apos;Or Espresso Splendente</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Latte Macchiato</fullName>
+        <default>false</default>
+        <label>L&apos;Or Latte Macchiato</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or Lungo Profondo</fullName>
+        <default>false</default>
+        <label>L&apos;Or Lungo Profondo</label>
+    </customValue>
+    <customValue>
+        <fullName>L&apos;Or XL Intense</fullName>
+        <default>false</default>
+        <label>L&apos;Or XL Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Latte</fullName>
+        <default>false</default>
+        <label>Latte</label>
+    </customValue>
+    <customValue>
+        <fullName>Latte Macchiato</fullName>
+        <default>false</default>
+        <label>Latte Macchiato</label>
+    </customValue>
+    <customValue>
+        <fullName>Latte Macchiato Caramel</fullName>
+        <default>false</default>
+        <label>Latte Macchiato Caramel</label>
+    </customValue>
+    <customValue>
+        <fullName>Latte Macchiato Less Sweet</fullName>
+        <default>false</default>
+        <label>Latte Macchiato Less Sweet</label>
+    </customValue>
+    <customValue>
+        <fullName>Latte Macchiato Weniger Süß</fullName>
+        <default>false</default>
+        <label>Latte Macchiato Weniger Süß</label>
+    </customValue>
+    <customValue>
+        <fullName>Latte Machiatto Vanilla</fullName>
+        <default>false</default>
+        <label>Latte Machiatto Vanilla</label>
+    </customValue>
+    <customValue>
+        <fullName>Latte Vanilla</fullName>
+        <default>false</default>
+        <label>Latte Vanilla</label>
+    </customValue>
+    <customValue>
+        <fullName>Lungo Elegante</fullName>
+        <default>false</default>
+        <label>Lungo Elegante</label>
+    </customValue>
+    <customValue>
+        <fullName>Lungo Estretto</fullName>
+        <default>false</default>
+        <label>Lungo Estretto</label>
+    </customValue>
+    <customValue>
+        <fullName>Lungo Mattinata</fullName>
+        <default>false</default>
+        <label>Lungo Mattinata</label>
+    </customValue>
+    <customValue>
+        <fullName>Lungo Profondo</fullName>
+        <default>false</default>
+        <label>Lungo Profondo</label>
+    </customValue>
+    <customValue>
+        <fullName>Macchiato Caramel</fullName>
+        <default>false</default>
+        <label>Macchiato Caramel</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcilla Café con Leche (x10)</fullName>
+        <default>false</default>
+        <label>Marcilla Café con Leche (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcilla Café Largo (x10)</fullName>
+        <default>false</default>
+        <label>Marcilla Café Largo (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcilla CafÚ con Leche (x10)</fullName>
+        <default>false</default>
+        <label>Marcilla CafÚ con Leche (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcilla CafÚ Largo (x10)</fullName>
+        <default>false</default>
+        <label>Marcilla CafÚ Largo (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcilla Descafeinado (x10)</fullName>
+        <default>false</default>
+        <label>Marcilla Descafeinado (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcilla Espresso (x10)</fullName>
+        <default>false</default>
+        <label>Marcilla Espresso (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Maxwell House Americano (Bundle FR)</fullName>
+        <default>false</default>
+        <label>Maxwell House Americano (Bundle FR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Maxwell House Espresso (x3)</fullName>
+        <default>false</default>
+        <label>Maxwell House Espresso (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Medaille D&apos;Or</fullName>
+        <default>false</default>
+        <label>Medaille D&apos;Or</label>
+    </customValue>
+    <customValue>
+        <fullName>Medium Roast</fullName>
+        <default>false</default>
+        <label>Medium Roast</label>
+    </customValue>
+    <customValue>
+        <fullName>Milano Espresso</fullName>
+        <default>false</default>
+        <label>Milano Espresso</label>
+    </customValue>
+    <customValue>
+        <fullName>Milea Mellanrost XL</fullName>
+        <default>false</default>
+        <label>Milea Mellanrost XL</label>
+    </customValue>
+    <customValue>
+        <fullName>Milka Chocolate (x10)</fullName>
+        <default>false</default>
+        <label>Milka Chocolate (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Milka Kakao RU</fullName>
+        <default>false</default>
+        <label>Milka Kakao RU</label>
+    </customValue>
+    <customValue>
+        <fullName>Milk Chocolate</fullName>
+        <default>false</default>
+        <label>Milk Chocolate</label>
+    </customValue>
+    <customValue>
+        <fullName>MIX Bundle Danish Favorites</fullName>
+        <default>false</default>
+        <label>MIX Bundle Danish Favorites</label>
+    </customValue>
+    <customValue>
+        <fullName>MIX Bundle DK Starting Pack</fullName>
+        <default>false</default>
+        <label>MIX Bundle DK Starting Pack</label>
+    </customValue>
+    <customValue>
+        <fullName>MIX Bundle Norvegians Favorites</fullName>
+        <default>false</default>
+        <label>MIX Bundle Norvegians Favorites</label>
+    </customValue>
+    <customValue>
+        <fullName>MIX Bundle NO Starting Pack</fullName>
+        <default>false</default>
+        <label>MIX Bundle NO Starting Pack</label>
+    </customValue>
+    <customValue>
+        <fullName>MIX Bundle SE Starting Pack</fullName>
+        <default>false</default>
+        <label>MIX Bundle SE Starting Pack</label>
+    </customValue>
+    <customValue>
+        <fullName>MIX Bundle Swedish Favorites</fullName>
+        <default>false</default>
+        <label>MIX Bundle Swedish Favorites</label>
+    </customValue>
+    <customValue>
+        <fullName>Monarch</fullName>
+        <default>false</default>
+        <label>Monarch</label>
+    </customValue>
+    <customValue>
+        <fullName>Mörkrost</fullName>
+        <default>false</default>
+        <label>Mörkrost</label>
+    </customValue>
+    <customValue>
+        <fullName>Morning Cafe</fullName>
+        <default>false</default>
+        <label>Morning Cafe</label>
+    </customValue>
+    <customValue>
+        <fullName>Morning Café</fullName>
+        <default>false</default>
+        <label>Morning Café</label>
+    </customValue>
+    <customValue>
+        <fullName>New York Americano</fullName>
+        <default>false</default>
+        <label>New York Americano</label>
+    </customValue>
+    <customValue>
+        <fullName>Oreo</fullName>
+        <default>false</default>
+        <label>Oreo</label>
+    </customValue>
+    <customValue>
+        <fullName>Original Mellanrost</fullName>
+        <default>false</default>
+        <label>Original Mellanrost</label>
+    </customValue>
+    <customValue>
+        <fullName>Or Jaune</fullName>
+        <default>false</default>
+        <label>Or Jaune</label>
+    </customValue>
+    <customValue>
+        <fullName>Paris Cafe Long</fullName>
+        <default>false</default>
+        <label>Paris Cafe Long</label>
+    </customValue>
+    <customValue>
+        <fullName>Petit Dejeuner</fullName>
+        <default>false</default>
+        <label>Petit Dejeuner</label>
+    </customValue>
+    <customValue>
+        <fullName>Petit Déjeuner</fullName>
+        <default>false</default>
+        <label>Petit Déjeuner</label>
+    </customValue>
+    <customValue>
+        <fullName>Petit Dejeuner Doux</fullName>
+        <default>false</default>
+        <label>Petit Dejeuner Doux</label>
+    </customValue>
+    <customValue>
+        <fullName>Petit Dejeuner Intense</fullName>
+        <default>false</default>
+        <label>Petit Dejeuner Intense</label>
+    </customValue>
+    <customValue>
+        <fullName>Petit Dejeuner XL</fullName>
+        <default>false</default>
+        <label>Petit Dejeuner XL</label>
+    </customValue>
+    <customValue>
+        <fullName>Pure Colombian</fullName>
+        <default>false</default>
+        <label>Pure Colombian</label>
+    </customValue>
+    <customValue>
+        <fullName>Quick start assorti DE</fullName>
+        <default>false</default>
+        <label>Quick start assorti DE</label>
+    </customValue>
+    <customValue>
+        <fullName>Quick start assorti ES</fullName>
+        <default>false</default>
+        <label>Quick start assorti ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Quick start assorti FR</fullName>
+        <default>false</default>
+        <label>Quick start assorti FR</label>
+    </customValue>
+    <customValue>
+        <fullName>Rich &amp; Aromatic</fullName>
+        <default>false</default>
+        <label>Rich &amp; Aromatic</label>
+    </customValue>
+    <customValue>
+        <fullName>Ristretto</fullName>
+        <default>false</default>
+        <label>Ristretto</label>
+    </customValue>
+    <customValue>
+        <fullName>Small coffee assorti ES</fullName>
+        <default>false</default>
+        <label>Small coffee assorti ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Small coffee assorti FR</fullName>
+        <default>false</default>
+        <label>Small coffee assorti FR</label>
+    </customValue>
+    <customValue>
+        <fullName>Starter Bundle (x11)</fullName>
+        <default>false</default>
+        <label>Starter Bundle (x11)</label>
+    </customValue>
+    <customValue>
+        <fullName>Suchard Hot Chocolate (x10)</fullName>
+        <default>false</default>
+        <label>Suchard Hot Chocolate (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Summer Bundle DE</fullName>
+        <default>false</default>
+        <label>Summer Bundle DE</label>
+    </customValue>
+    <customValue>
+        <fullName>Summer Bundle ES</fullName>
+        <default>false</default>
+        <label>Summer Bundle ES</label>
+    </customValue>
+    <customValue>
+        <fullName>Summer Bundle FR</fullName>
+        <default>false</default>
+        <label>Summer Bundle FR</label>
+    </customValue>
+    <customValue>
+        <fullName>Summer Discount Bundle</fullName>
+        <default>false</default>
+        <label>Summer Discount Bundle</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo Cappuccino Carambar (Bundle FR)</fullName>
+        <default>false</default>
+        <label>Tassimo Cappuccino Carambar (Bundle FR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo Creamer from Milk (x10)</fullName>
+        <default>false</default>
+        <label>Tassimo Creamer from Milk (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo Golden Bean</fullName>
+        <default>false</default>
+        <label>Tassimo Golden Bean</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Cappuccino</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Cappuccino</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Cappuccino (x10)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Cappuccino (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo l&apos;Or Espresso Decaf (x3)</fullName>
+        <default>false</default>
+        <label>Tassimo l&apos;Or Espresso Decaf (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo l&apos;Or Espresso Decaf (x5)</fullName>
+        <default>false</default>
+        <label>Tassimo l&apos;Or Espresso Decaf (x5)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo l&apos;Or Espresso Delizioso (Bundle ES)</fullName>
+        <default>false</default>
+        <label>Tassimo l&apos;Or Espresso Delizioso (Bundle ES)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Espresso Delizioso (x3)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Espresso Delizioso (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Espresso Delizioso (x5)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Espresso Delizioso (x5)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo l&apos;Or Espresso Fortissima (Bundle ES)</fullName>
+        <default>false</default>
+        <label>Tassimo l&apos;Or Espresso Fortissima (Bundle ES)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Espresso Splendente (x10)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Espresso Splendente (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Espresso Splendente (x3)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Espresso Splendente (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Espresso Splendente (x5)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Espresso Splendente (x5)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo l&apos;Or Latte Macchiato (Bundle ES)</fullName>
+        <default>false</default>
+        <label>Tassimo l&apos;Or Latte Macchiato (Bundle ES)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Latte Macchiato (x3)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Latte Macchiato (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo l&apos;Or Lungo Profondo (Bundle FR)</fullName>
+        <default>false</default>
+        <label>Tassimo l&apos;Or Lungo Profondo (Bundle FR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Lungo Profondo (x10)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Lungo Profondo (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Lungo Profondo (x3)</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Lungo Profondo (x3)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo L&apos;OR Skinny Latte Macchiato</fullName>
+        <default>false</default>
+        <label>Tassimo L&apos;OR Skinny Latte Macchiato</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo Latte Macchiatto Baileys</fullName>
+        <default>false</default>
+        <label>Tassimo Latte Macchiatto Baileys</label>
+    </customValue>
+    <customValue>
+        <fullName>Tassimo Paris Cafe Long (Bundle DE)</fullName>
+        <default>false</default>
+        <label>Tassimo Paris Cafe Long (Bundle DE)</label>
+    </customValue>
+    <customValue>
+        <fullName>TASSIMO VIVY 2 (T140) Cream</fullName>
+        <default>false</default>
+        <label>TASSIMO VIVY 2 (T140) Cream</label>
+    </customValue>
+    <customValue>
+        <fullName>TASSIMO VIVY 2 (T140) Just Red</fullName>
+        <default>false</default>
+        <label>TASSIMO VIVY 2 (T140) Just Red</label>
+    </customValue>
+    <customValue>
+        <fullName>TASSIMO VIVY 2 (T140) Real Black</fullName>
+        <default>false</default>
+        <label>TASSIMO VIVY 2 (T140) Real Black</label>
+    </customValue>
+    <customValue>
+        <fullName>TASSIMO VIVY 2 (T140) Snow White</fullName>
+        <default>false</default>
+        <label>TASSIMO VIVY 2 (T140) Snow White</label>
+    </customValue>
+    <customValue>
+        <fullName>TASSIMO VIVY 2 (T140) Sweet Pink</fullName>
+        <default>false</default>
+        <label>TASSIMO VIVY 2 (T140) Sweet Pink</label>
+    </customValue>
+    <customValue>
+        <fullName>Twinings Chai Latte CEEMA</fullName>
+        <default>false</default>
+        <label>Twinings Chai Latte CEEMA</label>
+    </customValue>
+    <customValue>
+        <fullName>Twinings Earl Grey (x10)</fullName>
+        <default>false</default>
+        <label>Twinings Earl Grey (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Twinings Fruits of the Forest Tea (x10)</fullName>
+        <default>false</default>
+        <label>Twinings Fruits of the Forest Tea (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Twinings Green Tea and Mint (x10)</fullName>
+        <default>false</default>
+        <label>Twinings Green Tea and Mint (x10)</label>
+    </customValue>
+    <customValue>
+        <fullName>Vanilla</fullName>
+        <default>false</default>
+        <label>Vanilla</label>
+    </customValue>
+    <customValue>
+        <fullName>Vanilla Latte</fullName>
+        <default>false</default>
+        <label>Vanilla Latte</label>
+    </customValue>
+    <customValue>
+        <fullName>Velours Noir Cafe Long 16Px5</fullName>
+        <default>false</default>
+        <label>Velours Noir Cafe Long 16Px5</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Product Flavour</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

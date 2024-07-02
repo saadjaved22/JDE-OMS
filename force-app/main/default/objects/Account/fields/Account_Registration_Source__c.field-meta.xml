@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Registration_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Account Registration Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Intershop</fullName>
+                <default>false</default>
+                <label>Intershop</label>
+            </value>
+            <value>
+                <fullName>Sampling Form</fullName>
+                <default>false</default>
+                <label>Sampling Form</label>
+            </value>
+            <value>
+                <fullName>External Database</fullName>
+                <default>false</default>
+                <label>External Database</label>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Local Database</fullName>
+                <default>false</default>
+                <label>Local Database</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Blokker POS</fullName>
+                <default>false</default>
+                <label>Blokker POS</label>
+            </value>
+            <value>
+                <fullName>DE.NL</fullName>
+                <default>false</default>
+                <label>DE.NL</label>
+            </value>
+            <value>
+                <fullName>MDC.FR</fullName>
+                <default>false</default>
+                <label>MDC.FR</label>
+            </value>
+            <value>
+                <fullName>a</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>a</label>
+            </value>
+            <value>
+                <fullName>b</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>b</label>
+            </value>
+            <value>
+                <fullName>c</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

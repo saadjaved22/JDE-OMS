@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>organisationID__c</fullName>
+    <description>The organisationId of this org that needs to be passed to OCI. Can&apos;t be fetched programmatically directly, but is available as &apos;TenantId&apos; at /lightning/setup/OmniChannelInventory/home</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The organisationId of this org that needs to be passed to OCI. Can&apos;t be fetched programmatically directly, but is available as &apos;TenantId&apos; at /lightning/setup/OmniChannelInventory/home</inlineHelpText>
+    <label>organisationID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

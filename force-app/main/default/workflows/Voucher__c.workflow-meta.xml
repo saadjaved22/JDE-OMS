@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Voucher_Status_Available</fullName>
+        <field>Status__c</field>
+        <literalValue>Available</literalValue>
+        <name>Update Voucher Status - Available</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Voucher_Status_Redeemed</fullName>
+        <field>Status__c</field>
+        <literalValue>Redeemed</literalValue>
+        <name>Update Voucher Status - Redeemed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Voucher_Status_Sent</fullName>
+        <field>Status__c</field>
+        <literalValue>Sent</literalValue>
+        <name>Update Voucher Status - Sent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Populate Status field - Available</fullName>
+        <actions>
+            <name>Update_Voucher_Status_Available</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Populate Voucher Status field - Available</description>
+        <formula>AND($Setup.WorkflowSettings__c.VoucherWorkflow__c,  OR(ISNULL(Send_Date__c), ISBLANK(Send_Date__c)), OR(ISNULL( Redemption_Date__c), ISBLANK(Redemption_Date__c)))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Status field - Redeemed</fullName>
+        <actions>
+            <name>Update_Voucher_Status_Redeemed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Populate Voucher Status field - Redeemed</description>
+        <formula>AND( $Setup.WorkflowSettings__c.VoucherWorkflow__c, OR( NOT(ISBLANK(Redemption_Date__c)),  NOT(ISNULL(Redemption_Date__c)) ))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Status field - Sent</fullName>
+        <actions>
+            <name>Update_Voucher_Status_Sent</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Populate Voucher Status field - Sent</description>
+        <formula>AND($Setup.WorkflowSettings__c.VoucherWorkflow__c,
+OR(NOT(ISBLANK(Send_Date__c)), NOT(ISNULL(Send_Date__c))),
+OR(ISBLANK(Redemption_Date__c), ISNULL(Redemption_Date__c)))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>UpdateExernalID</fullName>
+        <field>External_Id__c</field>
+        <formula>PersonEmail+&quot;NL&quot;+&quot;Douwe Egberts&quot;</formula>
+        <name>UpdateExernalID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Email_Opt_Out_False</fullName>
+        <field>PersonHasOptedOutOfEmail</field>
+        <literalValue>0</literalValue>
+        <name>Update Account Email Opt Out False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Email_Opt_Out_True</fullName>
+        <field>PersonHasOptedOutOfEmail</field>
+        <literalValue>1</literalValue>
+        <name>Update Account Email Opt Out True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_External_Id</fullName>
+        <field>External_Id__c</field>
+        <formula>Id  + &apos;_&apos; +External_Id__c</formula>
+        <name>Update Account External Id</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Opt_In_Status_Synced</fullName>
+        <field>opt_in_status_synced__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Account Opt_In_Status_Synced</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Opt_in_Status_Confirmed</fullName>
+        <field>Opt_in_Status__c</field>
+        <literalValue>Confirmed</literalValue>
+        <name>Update Account Opt-in Status - Confirmed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Opt_in_Status_Opt_out</fullName>
+        <field>Opt_in_Status__c</field>
+        <literalValue>Opt-out</literalValue>
+        <name>Update Account Opt-in Status - Opt-out</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Opt_in_Status_Requested</fullName>
+        <field>Opt_in_Status__c</field>
+        <literalValue>Requested</literalValue>
+        <name>Update Account Opt-in Status - Requested</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>SendOutboundNodtfication_To_IPAAS</fullName>
+        <apiVersion>43.0</apiVersion>
+        <description>Update Account Opt_In_Status_Synced</description>
+        <endpointUrl>https://jde-prod.boomi.cloud/ws/soap/jde/v1;boomi_auth=c2ZfcmV0YWlsX3Byb2RAamRlLUFJNDJEMy5EWEZBQ0w6OTBhNTQ3ZWMtZjdiYS00NjBmLThjOGItNDYxMWVkZDEwZmFh?wsdl=single</endpointUrl>
+        <fields>Brand__c</fields>
+        <fields>Country__c</fields>
+        <fields>External_Id__c</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>ipaas.integration@jdecoffee.com</integrationUser>
+        <name>SendOutboundNodtfication_To_IPAAS</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>Send_Tassimo_to_Magento</fullName>
+        <apiVersion>45.0</apiVersion>
+        <endpointUrl>https://jde-prod.boomi.cloud/ws/soap/jde/v1;boomi_auth=c2ZfcmV0YWlsX3Byb2RAamRlLUFJNDJEMy5EWEZBQ0w6OTBhNTQ3ZWMtZjdiYS00NjBmLThjOGItNDYxMWVkZDEwZmFh?wsdl=single</endpointUrl>
+        <fields>Account_Registration_Status__c</fields>
+        <fields>Brand__c</fields>
+        <fields>Consent_Status__c</fields>
+        <fields>Country__c</fields>
+        <fields>External_Id__c</fields>
+        <fields>Id</fields>
+        <fields>Opt_in_Status__c</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>pdc.jde.ao.salesforce@jdecoffee.com</integrationUser>
+        <name>Send Tassimo to Magento</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>Send_to_SAP_PI</fullName>
+        <apiVersion>39.0</apiVersion>
+        <endpointUrl>https://pip.demb.com:443/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SALESFORCE&amp;receiverParty=&amp;receiverService=&amp;interface=SI_OUT_CustomerUpdateNotification&amp;interfaceNamespace=urn:jdecoffee:digital:intershop:customersubscription</endpointUrl>
+        <fields>Account_Registration_Status__c</fields>
+        <fields>Brand__c</fields>
+        <fields>Consent_Status__c</fields>
+        <fields>Country__c</fields>
+        <fields>External_Id__c</fields>
+        <fields>Id</fields>
+        <fields>Opt_in_Status__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>batch.apex@jdecoffee.com</integrationUser>
+        <name>Send to SAP PI</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Populate Email Opt In Status Field - Confirmed</fullName>
+        <actions>
+            <name>Update_Account_Opt_in_Status_Confirmed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Populate Person Account Email Opt In Status Field - Confirmed</description>
+        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c,(  OR(  AND(Opt_in_Confirmation_Date__c &gt; Opt_in_Request_Date__c , Opt_in_Confirmation_Date__c &gt;  Opt_out_Request_Date__c ),  AND(NOT(ISBLANK(Opt_in_Confirmation_Date__c)), ISBLANK(Opt_in_Request_Date__c), ISBLANK(Opt_out_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c &gt; Opt_in_Request_Date__c, ISBLANK(Opt_out_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c &gt; Opt_out_Request_Date__c, ISBLANK(Opt_in_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c = Opt_in_Request_Date__c, OR(Opt_in_Confirmation_Date__c &gt;= Opt_out_Request_Date__c, ISBLANK(Opt_out_Request_Date__c)))  ) ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Email Opt In Status Field - Opt-out</fullName>
+        <actions>
+            <name>Update_Account_Opt_in_Status_Opt_out</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Populate Person Account Email Opt In Status Field - Opt-out</description>
+        <formula>AND( $Setup.WorkflowSettings__c.PersonAccountWorkflow__c, (  OR(  AND(Opt_out_Request_Date__c &gt; Opt_in_Request_Date__c , Opt_out_Request_Date__c  &gt; Opt_in_Confirmation_Date__c ),  AND(NOT(ISBLANK(Opt_out_Request_Date__c)), ISBLANK(Opt_in_Request_Date__c ), ISBLANK(Opt_in_Confirmation_Date__c )),  AND(Opt_out_Request_Date__c &gt; Opt_in_Request_Date__c, ISBLANK(Opt_in_Confirmation_Date__c)),  AND(Opt_out_Request_Date__c &gt; Opt_in_Confirmation_Date__c, ISBLANK(Opt_in_Request_Date__c)),  AND(Opt_out_Request_Date__c = Opt_in_Confirmation_Date__c,  OR(Opt_out_Request_Date__c &gt;= Opt_in_Request_Date__c,ISBLANK(Opt_in_Request_Date__c))),  AND(Opt_out_Request_Date__c = Opt_in_Request_Date__c,  OR(Opt_out_Request_Date__c &gt;= Opt_in_Confirmation_Date__c, ISBLANK(Opt_in_Confirmation_Date__c)))   ) ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Email Opt In Status Field - Requested</fullName>
+        <actions>
+            <name>Update_Account_Opt_in_Status_Requested</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Populate Person Account Email Opt In Status Field - Requested</description>
+        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ( OR(  AND(Opt_in_Request_Date__c &gt; Opt_in_Confirmation_Date__c, Opt_in_Request_Date__c &gt;  Opt_out_Request_Date__c ),  AND(NOT(ISBLANK(Opt_in_Request_Date__c)), ISBLANK(Opt_in_Confirmation_Date__c), ISBLANK(Opt_out_Request_Date__c )),  AND(Opt_in_Request_Date__c &gt; Opt_in_Confirmation_Date__c, ISBLANK(Opt_out_Request_Date__c )),  AND(Opt_in_Request_Date__c &gt; Opt_out_Request_Date__c, ISBLANK(Opt_in_Confirmation_Date__c))  ) ) )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Email Opt Out Field</fullName>
+        <actions>
+            <name>Update_Account_Email_Opt_Out_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Opt_in_Request_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>When creating new account and Opt-in Request Date has value, Populate Email Opt Out Field</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Email Opt Out Field - False</fullName>
+        <actions>
+            <name>Update_Account_Email_Opt_Out_False</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Populate Person Account Email Opt Out field - False</description>
+        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ISPICKVAL(Opt_in_Status__c ,&apos;Confirmed&apos;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Email Opt Out field - True</fullName>
+        <actions>
+            <name>Update_Account_Email_Opt_Out_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Populate Person Account Email Opt Out field - True</description>
+        <formula>AND(OR(ISPICKVAL(Opt_in_Status__c, &apos;Requested&apos;),  ISPICKVAL(Opt_in_Status__c, &apos;Opt-out&apos;)),
+$Setup.WorkflowSettings__c.PersonAccountWorkflow__c)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Email Alerts</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Person Account For Lor To IPASS</fullName>
+        <actions>
+            <name>SendOutboundNodtfication_To_IPAAS</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will send outbound notification to Ipass dell boomi. As part of the notification it will send Id and External Id of the consumer record.</description>
+        <formula>AND(
+$Setup.WorkflowSettings__c.PersonAccountWorkflow__c,
+ISPICKVAL(Brand__c, &quot;L&apos;Or&quot;),
+ISCHANGED(Consent_Status__c),
+OR(
+ISPICKVAL(Country__c, &quot;FR&quot;),
+ISPICKVAL(Country__c, &quot;ES&quot;),
+ISPICKVAL(Country__c, &quot;AT&quot;),
+ISPICKVAL(Country__c, &quot;BE&quot;),
+ISPICKVAL(Country__c, &quot;IT&quot;),
+ISPICKVAL(Country__c, &quot;UK&quot;),
+ISPICKVAL(Country__c, &quot;CH&quot;),
+ISPICKVAL(Country__c, &quot;IE&quot;)),
+NOT($User.Id = &apos;0050Y000004qDAG&apos;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Person Account For MdC To Boomi</fullName>
+        <actions>
+            <name>SendOutboundNodtfication_To_IPAAS</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will send outbound notification to Ipass dell boomi. As part of the notification it will send Id and External Id of the consumer record. This is separate from the LOr message so that it can be turned on/off independently.</description>
+        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c , ISPICKVAL(Brand__c,&quot;Maison du Café&quot;), ISPICKVAL(Country__c,&quot;FR&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Person Account to SAP PI</fullName>
+        <actions>
+            <name>Update_Account_Opt_In_Status_Synced</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Send_to_SAP_PI</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c ,OR(ISCHANGED(Type),ISCHANGED(Opt_in_Status__c),ISCHANGED(Consent_Status__c)),
+ISPICKVAL(Brand__c, &apos;Tassimo&apos;)
+ )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Tassimo to Magento</fullName>
+        <actions>
+            <name>Update_Account_Opt_In_Status_Synced</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Send_Tassimo_to_Magento</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <description>This Workflow Rule sends an outbound message containing fields to Magento.</description>
+        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c ,OR(ISCHANGED(Type),ISCHANGED(Opt_in_Status__c),ISCHANGED(Consent_Status__c)), 
+ISPICKVAL(Brand__c, &apos;Tassimo&apos;) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Account External Id</fullName>
+        <actions>
+            <name>Update_Account_External_Id</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This Workflow Rule updates the Account External Id when the Account Registration Status is Deactivated.</description>
+        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ISCHANGED(Account_Registration_Status__c),ISPICKVAL(Account_Registration_Status__c, &apos;Deactivated&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateExernalID</fullName>
+        <actions>
+            <name>UpdateExernalID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow rule will update external Id at account level for Loyalty Accounts</description>
+        <formula>!ISNEW() &amp;&amp; ISCHANGED(PersonEmail) &amp;&amp; ISPICKVAL(Type__c , &quot;Loyalty&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

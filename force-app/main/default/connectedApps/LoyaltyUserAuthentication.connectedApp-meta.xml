@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>pdc.jde.ao.salesforce@accenture.com</contactEmail>
+    <description>This app is Used by DE Episerver to authenticate Consumer credentials</description>
+    <label>LoyaltyUserAuthentication</label>
+    <oauthConfig>
+        <callbackUrl>https://jdesf.azurewebsites.net/en/afterconnection/
+https://douwe-egberts-prod.jdecoffee.net/_sfhandlelogin
+https://www.de.nl/_sfhandlelogin
+https://de.nl/_sfhandlelogin
+https://denl-acc.jdecoffee.net/_sfhandlelogin
+https://www.blokker.nl/payment/douwe-egberts
+https://blokker.nl/payment/douwe-egberts
+https://moncompte.maisonducafe.com/_sfhandlelogin
+https://www.moncompte.maisonducafe.com/_sfhandlelogin
+https://maisonducafecom-prod.jdecoffee.net/_sfhandlelogin
+https://www.maisonducafe.com/_sfhandlelogin
+https://new.blokker.nl/douweegberts/authorize
+https://www.blokker.nl/douweegberts/authorize
+https://blokker.nl/douweegberts/authorize
+https://www.spaarprogramma.de.nl/_sfhandlelogin
+https://www.spaarprogramma.de.nl</callbackUrl>
+        <consumerKey>3MVG9HxRZv05HarRwV.u4PoISlUZxWNRRJhYqS0PhXZ6zu9vNrCmqoHdXyH.uPLxEASXq2Z3wcDQMhHtZGvtd</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>specific_lifetime:1:DAYS</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>JDE DTC Support Agent</profileName>
+    <profileName>System Administrator</profileName>
+    <profileName>DE External Identity User</profileName>
+    <profileName>SAP PO Integration</profileName>
+    <profileName>Ownbackup Integration</profileName>
+    <profileName>MdC External Identity User</profileName>
+    <profileName>Boomi Integration</profileName>
+</ConnectedApp>

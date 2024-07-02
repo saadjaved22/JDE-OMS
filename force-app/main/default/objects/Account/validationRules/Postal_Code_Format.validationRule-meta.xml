@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Postal_Code_Format</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(NOT(ISBLANK(BillingPostalCode)) &amp;&amp; ISCHANGED(BillingPostalCode), 
+ IF(($Profile.Name = "JDE DTC Support Agent") &amp;&amp; 
+   ISPICKVAL(Brand__c , "Douwe Egberts") ,
+    IF(REGEX( BillingPostalCode , "[a-zA-Z0-9]{4}.+[a-zA-Z0-9]{2}"), false, 
+    true) , 
+ false), 
+false)</errorConditionFormula>
+    <errorMessage>Invalid Postal Code Format. Please follow this format: XXXX XX</errorMessage>
+</ValidationRule>

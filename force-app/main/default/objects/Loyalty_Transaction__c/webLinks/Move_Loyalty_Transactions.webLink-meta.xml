@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_Loyalty_Transactions</fullName>
+    <availability>online</availability>
+    <description>Move Loyalty Transactions to an other Account</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Move Loyalty Transactions</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/flow/JDE_Move_Loyalty_Transactions_to_other_Consumer?AccountId={!Account.Id}&amp;ExternalIdFromAccount={!Account.External_Id__c}&amp;retURL={!Account.Id}</url>
+</WebLink>

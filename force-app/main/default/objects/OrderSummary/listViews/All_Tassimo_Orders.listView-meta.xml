@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Tassimo_Orders</fullName>
+    <columns>Name</columns>
+    <columns>Account</columns>
+    <columns>GrandTotalAmount</columns>
+    <columns>OrderedDate</columns>
+    <columns>Status</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SalesChannel</field>
+        <operation>contains</operation>
+        <value>Tassimo</value>
+    </filters>
+    <label>All Tassimo Orders</label>
+</ListView>

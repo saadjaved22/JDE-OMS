@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Transaction</fullName>
+    <availability>online</availability>
+    <description>It is a custom button used to populate loyalty and total loyalty points</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Transaction</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/39.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/39.0/apex.js&quot;)} 
+
+
+var consumerRecord = sforce.connection.query(&quot;SELECT Loyalty_Total_Points__c from Account where id =&apos;{!Account.Id}&apos; &quot;); 
+
+var records = consumerRecord.getArray(&quot;records&quot;); 
+
+var loyaltyRecord = sforce.connection.query(&quot;SELECT Name from Loyalty__c where Loyalty_Consumer__c =&apos;{!Account.Id}&apos; &quot;); 
+
+var loyaltyQuery = loyaltyRecord.getArray(&quot;records&quot;); 
+
+var totalLoyaltyPoints = records[0].Loyalty_Total_Points__c.valueOf();
+
+if (typeof loyaltyQuery !== &apos;undefined&apos; &amp;&amp; loyaltyQuery.length &gt; 0){
+
+window.location.href= &quot;https://jdec.my.salesforce.com/a0V/e?CF00N0Y00000SBtgw={!Account.Name}&amp;CF00N0Y00000SBtgy=&quot;+loyaltyQuery[0].Name+&quot;&amp;CF00N0Y00000SBtgw_lkid={!Account.Id}&amp;00N1l000000FpcR=&quot;+Math.floor( totalLoyaltyPoints ) +&quot;&amp;saveURL=%2F{!Account.Id}&amp;retURL=%2F{!Account.Id}&quot;
+}else{
+alert(&quot;Not a valid Loyalty Consumer records. Please contact your system administrator&quot;);
+}</url>
+</WebLink>

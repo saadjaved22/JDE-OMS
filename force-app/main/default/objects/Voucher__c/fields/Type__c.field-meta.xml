@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Free Gift</fullName>
+                <default>false</default>
+                <label>Free Gift</label>
+            </value>
+            <value>
+                <fullName>Hidden Gift</fullName>
+                <default>false</default>
+                <label>Hidden Gift</label>
+            </value>
+            <value>
+                <fullName>Item Percentage Off</fullName>
+                <default>false</default>
+                <label>Item Percentage Off</label>
+            </value>
+            <value>
+                <fullName>Item Target Price</fullName>
+                <default>false</default>
+                <label>Item Target Price</label>
+            </value>
+            <value>
+                <fullName>Item Value Off</fullName>
+                <default>false</default>
+                <label>Item Value Off</label>
+            </value>
+            <value>
+                <fullName>ItemPercentageOffDiscount</fullName>
+                <default>false</default>
+                <label>ItemPercentageOffDiscount</label>
+            </value>
+            <value>
+                <fullName>Order Percentage Off</fullName>
+                <default>false</default>
+                <label>Order Percentage Off</label>
+            </value>
+            <value>
+                <fullName>Order Value Off</fullName>
+                <default>false</default>
+                <label>Order Value Off</label>
+            </value>
+            <value>
+                <fullName>OrderValueOffDiscount</fullName>
+                <default>false</default>
+                <label>OrderValueOffDiscount</label>
+            </value>
+            <value>
+                <fullName>Shipping Percentage Off</fullName>
+                <default>false</default>
+                <label>Shipping Percentage Off</label>
+            </value>
+            <value>
+                <fullName>Shipping Target Price</fullName>
+                <default>false</default>
+                <label>Shipping Target Price</label>
+            </value>
+            <value>
+                <fullName>Shipping Value Off</fullName>
+                <default>false</default>
+                <label>Shipping Value Off</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<design:component label="Custom Login Form">
+    <design:attribute name="startUrl"/>
+    <design:attribute name="nonLocalStartUrl" />
+    <design:attribute name="usernameLabel" default="Email"/>
+    <design:attribute name="passwordLabel" default="Password"/>
+    <design:attribute name="loginButtonLabel" default="Log in"/>
+    <design:attribute name="forgotPasswordLabel" default="Forgot your password?"/>
+    <design:attribute name="forgotPasswordUrl"/>
+    <design:attribute name="selfRegisterLabel" default="Not a member?"/>
+    <design:attribute name="selfRegisterUrl"/>
+    <design:attribute name="selfRegistrationEnabled" default="true" />
+    <design:attribute name="showGoBackLink" default="false" />
+    <design:attribute name="goBackLinkLabel" default="Click here to return to the previous page" />
+    <design:attribute name="reCaptchaPublicSiteURL" default="" />
+    <design:attribute name="reCaptchaSiteKey" default="" />
+    <design:attribute name="reCaptchaSiteSecret" default="" />
+    <design:attribute name="iframeTargetOrigin" default="" />
+</design:component>

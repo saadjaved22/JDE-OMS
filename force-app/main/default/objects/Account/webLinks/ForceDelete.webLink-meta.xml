@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ForceDelete</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Force Delete</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/39.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/39.0/apex.js")}
+
+var status;
+console.log({!Account.Loyalty_Total_Points__c});
+if({!Account.Loyalty_Total_Points__c} &gt; 0){
+
+status = "{!$Setup.forceDeleteConsumerSetting__c.Cannot_delete_0_points__c}";
+alert(status);
+
+}else if({!$Setup.forceDeleteConsumerSetting__c.Access_to_force_deletion_process__c}){
+    if (confirm("{!$Setup.forceDeleteConsumerSetting__c.Confirmation_text__c}")) {
+        status = sforce.apex.execute("ForceDeleteConsumer","forceDeleteAction",
+                             {accountId:'{!Account.Id}'});
+        alert(status);
+        window.location.href = "/001/o";
+    } 
+
+}else{
+
+status = "{!$Setup.forceDeleteConsumerSetting__c.Insufficient_access_error__c}";
+alert(status);
+
+}</url>
+</WebLink>

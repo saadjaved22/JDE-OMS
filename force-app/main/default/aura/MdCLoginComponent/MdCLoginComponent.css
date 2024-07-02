@@ -1,0 +1,130 @@
+.THIS  .login-icon {
+    color:#ccc;font-size:22px;
+}
+
+.THIS .login-form {
+    background-color:#fff;
+}
+
+.THIS .debug {
+    color:#fff;
+}
+
+.THIS  button.sfdc_button {
+    width: 100%;
+    height: 42px;
+    margin: 0 0 15px 0;
+    color: #433e38;
+    background: #d3bba1;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    font-size: 18px;
+    box-shadow: none;
+    font-family: 'Van Condensed', sans-serif;
+    font-weight: 300;
+    line-height: 42px;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: all 0.2s ease-out;
+}
+
+.THIS .uiButton--default .label {
+    color: #433e38;
+    text-shadow:none;
+}
+
+.THIS .uiButton--default .label:hover {
+    color: #d3bba1 !important;
+    text-shadow:none;
+}
+
+.THIS  button.sfdc_button:hover {
+    color:#d3bba1 !important;
+    background:#433e38;
+    cursor:pointer;
+}
+
+.THIS label {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.THIS #sfdc_username_container {
+    margin-top: 15px;
+}
+
+.THIS input {
+    margin: 4px 0 15px 0;
+    padding: 0 10px;
+    border: 1px solid #000;
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    background-color:#d2bba0;
+    color:#000;
+}
+
+.THIS input::placeholder {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.THIS  a.forgotLink {
+    color: #000;
+    font-family: 'Van Condensed',sans-serif;
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    margin: -5px 0 10px 0;
+}
+.THIS  a.forgotLink:hover {
+    color:#e8bc5d;
+    text-decoration: none;
+}
+
+.THIS #sfdc_forgot a.registrationLink {
+    color: #000;
+    font-family: 'Van Condensed',sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.THIS #sfdc_forgot a.registrationLink:hover {
+    color: #e8bc5d;
+}
+
+.THIS label.uiLabel-hidden {
+    display:none;
+}
+
+.THIS .text-center {
+    text-align:center;
+    display:block;
+    width:100%;
+}
+
+.THIS .error {
+    color: #C10318;
+    border: 1px solid #C10318;
+    border-radius: 3px;
+    font-family: 'Van Condensed',sans-serif;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+    line-height: 20px;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}

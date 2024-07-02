@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Registration_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Account Registration Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Deactivated</fullName>
+                <default>false</default>
+                <label>Deactivated</label>
+            </value>
+            <value>
+                <fullName>a</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>a</label>
+            </value>
+            <value>
+                <fullName>b</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>b</label>
+            </value>
+            <value>
+                <fullName>c</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

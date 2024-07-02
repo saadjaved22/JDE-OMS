@@ -1,0 +1,27 @@
+<design:component label="MdC Self Registration">
+    <design:attribute name="startUrl"/>
+    <design:attribute name="regConfirmUrl" default="./CheckPasswordResetEmail"/>
+    <design:attribute name="firstnameLabel" default="First Name"/>
+    <design:attribute name="lastnameLabel" default="Last Name"/>
+    <design:attribute name="emailLabel" default="Email"/>
+    <design:attribute name="passwordLabel" default="Create Password"/>
+    <design:attribute name="confirmPasswordLabel" default="Confirm Password"/>
+    <design:attribute name="submitButtonLabel" default="Sign Up"/>
+    <design:attribute name="returnLabel" default="Return to login"/>
+    <design:attribute name="includePasswordField" default="false"/>
+    <design:attribute name="genderLabel" default="Gender" />
+    <design:attribute name="birthdateLabel" default="Birthdate" />
+    <design:attribute name="postcodeLabel" default="Postcode" />
+    <design:attribute name="housenumberLabel" default="House Number" />
+    <design:attribute name="streetLabel" default="Street" />
+    <design:attribute name="cityLabel" default="City" />
+    <design:attribute name="mobilenumberLabel" default="Mobile Number" />
+    <design:attribute name="applianceOwnershipLabel" default="Appliance Ownership" />
+    <design:attribute name="ageConsentLabel" default="I agree that I am over 16 years of age" />
+    <design:attribute name="consentTextCheckbox" default="Yes, I would like to be kept informed of future offers, promotions, events, new products and other news about Maison du Cafe" />
+    <design:attribute name="consentText2" default="By registering you agree with our" />
+    <design:attribute name="privacyPolicyLabel" default="privacy policy" />
+    <design:attribute name="consentText3" default="You hereby give us permission to process your data in line with European data protection legislation" />
+    <design:attribute name="privacyPolicyUrl" default="http://www.maisonducafe.com/vie-privee-et-cookies/" />
+    <design:attribute name="extraFieldsFieldSet"/>
+</design:component>

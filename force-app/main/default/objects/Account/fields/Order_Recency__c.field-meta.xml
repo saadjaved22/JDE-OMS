@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Recency__c</fullName>
+    <externalId>false</externalId>
+    <label>Order Recency</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FrequentBuyers</fullName>
+                <default>false</default>
+                <label>FrequentBuyers</label>
+            </value>
+            <value>
+                <fullName>RecentBuyers</fullName>
+                <default>false</default>
+                <label>RecentBuyers</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Churn</fullName>
+                <default>false</default>
+                <label>Churn</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>NonBuyersNew</fullName>
+                <default>false</default>
+                <label>NonBuyersNew</label>
+            </value>
+            <value>
+                <fullName>NonBuyers</fullName>
+                <default>false</default>
+                <label>NonBuyers</label>
+            </value>
+            <value>
+                <fullName>NonBuyersOld</fullName>
+                <default>false</default>
+                <label>NonBuyersOld</label>
+            </value>
+            <value>
+                <fullName>NonBuyersInactive</fullName>
+                <default>false</default>
+                <label>NonBuyersInactive</label>
+            </value>
+            <value>
+                <fullName>NonBuyerNewlyRegistered</fullName>
+                <default>false</default>
+                <label>NonBuyerNewlyRegistered</label>
+            </value>
+            <value>
+                <fullName>Frequent buyers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Frequent buyers</label>
+            </value>
+            <value>
+                <fullName>In-active</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In-active</label>
+            </value>
+            <value>
+                <fullName>Non Buyers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non Buyers</label>
+            </value>
+            <value>
+                <fullName>Recent buyers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Recent buyers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

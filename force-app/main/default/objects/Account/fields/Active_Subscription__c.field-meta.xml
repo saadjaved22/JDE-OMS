@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Subscription__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If there is an active subscription this flag will be set to true, if there is no Active subscription, this flag will be set to False.</description>
+    <externalId>false</externalId>
+    <label>Active Subscription</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

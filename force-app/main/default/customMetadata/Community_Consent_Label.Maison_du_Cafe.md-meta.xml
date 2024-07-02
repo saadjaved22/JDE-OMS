@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Maison du Cafe</label>
+    <protected>false</protected>
+    <values>
+        <field>Consent_Text_1__c</field>
+        <value xsi:type="xsd:string">Oui, j&apos;aimerais être informé des astuces et conseils café, des promotions, des événements, des nouveaux produits et autres nouvelles de la part de Maison du Café.</value>
+    </values>
+    <values>
+        <field>Consent_Text_2__c</field>
+        <value xsi:type="xsd:string">En m’inscrivant, j&apos;accepte les</value>
+    </values>
+    <values>
+        <field>Consent_Text_3__c</field>
+        <value xsi:type="xsd:string">ainsi que mes données personnelles soient traitées, notamment collectées, stockées, utilisées et transférées (transfert à l&apos;étranger y compris).</value>
+    </values>
+    <values>
+        <field>Consent_Text_Version__c</field>
+        <value xsi:type="xsd:string">1</value>
+    </values>
+    <values>
+        <field>Country__c</field>
+        <value xsi:type="xsd:string">FR</value>
+    </values>
+    <values>
+        <field>Privacy_Policy_Label__c</field>
+        <value xsi:type="xsd:string">Conditions Générales d’Utilisation</value>
+    </values>
+    <values>
+        <field>Privacy_Policy_URL__c</field>
+        <value xsi:type="xsd:string">http://www.maisonducafe.com/vie-privee-et-cookies/</value>
+    </values>
+    <values>
+        <field>Privacy_Policy_Version__c</field>
+        <value xsi:type="xsd:string">1</value>
+    </values>
+</CustomMetadata>

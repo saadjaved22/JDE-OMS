@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Fulfilment Order Create</label>
+    <protected>false</protected>
+    <values>
+        <field>Status__c</field>
+        <value xsi:type="xsd:string">Success</value>
+    </values>
+    <values>
+        <field>businessObject__c</field>
+        <value xsi:type="xsd:string">Fulfilment Order</value>
+    </values>
+    <values>
+        <field>businessProcess__c</field>
+        <value xsi:type="xsd:string">Routing</value>
+    </values>
+    <values>
+        <field>direction__c</field>
+        <value xsi:type="xsd:string">OUT</value>
+    </values>
+    <values>
+        <field>documentType__c</field>
+        <value xsi:type="xsd:string">sObject</value>
+    </values>
+    <values>
+        <field>entityType__c</field>
+        <value xsi:type="xsd:string">FulfillmentOrderId</value>
+    </values>
+    <values>
+        <field>final__c</field>
+        <value xsi:type="xsd:string">FALSE</value>
+    </values>
+    <values>
+        <field>interfaceName__c</field>
+        <value xsi:type="xsd:string">Flow:Routing Step 3</value>
+    </values>
+    <values>
+        <field>stage__c</field>
+        <value xsi:type="xsd:string">Fulfilment Order created</value>
+    </values>
+</CustomMetadata>

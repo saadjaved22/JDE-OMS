@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM_Migration__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For AU Migrated Accounts</description>
+    <externalId>false</externalId>
+    <label>CRM Migration</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

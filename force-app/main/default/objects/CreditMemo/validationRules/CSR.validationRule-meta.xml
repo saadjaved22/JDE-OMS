@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSR</fullName>
+    <active>true</active>
+    <description>Credit Memo more than 150 Euro can not be created</description>
+    <errorConditionFormula>AND( TotalChargeAmount &gt; 150 , $Permission.CSR )</errorConditionFormula>
+    <errorMessage>Credit Memo more than 150 Euro can not be created</errorMessage>
+</ValidationRule>

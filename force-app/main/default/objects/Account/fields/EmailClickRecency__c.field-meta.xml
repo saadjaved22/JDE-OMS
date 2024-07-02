@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmailClickRecency__c</fullName>
+    <externalId>false</externalId>
+    <label>E-mailClickRecency</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RecentClicker</fullName>
+                <default>false</default>
+                <label>RecentClicker</label>
+            </value>
+            <value>
+                <fullName>FrequentClicker</fullName>
+                <default>false</default>
+                <label>FrequentClicker</label>
+            </value>
+            <value>
+                <fullName>ActiveClicker</fullName>
+                <default>false</default>
+                <label>Active Clicker</label>
+            </value>
+            <value>
+                <fullName>Clicker</fullName>
+                <default>false</default>
+                <label>Clicker</label>
+            </value>
+            <value>
+                <fullName>PassiveClicker</fullName>
+                <default>false</default>
+                <label>PassiveClicker</label>
+            </value>
+            <value>
+                <fullName>NonClicker</fullName>
+                <default>false</default>
+                <label>NonClicker</label>
+            </value>
+            <value>
+                <fullName>InactiveClicker</fullName>
+                <default>false</default>
+                <label>InactiveClicker</label>
+            </value>
+            <value>
+                <fullName>Freqent  clicker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Freqent  clicker</label>
+            </value>
+            <value>
+                <fullName>Inactive clicker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Inactive clicker</label>
+            </value>
+            <value>
+                <fullName>Non clicker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non clicker</label>
+            </value>
+            <value>
+                <fullName>Passive clicker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Passive clicker</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

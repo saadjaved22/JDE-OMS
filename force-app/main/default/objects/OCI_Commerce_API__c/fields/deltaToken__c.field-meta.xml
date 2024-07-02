@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>deltaToken__c</fullName>
+    <description>The token returned when fetching availability. By passing this token, a delta since the previous fetch is returned.
+If empty, the full availability is returned.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The token returned when fetching availability. By passing this token, a delta since the previous fetch is returned.
+If empty, the full availability is returned.</inlineHelpText>
+    <label>deltaToken</label>
+    <length>50000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

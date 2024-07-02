@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscriptions_Cancellation_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Subscriptions Cancellation Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Automatically cancelled.</fullName>
+                <default>false</default>
+                <label>Automatically cancelled.</label>
+            </value>
+            <value>
+                <fullName>Manually cancelled by customer.</fullName>
+                <default>false</default>
+                <label>Manually cancelled by customer.</label>
+            </value>
+            <value>
+                <fullName>Manually cancelled by admin.</fullName>
+                <default>false</default>
+                <label>Manually cancelled by admin.</label>
+            </value>
+            <value>
+                <fullName>I didn’t have enough space to store all the packs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>I didn’t have enough space to store all the packs</label>
+            </value>
+            <value>
+                <fullName>I don’t drink TASSIMO anymore</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>I don’t drink TASSIMO anymore</label>
+            </value>
+            <value>
+                <fullName>I had issues with my deliveries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>I had issues with my deliveries</label>
+            </value>
+            <value>
+                <fullName>It was too much coffee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>It was too much coffee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

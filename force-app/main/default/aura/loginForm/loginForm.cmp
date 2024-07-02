@@ -1,0 +1,126 @@
+<!-- add  to surface the component in community builder -->
+<aura:component controller="LightningLoginFormController" implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable">
+    <!-- <ltng:require scripts="{! $Resource.ReCaptchaScript }" afterScriptsLoaded="{! c.afterScriptsLoaded }"/> -->
+
+    <aura:attribute name="showError" type="Boolean" required="true" description="" default="false" access="private"/>
+    <aura:attribute name="errorMessage" type="String" required="false" description="" access="private"/>
+    <aura:attribute name="startUrl" type="String" required="false" description="The url you go to after a successful login - local only" />
+    <aura:attribute name="nonLocalStartUrl" type="String" required="false" description="The url you go to after login - non local" />
+    <aura:attribute name="usernameLabel" type="String" required="false" default="Username"/>
+    <aura:attribute name="passwordLabel" type="String" required="false" default="Password"/>
+    <aura:attribute name="loginButtonLabel" type="String" required="false" default="Log in"/>
+    <aura:attribute name="expid" type="String" required="false" description="The branding experience ID" />
+    <aura:attribute name="showGoBackLink" type="Boolean" required="false" description="Controls whether the link to return to previous page is shown." />
+    <aura:attribute name="goBackLinkLabel" type="String" required="false" description="Text for the go back link" />
+    
+    <aura:attribute name="loginUrl" type="String" required="false" description="Stores the url when the user reaches this page." />
+    
+    <aura:attribute name="forgotPasswordLabel" type="String" required="false" default="Forgot your password?"/>
+    <aura:attribute name="selfRegisterLabel" type="String" required="false" default="Not a member?"/>
+    <aura:attribute name="forgotPasswordUrl" type="String" required="false" default="/ForgotPassword"/>
+    <aura:attribute name="selfRegisterUrl" type="String" required="false" default="/SelfRegister"/>
+    <aura:attribute name="selfRegistrationEnabled" type="Boolean" required="false" default="true" />
+    <aura:attribute name="selfRegistrationEnabledText" type="String" required="false" default="true" />
+    <aura:attribute name="submitButtonLoading" type="Boolean" required="false" default="false"/>
+    
+    <aura:attribute name="isUsernamePasswordEnabled" type="Boolean" access="private"/>
+    <aura:attribute name="isSelfRegistrationEnabled" type="Boolean" access="private"/>
+    <aura:attribute name="communityForgotPasswordUrl" type="String" access="private"/>
+    <aura:attribute name="communitySelfRegisterUrl" type="String" access="private"/>
+    <aura:attribute name="showClickHere" type="Boolean" default="false" />
+    
+
+    <!-- Recaptcha Attributes -->
+    <aura:attribute name="reCaptchaPublicSiteURL" type="String" default="" />
+    <aura:attribute name="reCaptchaPublicSiteURLNonce" type="String" default="" />
+    <aura:attribute name="reCaptchaSiteKey" type="String" />
+    <aura:attribute name="reCaptchaSiteSecret" type="String" />
+    <aura:attribute name="reCaptchaLoginDisabled" type="Boolean" default="true" />
+    <aura:attribute name="reCaptchaToken" type="String" />
+    <aura:attribute name="iframeTargetOrigin" type="String" />
+    
+    <aura:registerevent name="sitePropagatedStartUrl" type="c:setStartUrl"/>
+    <aura:handler name="init" value="{!this}" action="{! c.initialize }"/>
+    <!-- <aura:handler name="render" value="{!this}" action="{!c.onRender}" /> -->
+    <aura:dependency resource="c:setStartUrl" type="EVENT"/>
+
+    <aura:dependency resource="siteforce:registerQueryEventMap" type="EVENT"/>
+    <aura:handler event="c:setStartUrl" action="{!c.setStartUrl}"/>
+    <aura:handler event="c:setExpId" action="{!c.setExpId}"/>    
+    <aura:dependency resource="c:setExpId" type="EVENT"/>  
+    
+    <div>
+        <aura:renderIf isTrue="{!v.isUsernamePasswordEnabled}">
+            <aura:renderIf isTrue="{!v.showError}">
+                <div class="error">
+                    <ui:outputRichText value="{!v.errorMessage}"/>
+                    <aura:renderIf isTrue="{!v.showClickHere}">
+                    	<b><a class="helpLink" href="./ForgotPassword" Style = "color: #C10318;" >Klik dan hier > </a></b>
+                    </aura:renderIf>
+                </div>
+            </aura:renderIf>
+
+            <!-- <pre>{! v.reCaptchaToken }</pre> -->
+
+            <div id="sfdc_username_container" class="sfdc">
+                <label for="username">E-mailadres</label>
+                <ui:inputEmail value="" aura:id="username" placeholder="{!v.usernameLabel}" keyup="{!c.onKeyUp}" class="input sfdc_usernameinput sfdc"/>
+                <!--<ui:inputText />-->
+            </div>
+    
+           <div id="sfdc_password_container" class="sfdc">
+                <label for="password">Wachtwoord<br/></label>
+                <ui:inputSecret value="" aura:id="password" placeholder="{!v.passwordLabel}" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc"/>
+            </div>
+            
+           <aura:renderIf isTrue="{!v.showGoBackLink}">
+            	<div class="goBackLink">
+                    <a href="" class="forgotLink" onclick="{!c.returnToPrevious}">{!v.goBackLinkLabel}</a>
+                </div>
+           </aura:renderIf>
+            
+            <div id="sfdc_forgot" class="sfdc">
+                <span align="center">
+                <a class="forgotLink" href="{!if(v.communityForgotPasswordUrl == null, v.forgotPasswordUrl, v.communityForgotPasswordUrl)}">{!v.forgotPasswordLabel}</a>
+   
+                </span><br/>
+               	<a class="helpLink" href="https://www.de.nl/contact-spaarprogramma/"  style="color:black" >Hulp nodig met inloggen? Klik dan hier</a>
+              
+                <aura:renderIf isTrue="{!v.selfRegistrationEnabled == true}"> 
+                <span><a class="registrationLink " href="{!if(v.communitySelfRegisterUrl == null, v.selfRegisterUrl, v.communitySelfRegisterUrl)}">{!v.selfRegisterLabel}</a></span>
+                    
+                <!-- Error message shown here: -->
+                <!-- <a style="color: #A80013" >LET OP: Vanwege een technisch probleem, is het op dit moment niet mogelijk om een nieuw account aan te maken of een nieuw wachtwoord aan te vragen. Excuses voor het ongemak. Wij verwachten dat het probleem na het weekend is opgelost.</a>-->				
+                    
+                </aura:renderIf>    
+            </div>
+
+
+            <aura:renderIf isTrue="{! v.reCaptchaPublicSiteURL != '' }">
+                <div id="recaptchaContainer">
+                    <iframe id="recaptchaIframe" src="{! v.reCaptchaPublicSiteURLNonce + '&amp;site_key=' + v.reCaptchaSiteKey + '&amp;origin=' + v.iframeTargetOrigin }" height="500px" scrolling="no" frameborder="0" width="100%" allowtransparency="true"></iframe>
+                </div>
+                <br />
+            </aura:renderIf>
+
+            <div id="sfdc_forgot" class="sfdc">
+                <aura:renderIf isTrue="{!v.submitButtonLoading}">
+                    <div class="sfdc_button_loading">
+                        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    </div>
+                    <aura:set attribute="else">
+                        <ui:button aura:id="submitButton" disabled="{! v.reCaptchaLoginDisabled }" press="{!c.handleLogin}" class="sfdc_button" label="{!v.loginButtonLabel}" />
+                    </aura:set>
+                </aura:renderIf>                  
+                                    
+            </div>
+    
+            <aura:renderIf isTrue="{!v.showGoBackLink}">
+            	<div class="goBackLink">
+                    <a href="" class="forgotLink" onclick="{!c.returnToPrevious}">{!v.goBackLinkLabel}</a>
+                </div>
+            </aura:renderIf>
+
+        </aura:renderIf>
+    </div>
+</aura:component>

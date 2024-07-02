@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Return_Order_valid_for_return_processing</name>
+        <label>Return Order valid for return processing?</label>
+        <locationX>990</locationX>
+        <locationY>203</locationY>
+        <defaultConnector>
+            <targetReference>Return_Order_Finalisation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>no</defaultConnectorLabel>
+        <rules>
+            <name>yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Return_Order</targetReference>
+            </connector>
+            <label>yes</label>
+        </rules>
+    </decisions>
+    <description>Return order actions moved to a subflow. Typo fixed</description>
+    <environments>Default</environments>
+    <interviewLabel>Return_Order_to_Magento_JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Process Return Order</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Return_Order_Finalisation</name>
+        <label>Return Order Finalisation</label>
+        <locationX>805</locationX>
+        <locationY>201</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>text</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <stringValue>This Return Order is already processed and closed.</stringValue>
+            </defaultValue>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Ok</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Send_Return_Order</name>
+        <label>Send Return Order</label>
+        <locationX>1192</locationX>
+        <locationY>203</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Handle_Post_Actions</targetReference>
+        </connector>
+        <fields>
+            <name>ReturnOrderFlowText</name>
+            <fieldText>&lt;p&gt;Are you sure you want to finalise Return Order&lt;strong&gt; {!recordId.ReturnOrderNumber}&lt;/strong&gt;?&lt;/p&gt;&lt;p&gt;Please note that if you don&apos;t specify any quantity received information, we will assume that the expected quantity was received.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;After clicking Finalise, it will close this Return Order and export it to the LSP and Magento.&lt;/p&gt;&lt;p&gt;You cannot edit it anymore afterwards.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Send Return Order</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>872</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Return_Order_valid_for_return_processing</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Handle_Post_Actions</name>
+        <label>Handle Post Actions</label>
+        <locationX>1192</locationX>
+        <locationY>377</locationY>
+        <flowName>Return_Order_Post_Actions_JDE</flowName>
+        <inputAssignments>
+            <name>returnOrder</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ReturnOrder</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Query_Limit__c</fullName>
+    <description>This is a text value added to the end of the batch query to avoid CPU timeout when we have huge amount of data</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a text value added to the end of the batch query to avoid CPU timeout when we have huge amount of data</inlineHelpText>
+    <label>Order Query Limit</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

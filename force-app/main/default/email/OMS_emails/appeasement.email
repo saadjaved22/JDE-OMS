@@ -1,0 +1,4 @@
+Dear {!User.Username},
+
+Please approve discount for  {!OrderSummary.TotalProductAdjDistAmount}
+on {!OrderSummary.OrderNumber}

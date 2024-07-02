@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Payment Method</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Master Card</fullName>
+                <default>false</default>
+                <label>Master Card</label>
+            </value>
+            <value>
+                <fullName>PayPal</fullName>
+                <default>false</default>
+                <label>PayPal</label>
+            </value>
+            <value>
+                <fullName>Visa Card</fullName>
+                <default>false</default>
+                <label>Visa Card</label>
+            </value>
+            <value>
+                <fullName>iDEAL</fullName>
+                <default>false</default>
+                <label>iDEAL</label>
+            </value>
+            <value>
+                <fullName>GiroPay</fullName>
+                <default>false</default>
+                <label>GiroPay</label>
+            </value>
+            <value>
+                <fullName>Debit Card Maestro</fullName>
+                <default>false</default>
+                <label>Debit Card Maestro</label>
+            </value>
+            <value>
+                <fullName>Carte Bleue</fullName>
+                <default>false</default>
+                <label>Carte Bleue</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Sofort</fullName>
+                <default>false</default>
+                <label>Sofort</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

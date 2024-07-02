@@ -1,0 +1,392 @@
+.THIS  #error {
+    text-align: center;
+    color:#FF0000;
+}
+
+.THIS  .login-icon {
+    color:#ccc;font-size:22px;
+}
+
+.THIS #sfdc_username_container {
+    width: 37.5%;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.THIS #sfdc_nickname_container {
+    width: 57.5%;
+    display: inline-block;
+}
+
+.THIS #sfdc_birthdate_container {
+    width: 37.5%;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.THIS .sfdc_Newbirthdate_container {
+    width: 30%;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.THIS .sfdc_Newbirthdate_containerDay {
+    width: 23%;
+    display: inline-block;
+    margin-right: 6%;
+}
+
+.THIS .sfdc_Newbirthdate_containerMonth {
+    width: 37%;
+    display: inline-block;
+    margin-right: 6%;
+}
+
+.THIS .sfdc_Newbirthdate_containerYear {
+    width: 25%;
+    display: inline-block;
+}
+
+.THIS .sfdc_Newbirthdate_containerAll {
+    width: 40%;
+    display: inline-block;
+    margin-right: 3%;
+}
+
+.THIS .sfdc_Newbirthdate_containerAll select {
+    margin: 4px 0 15px 0;
+    padding: 0 10px;
+    border: 1px solid #9f9f9f;
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    position: relative;
+    border-radius:0 !important;
+}
+
+.THIS #sfdc_phone_container {
+    width: 57.5%;
+    display: inline-block;
+}
+
+.THIS #sfdc_postcode_container {
+    width: 57%;
+    display: inline-block;
+}
+
+.THIS #sfdc_cityname_container {
+    width: 57.5%;
+    display: inline-block;
+}
+
+.THIS #sfdc_housenumber_container {
+    width: 37.5%;
+    display: inline-block;
+}
+
+.THIS #sfdc_streetname_container {
+    width: 57.5%;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.THIS .error {
+    color: #C10318;
+    border: 1px solid #C10318;
+    border-radius: 3px;
+    font-family: 'Van Condensed',sans-serif;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+    line-height: 20px;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.THIS .checkbox-error {
+    outline: 1px solid #C10318;
+}
+
+.THIS  button.sfdc_button {
+    width: 160px;
+    height: 42px;
+    margin: 25px 0 15px auto;
+    float: right;
+    color: #433e38;
+    background: #d3bba1;
+    display: block;
+    text-align: center;
+    box-shadow: none;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    font-size: 18px;
+    font-family: 'Van Condensed', sans-serif;
+    font-weight: 300;
+    line-height: 42px;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: all 0.2s ease-out;
+}
+
+.THIS  button:hover {
+    background-color:#433e38;
+    color:#d3bba1;
+    cursor:pointer;
+}
+
+.THIS span.disclaimer {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.THIS span.disclaimer a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.THIS label {
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+}
+
+.THIS #sfdc_gender_container {
+    margin-top: 20px;
+}
+
+.THIS #sfdc_username_container {
+    margin-top: 5px;
+}
+
+.THIS input {
+    margin: 4px 0 15px 0;
+    padding: 0 10px;
+    border: 1px solid #9F9F9F;
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    position: relative;
+}
+
+.THIS .uiButton--default .label {
+    color:#433e38;
+    text-shadow: none;
+}
+
+.THIS .uiButton--default .label:hover {
+    color:#d3bba1;
+    text-shadow: none;
+}
+
+.THIS input::placeholder {
+    color: #9F9F9F;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.THIS input[type="radio"] {
+	width: auto;
+	vertical-align: middle;
+	margin: 0 10px 0 20px;    
+}
+
+.THIS input[type="radio"]:first-of-type {
+	margin: 0 10px 0 0;    
+}
+
+.THIS .uiInput--radio {
+    display: inline-flex;
+    max-width: 20%;
+    margin: 0 10px;
+}
+
+.THIS .uiInput--radio:first-of-type {
+    margin: 0 10px 0 0;
+}
+
+.THIS .uiInput--radio label {
+    order: 2;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.THIS .uiInput--radio input {
+    order: 1;
+}
+
+.THIS .uiInput--checkbox {
+    display: inline-flex;
+	width: 100%;    
+}
+
+.THIS .uiInput--checkbox label {
+   font-weight: 400;
+   font-size: 14px;
+   margin: 10px 10px 10px 0;
+   order: 2;
+}
+
+.THIS .uiInput--checkbox input {
+    order: 1;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin: 10px 10px 10px 0;
+}
+
+.THIS .uiInput--datetime .datePicker-openIcon {
+    position: absolute;
+    right: 15px;
+    bottom: 28px;
+    left: auto;
+}
+
+.THIS .uiInput--datetime .datePicker-openIcon:before {
+    display: none;
+}
+
+.THIS  a#back_link {
+    color:#9F9F9F;
+    font-family: 'Van Condensed', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    float: left;
+    margin-top: 35px;
+}
+.THIS  a#back_link:hover {
+    color:#777;
+    text-decoration: none;
+}
+
+.THIS a#back_link:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin: 0px 8px 1px 0px;
+    border-left: 1px solid #777;
+    border-top: 1px solid #777;
+    transform: rotate(315deg);
+}
+
+
+.THIS label.uiLabel-hidden {
+    display:none;
+}
+
+.THIS #sfdc_instructiontwo_wrapper {
+    display: block;
+    position: relative;
+    border: 1px solid rgb(42,122,183);
+    background: rgb(217,239,248);
+    padding: 10px;
+    color: rgb(42,122,183);
+    margin: 20px 0 0 0;
+}
+
+.THIS #sfdc_instructiontwo_wrapper p a{
+    font-weight: 700;
+    color: rgb(22,102,163);
+}
+.THIS #sfdc_instructiontwo_wrapper span{
+	content: '';
+	background: url('https://upload.wikimedia.org/wikipedia/commons/3/38/Info_Simple.svg');
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+}
+.THIS .inline-radio .slds-radio {
+    display:inline-block;
+}
+.THIS .inline-radio .slds-radio label {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    color:#000;
+}
+.THIS .inline-radio .slds-radio span {
+    color:#000;
+}
+.THIS .inline-radio legend {
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    color:#000;
+}
+.THIS #sfdc_applianceownership_container .slds-form-element__legend {
+    font-size:16px;
+    color:#000;
+}
+.THIS #sfdc_applianceownership_container .slds-form-element__control .slds-checkbox {
+    display:inline-block !important;
+    width:50%;
+}
+.THIS #sfdc_applianceownership_container .slds-form-element__control {
+    border:1px solid #9f9f9f;
+    padding:10px;
+}
+.THIS .slds-required {
+    display:none;
+}
+@media (max-width: 768px) {
+    .THIS .sfdc {
+    	width: 100% !important;
+        display: block !important;
+        margin-right: 0;
+    }
+    
+    .THIS .uiInput--radio {
+        width: 100%;
+        display: flex;
+        margin: 6px 0 !important;
+    }
+    
+    .THIS input.sfdc_birthdayinput {
+        padding: 12px 10px;
+    }
+    
+    .THIS .uiInput--datetime .datePicker-openIcon {
+        bottom: 16px;
+    }
+    
+    .THIS  button.sfdc_button {
+        width: 100%;
+    }
+    
+    .THIS a#back_link {
+        width: 100%;
+    }
+    
+    .THIS .sfdc_Newbirthdate_containerDay {
+        width: 100%;
+    }
+    
+    .THIS .sfdc_Newbirthdate_containerMonth {
+        width: 100%;
+    }
+    
+    .THIS .sfdc_Newbirthdate_containerYear {
+        width: 100%;
+    }
+    
+    .THIS .sfdc_Newbirthdate_containerAll {
+        width: 100%;
+        display: inline-block;
+    }
+}

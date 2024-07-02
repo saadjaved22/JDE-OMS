@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_L_OR_Orders</fullName>
+    <columns>Name</columns>
+    <columns>Account</columns>
+    <columns>GrandTotalAmount</columns>
+    <columns>OrderedDate</columns>
+    <columns>Status</columns>
+    <columns>SalesChannel</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SalesChannel</field>
+        <operation>contains</operation>
+        <value>L&apos;Or</value>
+    </filters>
+    <label>All L&apos;OR Orders</label>
+</ListView>

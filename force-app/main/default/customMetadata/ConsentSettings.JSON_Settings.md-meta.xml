@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>JSON Settings</label>
+    <protected>false</protected>
+    <values>
+        <field>BrandList__c</field>
+        <value xsi:type="xsd:string">[&quot;Tassimo&quot;, &quot;L&apos;Or&quot;]</value>
+    </values>
+    <values>
+        <field>CompletedBrandList__c</field>
+        <value xsi:type="xsd:string">[&quot;Tassimo&quot;,
+&quot;L&apos;Or&quot;,
+&quot;Angebote&quot;,
+&quot;Bosch&quot;,
+&quot;Cadbury&quot;,
+&quot;Carte Noire&quot;,
+&quot;Costa&quot;,
+&quot;Douwe Egberts&quot;,
+&quot;Evergood&quot;,
+&quot;Friele&quot;,
+&quot;Gevalia&quot;,
+&quot;Grand Mere&quot;,
+&quot;Hag&quot;,
+&quot;Jacobs&quot;,
+&quot;Kenco&quot;,
+&quot;Koziol&quot;,
+&quot;Let&quot;,
+&quot;Loyalty&quot;,
+&quot;Maison du Café&quot;,
+&quot;Marabou&quot;,
+&quot;Marcilla&quot;,
+&quot;Maxwell House&quot;,
+&quot;Milka&quot;,
+&quot;Oreo&quot;,
+&quot;Other&quot;,
+&quot;Pickwick&quot;,
+&quot;Ritzenhoff&quot;,
+&quot;Saimaza&quot;,
+&quot;Senseo&quot;,
+&quot;Suchard&quot;,
+&quot;Twinings&quot;,
+&quot;Illy&quot;,
+&quot;Hornimans&quot;,
+&quot;TiOra&quot;,
+&quot;Harris&quot;,
+&quot;Moccona&quot;,
+&quot;Bell Tea&quot;,
+&quot;Prima&quot;]</value>
+    </values>
+    <values>
+        <field>CountryList__c</field>
+        <value xsi:type="xsd:string">[&quot;DE&quot;]</value>
+    </values>
+</CustomMetadata>

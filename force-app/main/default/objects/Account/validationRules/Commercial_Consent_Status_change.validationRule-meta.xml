@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Consent_Status_change</fullName>
+    <active>true</active>
+    <description>This validation rule will prevent changing Commercial Consent Status from Active to Registered.  Exception: changing Commercial Consent Status from Active to Registered should be possible in extended Account update mode for Senseo brand.</description>
+    <errorConditionFormula>AND(
+	ISPICKVAL(Consent_Status__c, 'Registered'),
+	ISPICKVAL(PRIORVALUE(Consent_Status__c),"Active"),
+	NOT(
+		OR(
+			AND(
+			$Setup.AccountUpdateMode__c.allowExtendedUpdate__c,
+			ISPICKVAL(Brand__c, 'Senseo')
+			),
+			OR(
+			ISPICKVAL(Brand__c, 'Maison du Café')
+			)
+		)
+	)
+)</errorConditionFormula>
+    <errorMessage>You can not change the Commercial Consent Status from Active to Registered (unless Account Brand is 'Senseo' and extended Account update mode is turned on).</errorMessage>
+</ValidationRule>

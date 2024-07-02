@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TotalOrderAmountWithTax__c</fullName>
+    <description>All orderlines, including shipping.</description>
+    <externalId>false</externalId>
+    <label>Total Order Amount with Tax</label>
+    <summarizedField>OrderItemSummary.TotalLineAmountWithTax</summarizedField>
+    <summaryForeignKey>OrderItemSummary.OrderSummaryId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <type>Summary</type>
+</CustomField>

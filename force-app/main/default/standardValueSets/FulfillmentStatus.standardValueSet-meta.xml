@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupingStringEnum>FulfillmentStatusCategory</groupingStringEnum>
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Draft</fullName>
+        <default>false</default>
+        <label>DRAFT</label>
+        <groupingString>DRAFT</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Allocated</fullName>
+        <default>false</default>
+        <label>ALLOCATED</label>
+        <groupingString>ACTIVATED</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Pickpack</fullName>
+        <default>false</default>
+        <label>SENT TO LSP</label>
+        <groupingString>FULFILLING</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Fulfilled</fullName>
+        <default>false</default>
+        <label>FULFILLED</label>
+        <groupingString>CLOSED</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Canceled</fullName>
+        <default>false</default>
+        <label>CANCELLED</label>
+        <groupingString>CANCELLED</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Partially Fulfilled</fullName>
+        <default>false</default>
+        <label>PARTIALLY FULFILLED</label>
+        <groupingString>CLOSED</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Incomplete</fullName>
+        <default>false</default>
+        <label>INCOMPLETE</label>
+        <groupingString>FULFILLING</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>REJECTED</label>
+        <groupingString>REJECTED</groupingString>
+    </standardValue>
+</StandardValueSet>

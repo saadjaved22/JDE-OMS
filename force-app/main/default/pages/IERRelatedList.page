@@ -1,0 +1,43 @@
+<apex:page standardController="Account" extensions="IERRelatedListController" rendered="{!renderPage}">    
+    <apex:form id="IERSection">                 
+        <apex:pageblock id="IERTable"> 
+            <apex:inputHidden value="{!account.ContactID__pc}"/>
+            <apex:inputHidden value="{!account.PersonEmail}"/>
+            <br/> 
+            <apex:pageBlockTable value="{!individualEmailResults}" var="IERRec" rendered="{!NOT(ISNULL(individualEmailResults))}">                 
+                <apex:column value="{!IERRec.Name}"><apex:facet name="header">Name</apex:facet></apex:column> 
+                <apex:column value="{!IERRec.SubjectLine}"><apex:facet name="header">Subject</apex:facet></apex:column>     
+                <apex:column value="{!IERRec.FromName}"><apex:facet name="header">Frome Name</apex:facet></apex:column> 
+                <apex:column value="{!IERRec.FromAddress}"><apex:facet name="header">From Address</apex:facet></apex:column> 
+                <apex:column value="{!IERRec.DateSentSTR}"><apex:facet name="header">Date Sent</apex:facet></apex:column> 
+                <apex:column value="{!IERRec.DateOpenedSTR}"><apex:facet name="header">Date Opened</apex:facet></apex:column> 
+                <apex:column >
+                    <apex:facet name="header">
+                        Hard Bounce
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!IERRec.HardBounce}"/>
+                </apex:column> 
+                <apex:column value="{!IERRec.JourneyName}"><apex:facet name="header">Journey Name</apex:facet></apex:column> 
+            </apex:pageBlockTable>                        
+            <apex:outputLabel value="No records to display"
+                              rendered="{!(ISNULL(individualEmailResults)) && successCall}"></apex:outputLabel> 
+            <apex:outputLabel value="An error occured. Please refresh page. If error persist, please contact support."
+                              rendered="{!not(successCall)}"></apex:outputLabel> 
+            <div align="center">
+                <div align="center" style="padding-top: 0.3%;display:  inline-block;">
+                    <!-- Navigating to First Page Button -->
+                    <apex:commandButton reRender="IERSection" action="{!moveToFirst}" disabled="{!firstbutton}" value="First" />&nbsp;
+                    <!-- Navigating to Previous Page Button -->
+                    <apex:commandButton reRender="IERSection" action="{!moveToPrev}" disabled="{!prevbutton}" value="Prev" />&nbsp;
+                    <!-- Navigating to Next Page Button -->
+                    <apex:commandButton reRender="IERSection" action="{!moveToNext}" disabled="{!nextbutton}" value="Next" />&nbsp;
+                    <!-- Navigating to Last Page Button -->
+                    <apex:commandButton reRender="IERSection" action="{!moveToLast}" disabled="{!lastbutton}" value="Last" />
+                </div>
+                <div align="right" style="float: right;padding-top: 0.3%;display:  inline-block;" rendered="{!NOT(ISNULL(individualEmailResults))}">
+                    Page {!IF(currentPage != null && currentPage + 1 > 0, currentPage + 1, 0)} of {!IF(numberOfPages != null && numberOfPages > 0, numberOfPages, 0)}.
+                </div>
+            </div>
+        </apex:pageblock> 
+    </apex:form>  
+</apex:page>
