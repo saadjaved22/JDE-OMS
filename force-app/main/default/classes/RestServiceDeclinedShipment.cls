@@ -18,7 +18,9 @@ public with sharing class RestServiceDeclinedShipment {
         System.enqueueJob(new AsyncDeclinedShipment(itemsToProcess));
       }
     } else {
-      AsyncDeclinedShipment asyncDeclinedShipment = new AsyncDeclinedShipment(itemMap);
+      AsyncDeclinedShipment asyncDeclinedShipment = new AsyncDeclinedShipment(
+        itemMap
+      );
       asyncDeclinedShipment.execute(null);
     }
   }
@@ -88,8 +90,14 @@ public with sharing class RestServiceDeclinedShipment {
 
       List<Id> orderSummaryIds = new List<Id>();
       for (DeclinedShipment__c declinedShipment : declinedShipments) {
-        if (!orderSummaryIds.contains(declinedShipment.FulfillmentOrderId__r.OrderSummaryId)) {
-          orderSummaryIds.add(declinedShipment.FulfillmentOrderId__r.OrderSummaryId);
+        if (
+          !orderSummaryIds.contains(
+            declinedShipment.FulfillmentOrderId__r.OrderSummaryId
+          )
+        ) {
+          orderSummaryIds.add(
+            declinedShipment.FulfillmentOrderId__r.OrderSummaryId
+          );
         }
       }
 
@@ -189,7 +197,10 @@ public with sharing class RestServiceDeclinedShipment {
       return returnObj;
     }
 
-    public void updateTransactionId(DeclinedShipment__c declinedShipment, String transactionID) {
+    public void updateTransactionId(
+      DeclinedShipment__c declinedShipment,
+      String transactionID
+    ) {
       declinedShipment.Transaction_Id__c = transactionID;
     }
   }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
         <appendable>enabled</appendable>
@@ -6,7 +6,8 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;Inscrivez-vous à la Maison du Café et économisez!&lt;/span&gt;&lt;/p&gt;</value>
+                    <value
+          >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;Inscrivez-vous à la Maison du Café et économisez!&lt;/span&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>forceCommunity:richTextInline</componentName>
                 <identifier>forceCommunity_richTextInline</identifier>
@@ -20,7 +21,8 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>applianceOwnershipLabel</name>
-                    <value>Je suis équipé de(s) la machine(s) suivante(s):</value>
+                    <value
+          >Je suis équipé de(s) la machine(s) suivante(s):</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>birthdateLabel</name>
@@ -40,11 +42,13 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>consentText3</name>
-                    <value>ainsi que mes données personnelles soient traitées, notamment collectées, stockées, utilisées et transférées (transfert à l&apos;étranger y compris).</value>
+                    <value
+          >ainsi que mes données personnelles soient traitées, notamment collectées, stockées, utilisées et transférées (transfert à l&apos;étranger y compris).</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>consentTextCheckbox</name>
-                    <value>Oui, j&apos;aimerais être informé des astuces et conseils café, des promotions, des événements, des nouveaux produits et autres nouvelles de la part de Maison du Café.</value>
+                    <value
+          >Oui, j&apos;aimerais être informé des astuces et conseils café, des promotions, des événements, des nouveaux produits et autres nouvelles de la part de Maison du Café.</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>emailLabel</name>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>49.0</apiVersion>
     <assignments>
@@ -7,7 +7,8 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <assignToReference
+      >myVariable_waitStartTimeVariable</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
@@ -88,7 +89,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.Deletion_Flag__c</leftValueReference>
+                <leftValueReference
+        >myVariable_current.Deletion_Flag__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -119,7 +121,8 @@
                         <stringValue>Picklist</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.Account_Registration_Status__c</leftValueReference>
+                <leftValueReference
+        >myVariable_current.Account_Registration_Status__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
                     <stringValue>Active</stringValue>
@@ -150,7 +153,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.isHardBounced__pc</leftValueReference>
+                <leftValueReference
+        >myVariable_current.isHardBounced__pc</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -162,7 +166,8 @@
             <label>Check if Candidate</label>
         </rules>
     </decisions>
-    <description>If last email sent to consumer’s email address hard bounced, consumer’s record becomes a candidate for removal unless consumer has an active Account Consent Status.</description>
+    <description
+  >If last email sent to consumer’s email address hard bounced, consumer’s record becomes a candidate for removal unless consumer has an active Account Consent Status.</description>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
@@ -178,14 +183,17 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>$Setup.ProcessBuilderSettings__c.IndividualEmailResultProcessBuilder__c != true</stringValue>
+                <stringValue
+        >$Setup.ProcessBuilderSettings__c.IndividualEmailResultProcessBuilder__c != true</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>$Setup.ProcessBuilderSettings__c.IndividualEmailResultProcessBuilder__c != true</expression>
+        <expression
+    >$Setup.ProcessBuilderSettings__c.IndividualEmailResultProcessBuilder__c != true</expression>
     </formulas>
-    <interviewLabel>Last_Email_Email_Sent_Hard_Bounced-2_InterviewLabel</interviewLabel>
+    <interviewLabel
+  >Last_Email_Email_Sent_Hard_Bounced-2_InterviewLabel</interviewLabel>
     <label>Last Email Email Sent Hard Bounced</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -258,7 +266,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -320,7 +328,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -395,7 +403,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -431,7 +439,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -467,7 +475,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -478,12 +486,14 @@
             </processMetadataValues>
             <field>To_be_Deleted_Date__c</field>
             <value>
-                <elementReference>formula_4_myRule_3_A1_5828361058</elementReference>
+                <elementReference
+        >formula_4_myRule_3_A1_5828361058</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
     </recordUpdates>
-    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <startElementReference
+  >myVariable_waitStartTimeAssignment</startElementReference>
     <status>Obsolete</status>
     <variables>
         <name>myVariable_current</name>

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Delivery_Method_new__c</fullName>
-    <description>possible delivery methods, replace badly defined (and unused) existing field</description>
+    <description
+  >possible delivery methods, replace badly defined (and unused) existing field</description>
     <externalId>false</externalId>
     <label>Delivery Method</label>
     <required>false</required>

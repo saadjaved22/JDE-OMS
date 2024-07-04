@@ -1,19 +1,29 @@
 <template>
-    <div class="slds-align_absolute-center" >
-        <div if:true={isLoading}>
-            <p>even geduld aub...</p>
-            <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
-        </div>        
-        <div if:false={isLoading}>
-            <div if:true={emailConfirmed} class="slds-align_absolute-center">
-                <p>Je e-mailadres is nu bevestigd, <b><a style="text-decoration: underline;"  href="./login"> klik hier</a></b>  om in te loggen op je Mijn D.E account.</p>
-            </div>
-            <div if:false={emailConfirmed} class="slds-align_absolute-center">
-                <p>Uw link is verbroken, ga terug naar de inlogscherm !</p>
-                <hr>
-                <a class="backLink" href="./login">Terug naar het inlogscherm</a>
-            </div>
-            
-        </div>
+  <div class="slds-align_absolute-center">
+    <div if:true={isLoading}>
+      <p>even geduld aub...</p>
+      <lightning-spinner
+        alternative-text="Loading"
+        variant="brand"
+      ></lightning-spinner>
     </div>
+    <div if:false={isLoading}>
+      <div if:true={emailConfirmed} class="slds-align_absolute-center">
+        <p>
+          Je e-mailadres is nu bevestigd,
+          <b
+            ><a style="text-decoration: underline" href="./login">
+              klik hier</a
+            ></b
+          >
+          om in te loggen op je Mijn D.E account.
+        </p>
+      </div>
+      <div if:false={emailConfirmed} class="slds-align_absolute-center">
+        <p>Uw link is verbroken, ga terug naar de inlogscherm !</p>
+        <hr />
+        <a class="backLink" href="./login">Terug naar het inlogscherm</a>
+      </div>
+    </div>
+  </div>
 </template>

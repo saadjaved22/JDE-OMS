@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <decisions>
@@ -26,9 +26,11 @@
             <label>yes</label>
         </rules>
     </decisions>
-    <description>Return order actions moved to a subflow. Typo fixed</description>
+    <description
+  >Return order actions moved to a subflow. Typo fixed</description>
     <environments>Default</environments>
-    <interviewLabel>Return_Order_to_Magento_JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Return_Order_to_Magento_JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Process Return Order</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -61,7 +63,8 @@
             <name>text</name>
             <dataType>String</dataType>
             <defaultValue>
-                <stringValue>This Return Order is already processed and closed.</stringValue>
+                <stringValue
+        >This Return Order is already processed and closed.</stringValue>
             </defaultValue>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
@@ -83,7 +86,8 @@
         </connector>
         <fields>
             <name>ReturnOrderFlowText</name>
-            <fieldText>&lt;p&gt;Are you sure you want to finalise Return Order&lt;strong&gt; {!recordId.ReturnOrderNumber}&lt;/strong&gt;?&lt;/p&gt;&lt;p&gt;Please note that if you don&apos;t specify any quantity received information, we will assume that the expected quantity was received.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;After clicking Finalise, it will close this Return Order and export it to the LSP and Magento.&lt;/p&gt;&lt;p&gt;You cannot edit it anymore afterwards.&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;Are you sure you want to finalise Return Order&lt;strong&gt; {!recordId.ReturnOrderNumber}&lt;/strong&gt;?&lt;/p&gt;&lt;p&gt;Please note that if you don&apos;t specify any quantity received information, we will assume that the expected quantity was received.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;After clicking Finalise, it will close this Return Order and export it to the LSP and Magento.&lt;/p&gt;&lt;p&gt;You cannot edit it anymore afterwards.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Send Return Order</nextOrFinishButtonLabel>
@@ -94,7 +98,8 @@
         <locationX>872</locationX>
         <locationY>50</locationY>
         <connector>
-            <targetReference>Return_Order_valid_for_return_processing</targetReference>
+            <targetReference
+      >Return_Order_valid_for_return_processing</targetReference>
         </connector>
     </start>
     <status>Active</status>

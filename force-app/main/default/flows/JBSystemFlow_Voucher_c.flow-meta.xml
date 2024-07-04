@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_FireJBTrigger</name>
-        <label>SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_FireJBTrigger</label>
+        <label
+    >SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
@@ -35,7 +36,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</stringValue>
+                <stringValue
+        >SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -59,28 +61,33 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:Customer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Brand__c&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Gender__pc&quot;,&quot;PersonEmail&quot;,&quot;CreatedDate&quot;,&quot;Opt_out_URL__c&quot;,&quot;PersonContactId&quot;,&quot;Consent_Status__c&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Type__c&quot;,&quot;Brand__c&quot;,&quot;Value__c&quot;,&quot;Consumption_Channel__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:Customer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Brand__c&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Gender__pc&quot;,&quot;PersonEmail&quot;,&quot;CreatedDate&quot;,&quot;Opt_out_URL__c&quot;,&quot;PersonContactId&quot;,&quot;Consent_Status__c&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Type__c&quot;,&quot;Brand__c&quot;,&quot;Value__c&quot;,&quot;Consumption_Channel__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <actionCalls>
         <name>SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_FireJBTrigger</name>
-        <label>SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_FireJBTrigger</label>
+        <label
+    >SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
         </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>ContactKey</name>
             <value>
-                <stringValue>{&quot;relationshipIdName&quot;:&quot;Customer__c&quot;,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Account&quot;,&quot;fieldName&quot;:&quot;PersonContactId&quot;}</stringValue>
+                <stringValue
+        >{&quot;relationshipIdName&quot;:&quot;Customer__c&quot;,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Account&quot;,&quot;fieldName&quot;:&quot;PersonContactId&quot;}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -98,7 +105,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</stringValue>
+                <stringValue
+        >SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -122,28 +130,33 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:Customer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;PersonContactId&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Customer__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:Customer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;PersonContactId&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Customer__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <actionCalls>
         <name>SalesforceObj323060e91536ed39ecee49487d7e0dcf_FireJBTrigger</name>
-        <label>SalesforceObj323060e91536ed39ecee49487d7e0dcf_FireJBTrigger</label>
+        <label
+    >SalesforceObj323060e91536ed39ecee49487d7e0dcf_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
         </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>ContactKey</name>
             <value>
-                <stringValue>{&quot;relationshipIdName&quot;:&quot;Contact__c&quot;,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Contact&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
+                <stringValue
+        >{&quot;relationshipIdName&quot;:&quot;Contact__c&quot;,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Contact&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -161,7 +174,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObj323060e91536ed39ecee49487d7e0dcf</stringValue>
+                <stringValue
+        >SalesforceObj323060e91536ed39ecee49487d7e0dcf</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -185,28 +199,33 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:Contact__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Email&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Salutation&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Brand__c&quot;,&quot;Prize__c&quot;,&quot;Country__c&quot;,&quot;Win_Y_N__c&quot;,&quot;Campaign__c&quot;,&quot;Customer__c&quot;,&quot;External_Id__c&quot;,&quot;Voucher_Number__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:Contact__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Email&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Salutation&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Brand__c&quot;,&quot;Prize__c&quot;,&quot;Country__c&quot;,&quot;Win_Y_N__c&quot;,&quot;Campaign__c&quot;,&quot;Customer__c&quot;,&quot;External_Id__c&quot;,&quot;Voucher_Number__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <actionCalls>
         <name>SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_FireJBTrigger</name>
-        <label>SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_FireJBTrigger</label>
+        <label
+    >SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
         </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>ContactKey</name>
             <value>
-                <stringValue>{&quot;relationshipIdName&quot;:&quot;Customer__c&quot;,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Account&quot;,&quot;fieldName&quot;:&quot;PersonContactId&quot;}</stringValue>
+                <stringValue
+        >{&quot;relationshipIdName&quot;:&quot;Customer__c&quot;,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Account&quot;,&quot;fieldName&quot;:&quot;PersonContactId&quot;}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -224,7 +243,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</stringValue>
+                <stringValue
+        >SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -248,19 +268,23 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:Customer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Brand__c&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Gender__pc&quot;,&quot;PersonEmail&quot;,&quot;Opt_out_URL__c&quot;,&quot;PersonContactId&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Type__c&quot;,&quot;Brand__c&quot;,&quot;Value__c&quot;,&quot;URL_To_Voucher__c&quot;,&quot;Delivery_Method__c&quot;,&quot;Consumption_Channel__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Customer__r&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:Customer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Brand__c&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Gender__pc&quot;,&quot;PersonEmail&quot;,&quot;Opt_out_URL__c&quot;,&quot;PersonContactId&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Voucher__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Type__c&quot;,&quot;Brand__c&quot;,&quot;Value__c&quot;,&quot;URL_To_Voucher__c&quot;,&quot;Delivery_Method__c&quot;,&quot;Consumption_Channel__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>49.0</apiVersion>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</name>
-        <label>JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Parameters_ContactKey_Null</name>
             <conditionLogic>(1 OR 2)</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.Customer__c</leftValueReference>
@@ -270,16 +294,19 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>new_object.Customer__r.PersonContactId</leftValueReference>
+                <leftValueReference
+        >new_object.Customer__r.PersonContactId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <label>JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Parameters_Null</name>
+            <name
+      >JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -289,22 +316,28 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Parameters_Null</label>
+            <label
+      >JB_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_Parameters_Null</label>
         </rules>
     </decisions>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</name>
-        <label>JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Parameters_ContactKey_Null</name>
             <conditionLogic>(1 OR 2)</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.Customer__c</leftValueReference>
@@ -314,19 +347,23 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>new_object.Customer__r.PersonContactId</leftValueReference>
+                <leftValueReference
+        >new_object.Customer__r.PersonContactId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
+                <targetReference
+        >JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
             </connector>
-            <label>JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Parameters_Null</name>
+            <name
+      >JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -336,22 +373,28 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Parameters_Null</label>
+            <label
+      >JB_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_Parameters_Null</label>
         </rules>
     </decisions>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObj323060e91536ed39ecee49487d7e0dcf</name>
-        <label>JB_Decision_Null_Check_SalesforceObj323060e91536ed39ecee49487d7e0dcf</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObj323060e91536ed39ecee49487d7e0dcf</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObj323060e91536ed39ecee49487d7e0dcf</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Parameters_ContactKey_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.Contact__c</leftValueReference>
@@ -361,12 +404,15 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
+                <targetReference
+        >JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
             </connector>
-            <label>JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Parameters_Null</name>
+            <name
+      >JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -376,22 +422,28 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Parameters_Null</label>
+            <label
+      >JB_SalesforceObj323060e91536ed39ecee49487d7e0dcf_Parameters_Null</label>
         </rules>
     </decisions>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</name>
-        <label>JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Parameters_ContactKey_Null</name>
             <conditionLogic>(1 OR 2)</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.Customer__c</leftValueReference>
@@ -401,19 +453,23 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>new_object.Customer__r.PersonContactId</leftValueReference>
+                <leftValueReference
+        >new_object.Customer__r.PersonContactId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
+                <targetReference
+        >JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
             </connector>
-            <label>JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Parameters_Null</name>
+            <name
+      >JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -423,9 +479,11 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Parameters_Null</label>
+            <label
+      >JB_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_Parameters_Null</label>
         </rules>
     </decisions>
     <decisions>
@@ -438,7 +496,8 @@
             <name>SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</name>
             <conditionLogic>(1 AND  (2 OR 3) )</conditionLogic>
             <conditions>
-                <leftValueReference>new_object.Consumption_Channel__c</leftValueReference>
+                <leftValueReference
+        >new_object.Consumption_Channel__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>DTC</stringValue>
@@ -459,7 +518,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</label>
         </rules>
@@ -470,7 +530,8 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -484,7 +545,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</label>
         </rules>
@@ -495,12 +557,14 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj2e7c36d94f7fe3700c23dfb6eec15462</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>SalesforceObj323060e91536ed39ecee49487d7e0dcf</name>
-            <conditionLogic>( ( ( ( ( (1 AND 2)  AND 3)  AND 4)  AND 5)  AND 6)  AND 7)</conditionLogic>
+            <conditionLogic
+      >( ( ( ( ( (1 AND 2)  AND 3)  AND 4)  AND 5)  AND 6)  AND 7)</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.Brand__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -551,7 +615,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObj323060e91536ed39ecee49487d7e0dcf_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObj323060e91536ed39ecee49487d7e0dcf_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObj323060e91536ed39ecee49487d7e0dcf</label>
         </rules>
@@ -562,14 +627,17 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj24e58e1f514ce8ff8a0f90e485ca5d46</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</name>
-            <conditionLogic>( (1 AND  ( ( ( ( (2 OR 3)  OR 4)  OR 5)  OR 6)  OR 7) )  AND 8)</conditionLogic>
+            <conditionLogic
+      >( (1 AND  ( ( ( ( (2 OR 3)  OR 4)  OR 5)  OR 6)  OR 7) )  AND 8)</conditionLogic>
             <conditions>
-                <leftValueReference>new_object.Consumption_Channel__c</leftValueReference>
+                <leftValueReference
+        >new_object.Consumption_Channel__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Retail</stringValue>
@@ -618,21 +686,24 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>new_object.Delivery_Method__c</leftValueReference>
+                <leftValueReference
+        >new_object.Delivery_Method__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Email</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObj7e73e5d008c204cb6b84a7299f25ae8d</label>
         </rules>
     </decisions>
     <label>JBSystemFlow_Voucher_c</label>
     <processType>AutoLaunchedFlow</processType>
-    <startElementReference>JB_Decision_Null_Check_SalesforceObj323060e91536ed39ecee49487d7e0dcf</startElementReference>
+    <startElementReference
+  >JB_Decision_Null_Check_SalesforceObj323060e91536ed39ecee49487d7e0dcf</startElementReference>
     <status>Active</status>
     <variables>
         <name>new_object</name>

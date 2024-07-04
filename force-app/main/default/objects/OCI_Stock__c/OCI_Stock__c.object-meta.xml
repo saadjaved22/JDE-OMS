@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>Accept</actionName>
@@ -171,9 +171,12 @@
         <excludedStandardButtons>PrintableListView</excludedStandardButtons>
         <listViewButtons>Change_Safety_Stock</listViewButtons>
         <searchResultsAdditionalFields>onHand__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Reserved__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>safetyStockCount__c</searchResultsAdditionalFields>
-        <searchResultsCustomButtons>Change_Safety_Stock</searchResultsCustomButtons>
+        <searchResultsAdditionalFields
+    >Reserved__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >safetyStockCount__c</searchResultsAdditionalFields>
+        <searchResultsCustomButtons
+    >Change_Safety_Stock</searchResultsCustomButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Send_Update_To_Magento</name>
@@ -25,9 +25,11 @@
         </inputParameters>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
-    <description>Removed the OCI/OMS side, as this is now done in code (RestServiceShipment)</description>
+    <description
+  >Removed the OCI/OMS side, as this is now done in code (RestServiceShipment)</description>
     <environments>Default</environments>
-    <interviewLabel>Declined Shipment JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Declined Shipment JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Declined Shipment JDE</label>
     <loops>
         <name>Declined_Shipments_Loop</name>
@@ -64,7 +66,8 @@
         <label>Get Declined Shipments</label>
         <locationX>666</locationX>
         <locationY>210</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Declined_Shipments_Loop</targetReference>
         </connector>
@@ -83,7 +86,8 @@
     <start>
         <locationX>151</locationX>
         <locationY>110</locationY>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>or</filterLogic>
         <filters>
             <field>StatusCategory</field>
@@ -132,7 +136,8 @@
     </variables>
     <variables>
         <name>fulfillmentOrderItemsToCancel</name>
-        <apexClass>ConnectApi__FulfillmentOrderLineItemsToCancelInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderLineItemsToCancelInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -140,7 +145,8 @@
     </variables>
     <variables>
         <name>fulfillmentOrderLineItemRepresentation</name>
-        <apexClass>ConnectApi__FulfillmentOrderLineItemInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderLineItemInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

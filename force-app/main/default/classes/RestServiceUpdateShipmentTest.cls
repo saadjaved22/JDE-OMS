@@ -23,7 +23,8 @@ public class RestServiceUpdateShipmentTest {
     List<RestServiceShipment.orderItemWrapper> shippingOrderItems = new List<RestServiceShipment.orderItemWrapper>();
     RestServiceShipment.orderItemWrapper shippingOrderItem = new RestServiceShipment.orderItemWrapper();
     shippingOrderItem.aggregatedLineID = '1';
-    shippingOrderItem.sku = ((Product2) results.get('product')).StockKeepingUnit;
+    shippingOrderItem.sku = ((Product2) results.get('product'))
+      .StockKeepingUnit;
     shippingOrderItem.shippedQuantity = '1';
     shippingOrderItem.declinedQuantity = '0';
     shippingOrderItems.add(shippingOrderItem);
@@ -35,7 +36,12 @@ public class RestServiceUpdateShipmentTest {
       shippingOrderItems
     );
 
-    Shipment shipment = [SELECT Id FROM Shipment WHERE FulfillmentOrderId = :fOrder.Id LIMIT 1];
+    Shipment shipment = [
+      SELECT Id
+      FROM Shipment
+      WHERE FulfillmentOrderId = :fOrder.Id
+      LIMIT 1
+    ];
     List<RestServiceInvocableAction> ids = new List<RestServiceInvocableAction>();
     RestServiceInvocableAction action = new RestServiceInvocableAction();
     action.Id = shipment.Id;
@@ -70,7 +76,8 @@ public class RestServiceUpdateShipmentTest {
     List<RestServiceShipment.orderItemWrapper> shippingOrderItems = new List<RestServiceShipment.orderItemWrapper>();
     RestServiceShipment.orderItemWrapper shippingOrderItem = new RestServiceShipment.orderItemWrapper();
     shippingOrderItem.aggregatedLineID = '1';
-    shippingOrderItem.sku = ((Product2) results.get('product')).StockKeepingUnit;
+    shippingOrderItem.sku = ((Product2) results.get('product'))
+      .StockKeepingUnit;
     shippingOrderItem.shippedQuantity = '1';
     shippingOrderItem.declinedQuantity = '0';
     shippingOrderItems.add(shippingOrderItem);
@@ -82,7 +89,12 @@ public class RestServiceUpdateShipmentTest {
       shippingOrderItems
     );
 
-    Shipment shipment = [SELECT Id FROM Shipment WHERE FulfillmentOrderId = :fOrder.Id LIMIT 1];
+    Shipment shipment = [
+      SELECT Id
+      FROM Shipment
+      WHERE FulfillmentOrderId = :fOrder.Id
+      LIMIT 1
+    ];
     List<RestServiceInvocableAction> ids = new List<RestServiceInvocableAction>();
     RestServiceInvocableAction action = new RestServiceInvocableAction();
     action.Id = shipment.Id;

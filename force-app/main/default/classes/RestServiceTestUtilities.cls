@@ -48,15 +48,23 @@ public class RestServiceTestUtilities {
     return outputMap;
   }
 
-  public static Map<String, Object> createOrder(Account acc, String paymentType) {
+  public static Map<String, Object> createOrder(
+    Account acc,
+    String paymentType
+  ) {
     return createOrder(acc, paymentType, null);
   }
 
-  public static Map<String, Object> createOrder(Account acc, String paymentType, String bonus) {
+  public static Map<String, Object> createOrder(
+    Account acc,
+    String paymentType,
+    String bonus
+  ) {
     Map<String, Object> outputMap = new Map<String, Object>();
 
     Decimal randomPrice = createRandPrice();
-    Decimal tax = (randomPrice - (randomPrice / 1.2)).setScale(2, System.RoundingMode.HALF_EVEN);
+    Decimal tax = (randomPrice - (randomPrice / 1.2))
+      .setScale(2, System.RoundingMode.HALF_EVEN);
     DateTime dateEntered = system.now();
     String orderRef = 'SE' + generateRandomId();
 
@@ -124,7 +132,11 @@ public class RestServiceTestUtilities {
     outputMap.put('product', prod);
 
     // ** assuming that product2.trigger should have created price entreries for each new product2 insert.
-    PricebookEntry pbe = [SELECT Id FROM PricebookEntry WHERE Product2Id = :prod.Id][0];
+    PricebookEntry pbe = [
+      SELECT Id
+      FROM PricebookEntry
+      WHERE Product2Id = :prod.Id
+    ][0];
 
     // create location group
     LocationGroup testLocGroup = new LocationGroup();
@@ -248,7 +260,11 @@ public class RestServiceTestUtilities {
    * @return			Pricebook2
    ***************************************************¯\_(ツ)_/¯**************************************************/
   public static Pricebook2 createSFDCPricebook(String name) {
-    Pricebook2 pb2 = new Pricebook2(Name = name, isActive = true, Description = 'TEST PRICEBOOK');
+    Pricebook2 pb2 = new Pricebook2(
+      Name = name,
+      isActive = true,
+      Description = 'TEST PRICEBOOK'
+    );
     insert pb2;
     return pb2;
   }
@@ -258,7 +274,9 @@ public class RestServiceTestUtilities {
     PricebookEntry[] priceEntries = new List<PricebookEntry>();
     Integer i = count - 1;
     for (; i >= 0; i--) {
-      String TEST_PRODUCT_NAME = 'TEST' + EncodingUtil.convertToHex(crypto.generateAesKey(128)).substring(0, 10);
+      String TEST_PRODUCT_NAME =
+        'TEST' +
+        EncodingUtil.convertToHex(crypto.generateAesKey(128)).substring(0, 10);
       products.add(
         new Product2(
           Description = TEST_PRODUCT_NAME,
@@ -272,7 +290,11 @@ public class RestServiceTestUtilities {
     insert products;
     for (Product2 product : products) {
       priceEntries.add(
-        new PricebookEntry(Pricebook2Id = Test.getStandardPricebookId(), Product2Id = product.Id, UnitPrice = 1)
+        new PricebookEntry(
+          Pricebook2Id = Test.getStandardPricebookId(),
+          Product2Id = product.Id,
+          UnitPrice = 1
+        )
       );
     }
     insert priceEntries;
@@ -287,7 +309,11 @@ public class RestServiceTestUtilities {
   }
 
   public static Decimal createRandPrice() {
-    return Decimal.valueOf(Integer.valueof(Math.random() * 1000) + '.' + Integer.valueof(Math.random() * 99))
+    return Decimal.valueOf(
+        Integer.valueof(Math.random() * 1000) +
+          '.' +
+          Integer.valueof(Math.random() * 99)
+      )
       .setScale(2, System.RoundingMode.HALF_EVEN);
   }
 
@@ -322,18 +348,28 @@ public class RestServiceTestUtilities {
 
   public static OrderDeliveryMethod createOrderDeliveryMethod() {
     String refNum = 'standardDHL_DE';
-    OrderDeliveryMethod odm = new OrderDeliveryMethod(ReferenceNumber = refNum, Name = refNum, IsActive = true);
+    OrderDeliveryMethod odm = new OrderDeliveryMethod(
+      ReferenceNumber = refNum,
+      Name = refNum,
+      IsActive = true
+    );
     insert odm;
     return odm;
   }
 
   public static Schema.Location createLocation() {
-    Schema.Location location = new Schema.Location(ExternalReference = TEST_LOCATION, Name = 'Test');
+    Schema.Location location = new Schema.Location(
+      ExternalReference = TEST_LOCATION,
+      Name = 'Test'
+    );
     insert location;
     return location;
   }
 
-  public static FulfillmentOrder setupFulfillmentOrderData(String orderSummaryRecordId, Id accId) {
+  public static FulfillmentOrder setupFulfillmentOrderData(
+    String orderSummaryRecordId,
+    Id accId
+  ) {
     FulfillmentOrder fulfillmentOrder = new FulfillmentOrder(
       FulfilledToName = 'test',
       DeliveryMethodId = [SELECT ID FROM OrderDeliveryMethod LIMIT 1]
@@ -356,7 +392,10 @@ public class RestServiceTestUtilities {
     List<OrderItemSummary> orderItemSummaryList = [
       SELECT ID, OriginalOrderItemId
       FROM OrderItemSummary
-      WHERE OrderSummaryId = :orderSummaryRecordId AND (Type = 'Order Product' OR Type = 'Delivery Charge')
+      WHERE
+        OrderSummaryId = :orderSummaryRecordId
+        AND (Type = 'Order Product'
+        OR Type = 'Delivery Charge')
       ORDER BY Type
     ];
     List<FulfillmentOrderLineItem> orderLineItemList = new List<FulfillmentOrderLineItem>();

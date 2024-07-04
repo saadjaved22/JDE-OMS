@@ -6,124 +6,133 @@ History
 */
 @isTest
 private class CampaignMemberTrigger_Test {
-	
-	@testSetup
-	static void beforeEachTest(){
-		TriggerSettings__c ts1 = new TriggerSettings__c();
-        // ts1.PersonAccountTrigger__c = false;
-        ts1.CampaignMemberTrigger__c = true;
-        insert ts1;
-		// 4 accounts:
-		List<Account> testAccounts = new List<Account>();
+  @testSetup
+  static void beforeEachTest() {
+    TriggerSettings__c ts1 = new TriggerSettings__c();
+    // ts1.PersonAccountTrigger__c = false;
+    ts1.CampaignMemberTrigger__c = true;
+    insert ts1;
+    // 4 accounts:
+    List<Account> testAccounts = new List<Account>();
 
-		Account account1 = new AccountBuilder()
-		.setLastName('TestName_1')
-		.setEmail('test_1@a.a')
-		.setCountry('NL')
-		.setBrand('Jacobs')
-		.setAccountType('Loyalty')
-		.build();
+    Account account1 = new AccountBuilder()
+      .setLastName('TestName_1')
+      .setEmail('test_1@a.a')
+      .setCountry('NL')
+      .setBrand('Jacobs')
+      .setAccountType('Loyalty')
+      .build();
 
-		Account account2 = new AccountBuilder()
-		.setLastName('TestName_2')
-		.setEmail('test_2@a.a')
-		.setCountry('NL')
-		.setBrand('Jacobs')
-		.setAccountType('Guest')
-		.build();
+    Account account2 = new AccountBuilder()
+      .setLastName('TestName_2')
+      .setEmail('test_2@a.a')
+      .setCountry('NL')
+      .setBrand('Jacobs')
+      .setAccountType('Guest')
+      .build();
 
-		Account account3 = new AccountBuilder()
-		.setLastName('TestName_3')
-		.setEmail('test_3@a.a')
-		.setCountry('NL')
-		.setBrand('Jacobs')
-		.setAccountType('Loyalty')
-		.build();
+    Account account3 = new AccountBuilder()
+      .setLastName('TestName_3')
+      .setEmail('test_3@a.a')
+      .setCountry('NL')
+      .setBrand('Jacobs')
+      .setAccountType('Loyalty')
+      .build();
 
-		Account account4 = new AccountBuilder()
-		.setLastName('TestName_4')
-		.setEmail('test_4@a.a')
-		.setCountry('NL')
-		.setBrand('Jacobs')
-		.setAccountType('Loyalty')
-		.build();
+    Account account4 = new AccountBuilder()
+      .setLastName('TestName_4')
+      .setEmail('test_4@a.a')
+      .setCountry('NL')
+      .setBrand('Jacobs')
+      .setAccountType('Loyalty')
+      .build();
 
-		testAccounts.add( account1 );
-		testAccounts.add( account2 );
-		testAccounts.add( account3 );
-		testAccounts.add( account4 );
+    testAccounts.add(account1);
+    testAccounts.add(account2);
+    testAccounts.add(account3);
+    testAccounts.add(account4);
 
-		Test.startTest();
-		insert testAccounts;
+    Test.startTest();
+    insert testAccounts;
 
-		// 3 Loyalties
+    // 3 Loyalties
 
-		List<Loyalty__c> testLoyalties = new List<Loyalty__c>();
+    List<Loyalty__c> testLoyalties = new List<Loyalty__c>();
 
-		Loyalty__c loyalty1 = new Loyalty__c();
-		loyalty1.Loyalty_Consumer__c = account1.Id;
-		loyalty1.External_Id__c = account1.External_Id__c;
+    Loyalty__c loyalty1 = new Loyalty__c();
+    loyalty1.Loyalty_Consumer__c = account1.Id;
+    loyalty1.External_Id__c = account1.External_Id__c;
 
-		Loyalty__c loyalty2 = new Loyalty__c();
-		loyalty2.Loyalty_Consumer__c = account2.Id;
-		loyalty2.External_Id__c = account2.External_Id__c;
+    Loyalty__c loyalty2 = new Loyalty__c();
+    loyalty2.Loyalty_Consumer__c = account2.Id;
+    loyalty2.External_Id__c = account2.External_Id__c;
 
-		Loyalty__c loyalty3 = new Loyalty__c();
-		loyalty3.Loyalty_Consumer__c = account4.Id;
-		loyalty3.External_Id__c = 'SomeValueDifferentThanAccountExternalId';
+    Loyalty__c loyalty3 = new Loyalty__c();
+    loyalty3.Loyalty_Consumer__c = account4.Id;
+    loyalty3.External_Id__c = 'SomeValueDifferentThanAccountExternalId';
 
-		testLoyalties.add( loyalty1 );
-		testLoyalties.add( loyalty2 );
-		testLoyalties.add( loyalty3 );
+    testLoyalties.add(loyalty1);
+    testLoyalties.add(loyalty2);
+    testLoyalties.add(loyalty3);
 
-		insert testLoyalties;
+    insert testLoyalties;
 
-		// 2 campaigns:
-		List<Campaign> testCampaigns = new List<Campaign>();
+    // 2 campaigns:
+    List<Campaign> testCampaigns = new List<Campaign>();
 
-		Campaign campaign1 = new Campaign();
-		campaign1.Name = 'FirstCampaign';
-		campaign1.Brand__c= 'Senseo';
-		campaign1.Country__c= 'NL';
-		campaign1.Add_Points__c = true;
-		campaign1.Points_Amount__c = 10;
+    Campaign campaign1 = new Campaign();
+    campaign1.Name = 'FirstCampaign';
+    campaign1.Brand__c = 'Senseo';
+    campaign1.Country__c = 'NL';
+    campaign1.Add_Points__c = true;
+    campaign1.Points_Amount__c = 10;
 
-		Campaign campaign3 = new Campaign();
-		campaign3.Name = 'ThirdCampaign';
-		campaign3.Brand__c= 'Tassimo';
-		campaign3.Country__c= 'NL';
-		campaign3.Add_Points__c = false;
+    Campaign campaign3 = new Campaign();
+    campaign3.Name = 'ThirdCampaign';
+    campaign3.Brand__c = 'Tassimo';
+    campaign3.Country__c = 'NL';
+    campaign3.Add_Points__c = false;
 
-		testCampaigns.add( campaign1 );
-		testCampaigns.add( campaign3 );
+    testCampaigns.add(campaign1);
+    testCampaigns.add(campaign3);
 
-		insert testCampaigns;
-		Test.stopTest();
-	}
+    insert testCampaigns;
+    Test.stopTest();
+  }
 
-	@IsTest
-	static void testCampaingMemberCustomerUpdate(){
-		List<Account>  accList = [Select ID,ContactID__pc FROM Account LIMIT 1];
-		Campaign  camp = [SELECT ID FROM Campaign LIMIT 1];
+  @IsTest
+  static void testCampaingMemberCustomerUpdate() {
+    List<Account> accList = [SELECT ID, ContactID__pc FROM Account LIMIT 1];
+    Campaign camp = [SELECT ID FROM Campaign LIMIT 1];
 
-		Test.startTest();
-			CampaignMember cmpM = new CampaignMember(ContactId = accList[0].ContactID__pc , CampaignId = camp.Id, Status = 'Sent');
-        	insert cmpM;
-		Test.stopTest();
+    Test.startTest();
+    CampaignMember cmpM = new CampaignMember(
+      ContactId = accList[0].ContactID__pc,
+      CampaignId = camp.Id,
+      Status = 'Sent'
+    );
+    insert cmpM;
+    Test.stopTest();
 
-		CampaignMember cmpMM = [SELECT ID, Customer__c,Status FROM CampaignMember WHERE ID = :cmpM.ID];
-		System.assert(cmpMM.Customer__c == accList[0].Id);
+    CampaignMember cmpMM = [
+      SELECT ID, Customer__c, Status
+      FROM CampaignMember
+      WHERE ID = :cmpM.ID
+    ];
+    System.assert(cmpMM.Customer__c == accList[0].Id);
 
-		cmpMM.Status = 'Responded';
-		update cmpMM;
+    cmpMM.Status = 'Responded';
+    update cmpMM;
 
-		CampaignMember cmpMMM = [SELECT ID, Customer__c,ContactId FROM CampaignMember WHERE ID = :cmpMM.ID];
-		System.assert(cmpMM.Customer__c == accList[0].Id);
+    CampaignMember cmpMMM = [
+      SELECT ID, Customer__c, ContactId
+      FROM CampaignMember
+      WHERE ID = :cmpMM.ID
+    ];
+    System.assert(cmpMM.Customer__c == accList[0].Id);
+  }
 
-
-	}
-
-	/* @isTest 
+  /* @isTest 
 	static void test_onAfterInsert_create_loyalty_transaction() {
 		// setup
 		Account account1 = AccountSelector.getAccountByExternalId('test_1@a.aNLJacobs'); // account type Loyalty
@@ -163,7 +172,7 @@ private class CampaignMemberTrigger_Test {
 		//TODO: ??add checks on total amount on Loyalty and Account (after clarification about points addition)
 	} */
 
-	/* @isTest 
+  /* @isTest 
 	static void test_onAfterInsert_do_not_create_transaction_when_campaign_without_points() {
 		// setup
 		Account account1 = AccountSelector.getAccountByExternalId('test_1@a.aNLJacobs'); // account type Loyalty
@@ -184,7 +193,7 @@ private class CampaignMemberTrigger_Test {
 		System.assertEquals( 0, transactions.size(), ' There should be no transactions for this loyalty' );
 	} */
 
-	/* @isTest 
+  /* @isTest 
 	static void test_onAfterInsert_do_not_create_transaction_when_account_is_not_loyalty_type() {
 		// setup
 		Account account2 = AccountSelector.getAccountByExternalId('test_2@a.aNLJacobs'); //account type Guest
@@ -205,7 +214,7 @@ private class CampaignMemberTrigger_Test {
 		System.assertEquals( 0, transactions.size(), ' There should be no transactions for this loyalty' );
 	} */
 
-	/* @isTest 
+  /* @isTest 
 	static void test_onAfterInsert_do_not_create_transaction_nor_loyalty_when_account_do_not_have_loyalty() {
 		// setup
 		Account account3 = AccountSelector.getAccountByExternalId('test_3@a.aNLJacobs'); //account type Loyalty, but no Loyalty object
@@ -226,8 +235,7 @@ private class CampaignMemberTrigger_Test {
 		System.assertEquals( 0, transactions.size(), ' There should be no transactions for this account' );
 	} */
 
-
-	/* @isTest 
+  /* @isTest 
 	static void test_onAfterInsert_do_not_create_transaction_nor_loyalty_when_account_do_not_have_loyalty_with_proper_externalId() {
 		
 	 	// setup
@@ -248,5 +256,4 @@ private class CampaignMemberTrigger_Test {
 		System.assert( null != transactions, 'There should be transaction list' );
 		System.assertEquals( 0, transactions.size(), ' There should be no transactions for this account' );
 	} */
-	
 }

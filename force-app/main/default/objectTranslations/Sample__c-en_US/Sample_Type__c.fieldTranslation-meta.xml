@@ -1,45 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label></label>
+    <label />
     <name>Sample_Type__c</name>
     <picklistValues>
         <masterLabel>Beans</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Filter</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Instant</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>NCC</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Pads</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>R2D</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Roast&amp;Ground</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Tea</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Value 1</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Value 2</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
 </CustomFieldTranslation>

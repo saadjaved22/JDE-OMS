@@ -1,16 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Network xmlns="http://soap.sforce.com/2006/04/metadata">
     <allowInternalUserLogin>true</allowInternalUserLogin>
     <allowMembersToFlag>false</allowMembersToFlag>
-    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
-    <communityRoles/>
-    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <changePasswordTemplate
+  >unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles />
+    <disableReputationRecordConversations
+  >false</disableReputationRecordConversations>
     <emailSenderAddress>spaarprogramma@douwe-egberts.com</emailSenderAddress>
     <emailSenderName>D.E Spaarprogramma</emailSenderName>
     <enableApexCDNCaching>true</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>false</enableDirectMessages>
-    <enableExperienceBundleBasedSnaOverrideEnabled>false</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableExperienceBundleBasedSnaOverrideEnabled
+  >false</enableExperienceBundleBasedSnaOverrideEnabled>
     <enableGuestChatter>false</enableGuestChatter>
     <enableGuestFileAccess>false</enableGuestFileAccess>
     <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
@@ -27,20 +30,25 @@
     <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
     <enableTopicSuggestions>false</enableTopicSuggestions>
     <enableUpDownVote>false</enableUpDownVote>
-    <forgotPasswordTemplate>DE_Loyalty_Community_Emails/Communities_Forgot_Password_Email_DE_Loyalty</forgotPasswordTemplate>
+    <forgotPasswordTemplate
+  >DE_Loyalty_Community_Emails/Communities_Forgot_Password_Email_DE_Loyalty</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
-    <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
+    <headlessForgotPasswordTemplate
+  >unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
     <logoutUrl>https://www.de.nl/</logoutUrl>
     <networkMemberGroups>
         <profile>Admin</profile>
         <profile>DE External Identity User</profile>
     </networkMemberGroups>
     <networkPageOverrides>
-        <changePasswordPageOverrideSetting>VisualForce</changePasswordPageOverrideSetting>
-        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <changePasswordPageOverrideSetting
+    >VisualForce</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting
+    >Designer</forgotPasswordPageOverrideSetting>
         <homePageOverrideSetting>Designer</homePageOverrideSetting>
         <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
-        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+        <selfRegProfilePageOverrideSetting
+    >Designer</selfRegProfilePageOverrideSetting>
     </networkPageOverrides>
     <picassoSite>DE_Loyalty1</picassoSite>
     <selfRegistration>false</selfRegistration>
@@ -53,5 +61,6 @@
         <standardTab>Chatter</standardTab>
     </tabs>
     <urlPathPrefix>loyalty</urlPathPrefix>
-    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+    <welcomeTemplate
+  >unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
 </Network>

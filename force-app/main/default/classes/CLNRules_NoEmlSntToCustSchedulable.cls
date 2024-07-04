@@ -9,11 +9,9 @@ History
 *********************************************************************/
 
 global class CLNRules_NoEmlSntToCustSchedulable implements Schedulable {
-    
-    global void execute(SchedulableContext sc) {
-        CLNRules_NoEmailSentToCustomer b = new CLNRules_NoEmailSentToCustomer();
-        
-        database.executebatch(b,200);
-    }
-   
+  global void execute(SchedulableContext sc) {
+    CLNRules_NoEmailSentToCustomer b = new CLNRules_NoEmailSentToCustomer();
+
+    database.executebatch(b, 200);
+  }
 }

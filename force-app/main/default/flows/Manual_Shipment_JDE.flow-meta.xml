@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <assignments>
@@ -10,14 +10,16 @@
             <assignToReference>ShipmentItem.Quantity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_All_Shipment_Items.Quantity</elementReference>
+                <elementReference
+        >Get_All_Shipment_Items.Quantity</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>ShipmentItem.Product2Id</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_All_Shipment_Items.Product2Id</elementReference>
+                <elementReference
+        >Get_All_Shipment_Items.Product2Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -35,14 +37,16 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ShipmentItem.FulfillmentOrderLineItemId</assignToReference>
+            <assignToReference
+      >ShipmentItem.FulfillmentOrderLineItemId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Get_All_Shipment_Items.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ShipmentItem.ExpectedDeliveryDate</assignToReference>
+            <assignToReference
+      >ShipmentItem.ExpectedDeliveryDate</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>ExpectedDeliveryDate</elementReference>
@@ -81,7 +85,8 @@
         <locationX>579</locationX>
         <locationY>284</locationY>
         <defaultConnector>
-            <targetReference>Invalid_State_for_Fulfillment_order</targetReference>
+            <targetReference
+      >Invalid_State_for_Fulfillment_order</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -114,8 +119,10 @@
         <dataType>Date</dataType>
         <expression>TODAY() + 7</expression>
     </formulas>
-    <interviewLabel>Manual Shipment JDE {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <interviewLabel
+  >Manual Shipment JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun
+  >true</isAdditionalPermissionRequiredToRun>
     <label>Manual Shipment JDE</label>
     <loops>
         <name>Get_All_Shipment_Items</name>
@@ -162,7 +169,8 @@
         <inputAssignments>
             <field>DeliveryMethodId</field>
             <value>
-                <elementReference>Get_FO_Info.DeliveryMethodId</elementReference>
+                <elementReference
+        >Get_FO_Info.DeliveryMethodId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -192,7 +200,8 @@
         <inputAssignments>
             <field>ShipToCountry</field>
             <value>
-                <elementReference>Get_FO_Info.FulfilledToCountry</elementReference>
+                <elementReference
+        >Get_FO_Info.FulfilledToCountry</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -204,13 +213,15 @@
         <inputAssignments>
             <field>ShipToPostalCode</field>
             <value>
-                <elementReference>Get_FO_Info.FulfilledToPostalCode</elementReference>
+                <elementReference
+        >Get_FO_Info.FulfilledToPostalCode</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>ShipToStreet</field>
             <value>
-                <elementReference>Get_FO_Info.FulfilledToStreet</elementReference>
+                <elementReference
+        >Get_FO_Info.FulfilledToStreet</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -248,7 +259,8 @@
         <label>Get FO Info</label>
         <locationX>397</locationX>
         <locationY>283</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Check_Fulfillment_Order_Status</targetReference>
         </connector>
@@ -269,7 +281,8 @@
         <label>Get FO Items Info</label>
         <locationX>965</locationX>
         <locationY>281</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_All_Shipment_Items</targetReference>
         </connector>
@@ -358,10 +371,12 @@
         </connector>
         <fields>
             <name>Confirmation</name>
-            <fieldText>&lt;p&gt;Please click Create Manual Shipment to manually create shipment record in Magento.&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;Please click Create Manual Shipment to manually create shipment record in Magento.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
-        <nextOrFinishButtonLabel>Create Manual Shipment</nextOrFinishButtonLabel>
+        <nextOrFinishButtonLabel
+    >Create Manual Shipment</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -375,7 +390,8 @@
         <allowPause>true</allowPause>
         <fields>
             <name>Invalid_Status</name>
-            <fieldText>&lt;p&gt;The fulfillment order needs to be in status ALLOCATED or SENT TO LSP to create a shipment.&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;The fulfillment order needs to be in status ALLOCATED or SENT TO LSP to create a shipment.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -394,7 +410,8 @@
         </connector>
         <fields>
             <name>FinalText</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Shipment is created.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Shipment is created.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Finish</nextOrFinishButtonLabel>

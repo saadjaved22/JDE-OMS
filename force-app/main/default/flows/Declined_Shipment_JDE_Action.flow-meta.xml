@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Send_Declined_Shipment_to_Magento</name>
@@ -17,8 +17,10 @@
     </actionCalls>
     <apiVersion>58.0</apiVersion>
     <environments>Default</environments>
-    <interviewLabel>Declined Shipment JDE Action {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <interviewLabel
+  >Declined Shipment JDE Action {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun
+  >true</isAdditionalPermissionRequiredToRun>
     <label>Declined Shipment to Magento</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -53,10 +55,12 @@
         </connector>
         <fields>
             <name>Declined_Shipment_Text</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Are you sure you want to resend the Declined Shipment &lt;/span&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;{!recordId.Name}&lt;/strong&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt; to Magento?&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Are you sure you want to resend the Declined Shipment &lt;/span&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;{!recordId.Name}&lt;/strong&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt; to Magento?&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
-        <nextOrFinishButtonLabel>Resend Declined Shipment</nextOrFinishButtonLabel>
+        <nextOrFinishButtonLabel
+    >Resend Declined Shipment</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>

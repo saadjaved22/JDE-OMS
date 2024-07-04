@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <processMetadataValues>
@@ -63,14 +63,16 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <assignToReference
+      >myVariable_waitStartTimeVariable</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>isChangedDecision4_myRule_3_Request_to_be_Forgotten_c</targetReference>
+            <targetReference
+      >isChangedDecision4_myRule_3_Request_to_be_Forgotten_c</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -93,10 +95,12 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>myVariable_old.Request_to_be_Forgotten__c</leftValueReference>
+                <leftValueReference
+        >myVariable_old.Request_to_be_Forgotten__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <elementReference>myVariable_current.Request_to_be_Forgotten__c</elementReference>
+                    <elementReference
+          >myVariable_current.Request_to_be_Forgotten__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -176,7 +180,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_4_myRule_3_Request_to_be_Forgotten_c</leftValueReference>
+                <leftValueReference
+        >isChangedRule_4_myRule_3_Request_to_be_Forgotten_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -207,7 +212,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.Request_to_be_Forgotten__c</leftValueReference>
+                <leftValueReference
+        >myVariable_current.Request_to_be_Forgotten__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -238,7 +244,8 @@
                         <stringValue>Picklist</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.Type__c</leftValueReference>
+                <leftValueReference
+        >myVariable_current.Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Loyalty</stringValue>
@@ -269,7 +276,8 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.IsCustomerPortal</leftValueReference>
+                <leftValueReference
+        >myVariable_current.IsCustomerPortal</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -281,17 +289,20 @@
             <label>IsRequestToBeForgottenChecked</label>
         </rules>
     </decisions>
-    <description>Process Builder will update IsCustomerPortal to false when Request to be forgotten is requested</description>
+    <description
+  >Process Builder will update IsCustomerPortal to false when Request to be forgotten is requested</description>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c != true</stringValue>
+                <stringValue
+        >$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c != true</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c != true</expression>
+        <expression
+    >$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c != true</expression>
     </formulas>
     <interviewLabel>Request_To_Be_Forgotten-3_InterviewLabel</interviewLabel>
     <label>Request To Be Forgotten</label>
@@ -366,7 +377,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -428,7 +439,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -444,7 +455,8 @@
         </inputAssignments>
         <object>Account</object>
     </recordUpdates>
-    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <startElementReference
+  >myVariable_waitStartTimeAssignment</startElementReference>
     <status>Obsolete</status>
     <variables>
         <name>myVariable_current</name>

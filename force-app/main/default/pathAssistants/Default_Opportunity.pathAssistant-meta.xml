@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
     <active>false</active>
     <entityName>Opportunity</entityName>
@@ -6,7 +6,8 @@
     <masterLabel>Default</masterLabel>
     <pathAssistantSteps>
         <fieldNames>Loss_Reason__c</fieldNames>
-        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Reviseer technieken voor een groter aantal &amp;quot;wins&amp;quot; in de toekomst.&lt;/strong&gt;&lt;/p&gt;
+        <info
+    >&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Reviseer technieken voor een groter aantal &amp;quot;wins&amp;quot; in de toekomst.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;&lt;li class=&quot;p1&quot;&gt;Wat heeft er toe bijgedragen dat u deze opportunity hebt verloren?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Wat moeten we anders gaan doen om onze winstkansen te vergroten?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Plan een vervolgtaak of -event voor deze account.&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>Closed Lost</picklistValueName>
@@ -20,7 +21,8 @@
         <fieldNames>Amount</fieldNames>
         <fieldNames>CloseDate</fieldNames>
         <fieldNames>Discovery_Completed__c</fieldNames>
-        <info>&lt;div style=&quot;font-family: arial, sans, sans-serif;&quot;&gt;&lt;strong&gt;Krijg inzicht in de bedrijfsbehoefte en besluitvormingscriteria.&lt;/strong&gt;
+        <info
+    >&lt;div style=&quot;font-family: arial, sans, sans-serif;&quot;&gt;&lt;strong&gt;Krijg inzicht in de bedrijfsbehoefte en besluitvormingscriteria.&lt;/strong&gt;
 
 &lt;ul&gt;&lt;li class=&quot;p1&quot;&gt;Waarom is onze oplossing geschikt?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Op welke manier is onze oplossing beter dan die van de concurrentie?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Welke resources zijn beschikbaar voor de implementatie van de oplossing?&lt;/li&gt;&lt;/ul&gt;
 &lt;/div&gt;</info>
@@ -29,7 +31,8 @@
     <pathAssistantSteps>
         <fieldNames>Amount</fieldNames>
         <fieldNames>CloseDate</fieldNames>
-        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Onderhandel over waarde- en oplossingsdoelstellingen.&lt;/strong&gt;&lt;/p&gt;
+        <info
+    >&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Onderhandel over waarde- en oplossingsdoelstellingen.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;&lt;li class=&quot;p1&quot;&gt;Hebt u bevestigd dat alle belangrijke besluitvormers erbij zijn betrokken?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Hebt u zich voldoende gericht op het belang van de waarde om de beste prijs te kunnen halen?&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>Negotiation</picklistValueName>
@@ -38,7 +41,8 @@
         <fieldNames>Amount</fieldNames>
         <fieldNames>CloseDate</fieldNames>
         <fieldNames>ROI_Analysis_Completed__c</fieldNames>
-        <info>&lt;div style=&quot;font-family: arial, sans, sans-serif;&quot;&gt;&lt;strong&gt;Presenteer de oplossing en geef inzicht in het aanschaffingsproces.​&lt;/strong&gt;&lt;/div&gt;
+        <info
+    >&lt;div style=&quot;font-family: arial, sans, sans-serif;&quot;&gt;&lt;strong&gt;Presenteer de oplossing en geef inzicht in het aanschaffingsproces.​&lt;/strong&gt;&lt;/div&gt;
 
 &lt;ul&gt;&lt;li class=&quot;p1&quot;&gt;Waar zijn ze op dit moment in de aanschafcyclus?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Hoe luidt het proces om inkooporders te genereren?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Wie zijn de belangrijkste besluitvormers?  Hebt u ze toegevoegd aan de opportunity?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Hoe kunt u de waarde van onze oplossingen duidelijk maken aan die besluitvormers?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Wat is de status van kwantificerende ROI bij hun?&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>Proposal</picklistValueName>
@@ -47,7 +51,8 @@
         <fieldNames>CloseDate</fieldNames>
         <fieldNames>Description</fieldNames>
         <fieldNames>Budget_Confirmed__c</fieldNames>
-        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Kwalificeer de opportunity en bevestig het budget.​&lt;/strong&gt;&lt;/p&gt;
+        <info
+    >&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Kwalificeer de opportunity en bevestig het budget.​&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;&lt;li class=&quot;p1&quot;&gt;Wat voor zaken doen ze?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Welke problemen proberen ze op te lossen?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Op welke manier zijn ze met het oplossen van deze problemen geholpen?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Is dit een goed moment voor ze?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Hoe groot is hun budget?&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Welke andere oplossingen overwegen ze?&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>Qualification</picklistValueName>

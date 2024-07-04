@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Update_Safety_Stock_in_Warehouse</name>
@@ -17,12 +17,14 @@
         <inputParameters>
             <name>safetyStock</name>
             <value>
-                <elementReference>New_Safetystock_value_for_all_SKUs</elementReference>
+                <elementReference
+        >New_Safetystock_value_for_all_SKUs</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
-    <description>Screenflow to set a new value for all SKUs in a warehouse</description>
+    <description
+  >Screenflow to set a new value for all SKUs in a warehouse</description>
     <dynamicChoiceSets>
         <name>choose_location</name>
         <dataType>String</dataType>
@@ -61,7 +63,8 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <screens>
-        <description>Select the warehouse and set the safetystock number for all SKUs in that warehouse</description>
+        <description
+    >Select the warehouse and set the safetystock number for all SKUs in that warehouse</description>
         <name>Set_safetystock_for_warehouse</name>
         <label>Set safetystock for warehouse</label>
         <locationX>176</locationX>

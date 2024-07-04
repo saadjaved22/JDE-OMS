@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
     <active>true</active>
     <entityName>Lead</entityName>
     <fieldName>Status</fieldName>
     <masterLabel>Default</masterLabel>
     <pathAssistantSteps>
-        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Gefeliciteerd! &lt;/strong&gt;U bent nu zo ver dat u de leadrecord kunt converteren naar een opportunity. Vervolgens gaat u door met het kwalificatieproces met uw nieuwe contactpersoon.&lt;/p&gt;</info>
+        <info
+    >&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Gefeliciteerd! &lt;/strong&gt;U bent nu zo ver dat u de leadrecord kunt converteren naar een opportunity. Vervolgens gaat u door met het kwalificatieproces met uw nieuwe contactpersoon.&lt;/p&gt;</info>
         <picklistValueName>Gekwalificeerd</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
@@ -14,7 +15,8 @@
         <fieldNames>Industry</fieldNames>
         <fieldNames>AnnualRevenue</fieldNames>
         <fieldNames>NumberOfEmployees</fieldNames>
-        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Zorg voor snelle info over en snel contact met uw lead.&lt;/strong&gt;&lt;/p&gt;
+        <info
+    >&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Zorg voor snelle info over en snel contact met uw lead.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p class=&quot;p1&quot;&gt;Gebruik Salesforce-leads om prospects te scheiden van de Salesforce-contactpersonen aan wie u al hebt verkocht.&lt;/p&gt;
 
@@ -32,7 +34,8 @@
     <pathAssistantSteps>
         <fieldNames>Description</fieldNames>
         <fieldNames>LeadSource</fieldNames>
-        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Als uw lead noch de interesse, noch de bevoegdheid heeft om bij u te kopen, markeert u de lead als Ongekwalificeerd. &lt;/strong&gt;&lt;/p&gt;
+        <info
+    >&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Als uw lead noch de interesse, noch de bevoegdheid heeft om bij u te kopen, markeert u de lead als Ongekwalificeerd. &lt;/strong&gt;&lt;/p&gt;
 
 &lt;p class=&quot;p1&quot;&gt;Verspil geen tijd aan ongekwalificeerde leads.&lt;/p&gt;
 
@@ -41,7 +44,8 @@
     </pathAssistantSteps>
     <pathAssistantSteps>
         <fieldNames>Rating</fieldNames>
-        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Koester uw lead zodat u de touwtjes in handen hebt.&lt;/strong&gt;&lt;/p&gt;
+        <info
+    >&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Koester uw lead zodat u de touwtjes in handen hebt.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p class=&quot;p1&quot;&gt;Stuur e-mailberichten op basis van tijdsintervallen en de acties van uw leads op onze website. Door leads te koesteren maakt u tijd vrij, waardoor u zich kunt richten op andere opportunities in uw pijplijn.&lt;/p&gt;
 
@@ -56,7 +60,8 @@
         <fieldNames>Email</fieldNames>
         <fieldNames>MobilePhone</fieldNames>
         <fieldNames>Phone</fieldNames>
-        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Controleer contactgegevens en kwalificeer uw lead.&lt;/strong&gt;&lt;/p&gt;
+        <info
+    >&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Controleer contactgegevens en kwalificeer uw lead.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p class=&quot;p1&quot;&gt;Verzamel zo veel mogelijk contactgegevens als u kunt. Benader de professionals voor tips over het belang van het kwalificeren van uw lead.&lt;/p&gt;
 

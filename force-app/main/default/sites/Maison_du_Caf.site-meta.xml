@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
     <active>true</active>
     <allowGuestPaymentsApi>false</allowGuestPaymentsApi>
@@ -11,7 +11,8 @@
     <authorizationRequiredPage>CommunitiesLogin</authorizationRequiredPage>
     <bandwidthExceededPage>BandwidthExceeded</bandwidthExceededPage>
     <browserXssProtection>true</browserXssProtection>
-    <cachePublicVisualforcePagesInProxyServers>true</cachePublicVisualforcePagesInProxyServers>
+    <cachePublicVisualforcePagesInProxyServers
+  >true</cachePublicVisualforcePagesInProxyServers>
     <changePasswordPage>MdCCommunityChangePassword</changePasswordPage>
     <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
     <contentSniffingProtection>true</contentSniffingProtection>
@@ -23,10 +24,12 @@
     <indexPage>MdCCommunitiesLanding</indexPage>
     <masterLabel>Maison du Café</masterLabel>
     <redirectToCustomDomain>false</redirectToCustomDomain>
-    <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
+    <referrerPolicyOriginWhenCrossOrigin
+  >true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
     <siteAdmin>batch.apex@jdecoffee.com</siteAdmin>
-    <siteGuestRecordDefaultOwner>iyano.m.a.paguio@jdecoffee.com</siteGuestRecordDefaultOwner>
+    <siteGuestRecordDefaultOwner
+  >iyano.m.a.paguio@jdecoffee.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
     <subdomain>jde</subdomain>
     <urlPathPrefix>mdc</urlPathPrefix>

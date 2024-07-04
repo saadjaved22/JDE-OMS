@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Source_Unique_ID__c</fullName>
     <caseSensitive>true</caseSensitive>
-    <description>To be used for data migration from Zeta/Pro-Campaign</description>
+    <description
+  >To be used for data migration from Zeta/Pro-Campaign</description>
     <externalId>false</externalId>
-    <inlineHelpText>Unique ID of the record in the System (Pro-Camppaign or Zeta). Prefereably prepended with "Zeta" or "Pro to avoid possibility of duplication"</inlineHelpText>
+    <inlineHelpText
+  >Unique ID of the record in the System (Pro-Camppaign or Zeta). Prefereably prepended with "Zeta" or "Pro to avoid possibility of duplication"</inlineHelpText>
     <label>Source Unique ID</label>
     <length>80</length>
     <required>false</required>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <assignments>
@@ -10,11 +10,13 @@
             <assignToReference>outputChangeItems</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>Change_Items_Loop_to_Set_Shipping_Flag</elementReference>
+                <elementReference
+        >Change_Items_Loop_to_Set_Shipping_Flag</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Change_Items_Loop_to_Set_Shipping_Flag</targetReference>
+            <targetReference
+      >Change_Items_Loop_to_Set_Shipping_Flag</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -78,7 +80,8 @@
         <locationX>1657</locationX>
         <locationY>433</locationY>
         <assignmentItems>
-            <assignToReference>Change_Items_Loop_to_Set_Shipping_Flag.shippingReductionFlag</assignToReference>
+            <assignToReference
+      >Change_Items_Loop_to_Set_Shipping_Flag.shippingReductionFlag</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>shippingReductionFlag</elementReference>
@@ -101,7 +104,8 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Change_Items_Loop_to_Set_Shipping_Flag</targetReference>
+            <targetReference
+      >Change_Items_Loop_to_Set_Shipping_Flag</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -117,7 +121,8 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Change_Items_Loop_to_Set_Shipping_Flag</targetReference>
+            <targetReference
+      >Change_Items_Loop_to_Set_Shipping_Flag</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -133,10 +138,12 @@
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Change_Items_Loop.quantity</leftValueReference>
+                <leftValueReference
+        >Change_Items_Loop.quantity</leftValueReference>
                 <operator>LessThan</operator>
                 <rightValue>
-                    <elementReference>Order_Item_Summaries_Loop.QuantityAvailableToReturn</elementReference>
+                    <elementReference
+          >Order_Item_Summaries_Loop.QuantityAvailableToReturn</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -172,7 +179,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Set_Shipping_Reduction_to_True</targetReference>
+                <targetReference
+        >Set_Shipping_Reduction_to_True</targetReference>
             </connector>
             <label>Full Return</label>
         </rules>
@@ -190,14 +198,17 @@
             <name>Less</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Order_Items_Cleanup_Loop.Quantity</leftValueReference>
+                <leftValueReference
+        >Order_Items_Cleanup_Loop.Quantity</leftValueReference>
                 <operator>LessThanOrEqualTo</operator>
                 <rightValue>
-                    <elementReference>Order_Items_Cleanup_Loop.QuantityReturnInitiated</elementReference>
+                    <elementReference
+          >Order_Items_Cleanup_Loop.QuantityReturnInitiated</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Remove_the_item_from_collection</targetReference>
+                <targetReference
+        >Remove_the_item_from_collection</targetReference>
             </connector>
             <label>Less Quantity</label>
         </rules>
@@ -215,14 +226,17 @@
             <name>Product_Matched</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Change_Items_Loop.orderItemSummaryId</leftValueReference>
+                <leftValueReference
+        >Change_Items_Loop.orderItemSummaryId</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>Order_Item_Summaries_Loop.Id</elementReference>
+                    <elementReference
+          >Order_Item_Summaries_Loop.Id</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Check_If_Partial_Return_On_Item</targetReference>
+                <targetReference
+        >Check_If_Partial_Return_On_Item</targetReference>
             </connector>
             <label>Product Matched</label>
         </rules>
@@ -231,10 +245,12 @@
     <formulas>
         <name>activeAvailableQuantity</name>
         <dataType>Number</dataType>
-        <expression>{!Order_Item_Summaries_Loop.Quantity}-{!Order_Item_Summaries_Loop.QuantityReturnInitiated}</expression>
+        <expression
+    >{!Order_Item_Summaries_Loop.Quantity}-{!Order_Item_Summaries_Loop.QuantityReturnInitiated}</expression>
         <scale>0</scale>
     </formulas>
-    <interviewLabel>Validate Return Items JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Validate Return Items JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Validate Return Items JDE</label>
     <loops>
         <name>Change_Items_Loop</name>
@@ -258,7 +274,8 @@
         <collectionReference>changeItems</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Set_Shipping_Reduction_Flag_to_True</targetReference>
+            <targetReference
+      >Set_Shipping_Reduction_Flag_to_True</targetReference>
         </nextValueConnector>
     </loops>
     <loops>
@@ -313,7 +330,8 @@
         <label>Get Order Item Summaries</label>
         <locationX>572</locationX>
         <locationY>233</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Order_Items_Cleanup_Loop</targetReference>
         </connector>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Return_Order_API_callout_to_LSP</name>
@@ -8,7 +8,8 @@
         <actionName>RestServiceReturnOrder</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Get_Return_Lines_With_Empty_Quantity_Received_Value</targetReference>
+            <targetReference
+      >Get_Return_Lines_With_Empty_Quantity_Received_Value</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -71,10 +72,12 @@
         <locationX>976</locationX>
         <locationY>427</locationY>
         <assignmentItems>
-            <assignToReference>Return_Lines_Loop.QuantityReceived</assignToReference>
+            <assignToReference
+      >Return_Lines_Loop.QuantityReceived</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Return_Lines_Loop.QuantityExpected</elementReference>
+                <elementReference
+        >Return_Lines_Loop.QuantityExpected</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -99,14 +102,16 @@
     </assignments>
     <description>Run Integration calls async option added.</description>
     <environments>Default</environments>
-    <interviewLabel>Return Order Post Actions JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Return Order Post Actions JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Return Order Post Actions JDE</label>
     <loops>
         <name>Return_Lines_Loop</name>
         <label>Return Lines Loop</label>
         <locationX>1052</locationX>
         <locationY>226</locationY>
-        <collectionReference>Get_Return_Lines_With_Empty_Quantity_Received_Value</collectionReference>
+        <collectionReference
+    >Get_Return_Lines_With_Empty_Quantity_Received_Value</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Set_Quantity_Received</targetReference>
@@ -139,7 +144,8 @@
         <label>Get Return Lines With Empty Quantity Received Value</label>
         <locationX>903</locationX>
         <locationY>226</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Return_Lines_Loop</targetReference>
         </connector>
@@ -190,7 +196,8 @@
         <locationX>446</locationX>
         <locationY>48</locationY>
         <connector>
-            <targetReference>Return_Order_API_Return_callout_to_Webshop</targetReference>
+            <targetReference
+      >Return_Order_API_Return_callout_to_Webshop</targetReference>
         </connector>
     </start>
     <status>Active</status>

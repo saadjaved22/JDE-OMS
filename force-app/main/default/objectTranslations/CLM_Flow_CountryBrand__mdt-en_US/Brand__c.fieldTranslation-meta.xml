@@ -1,125 +1,125 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label></label>
+    <label />
     <name>Brand__c</name>
     <picklistValues>
         <masterLabel>Bosch</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Cadbury</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Carte Noire</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Costa</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Douwe Egberts</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Evergood</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Friele</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Gevalia</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Grand Mere</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Hag</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Jacobs</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Jacqmotte</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Kenco</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Koziol</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>L&apos;Or</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Let</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Maison du Café</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Marabou</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Marcilla</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Maxwell House</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Milka</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Oreo</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Other</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Pickwick</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Ritzenhoff</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Saimaza</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Senseo</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Suchard</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Tassimo</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Twinings</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
 </CustomFieldTranslation>

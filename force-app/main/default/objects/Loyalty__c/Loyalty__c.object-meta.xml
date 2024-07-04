@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>Accept</actionName>
@@ -143,7 +143,8 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>This object will hold information like Loyal Card Number, Total Loyalty Points, Total Loyalty Points Redeemed.</description>
+    <description
+  >This object will hold information like Loyal Card Number, Total Loyalty Points, Total Loyalty Points Redeemed.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -163,9 +164,12 @@
     </nameField>
     <pluralLabel>Loyalty</pluralLabel>
     <searchLayouts>
-        <searchResultsAdditionalFields>Loyalty_Account_Number__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Loyalty_Card_Status__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Loyalty_Consumer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >Loyalty_Account_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >Loyalty_Card_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >Loyalty_Consumer__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>

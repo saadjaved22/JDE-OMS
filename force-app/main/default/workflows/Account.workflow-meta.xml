@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldUpdates>
         <fullName>UpdateExernalID</fullName>
@@ -84,7 +84,8 @@
         <fullName>SendOutboundNodtfication_To_IPAAS</fullName>
         <apiVersion>43.0</apiVersion>
         <description>Update Account Opt_In_Status_Synced</description>
-        <endpointUrl>https://jde-prod.boomi.cloud/ws/soap/jde/v1;boomi_auth=c2ZfcmV0YWlsX3Byb2RAamRlLUFJNDJEMy5EWEZBQ0w6OTBhNTQ3ZWMtZjdiYS00NjBmLThjOGItNDYxMWVkZDEwZmFh?wsdl=single</endpointUrl>
+        <endpointUrl
+    >https://jde-prod.boomi.cloud/ws/soap/jde/v1;boomi_auth=c2ZfcmV0YWlsX3Byb2RAamRlLUFJNDJEMy5EWEZBQ0w6OTBhNTQ3ZWMtZjdiYS00NjBmLThjOGItNDYxMWVkZDEwZmFh?wsdl=single</endpointUrl>
         <fields>Brand__c</fields>
         <fields>Country__c</fields>
         <fields>External_Id__c</fields>
@@ -98,7 +99,8 @@
     <outboundMessages>
         <fullName>Send_Tassimo_to_Magento</fullName>
         <apiVersion>45.0</apiVersion>
-        <endpointUrl>https://jde-prod.boomi.cloud/ws/soap/jde/v1;boomi_auth=c2ZfcmV0YWlsX3Byb2RAamRlLUFJNDJEMy5EWEZBQ0w6OTBhNTQ3ZWMtZjdiYS00NjBmLThjOGItNDYxMWVkZDEwZmFh?wsdl=single</endpointUrl>
+        <endpointUrl
+    >https://jde-prod.boomi.cloud/ws/soap/jde/v1;boomi_auth=c2ZfcmV0YWlsX3Byb2RAamRlLUFJNDJEMy5EWEZBQ0w6OTBhNTQ3ZWMtZjdiYS00NjBmLThjOGItNDYxMWVkZDEwZmFh?wsdl=single</endpointUrl>
         <fields>Account_Registration_Status__c</fields>
         <fields>Brand__c</fields>
         <fields>Consent_Status__c</fields>
@@ -115,7 +117,8 @@
     <outboundMessages>
         <fullName>Send_to_SAP_PI</fullName>
         <apiVersion>39.0</apiVersion>
-        <endpointUrl>https://pip.demb.com:443/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SALESFORCE&amp;receiverParty=&amp;receiverService=&amp;interface=SI_OUT_CustomerUpdateNotification&amp;interfaceNamespace=urn:jdecoffee:digital:intershop:customersubscription</endpointUrl>
+        <endpointUrl
+    >https://pip.demb.com:443/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SALESFORCE&amp;receiverParty=&amp;receiverService=&amp;interface=SI_OUT_CustomerUpdateNotification&amp;interfaceNamespace=urn:jdecoffee:digital:intershop:customersubscription</endpointUrl>
         <fields>Account_Registration_Status__c</fields>
         <fields>Brand__c</fields>
         <fields>Consent_Status__c</fields>
@@ -136,8 +139,10 @@
             <type>FieldUpdate</type>
         </actions>
         <active>false</active>
-        <description>Populate Person Account Email Opt In Status Field - Confirmed</description>
-        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c,(  OR(  AND(Opt_in_Confirmation_Date__c &gt; Opt_in_Request_Date__c , Opt_in_Confirmation_Date__c &gt;  Opt_out_Request_Date__c ),  AND(NOT(ISBLANK(Opt_in_Confirmation_Date__c)), ISBLANK(Opt_in_Request_Date__c), ISBLANK(Opt_out_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c &gt; Opt_in_Request_Date__c, ISBLANK(Opt_out_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c &gt; Opt_out_Request_Date__c, ISBLANK(Opt_in_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c = Opt_in_Request_Date__c, OR(Opt_in_Confirmation_Date__c &gt;= Opt_out_Request_Date__c, ISBLANK(Opt_out_Request_Date__c)))  ) ) )</formula>
+        <description
+    >Populate Person Account Email Opt In Status Field - Confirmed</description>
+        <formula
+    >AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c,(  OR(  AND(Opt_in_Confirmation_Date__c &gt; Opt_in_Request_Date__c , Opt_in_Confirmation_Date__c &gt;  Opt_out_Request_Date__c ),  AND(NOT(ISBLANK(Opt_in_Confirmation_Date__c)), ISBLANK(Opt_in_Request_Date__c), ISBLANK(Opt_out_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c &gt; Opt_in_Request_Date__c, ISBLANK(Opt_out_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c &gt; Opt_out_Request_Date__c, ISBLANK(Opt_in_Request_Date__c)),  AND(Opt_in_Confirmation_Date__c = Opt_in_Request_Date__c, OR(Opt_in_Confirmation_Date__c &gt;= Opt_out_Request_Date__c, ISBLANK(Opt_out_Request_Date__c)))  ) ) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -147,8 +152,10 @@
             <type>FieldUpdate</type>
         </actions>
         <active>false</active>
-        <description>Populate Person Account Email Opt In Status Field - Opt-out</description>
-        <formula>AND( $Setup.WorkflowSettings__c.PersonAccountWorkflow__c, (  OR(  AND(Opt_out_Request_Date__c &gt; Opt_in_Request_Date__c , Opt_out_Request_Date__c  &gt; Opt_in_Confirmation_Date__c ),  AND(NOT(ISBLANK(Opt_out_Request_Date__c)), ISBLANK(Opt_in_Request_Date__c ), ISBLANK(Opt_in_Confirmation_Date__c )),  AND(Opt_out_Request_Date__c &gt; Opt_in_Request_Date__c, ISBLANK(Opt_in_Confirmation_Date__c)),  AND(Opt_out_Request_Date__c &gt; Opt_in_Confirmation_Date__c, ISBLANK(Opt_in_Request_Date__c)),  AND(Opt_out_Request_Date__c = Opt_in_Confirmation_Date__c,  OR(Opt_out_Request_Date__c &gt;= Opt_in_Request_Date__c,ISBLANK(Opt_in_Request_Date__c))),  AND(Opt_out_Request_Date__c = Opt_in_Request_Date__c,  OR(Opt_out_Request_Date__c &gt;= Opt_in_Confirmation_Date__c, ISBLANK(Opt_in_Confirmation_Date__c)))   ) ) )</formula>
+        <description
+    >Populate Person Account Email Opt In Status Field - Opt-out</description>
+        <formula
+    >AND( $Setup.WorkflowSettings__c.PersonAccountWorkflow__c, (  OR(  AND(Opt_out_Request_Date__c &gt; Opt_in_Request_Date__c , Opt_out_Request_Date__c  &gt; Opt_in_Confirmation_Date__c ),  AND(NOT(ISBLANK(Opt_out_Request_Date__c)), ISBLANK(Opt_in_Request_Date__c ), ISBLANK(Opt_in_Confirmation_Date__c )),  AND(Opt_out_Request_Date__c &gt; Opt_in_Request_Date__c, ISBLANK(Opt_in_Confirmation_Date__c)),  AND(Opt_out_Request_Date__c &gt; Opt_in_Confirmation_Date__c, ISBLANK(Opt_in_Request_Date__c)),  AND(Opt_out_Request_Date__c = Opt_in_Confirmation_Date__c,  OR(Opt_out_Request_Date__c &gt;= Opt_in_Request_Date__c,ISBLANK(Opt_in_Request_Date__c))),  AND(Opt_out_Request_Date__c = Opt_in_Request_Date__c,  OR(Opt_out_Request_Date__c &gt;= Opt_in_Confirmation_Date__c, ISBLANK(Opt_in_Confirmation_Date__c)))   ) ) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -158,8 +165,10 @@
             <type>FieldUpdate</type>
         </actions>
         <active>false</active>
-        <description>Populate Person Account Email Opt In Status Field - Requested</description>
-        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ( OR(  AND(Opt_in_Request_Date__c &gt; Opt_in_Confirmation_Date__c, Opt_in_Request_Date__c &gt;  Opt_out_Request_Date__c ),  AND(NOT(ISBLANK(Opt_in_Request_Date__c)), ISBLANK(Opt_in_Confirmation_Date__c), ISBLANK(Opt_out_Request_Date__c )),  AND(Opt_in_Request_Date__c &gt; Opt_in_Confirmation_Date__c, ISBLANK(Opt_out_Request_Date__c )),  AND(Opt_in_Request_Date__c &gt; Opt_out_Request_Date__c, ISBLANK(Opt_in_Confirmation_Date__c))  ) ) )</formula>
+        <description
+    >Populate Person Account Email Opt In Status Field - Requested</description>
+        <formula
+    >AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ( OR(  AND(Opt_in_Request_Date__c &gt; Opt_in_Confirmation_Date__c, Opt_in_Request_Date__c &gt;  Opt_out_Request_Date__c ),  AND(NOT(ISBLANK(Opt_in_Request_Date__c)), ISBLANK(Opt_in_Confirmation_Date__c), ISBLANK(Opt_out_Request_Date__c )),  AND(Opt_in_Request_Date__c &gt; Opt_in_Confirmation_Date__c, ISBLANK(Opt_out_Request_Date__c )),  AND(Opt_in_Request_Date__c &gt; Opt_out_Request_Date__c, ISBLANK(Opt_in_Confirmation_Date__c))  ) ) )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -173,7 +182,8 @@
             <field>Account.Opt_in_Request_Date__c</field>
             <operation>notEqual</operation>
         </criteriaItems>
-        <description>When creating new account and Opt-in Request Date has value, Populate Email Opt Out Field</description>
+        <description
+    >When creating new account and Opt-in Request Date has value, Populate Email Opt Out Field</description>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
@@ -183,8 +193,10 @@
             <type>FieldUpdate</type>
         </actions>
         <active>false</active>
-        <description>Populate Person Account Email Opt Out field - False</description>
-        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ISPICKVAL(Opt_in_Status__c ,&apos;Confirmed&apos;))</formula>
+        <description
+    >Populate Person Account Email Opt Out field - False</description>
+        <formula
+    >AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ISPICKVAL(Opt_in_Status__c ,&apos;Confirmed&apos;))</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -194,8 +206,10 @@
             <type>FieldUpdate</type>
         </actions>
         <active>false</active>
-        <description>Populate Person Account Email Opt Out field - True</description>
-        <formula>AND(OR(ISPICKVAL(Opt_in_Status__c, &apos;Requested&apos;),  ISPICKVAL(Opt_in_Status__c, &apos;Opt-out&apos;)),
+        <description
+    >Populate Person Account Email Opt Out field - True</description>
+        <formula
+    >AND(OR(ISPICKVAL(Opt_in_Status__c, &apos;Requested&apos;),  ISPICKVAL(Opt_in_Status__c, &apos;Opt-out&apos;)),
 $Setup.WorkflowSettings__c.PersonAccountWorkflow__c)</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
@@ -216,7 +230,8 @@ $Setup.WorkflowSettings__c.PersonAccountWorkflow__c)</formula>
             <type>OutboundMessage</type>
         </actions>
         <active>true</active>
-        <description>This workflow will send outbound notification to Ipass dell boomi. As part of the notification it will send Id and External Id of the consumer record.</description>
+        <description
+    >This workflow will send outbound notification to Ipass dell boomi. As part of the notification it will send Id and External Id of the consumer record.</description>
         <formula>AND(
 $Setup.WorkflowSettings__c.PersonAccountWorkflow__c,
 ISPICKVAL(Brand__c, &quot;L&apos;Or&quot;),
@@ -241,8 +256,10 @@ NOT($User.Id = &apos;0050Y000004qDAG&apos;)
             <type>OutboundMessage</type>
         </actions>
         <active>true</active>
-        <description>This workflow will send outbound notification to Ipass dell boomi. As part of the notification it will send Id and External Id of the consumer record. This is separate from the LOr message so that it can be turned on/off independently.</description>
-        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c , ISPICKVAL(Brand__c,&quot;Maison du Café&quot;), ISPICKVAL(Country__c,&quot;FR&quot;))</formula>
+        <description
+    >This workflow will send outbound notification to Ipass dell boomi. As part of the notification it will send Id and External Id of the consumer record. This is separate from the LOr message so that it can be turned on/off independently.</description>
+        <formula
+    >AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c , ISPICKVAL(Brand__c,&quot;Maison du Café&quot;), ISPICKVAL(Country__c,&quot;FR&quot;))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -256,7 +273,8 @@ NOT($User.Id = &apos;0050Y000004qDAG&apos;)
             <type>OutboundMessage</type>
         </actions>
         <active>false</active>
-        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c ,OR(ISCHANGED(Type),ISCHANGED(Opt_in_Status__c),ISCHANGED(Consent_Status__c)),
+        <formula
+    >AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c ,OR(ISCHANGED(Type),ISCHANGED(Opt_in_Status__c),ISCHANGED(Consent_Status__c)),
 ISPICKVAL(Brand__c, &apos;Tassimo&apos;)
  )</formula>
         <triggerType>onAllChanges</triggerType>
@@ -272,8 +290,10 @@ ISPICKVAL(Brand__c, &apos;Tassimo&apos;)
             <type>OutboundMessage</type>
         </actions>
         <active>true</active>
-        <description>This Workflow Rule sends an outbound message containing fields to Magento.</description>
-        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c ,OR(ISCHANGED(Type),ISCHANGED(Opt_in_Status__c),ISCHANGED(Consent_Status__c)), 
+        <description
+    >This Workflow Rule sends an outbound message containing fields to Magento.</description>
+        <formula
+    >AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c ,OR(ISCHANGED(Type),ISCHANGED(Opt_in_Status__c),ISCHANGED(Consent_Status__c)), 
 ISPICKVAL(Brand__c, &apos;Tassimo&apos;) 
 )</formula>
         <triggerType>onAllChanges</triggerType>
@@ -285,8 +305,10 @@ ISPICKVAL(Brand__c, &apos;Tassimo&apos;)
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <description>This Workflow Rule updates the Account External Id when the Account Registration Status is Deactivated.</description>
-        <formula>AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ISCHANGED(Account_Registration_Status__c),ISPICKVAL(Account_Registration_Status__c, &apos;Deactivated&apos;))</formula>
+        <description
+    >This Workflow Rule updates the Account External Id when the Account Registration Status is Deactivated.</description>
+        <formula
+    >AND($Setup.WorkflowSettings__c.PersonAccountWorkflow__c, ISCHANGED(Account_Registration_Status__c),ISPICKVAL(Account_Registration_Status__c, &apos;Deactivated&apos;))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -296,8 +318,10 @@ ISPICKVAL(Brand__c, &apos;Tassimo&apos;)
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <description>This workflow rule will update external Id at account level for Loyalty Accounts</description>
-        <formula>!ISNEW() &amp;&amp; ISCHANGED(PersonEmail) &amp;&amp; ISPICKVAL(Type__c , &quot;Loyalty&quot;)</formula>
+        <description
+    >This workflow rule will update external Id at account level for Loyalty Accounts</description>
+        <formula
+    >!ISNEW() &amp;&amp; ISCHANGED(PersonEmail) &amp;&amp; ISPICKVAL(Type__c , &quot;Loyalty&quot;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

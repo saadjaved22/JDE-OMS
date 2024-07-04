@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>OCI_Release_Reservation</name>
@@ -32,45 +32,57 @@
         <locationX>899</locationX>
         <locationY>857</locationY>
         <assignmentItems>
-            <assignToReference>SingleReleaseReservation.quantity</assignToReference>
+            <assignToReference
+      >SingleReleaseReservation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Order_Items_Loop.Quantity__c</elementReference>
+                <elementReference
+        >Interaction_Order_Items_Loop.Quantity__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleReleaseReservation.locationIdentifier</assignToReference>
+            <assignToReference
+      >SingleReleaseReservation.locationIdentifier</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Order_Items_Loop.FromLocation__r.ExternalReference</elementReference>
+                <elementReference
+        >Interaction_Order_Items_Loop.FromLocation__r.ExternalReference</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleReleaseReservation.stockKeepingUnit</assignToReference>
+            <assignToReference
+      >SingleReleaseReservation.stockKeepingUnit</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Order_Items_Loop.OrderItemSummary__r.Product2.StockKeepingUnit</elementReference>
+                <elementReference
+        >Interaction_Order_Items_Loop.OrderItemSummary__r.Product2.StockKeepingUnit</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleReleaseReservation.locationGroupIdentifier</assignToReference>
+            <assignToReference
+      >SingleReleaseReservation.locationGroupIdentifier</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Order_Items_Loop.FromLocationGroup__r.ExternalReference</elementReference>
+                <elementReference
+        >Interaction_Order_Items_Loop.FromLocationGroup__r.ExternalReference</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleReleaseReservation.actionRequestId</assignToReference>
+            <assignToReference
+      >SingleReleaseReservation.actionRequestId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Order_Items_Loop.Id</elementReference>
+                <elementReference
+        >Interaction_Order_Items_Loop.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleReleaseReservation.externalRefId</assignToReference>
+            <assignToReference
+      >SingleReleaseReservation.externalRefId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Order_Items_Loop.Id</elementReference>
+                <elementReference
+        >Interaction_Order_Items_Loop.Id</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -83,7 +95,8 @@
         <locationX>1024</locationX>
         <locationY>856</locationY>
         <assignmentItems>
-            <assignToReference>ReleaseReservationRequest.releaseRecords</assignToReference>
+            <assignToReference
+      >ReleaseReservationRequest.releaseRecords</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>SingleReleaseReservation</elementReference>
@@ -148,7 +161,7 @@
                 <leftValueReference>ExceptionMessage</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </rightValue>
             </conditions>
             <conditions>
@@ -177,14 +190,17 @@
             <name>Failure_Limit_Reached_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.ConnectionFailAttempts__c</leftValueReference>
+                <leftValueReference
+        >$Record.ConnectionFailAttempts__c</leftValueReference>
                 <operator>GreaterThanOrEqualTo</operator>
                 <rightValue>
-                    <elementReference>MAX_OCI_CONN_FAIL_ATTEMPTS</elementReference>
+                    <elementReference
+          >MAX_OCI_CONN_FAIL_ATTEMPTS</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Process_Exception_Max_Failures_Reached</targetReference>
+                <targetReference
+        >Process_Exception_Max_Failures_Reached</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -202,7 +218,8 @@
             <name>Item_Is_Product</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Interaction_Order_Items_Loop.OrderItemSummary__r.TypeCode</leftValueReference>
+                <leftValueReference
+        >Interaction_Order_Items_Loop.OrderItemSummary__r.TypeCode</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Product</stringValue>
@@ -227,14 +244,16 @@
         <dataType>DateTime</dataType>
         <expression>NOW() + (1/24)</expression>
     </formulas>
-    <interviewLabel>Release Reservation JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Release Reservation JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Release Reservation JDE</label>
     <loops>
         <name>Error_Responses</name>
         <label>Error Responses</label>
         <locationX>1524</locationX>
         <locationY>379</locationY>
-        <collectionReference>ReleaseReservationResponse.errors</collectionReference>
+        <collectionReference
+    >ReleaseReservationResponse.errors</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Exception_Message</targetReference>
@@ -305,7 +324,8 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.OCIReleaseReservationError</elementReference>
+                <elementReference
+        >$Label.OCIReleaseReservationError</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -364,7 +384,8 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.OCIConnectionFailedAttempts</elementReference>
+                <elementReference
+        >$Label.OCIConnectionFailedAttempts</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -399,7 +420,8 @@
         <label>Interaction Order Items</label>
         <locationX>553</locationX>
         <locationY>380</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Interaction_Order_Items_Loop</targetReference>
         </connector>
@@ -473,7 +495,8 @@
         <inputAssignments>
             <field>ConnectionFailAttempts__c</field>
             <value>
-                <elementReference>Increment_Connection_Failed_Attempts</elementReference>
+                <elementReference
+        >Increment_Connection_Failed_Attempts</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -508,7 +531,8 @@
     <start>
         <locationX>29</locationX>
         <locationY>272</locationY>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Status__c</field>
@@ -543,11 +567,13 @@
     <textTemplates>
         <name>Error_Message_Template</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>[SKU: {!Error_Responses.details.stockKeepingUnit} - {!Error_Responses.message}]</text>
+        <text
+    >[SKU: {!Error_Responses.details.stockKeepingUnit} - {!Error_Responses.message}]</text>
     </textTemplates>
     <variables>
         <name>CreateReservationInputRepresentation</name>
-        <apexClass>ConnectApi__OCICreateReservationInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCICreateReservationInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
@@ -555,7 +581,8 @@
     </variables>
     <variables>
         <name>CreateReservationOutputRepresentation</name>
-        <apexClass>ConnectApi__OCICreateReservationOutputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCICreateReservationOutputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
@@ -570,7 +597,8 @@
     </variables>
     <variables>
         <name>ReleaseReservationRequest</name>
-        <apexClass>ConnectApi__OCIReleaseReservationInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCIReleaseReservationInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -578,7 +606,8 @@
     </variables>
     <variables>
         <name>ReleaseReservationResponse</name>
-        <apexClass>ConnectApi__OCIReleaseReservationOutputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCIReleaseReservationOutputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -586,7 +615,8 @@
     </variables>
     <variables>
         <name>ResponseErrorCollection</name>
-        <apexClass>ConnectApi__OCIReleaseReservationErrorOutputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCIReleaseReservationErrorOutputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
@@ -594,7 +624,8 @@
     </variables>
     <variables>
         <name>SingleCreateReservationInputRepresentation</name>
-        <apexClass>ConnectApi__OCICreateReservationSingleInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCICreateReservationSingleInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
@@ -602,7 +633,8 @@
     </variables>
     <variables>
         <name>SingleReleaseReservation</name>
-        <apexClass>ConnectApi__OCIReleaseReservationSingleInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCIReleaseReservationSingleInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

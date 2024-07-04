@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Resend_Confirmation_Email</fullName>
     <availability>online</availability>
-    <description>This is a custom button to resend confirmation Email for DE portal users</description>
+    <description
+  >This is a custom button to resend confirmation Email for DE portal users</description>
     <displayType>button</displayType>
     <height>600</height>
     <linkType>page</linkType>

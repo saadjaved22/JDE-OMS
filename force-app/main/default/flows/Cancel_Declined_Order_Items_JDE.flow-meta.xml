@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Cancel_Order_Item_Summaries_Submit</name>
@@ -8,7 +8,8 @@
         <actionName>cancelOrderItemSummariesSubmit</actionName>
         <actionType>cancelOrderItemSummariesSubmit</actionType>
         <connector>
-            <targetReference>CreateCreditMemoInputRepresentation_assign</targetReference>
+            <targetReference
+      >CreateCreditMemoInputRepresentation_assign</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Process_Exception</targetReference>
@@ -27,7 +28,8 @@
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>SubmitCancelOutputRepresentation</assignToReference>
+            <assignToReference
+      >SubmitCancelOutputRepresentation</assignToReference>
             <name>submitCancelOutput</name>
         </outputParameters>
     </actionCalls>
@@ -54,11 +56,13 @@
         <inputParameters>
             <name>creditMemoInput</name>
             <value>
-                <elementReference>CreateCreditMemoInputRepresentation</elementReference>
+                <elementReference
+        >CreateCreditMemoInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>CreateCreditMemoOutputRepresentation</assignToReference>
+            <assignToReference
+      >CreateCreditMemoOutputRepresentation</assignToReference>
             <name>creditMemoOutput</name>
         </outputParameters>
     </actionCalls>
@@ -85,10 +89,12 @@
         <locationX>1122</locationX>
         <locationY>590</locationY>
         <assignmentItems>
-            <assignToReference>changeInputRepresentation.changeItems</assignToReference>
+            <assignToReference
+      >changeInputRepresentation.changeItems</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>changeItemInputRepresentation</elementReference>
+                <elementReference
+        >changeItemInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -101,35 +107,42 @@
         <locationX>1286</locationX>
         <locationY>589</locationY>
         <assignmentItems>
-            <assignToReference>changeItemInputRepresentation.orderItemSummaryId</assignToReference>
+            <assignToReference
+      >changeItemInputRepresentation.orderItemSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>OCI_Interaction_FOs1.FulfillmentOrderItem__r.OrderItemSummary.Id</elementReference>
+                <elementReference
+        >OCI_Interaction_FOs1.FulfillmentOrderItem__r.OrderItemSummary.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>changeItemInputRepresentation.quantity</assignToReference>
+            <assignToReference
+      >changeItemInputRepresentation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>OCI_Interaction_FOs1.Quantity__c</elementReference>
+                <elementReference
+        >OCI_Interaction_FOs1.Quantity__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>changeItemInputRepresentation.reason</assignToReference>
+            <assignToReference
+      >changeItemInputRepresentation.reason</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Unknown</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>changeItemInputRepresentation.shippingReductionFlag</assignToReference>
+            <assignToReference
+      >changeItemInputRepresentation.shippingReductionFlag</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>shippingReductionFlag</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Change_Input_Representation_Assignment</targetReference>
+            <targetReference
+      >Change_Input_Representation_Assignment</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -141,7 +154,8 @@
             <assignToReference>declinedQuantityCount</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>OCI_Interaction_FOs1.Quantity__c</elementReference>
+                <elementReference
+        >OCI_Interaction_FOs1.Quantity__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -154,10 +168,12 @@
         <locationX>1539</locationX>
         <locationY>337</locationY>
         <assignmentItems>
-            <assignToReference>CreateCreditMemoInputRepresentation.changeOrderIds</assignToReference>
+            <assignToReference
+      >CreateCreditMemoInputRepresentation.changeOrderIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>SubmitCancelOutputRepresentation.changeOrderId</elementReference>
+                <elementReference
+        >SubmitCancelOutputRepresentation.changeOrderId</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -173,21 +189,24 @@
             <assignToReference>Refund.Amount</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>SubmitCancelOutputRepresentation.changeBalances.grandTotalAmount</elementReference>
+                <elementReference
+        >SubmitCancelOutputRepresentation.changeBalances.grandTotalAmount</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Refund.Balance</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>SubmitCancelOutputRepresentation.changeBalances.grandTotalAmount</elementReference>
+                <elementReference
+        >SubmitCancelOutputRepresentation.changeBalances.grandTotalAmount</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Refund.CurrencyIsoCode</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Order_Payment_Summary.CurrencyIsoCode</elementReference>
+                <elementReference
+        >Order_Payment_Summary.CurrencyIsoCode</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -288,15 +307,18 @@
             <label>yes</label>
         </rules>
     </decisions>
-    <description>Trigger on complete decline instead of per order item, so that we can create one Credit Memo and Refund</description>
+    <description
+  >Trigger on complete decline instead of per order item, so that we can create one Credit Memo and Refund</description>
     <environments>Default</environments>
     <formulas>
         <name>QuantityLeftToCancel</name>
         <dataType>Number</dataType>
-        <expression>{!count_items.QuantityNetOrdered} - {!count_items.QuantityShipped}</expression>
+        <expression
+    >{!count_items.QuantityNetOrdered} - {!count_items.QuantityShipped}</expression>
         <scale>0</scale>
     </formulas>
-    <interviewLabel>Cancel Declined Order Items {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Cancel Declined Order Items {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Cancel Declined Order Items</label>
     <loops>
         <name>count_items</name>
@@ -320,10 +342,12 @@
         <collectionReference>OCI_Interaction_FOs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Change_Item_Input_Representation_Assignment</targetReference>
+            <targetReference
+      >Change_Item_Input_Representation_Assignment</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Cancel_Order_Item_Summaries_Submit</targetReference>
+            <targetReference
+      >Cancel_Order_Item_Summaries_Submit</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
@@ -385,7 +409,8 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <stringValue>Cancel Declined Order Items flow failed</stringValue>
+                <stringValue
+        >Cancel Declined Order Items flow failed</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -403,7 +428,8 @@
         <inputAssignments>
             <field>TransactionId__c</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.Transaction_ID__c</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.Transaction_ID__c</elementReference>
             </value>
         </inputAssignments>
         <object>ProcessException</object>
@@ -421,7 +447,8 @@
         <label>Get Order Item Summaries</label>
         <locationX>153</locationX>
         <locationY>429</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>OCI_Interaction_FOs</targetReference>
         </connector>
@@ -442,7 +469,8 @@
         <label>OCI Interaction FOs</label>
         <locationX>279</locationX>
         <locationY>429</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>OCI_Interaction_FOs1_0</targetReference>
         </connector>
@@ -466,7 +494,8 @@
         <label>Order Payment Summary</label>
         <locationX>1539</locationX>
         <locationY>684</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Refund_ass</targetReference>
         </connector>
@@ -488,7 +517,8 @@
         <connector>
             <targetReference>Get_Order_Item_Summaries</targetReference>
         </connector>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Type__c</field>
@@ -581,7 +611,8 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <value>
-            <elementReference>$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
+            <elementReference
+      >$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
         </value>
     </variables>
     <variables>

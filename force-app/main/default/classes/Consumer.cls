@@ -1,106 +1,95 @@
-global class Consumer{
+global class Consumer {
+  global class ConsumerRecord {
+    webService Integer ID;
+    webService String LastName;
+    webService String FirstName;
+    webService String MiddleName;
+    webService String Street;
+    webService Integer HouseNumber;
+    webService String HouseLetters;
+    webService String City;
+    webService String PostCode;
+    webService String Country;
+    webService String Email;
+    webService Boolean IsLoyaltyMember;
+    webService Boolean HasActiveLoyaltyCard;
+    webService Integer AccountNumber;
+    webService String Initials;
+    webService String Title;
+    webService String Gender;
+    webService String BirthDate;
+    webService String Region;
+    webService String Telephone;
+    webService String Mobile;
 
- global class ConsumerRecord {
-        webservice Integer ID;
-        webservice String LastName;
-        webservice String FirstName;
-        webservice String MiddleName;
-        webservice String Street;
-        webservice Integer HouseNumber;
-        webservice String HouseLetters;
-        webservice String City;
-        webservice String PostCode;
-        webservice String Country;
-        webservice String Email;
-        webservice Boolean IsLoyaltyMember;
-        webservice Boolean HasActiveLoyaltyCard;
-        webservice Integer AccountNumber;
-        webservice String Initials;
-        webservice String Title;
-        webservice String Gender;
-        webservice String BirthDate;
-        webservice String Region;
-        webservice String Telephone;
-        webservice String Mobile;
-     
-        global ConsumerRecord(){
-            
-        }
-     
-
-  }
-    
-    global class ConsumerInfo{
-        webservice Integer ID;
-        webservice String LastName;
-        webservice String FirstName;
-        webservice String MiddleName;
-        webservice String Street;
-        webservice Integer HouseNumber;
-        webservice String HouseLetters;
-        webservice String City;
-        webservice String PostCode;
-        webservice String Country;
-        webservice String Email;
-        webservice Boolean IsLoyaltyMember;
-        webservice Boolean HasActiveLoyaltyCard;
-        webservice Integer AccountNumber;
-        webservice String Initials;
-        webservice String Title;
-        webservice String Gender;
-        webservice String BirthDate;
-        webservice String Region;
-        webservice String Telephone;
-        webservice String Mobile;
-        webservice AuditHeader audit;
-        
-        global ConsumerInfo(){
-            
-        }
-
-  }
-      global class ConsumerResult{
-        webservice string status;
-       	webservice List<ValidationError> ArrayOfValidationError;
-        webservice List<ConsumerRecord> listConsumerRecord;
-        
-        global ConsumerResult(){
-            
-        }
-     }
-  
-     global class ConsumerSearch{
-        webservice string LastName;
-        webservice string PostCode;
-        webservice Integer HouseNumber;
-        webservice String emailPart;
-        webservice string CardNumber;
-        webservice Integer consumerId;
-        webservice AuditHeader audit;
-         
-        global ConsumerSearch(){
-            
-        }
-     }
-    
-    global class ValidationError{
-        webservice String Key;
-        webservice String Message;
-        webservice String Tag;
-        
-        global ValidationError(){
-            
-        }
+    global ConsumerRecord() {
     }
-    
-    global class AuditHeader{
-        webservice String cashiername;
-        webservice String shopnr;
-        webservice String shopname;
-        
-        global AuditHeader(){
-            
-        }
+  }
 
+  global class ConsumerInfo {
+    webService Integer ID;
+    webService String LastName;
+    webService String FirstName;
+    webService String MiddleName;
+    webService String Street;
+    webService Integer HouseNumber;
+    webService String HouseLetters;
+    webService String City;
+    webService String PostCode;
+    webService String Country;
+    webService String Email;
+    webService Boolean IsLoyaltyMember;
+    webService Boolean HasActiveLoyaltyCard;
+    webService Integer AccountNumber;
+    webService String Initials;
+    webService String Title;
+    webService String Gender;
+    webService String BirthDate;
+    webService String Region;
+    webService String Telephone;
+    webService String Mobile;
+    webService AuditHeader audit;
+
+    global ConsumerInfo() {
     }
+  }
+  global class ConsumerResult {
+    webService string status;
+    webService List<ValidationError> ArrayOfValidationError;
+    webService List<ConsumerRecord> listConsumerRecord;
+
+    global ConsumerResult() {
+    }
+  }
+
+  global class ConsumerSearch {
+    webService string LastName;
+    webService string PostCode;
+    webService Integer HouseNumber;
+    webService String emailPart;
+    webService string CardNumber;
+    webService Integer consumerId;
+    webService AuditHeader audit;
+
+    global ConsumerSearch() {
+    }
+  }
+
+  global class ValidationError {
+    webService String Key;
+    webService String Message;
+    webService String Tag;
+
+    global ValidationError() {
+    }
+  }
+
+  global class AuditHeader {
+    webService String cashiername;
+    webService String shopnr;
+    webService String shopname;
+
+    global AuditHeader() {
+    }
+  }
 }

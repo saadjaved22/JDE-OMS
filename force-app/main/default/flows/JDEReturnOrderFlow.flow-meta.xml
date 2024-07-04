@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Call_Apex_to_make_API_Callout_Scheduled</name>
@@ -52,7 +52,8 @@
         <scheduledPaths>
             <name>Call_Apex_to_make_API_Callout</name>
             <connector>
-                <targetReference>Call_Apex_to_make_API_Callout_Scheduled</targetReference>
+                <targetReference
+        >Call_Apex_to_make_API_Callout_Scheduled</targetReference>
             </connector>
             <label>Call Apex to make API Callout</label>
             <offsetNumber>1</offsetNumber>

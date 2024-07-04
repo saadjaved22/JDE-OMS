@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>49.0</apiVersion>
     <assignments>
@@ -7,7 +7,8 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <assignToReference
+      >myVariable_waitStartTimeVariable</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
@@ -91,12 +92,14 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>$Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c != true</stringValue>
+                <stringValue
+        >$Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c != true</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>$Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c != true</expression>
+        <expression
+    >$Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c != true</expression>
     </formulas>
     <formulas>
         <name>formula_myRule_3</name>
@@ -189,7 +192,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -238,7 +241,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -288,7 +291,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>myVariable_current.Loyalty_Consumer__c</elementReference>
+                <elementReference
+        >myVariable_current.Loyalty_Consumer__c</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -313,7 +317,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -324,12 +328,14 @@
             </processMetadataValues>
             <field>Loyalty_Last_Transaction_Date__c</field>
             <value>
-                <elementReference>formula_4_myRule_3_A1_2633749512</elementReference>
+                <elementReference
+        >formula_4_myRule_3_A1_2633749512</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
     </recordUpdates>
-    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <startElementReference
+  >myVariable_waitStartTimeAssignment</startElementReference>
     <status>Active</status>
     <variables>
         <name>myVariable_current</name>

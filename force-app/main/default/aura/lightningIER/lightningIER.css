@@ -1,7 +1,8 @@
-.THIS .slds-th__action{ 
-    justify-content: center !important; }
+.THIS .slds-th__action {
+  justify-content: center !important;
+}
 
-.THIS .slds-th__action{
-   color: black;
-   font-weight:bold;
+.THIS .slds-th__action {
+  color: black;
+  font-weight: bold;
 }

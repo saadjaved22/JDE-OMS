@@ -18,7 +18,9 @@ public with sharing class RestServiceUpdateShipment {
         System.enqueueJob(new AsyncUpdateShipment(itemsToProcess));
       }
     } else {
-      AsyncUpdateShipment asyncUpdateShipment = new AsyncUpdateShipment(itemMap);
+      AsyncUpdateShipment asyncUpdateShipment = new AsyncUpdateShipment(
+        itemMap
+      );
       asyncUpdateShipment.execute(null);
     }
   }
@@ -72,7 +74,12 @@ public with sharing class RestServiceUpdateShipment {
       ];
 
       List<ShipmentItem> allShipmentItems = [
-        SELECT id, Product2.StockKeepingUnit, Quantity, OrderItemSummary.OriginalOrderItem.ItemId__c, ShipmentId
+        SELECT
+          id,
+          Product2.StockKeepingUnit,
+          Quantity,
+          OrderItemSummary.OriginalOrderItem.ItemId__c,
+          ShipmentId
         FROM ShipmentItem
         WHERE ShipmentId IN :internalMap.keySet()
       ];
@@ -85,7 +92,10 @@ public with sharing class RestServiceUpdateShipment {
       ];
 
       for (Shipment shipment : shipmentList) {
-        List<ShipmentItem> shipmentItems = getShipmentItemsByShipmentId(allShipmentItems, shipment.Id);
+        List<ShipmentItem> shipmentItems = getShipmentItemsByShipmentId(
+          allShipmentItems,
+          shipment.Id
+        );
 
         String salesChannelID = '';
         String orderReferenceNumber = shipment.OrderSummary.OrderNumber;
@@ -97,7 +107,8 @@ public with sharing class RestServiceUpdateShipment {
         String trackingNumber = shipment.TrackingNumber;
         String transactionID = TransactionId.generateID();
 
-        List<String> fulfilmentOrderID_s = String.valueOf(fulfilmentOrderID).split('-');
+        List<String> fulfilmentOrderID_s = String.valueOf(fulfilmentOrderID)
+          .split('-');
 
         if (fulfilmentOrderID_s.size() > 1) {
           salesChannelID = fulfilmentOrderID_s[0];
@@ -147,7 +158,10 @@ public with sharing class RestServiceUpdateShipment {
       update shipmentList;
     }
 
-    private List<ShipmentItem> getShipmentItemsByShipmentId(List<ShipmentItem> shipmentItems, Id shipmentId) {
+    private List<ShipmentItem> getShipmentItemsByShipmentId(
+      List<ShipmentItem> shipmentItems,
+      Id shipmentId
+    ) {
       List<ShipmentItem> returnObj = new List<ShipmentItem>();
       for (ShipmentItem shipmentItem : shipmentItems) {
         if (shipmentItem.ShipmentId == shipmentId) {
@@ -181,7 +195,8 @@ public with sharing class RestServiceUpdateShipment {
 
       for (integer i = 0; i < shipmentItemsList.size(); i++) {
         ShipmentItemWrapper shipmentObj = new ShipmentItemWrapper();
-        shipmentObj.itemID = shipmentItemsList[i].OrderItemSummary.OriginalOrderItem.ItemId__c;
+        shipmentObj.itemID = shipmentItemsList[i]
+          .OrderItemSummary.OriginalOrderItem.ItemId__c;
         shipmentObj.sku = shipmentItemsList[i].Product2.StockKeepingUnit;
         shipmentObj.shippedQuantity = shipmentItemsList[i].Quantity.intValue();
         shipmentItems.add(shipmentObj);
@@ -203,7 +218,14 @@ public with sharing class RestServiceUpdateShipment {
       List<String> exceptionList = new List<String>();
       System.debug('Shipment sent to API: ' + JSONBody);
       HttpRequest req = new HttpRequest();
-      req.setEndpoint(endpoint.Base_URL__c + salesChannelID + '/' + country + '/' + fulfilmentOrderID);
+      req.setEndpoint(
+        endpoint.Base_URL__c +
+          salesChannelID +
+          '/' +
+          country +
+          '/' +
+          fulfilmentOrderID
+      );
       req.setMethod('POST');
       req.setBody(JSONBody);
 

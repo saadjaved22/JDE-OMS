@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>JDE_Customer_Care</application>
@@ -929,7 +929,8 @@
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
-    <description>Salesforce Profile for the Data Analytics/JUST BI team.</description>
+    <description
+  >Salesforce Profile for the Data Analytics/JUST BI team.</description>
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.AccountID__c</field>
@@ -1857,7 +1858,8 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Loyalty_Transaction__c.Loyalty_Transaction_Created_Date_Time__c</field>
+        <field
+    >Loyalty_Transaction__c.Loyalty_Transaction_Created_Date_Time__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2377,7 +2379,8 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Post_Deletion_Audit_Log__c.Salesforce_Person_Contact_ID__c</field>
+        <field
+    >Post_Deletion_Audit_Log__c.Salesforce_Person_Contact_ID__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2842,147 +2845,219 @@
     </fieldPermissions>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Campaign_Created_or_Updated_Create_External_Id</flow>
+        <flow>
+Campaign_Created_or_Updated_Create_External_Id;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Campaign_Member_Customer_External_Id</flow>
+        <flow>
+Campaign_Member_Customer_External_Id;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>CheckIfEmailBounced</flow>
+        <flow>
+CheckIfEmailBounced;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>ConsumerDataCleanUp</flow>
+        <flow>
+ConsumerDataCleanUp;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Create_DE_Community_User</flow>
+        <flow>
+Create_DE_Community_User;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Create_Loyalty_Record</flow>
+        <flow>
+Create_Loyalty_Record;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Force_delete_consumer</flow>
+        <flow>
+Force_delete_consumer;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>GDPR_Consumer_Cleaning_Rules</flow>
+        <flow>
+GDPR_Consumer_Cleaning_Rules;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_Account</flow>
+        <flow>
+JBSystemFlow_Account;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_Brewer_Registration_c</flow>
+        <flow>
+JBSystemFlow_Brewer_Registration_c;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_CampaignMember</flow>
+        <flow>
+JBSystemFlow_CampaignMember;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_Contact</flow>
+        <flow>
+JBSystemFlow_Contact;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_Donation_c</flow>
+        <flow>
+JBSystemFlow_Donation_c;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_Loyalty_Transaction_c</flow>
+        <flow>
+JBSystemFlow_Loyalty_Transaction_c;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_Order_c</flow>
+        <flow>
+JBSystemFlow_Order_c;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_Survey_Campaign_Profile_c</flow>
+        <flow>
+JBSystemFlow_Survey_Campaign_Profile_c;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystemFlow_Voucher_c</flow>
+        <flow>
+JBSystemFlow_Voucher_c;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_Account_Process</flow>
+        <flow>
+JBSystem_Account_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_Brewer_Registration_c_Process</flow>
+        <flow>
+JBSystem_Brewer_Registration_c_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_CampaignMember_Process</flow>
+        <flow>
+JBSystem_CampaignMember_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_Contact_Process</flow>
+        <flow>
+JBSystem_Contact_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_Donation_c_Process</flow>
+        <flow>
+JBSystem_Donation_c_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_Loyalty_Transaction_c_Process</flow>
+        <flow>
+JBSystem_Loyalty_Transaction_c_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_Order_c_Process</flow>
+        <flow>
+JBSystem_Order_c_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_Survey_Campaign_Profile_c_Process</flow>
+        <flow>
+JBSystem_Survey_Campaign_Profile_c_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JBSystem_Voucher_c_Process</flow>
+        <flow>
+JBSystem_Voucher_c_Process;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>JDE_Move_Loyalty_Transactions_to_other_Consumer</flow>
+        <flow>
+JDE_Move_Loyalty_Transactions_to_other_Consumer;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Last_Email_Email_Sent_Hard_Bounced</flow>
+        <flow>
+Last_Email_Email_Sent_Hard_Bounced;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>LatestEmailSendDateToAccount</flow>
+        <flow>
+LatestEmailSendDateToAccount;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Loyalty_Transaction_Update</flow>
+        <flow>
+Loyalty_Transaction_Update;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Loyalty_Update</flow>
+        <flow>
+Loyalty_Update;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>PopulateCustomerID</flow>
+        <flow>
+PopulateCustomerID;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>PopulateLoyaltyAccountNumber</flow>
+        <flow>
+PopulateLoyaltyAccountNumber;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Request_To_Be_Forgotten</flow>
+        <flow>
+Request_To_Be_Forgotten;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Survey_Result_Create_Recommendation</flow>
+        <flow>
+Survey_Result_Create_Recommendation;
+    </flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Update_Loyalty_When_Account_is_Updated</flow>
+        <flow>
+Update_Loyalty_When_Account_is_Updated;
+    </flow>
     </flowAccesses>
     <layoutAssignments>
         <layout>Account-Account Layout</layout>
@@ -2995,7 +3070,8 @@
         <layout>AccountBrand-Account Brand Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>AlternativePaymentMethod-Alternative Payment Method Layout</layout>
+        <layout
+    >AlternativePaymentMethod-Alternative Payment Method Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Asset-Asset Layout</layout>
@@ -3013,7 +3089,8 @@
         <layout>BusinessBrand-Business Brand Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CLM_Flow_CountryBrand__mdt-CLM Flow Country and Brand Layout</layout>
+        <layout
+    >CLM_Flow_CountryBrand__mdt-CLM Flow Country and Brand Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Campaign-Campaign Layout</layout>
@@ -3046,7 +3123,8 @@
         <layout>CommunityMemberLayout-Community Member Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Community_Consent_Label__mdt-Community Consent Label Layout</layout>
+        <layout
+    >Community_Consent_Label__mdt-Community Consent Label Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ConsentSettings__mdt-Consent Settings Layout</layout>
@@ -3076,7 +3154,8 @@
         <layout>CreditMemoLine-Credit Memo Line Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CspTrustedSite-Content Security Policy Trusted Site Layout</layout>
+        <layout
+    >CspTrustedSite-Content Security Policy Trusted Site Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Customer-Customer Layout</layout>
@@ -3118,7 +3197,8 @@
         <layout>Individual-Individual Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Invalid_Emails_for_Loyalty__mdt-Invalid Emails for Loyalty Layout</layout>
+        <layout
+    >Invalid_Emails_for_Loyalty__mdt-Invalid Emails for Loyalty Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Invoice-Invoice Layout</layout>
@@ -3139,7 +3219,8 @@
         <layout>LocationGroup-Location Group Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>LocationGroupAssignment-Location Group Assignment Layout</layout>
+        <layout
+    >LocationGroupAssignment-Location Group Assignment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Loyalty_Transaction__c-Loyalty Transaction Layout</layout>
@@ -3178,7 +3259,8 @@
         <layout>Payment-Payment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>PaymentAuthAdjustment-Payment Authorization Adjustment Layout</layout>
+        <layout
+    >PaymentAuthAdjustment-Payment Authorization Adjustment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>PaymentAuthorization-Payment Authorization Layout</layout>
@@ -3200,7 +3282,8 @@
         <recordType>PersonAccount.PersonAccount</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Post_Deletion_Audit_Log__c-Post Deletion Audit Log Layout</layout>
+        <layout
+    >Post_Deletion_Audit_Log__c-Post Deletion Audit Log Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
@@ -3215,7 +3298,8 @@
         <layout>Product2-Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Product_Recommendation__mdt-Product Recommendation Layout</layout>
+        <layout
+    >Product_Recommendation__mdt-Product Recommendation Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ProfileSkill-Skill Layout</layout>
@@ -3245,7 +3329,8 @@
         <layout>ReturnOrder-Return Order Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>ReturnOrderItemAdjustment-Return Order Item Adjustment Layout</layout>
+        <layout
+    >ReturnOrderItemAdjustment-Return Order Item Adjustment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ReturnOrderItemTax-Return Order Item Tax Layout</layout>
@@ -3281,7 +3366,8 @@
         <layout>Survey_Answer__c-Survey Answer Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Survey_Campaign_Profile__c-Survey Campaign Profile Layout</layout>
+        <layout
+    >Survey_Campaign_Profile__c-Survey Campaign Profile Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Survey_Question__c-Survey Question Layout</layout>
@@ -3314,7 +3400,8 @@
         <layout>UserProvisioningLog-User Provisioning Log Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>UserProvisioningRequest-User Provisioning Request Layout</layout>
+        <layout
+    >UserProvisioningRequest-User Provisioning Request Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Voucher__c-Voucher Layout</layout>

@@ -45,7 +45,9 @@ public with sharing class RestServiceCreditRefundTest {
     );
 
     ConnectApi.CreateCreditMemoInputRepresentation createMemoInput = new ConnectApi.CreateCreditMemoInputRepresentation();
-    createMemoInput.changeOrderIds = new List<String>{ output.preFulfillmentChangeOrderId };
+    createMemoInput.changeOrderIds = new List<String>{
+      output.preFulfillmentChangeOrderId
+    };
     ConnectApi.CreateCreditMemoOutputRepresentation creditMemoOutput = connectAPI.OrderSummary.createCreditMemo(
       orderSummaryId,
       createMemoInput
@@ -54,7 +56,10 @@ public with sharing class RestServiceCreditRefundTest {
     List<ID> ids = new List<ID>();
     ids.add(creditMemoOutput.creditMemoId);
     test.startTest();
-    Test.setMock(HttpCalloutMock.class, new RestServiceCreditRefundCalloutMock());
+    Test.setMock(
+      HttpCalloutMock.class,
+      new RestServiceCreditRefundCalloutMock()
+    );
     RestServiceCreditRefund.getData(ids);
     test.stopTest();
   }

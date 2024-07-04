@@ -1,18 +1,24 @@
 <template>
-    <div class="slds-align_absolute-center" >
-        <div if:true={isLoading}>
-            <p>even geduld aub...</p>
-            <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
-        </div>        
-        <div if:false={isLoading}>
-            <div if:true={emailChangeConfirmed}>
-                <p>Je e-mailadres is bijgewerkt, gebruik je nieuwe e-mailadres en wachtwoord om in te loggen.</p>
-            </div>
-            <div if:false={emailChangeConfirmed}>
-                <p>Je link is verbroken, ga terug naar de inlogscherm !</p>
-            </div>
-            <hr>
-            <a class="backLink" href="./login">Terug naar het inlogscherm</a>
-        </div>
+  <div class="slds-align_absolute-center">
+    <div if:true={isLoading}>
+      <p>even geduld aub...</p>
+      <lightning-spinner
+        alternative-text="Loading"
+        variant="brand"
+      ></lightning-spinner>
     </div>
+    <div if:false={isLoading}>
+      <div if:true={emailChangeConfirmed}>
+        <p>
+          Je e-mailadres is bijgewerkt, gebruik je nieuwe e-mailadres en
+          wachtwoord om in te loggen.
+        </p>
+      </div>
+      <div if:false={emailChangeConfirmed}>
+        <p>Je link is verbroken, ga terug naar de inlogscherm !</p>
+      </div>
+      <hr />
+      <a class="backLink" href="./login">Terug naar het inlogscherm</a>
+    </div>
+  </div>
 </template>

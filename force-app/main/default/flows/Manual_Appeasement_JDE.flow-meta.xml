@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Discount_Order_Item_Summaries_Preview</name>
@@ -17,7 +17,8 @@
         <inputParameters>
             <name>orderItemSummariesToAdjust</name>
             <value>
-                <elementReference>adjustOrderItemSummaryInputRepresentation</elementReference>
+                <elementReference
+        >adjustOrderItemSummaryInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -27,7 +28,8 @@
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>adjustOrderSummaryOutputRepresentation</assignToReference>
+            <assignToReference
+      >adjustOrderSummaryOutputRepresentation</assignToReference>
             <name>adjustOutput</name>
         </outputParameters>
     </actionCalls>
@@ -98,7 +100,8 @@
         <locationX>1328</locationX>
         <locationY>741</locationY>
         <assignmentItems>
-            <assignToReference>AppeasementItem.AdjustmentType__c</assignToReference>
+            <assignToReference
+      >AppeasementItem.AdjustmentType__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>AmountWithTax</stringValue>
@@ -112,7 +115,8 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>AppeasementItem.Description__c</assignToReference>
+            <assignToReference
+      >AppeasementItem.Description__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>discountItem.description</elementReference>
@@ -126,14 +130,17 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>AppeasementItem.Order_Product_Summary__c</assignToReference>
+            <assignToReference
+      >AppeasementItem.Order_Product_Summary__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>discountItem.orderItemSummaryId</elementReference>
+                <elementReference
+        >discountItem.orderItemSummaryId</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Discount_Order_Item_Input_Representation_Assignment</targetReference>
+            <targetReference
+      >Discount_Order_Item_Input_Representation_Assignment</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -145,21 +152,24 @@
             <assignToReference>errorMessage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Unmanaged_Order_Message</elementReference>
+                <elementReference
+        >Error_Output_Unmanaged_Order_Message</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageTitle</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Unmanaged_Order_Title</elementReference>
+                <elementReference
+        >Error_Output_Unmanaged_Order_Title</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Invocable_Action_Image</elementReference>
+                <elementReference
+        >Error_Output_Invocable_Action_Image</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -204,7 +214,8 @@
         <locationX>939</locationX>
         <locationY>693</locationY>
         <assignmentItems>
-            <assignToReference>discountItem.orderItemSummaryId</assignToReference>
+            <assignToReference
+      >discountItem.orderItemSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>selectedOrderItem.Id</elementReference>
@@ -214,7 +225,7 @@
             <assignToReference>discountItem.description</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue></stringValue>
+                <stringValue />
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -248,35 +259,41 @@
         <locationX>1125</locationX>
         <locationY>452</locationY>
         <assignmentItems>
-            <assignToReference>adjustItemInputRepresentation.amount</assignToReference>
+            <assignToReference
+      >adjustItemInputRepresentation.amount</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>discountItem.discountValue</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>adjustItemInputRepresentation.adjustmentType</assignToReference>
+            <assignToReference
+      >adjustItemInputRepresentation.adjustmentType</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>discountItem.discountType</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>adjustItemInputRepresentation.orderItemSummaryId</assignToReference>
+            <assignToReference
+      >adjustItemInputRepresentation.orderItemSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>discountItem.orderItemSummaryId</elementReference>
+                <elementReference
+        >discountItem.orderItemSummaryId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>adjustItemInputRepresentation.reason</assignToReference>
+            <assignToReference
+      >adjustItemInputRepresentation.reason</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>discountItem.reason</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>adjustItemInputRepresentation.description</assignToReference>
+            <assignToReference
+      >adjustItemInputRepresentation.description</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>discountItem.description</elementReference>
@@ -308,10 +325,12 @@
         <locationX>1327</locationX>
         <locationY>518</locationY>
         <assignmentItems>
-            <assignToReference>adjustOrderItemSummaryInputRepresentation.adjustItems</assignToReference>
+            <assignToReference
+      >adjustOrderItemSummaryInputRepresentation.adjustItems</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>adjustItemInputRepresentation</elementReference>
+                <elementReference
+        >adjustItemInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -327,14 +346,16 @@
             <assignToReference>errorMessage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Invocable_Action_Message</elementReference>
+                <elementReference
+        >Error_Output_Invocable_Action_Message</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Invocable_Action_Image</elementReference>
+                <elementReference
+        >Error_Output_Invocable_Action_Image</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -357,21 +378,24 @@
             <assignToReference>errorMessage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_NoItemsToDiscount</elementReference>
+                <elementReference
+        >Error_Output_NoItemsToDiscount</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageTitle</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_NoItemsToDiscount_Header</elementReference>
+                <elementReference
+        >Error_Output_NoItemsToDiscount_Header</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_NoItemsToDiscount_Image</elementReference>
+                <elementReference
+        >Error_Output_NoItemsToDiscount_Image</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -394,7 +418,8 @@
             <assignToReference>errorMessageTitle</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_No_Manager_Header</elementReference>
+                <elementReference
+        >Error_Output_No_Manager_Header</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -407,10 +432,12 @@
         <locationX>1339</locationX>
         <locationY>190</locationY>
         <assignmentItems>
-            <assignToReference>adjustOrderItemSummaryInputRepresentation.allocatedItemsChangeOrderType</assignToReference>
+            <assignToReference
+      >adjustOrderItemSummaryInputRepresentation.allocatedItemsChangeOrderType</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>allocatedItemsChangeOrderType</elementReference>
+                <elementReference
+        >allocatedItemsChangeOrderType</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -430,7 +457,8 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>Appeasement.Approval_Status__c</assignToReference>
+            <assignToReference
+      >Appeasement.Approval_Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Pending</stringValue>
@@ -446,7 +474,8 @@
         <locationX>1470</locationX>
         <locationY>520</locationY>
         <assignmentItems>
-            <assignToReference>AppeasementItem.Appeasement__c</assignToReference>
+            <assignToReference
+      >AppeasementItem.Appeasement__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Appeasement.Id</elementReference>
@@ -582,14 +611,16 @@
             <assignToReference>errorMessageTitle</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Wrong_Entity_Header</elementReference>
+                <elementReference
+        >Error_Output_Wrong_Entity_Header</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Wrong_Entity_Image</elementReference>
+                <elementReference
+        >Error_Output_Wrong_Entity_Image</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -600,28 +631,32 @@
         <name>Confirmation_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
         <name>Error_Output_Invocable_Action_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
         <name>Error_Output_NoItemsToDiscount_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
         <name>Error_Output_Wrong_Entity_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
@@ -651,7 +686,8 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>adjustOrderSummaryOutputRepresentation.changeBalances.grandTotalAmount</leftValueReference>
+                <leftValueReference
+        >adjustOrderSummaryOutputRepresentation.changeBalances.grandTotalAmount</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <elementReference>ApprovalLimit</elementReference>
@@ -713,21 +749,24 @@
         <locationX>447</locationX>
         <locationY>487</locationY>
         <defaultConnector>
-            <targetReference>Set_Discount_Amount_Type_Without_Tax</targetReference>
+            <targetReference
+      >Set_Discount_Amount_Type_Without_Tax</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Is_OrderSummary_VAT</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Order_Summary_Object.TaxLocaleType</leftValueReference>
+                <leftValueReference
+        >Get_Order_Summary_Object.TaxLocaleType</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Gross</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Set_Discount_Amount_Type_With_Tax</targetReference>
+                <targetReference
+        >Set_Discount_Amount_Type_With_Tax</targetReference>
             </connector>
             <label>Is OrderSummary VAT</label>
         </rules>
@@ -745,14 +784,16 @@
             <name>Unmanaged_Order</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Order_Summary_Object.OrderLifeCycleType</leftValueReference>
+                <leftValueReference
+        >Get_Order_Summary_Object.OrderLifeCycleType</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>UNMANAGED</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Assign_Unmanaged_Error_Messages</targetReference>
+                <targetReference
+        >Assign_Unmanaged_Error_Messages</targetReference>
             </connector>
             <label>Unmanaged Order</label>
         </rules>
@@ -770,7 +811,8 @@
             <name>Item_is_Discountable</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>potentiallyDiscountableItem.TotalAmtWithTax</leftValueReference>
+                <leftValueReference
+        >potentiallyDiscountableItem.TotalAmtWithTax</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -792,7 +834,8 @@
             <name>Valid</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Order_Summary_Object</leftValueReference>
+                <leftValueReference
+        >Get_Order_Summary_Object</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -807,14 +850,16 @@
             <name>Not_Valid</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Order_Summary_Object</leftValueReference>
+                <leftValueReference
+        >Get_Order_Summary_Object</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Set_Wrong_Entity_Error_Message</targetReference>
+                <targetReference
+        >Set_Wrong_Entity_Error_Message</targetReference>
             </connector>
             <label>Not Valid</label>
         </rules>
@@ -832,7 +877,8 @@
             <name>yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>adjustItemInputRepresentation.adjustmentType</leftValueReference>
+                <leftValueReference
+        >adjustItemInputRepresentation.adjustmentType</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Percentage</stringValue>
@@ -874,11 +920,13 @@
     <formulas>
         <name>discountamount</name>
         <dataType>Number</dataType>
-        <expression>{!discountvalue} * {!discountItem.discountValue} / 100</expression>
+        <expression
+    >{!discountvalue} * {!discountItem.discountValue} / 100</expression>
         <scale>2</scale>
     </formulas>
     <interviewLabel>Manual Appeasement {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <isAdditionalPermissionRequiredToRun
+  >true</isAdditionalPermissionRequiredToRun>
     <label>Credit Refund</label>
     <loops>
         <name>Appeasement_Item_Loop</name>
@@ -900,7 +948,8 @@
         <label>Discount Item Assignment Loop</label>
         <locationX>1004</locationX>
         <locationY>447</locationY>
-        <assignNextValueToReference>selectedOrderItem</assignNextValueToReference>
+        <assignNextValueToReference
+    >selectedOrderItem</assignNextValueToReference>
         <collectionReference>selectedOrderItemSummaries</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -919,10 +968,12 @@
         <collectionReference>discountItems</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Discount_Item_Input_Representation_Assignment</targetReference>
+            <targetReference
+      >Discount_Item_Input_Representation_Assignment</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Discount_Order_Item_Summaries_Preview</targetReference>
+            <targetReference
+      >Discount_Order_Item_Summaries_Preview</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
@@ -930,7 +981,8 @@
         <label>Filter For Discountable Items</label>
         <locationX>563</locationX>
         <locationY>267</locationY>
-        <assignNextValueToReference>potentiallyDiscountableItem</assignNextValueToReference>
+        <assignNextValueToReference
+    >potentiallyDiscountableItem</assignNextValueToReference>
         <collectionReference>Get_Order_Item_Summary</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -978,7 +1030,8 @@
         <label>Get Order Item Summary</label>
         <locationX>350</locationX>
         <locationY>495</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Determine_Discount_Amount_Type</targetReference>
         </connector>
@@ -1003,7 +1056,8 @@
         <label>Get Order Summary</label>
         <locationX>211</locationX>
         <locationY>156</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Determine_Unmanaged_Order</targetReference>
         </connector>
@@ -1027,7 +1081,8 @@
         <label>OrderItemSummary</label>
         <locationX>1499</locationX>
         <locationY>927</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>calculate_discount</targetReference>
         </connector>
@@ -1036,7 +1091,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>discountItem.orderItemSummaryId</elementReference>
+                <elementReference
+        >discountItem.orderItemSummaryId</elementReference>
             </value>
         </filters>
         <object>OrderItemSummary</object>
@@ -1092,7 +1148,8 @@
         </connector>
         <fields>
             <name>ApprovalScreen</name>
-            <fieldText>&lt;p&gt;The total appeasement requested for {!Get_Order_Summary_Object.OrderNumber} is {!adjustOrderSummaryOutputRepresentation.changeBalances.grandTotalAmount}.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Since this is higher than the maximum amount, approval is required.&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;The total appeasement requested for {!Get_Order_Summary_Object.OrderNumber} is {!adjustOrderSummaryOutputRepresentation.changeBalances.grandTotalAmount}.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Since this is higher than the maximum amount, approval is required.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Request Approval</nextOrFinishButtonLabel>
@@ -1109,7 +1166,8 @@
         <allowPause>false</allowPause>
         <fields>
             <name>ApprovalSubmittes</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Approval request was submitted!&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Approval request was submitted!&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -1125,12 +1183,14 @@
         <allowPause>false</allowPause>
         <fields>
             <name>Error_Output_Message_Image</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;{!errorMessageImage}&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;{!errorMessageImage}&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Error_Output_Message</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;{!errorMessageTitle}&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;{!errorMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;{!errorMessageTitle}&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;{!errorMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -1146,12 +1206,14 @@
         <allowPause>false</allowPause>
         <fields>
             <name>ConfirmationImageDisplay</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;{!confirmationImage}&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;{!confirmationImage}&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>ConfirmationHeading</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;You&apos;re all set! The customer has been appeased.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;You&apos;re all set! The customer has been appeased.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1176,7 +1238,8 @@
                     <elementReference>$Flow.ActiveStages</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
         </fields>
         <showFooter>false</showFooter>
@@ -1195,7 +1258,8 @@
         </connector>
         <fields>
             <name>finishedMessage</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Preview Appeasement&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Preview Appeasement&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1217,22 +1281,26 @@
             <inputParameters>
                 <name>orderSummary</name>
                 <value>
-                    <elementReference>Get_Order_Summary_Object</elementReference>
+                    <elementReference
+          >Get_Order_Summary_Object</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>previewAdjustOutput</name>
                 <value>
-                    <elementReference>adjustOrderSummaryOutputRepresentation</elementReference>
+                    <elementReference
+          >adjustOrderSummaryOutputRepresentation</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>selectedOrderItemSummaries</name>
                 <value>
-                    <elementReference>selectedOrderItemSummaries</elementReference>
+                    <elementReference
+          >selectedOrderItemSummaries</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
         </fields>
         <fields>
@@ -1257,7 +1325,8 @@
                     <elementReference>$Flow.ActiveStages</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
         </fields>
         <showFooter>false</showFooter>
@@ -1276,7 +1345,8 @@
         </connector>
         <fields>
             <name>ProductSelectionHeading</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Select from these available items to appease.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Select from these available items to appease.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1298,19 +1368,23 @@
             <inputParameters>
                 <name>selectedOrderItemSummaries</name>
                 <value>
-                    <elementReference>selectedOrderItemSummaries</elementReference>
+                    <elementReference
+          >selectedOrderItemSummaries</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>orderSummary</name>
                 <value>
-                    <elementReference>Get_Order_Summary_Object</elementReference>
+                    <elementReference
+          >Get_Order_Summary_Object</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
-                <assignToReference>selectedOrderItemSummaries</assignToReference>
+                <assignToReference
+        >selectedOrderItemSummaries</assignToReference>
                 <name>selectedOrderItemSummaries</name>
             </outputParameters>
             <outputParameters>
@@ -1340,7 +1414,8 @@
                     <elementReference>isError</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
                 <assignToReference>isError</assignToReference>
@@ -1359,11 +1434,13 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Set_Allocated_Items_Change_Order_Type</targetReference>
+            <targetReference
+      >Set_Allocated_Items_Change_Order_Type</targetReference>
         </connector>
         <fields>
             <name>DiscountSelectionHeading</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 18px; color: rgb(62, 62, 60);&quot;&gt;Select the type, value, and reason.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 18px; color: rgb(62, 62, 60);&quot;&gt;Select the type, value, and reason.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1373,7 +1450,8 @@
             <inputParameters>
                 <name>selectedOrderItemSummaries</name>
                 <value>
-                    <elementReference>selectedOrderItemSummaries</elementReference>
+                    <elementReference
+          >selectedOrderItemSummaries</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1397,17 +1475,20 @@
             <inputParameters>
                 <name>orderSummary</name>
                 <value>
-                    <elementReference>Get_Order_Summary_Object</elementReference>
+                    <elementReference
+          >Get_Order_Summary_Object</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
                 <assignToReference>discountItems</assignToReference>
                 <name>discountItemList</name>
             </outputParameters>
             <outputParameters>
-                <assignToReference>selectedOrderItemSummaries</assignToReference>
+                <assignToReference
+        >selectedOrderItemSummaries</assignToReference>
                 <name>selectedOrderItemSummaries</name>
             </outputParameters>
         </fields>
@@ -1433,7 +1514,8 @@
                     <elementReference>$Flow.ActiveStages</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
                 <assignToReference>isError</assignToReference>
@@ -1479,17 +1561,20 @@
     <textTemplates>
         <name>Error_Output_Invocable_Action_Message</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>Close this window and check the order summary page for updated information.</text>
+        <text
+    >Close this window and check the order summary page for updated information.</text>
     </textTemplates>
     <textTemplates>
         <name>Error_Output_No_Manager</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;The user requesting the appeasement has no manager configured, and hence no apporval can be triggered.&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Please contact your administrator to correct this.&lt;/p&gt;</text>
+        <text
+    >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;The user requesting the appeasement has no manager configured, and hence no apporval can be triggered.&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Please contact your administrator to correct this.&lt;/p&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>Error_Output_NoItemsToDiscount</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>When an order has items you can appease, you&apos;ll find them here.</text>
+        <text
+    >When an order has items you can appease, you&apos;ll find them here.</text>
     </textTemplates>
     <textTemplates>
         <name>Error_Output_NoItemsToDiscount_Header</name>
@@ -1509,7 +1594,8 @@
     <textTemplates>
         <name>Error_Output_Wrong_Entity</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>This is where you&apos;d appease items from an order. To appease an order, start from the order summary page.</text>
+        <text
+    >This is where you&apos;d appease items from an order. To appease an order, start from the order summary page.</text>
     </textTemplates>
     <textTemplates>
         <name>Error_Output_Wrong_Entity_Header</name>
@@ -1526,7 +1612,8 @@
     </variables>
     <variables>
         <name>adjustOrderItemSummaryInputRepresentation</name>
-        <apexClass>ConnectApi__AdjustOrderItemSummaryInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__AdjustOrderItemSummaryInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -1534,7 +1621,8 @@
     </variables>
     <variables>
         <name>adjustOrderSummaryOutputRepresentation</name>
-        <apexClass>ConnectApi__AdjustOrderSummaryOutputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__AdjustOrderSummaryOutputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -1582,7 +1670,8 @@
         <isOutput>false</isOutput>
         <scale>2</scale>
         <value>
-            <elementReference>$Setup.Appeasement_Approval_Limit__c.Amount__c</elementReference>
+            <elementReference
+      >$Setup.Appeasement_Approval_Limit__c.Amount__c</elementReference>
         </value>
     </variables>
     <variables>
@@ -1617,7 +1706,8 @@
         <objectType>OrderItemSummary</objectType>
     </variables>
     <variables>
-        <description>used to set the discount amount type based on whether the order is VAT</description>
+        <description
+    >used to set the discount amount type based on whether the order is VAT</description>
         <name>discountAmountType</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>

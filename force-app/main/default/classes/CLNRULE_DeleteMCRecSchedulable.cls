@@ -8,11 +8,10 @@ History
     @Fixed by Wunderman Thompson  09/2022
 *********************************************************************/
 
-global class CLNRULE_DeleteMCRecSchedulable implements Schedulable{
+global class CLNRULE_DeleteMCRecSchedulable implements Schedulable {
+  global void execute(SchedulableContext sc) {
+    CLNRULE_DeleteMCRecBatch b = new CLNRULE_DeleteMCRecBatch();
 
-    global void execute(SchedulableContext sc) {
-        CLNRULE_DeleteMCRecBatch b = new CLNRULE_DeleteMCRecBatch();
-        
-        database.executebatch(b,200);
-    }
+    database.executebatch(b, 200);
+  }
 }

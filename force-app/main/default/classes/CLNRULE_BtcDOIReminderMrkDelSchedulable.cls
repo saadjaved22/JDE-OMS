@@ -9,11 +9,9 @@ History
 *********************************************************************/
 
 global class CLNRULE_BtcDOIReminderMrkDelSchedulable implements Schedulable {
-    
-    global void execute(SchedulableContext sc) {
-        CLNRULE_BatchDOIReminderMarkDel b = new CLNRULE_BatchDOIReminderMarkDel();
-        
-        database.executebatch(b,200);
-    }
-   
+  global void execute(SchedulableContext sc) {
+    CLNRULE_BatchDOIReminderMarkDel b = new CLNRULE_BatchDOIReminderMarkDel();
+
+    database.executebatch(b, 200);
+  }
 }

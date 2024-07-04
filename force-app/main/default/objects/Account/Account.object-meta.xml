@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>CallHighlightAction</actionName>
@@ -184,7 +184,8 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <comment
+    >Action override created by Lightning App Builder during activation.</comment>
         <content>Account_Record_Page</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
@@ -234,17 +235,26 @@
     <externalSharingModel>Private</externalSharingModel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <searchLayouts>
-        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >ACCOUNT.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Country__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >Country__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Brand__c</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>CORE.USERS.ALIAS</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>ACCOUNT.TYPE</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>ACCOUNT.TYPE</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>ACCOUNT.PHONE1</lookupPhoneDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >CORE.USERS.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >ACCOUNT.TYPE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >ACCOUNT.TYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >ACCOUNT.PHONE1</lookupPhoneDialogsAdditionalFields>
         <searchFilterFields>ACCOUNT.NAME</searchFilterFields>
         <searchFilterFields>Brand__c</searchFilterFields>
         <searchFilterFields>Type__c</searchFilterFields>
@@ -254,15 +264,22 @@
         <searchFilterFields>ACCOUNT.ADDRESS1_ZIP</searchFilterFields>
         <searchFilterFields>ACCOUNT.ADDRESS1_CITY</searchFilterFields>
         <searchFilterFields>PC_EMAIL</searchFilterFields>
-        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>PC_LAST_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >PC_LAST_NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>PC_EMAIL</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Brand__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Loyalty_Total_Points__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Loyalty_Last_Transaction_Date__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_ZIP</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_CITY</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Account_Registration_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >Loyalty_Total_Points__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >Loyalty_Last_Transaction_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >ACCOUNT.ADDRESS1_ZIP</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >ACCOUNT.ADDRESS1_CITY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >Account_Registration_Status__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>

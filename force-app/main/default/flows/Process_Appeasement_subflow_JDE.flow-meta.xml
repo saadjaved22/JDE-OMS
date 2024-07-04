@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Adjust_Order_Item_Summaries_Submit</name>
@@ -17,17 +17,20 @@
         <inputParameters>
             <name>orderSummaryId</name>
             <value>
-                <elementReference>appeasement.Order_Summary__r.Id</elementReference>
+                <elementReference
+        >appeasement.Order_Summary__r.Id</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
             <name>orderItemSummariesToAdjust</name>
             <value>
-                <elementReference>adjustOrderItemSummaryInputRepresentation</elementReference>
+                <elementReference
+        >adjustOrderItemSummaryInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>AdjustOrderSummaryOutputRepresentation</assignToReference>
+            <assignToReference
+      >AdjustOrderSummaryOutputRepresentation</assignToReference>
             <name>adjustOutput</name>
         </outputParameters>
     </actionCalls>
@@ -48,17 +51,20 @@
         <inputParameters>
             <name>orderSummaryId</name>
             <value>
-                <elementReference>appeasement.Order_Summary__c</elementReference>
+                <elementReference
+        >appeasement.Order_Summary__c</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
             <name>creditMemoInput</name>
             <value>
-                <elementReference>CreditMemoInputRepresentation</elementReference>
+                <elementReference
+        >CreditMemoInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>CreateCreditMemoOutputRepresentation</assignToReference>
+            <assignToReference
+      >CreateCreditMemoOutputRepresentation</assignToReference>
             <name>creditMemoOutput</name>
         </outputParameters>
     </actionCalls>
@@ -69,10 +75,12 @@
         <locationX>1370</locationX>
         <locationY>686</locationY>
         <assignmentItems>
-            <assignToReference>CreditMemoInputRepresentation.changeOrderIds</assignToReference>
+            <assignToReference
+      >CreditMemoInputRepresentation.changeOrderIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>AdjustOrderSummaryOutputRepresentation.inFulfillmentChangeOrderId</elementReference>
+                <elementReference
+        >AdjustOrderSummaryOutputRepresentation.inFulfillmentChangeOrderId</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -85,10 +93,12 @@
         <locationX>1081</locationX>
         <locationY>712</locationY>
         <assignmentItems>
-            <assignToReference>CreditMemoInputRepresentation.changeOrderIds</assignToReference>
+            <assignToReference
+      >CreditMemoInputRepresentation.changeOrderIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>AdjustOrderSummaryOutputRepresentation.postFulfillmentChangeOrderId</elementReference>
+                <elementReference
+        >AdjustOrderSummaryOutputRepresentation.postFulfillmentChangeOrderId</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -101,10 +111,12 @@
         <locationX>1087</locationX>
         <locationY>463</locationY>
         <assignmentItems>
-            <assignToReference>CreditMemoInputRepresentation.changeOrderIds</assignToReference>
+            <assignToReference
+      >CreditMemoInputRepresentation.changeOrderIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>AdjustOrderSummaryOutputRepresentation.preFulfillmentChangeOrderId</elementReference>
+                <elementReference
+        >AdjustOrderSummaryOutputRepresentation.preFulfillmentChangeOrderId</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -117,10 +129,12 @@
         <locationX>773</locationX>
         <locationY>671</locationY>
         <assignmentItems>
-            <assignToReference>adjustOrderItemSummaryInputRepresentation.adjustItems</assignToReference>
+            <assignToReference
+      >adjustOrderItemSummaryInputRepresentation.adjustItems</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>AdjustItemInputRepresentation</elementReference>
+                <elementReference
+        >AdjustItemInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -136,14 +150,16 @@
             <assignToReference>refund.Amount</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>AdjustOrderSummaryOutputRepresentation.changeBalances.grandTotalAmount</elementReference>
+                <elementReference
+        >AdjustOrderSummaryOutputRepresentation.changeBalances.grandTotalAmount</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>refund.Balance</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>AdjustOrderSummaryOutputRepresentation.changeBalances.grandTotalAmount</elementReference>
+                <elementReference
+        >AdjustOrderSummaryOutputRepresentation.changeBalances.grandTotalAmount</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -185,7 +201,8 @@
             <assignToReference>refund.CurrencyIsoCode</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Order_Payment_Summary.CurrencyIsoCode</elementReference>
+                <elementReference
+        >Order_Payment_Summary.CurrencyIsoCode</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -198,38 +215,48 @@
         <locationX>539</locationX>
         <locationY>678</locationY>
         <assignmentItems>
-            <assignToReference>AdjustItemInputRepresentation.adjustmentType</assignToReference>
+            <assignToReference
+      >AdjustItemInputRepresentation.adjustmentType</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>create_input_representation.AdjustmentType__c</elementReference>
+                <elementReference
+        >create_input_representation.AdjustmentType__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>AdjustItemInputRepresentation.amount</assignToReference>
+            <assignToReference
+      >AdjustItemInputRepresentation.amount</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>create_input_representation.Amount__c</elementReference>
+                <elementReference
+        >create_input_representation.Amount__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>AdjustItemInputRepresentation.description</assignToReference>
+            <assignToReference
+      >AdjustItemInputRepresentation.description</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>create_input_representation.Description__c</elementReference>
+                <elementReference
+        >create_input_representation.Description__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>AdjustItemInputRepresentation.orderItemSummaryId</assignToReference>
+            <assignToReference
+      >AdjustItemInputRepresentation.orderItemSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>create_input_representation.Order_Product_Summary__c</elementReference>
+                <elementReference
+        >create_input_representation.Order_Product_Summary__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>AdjustItemInputRepresentation.reason</assignToReference>
+            <assignToReference
+      >AdjustItemInputRepresentation.reason</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>create_input_representation.Reason__c</elementReference>
+                <elementReference
+        >create_input_representation.Reason__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -242,7 +269,8 @@
         <locationX>510</locationX>
         <locationY>431</locationY>
         <assignmentItems>
-            <assignToReference>adjustOrderItemSummaryInputRepresentation.allocatedItemsChangeOrderType</assignToReference>
+            <assignToReference
+      >adjustOrderItemSummaryInputRepresentation.allocatedItemsChangeOrderType</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>InFulfillment</stringValue>
@@ -261,7 +289,8 @@
             <assignToReference>ErrorDescription</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>The AdjustOrderSummaries Action failed. This is most likely due to some changes to the refundable total on the order during the approval process, so the amount could no longer be refunded.</stringValue>
+                <stringValue
+        >The AdjustOrderSummaries Action failed. This is most likely due to some changes to the refundable total on the order during the approval process, so the amount could no longer be refunded.</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -277,7 +306,8 @@
             <assignToReference>ErrorDescription</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>The creation of the CreditMemo failed. </stringValue>
+                <stringValue
+        >The creation of the CreditMemo failed. </stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -293,7 +323,8 @@
             <assignToReference>ErrorDescription</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>No Order Payment Summary found. Without a payment, no refund can be done.</stringValue>
+                <stringValue
+        >No Order Payment Summary found. Without a payment, no refund can be done.</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -325,7 +356,8 @@
             <assignToReference>appeasement.Credit_Memo__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>CreateCreditMemoOutputRepresentation.creditMemoId</elementReference>
+                <elementReference
+        >CreateCreditMemoOutputRepresentation.creditMemoId</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -345,7 +377,8 @@
             <name>yes_0</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>AdjustOrderSummaryOutputRepresentation.inFulfillmentChangeOrderId</leftValueReference>
+                <leftValueReference
+        >AdjustOrderSummaryOutputRepresentation.inFulfillmentChangeOrderId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -370,7 +403,8 @@
             <name>yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>AdjustOrderSummaryOutputRepresentation.postFulfillmentChangeOrderId</leftValueReference>
+                <leftValueReference
+        >AdjustOrderSummaryOutputRepresentation.postFulfillmentChangeOrderId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -395,7 +429,8 @@
             <name>yes2</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>AdjustOrderSummaryOutputRepresentation.preFulfillmentChangeOrderId</leftValueReference>
+                <leftValueReference
+        >AdjustOrderSummaryOutputRepresentation.preFulfillmentChangeOrderId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -408,7 +443,8 @@
         </rules>
     </decisions>
     <environments>Default</environments>
-    <interviewLabel>Process Appeasement Subflow {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Process Appeasement Subflow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Process Appeasement Subflow</label>
     <loops>
         <name>create_input_representation</name>
@@ -421,7 +457,8 @@
             <targetReference>Set_AdjustItemInputRepresentation</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Adjust_Order_Item_Summaries_Submit</targetReference>
+            <targetReference
+      >Adjust_Order_Item_Summaries_Submit</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -475,7 +512,8 @@
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>appeasement.Order_Summary__c</elementReference>
+                <elementReference
+        >appeasement.Order_Summary__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -499,7 +537,8 @@
         <label>Get Appeasement Items</label>
         <locationX>645</locationX>
         <locationY>432</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>create_input_representation</targetReference>
         </connector>
@@ -520,7 +559,8 @@
         <label>Order Payment Summary</label>
         <locationX>1876</locationX>
         <locationY>349</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Refund_ass</targetReference>
         </connector>
@@ -532,7 +572,8 @@
             <field>OrderSummaryId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>appeasement.Order_Summary__c</elementReference>
+                <elementReference
+        >appeasement.Order_Summary__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -570,9 +611,11 @@
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <description>input for adjustments as stored on the Appeasement</description>
+        <description
+    >input for adjustments as stored on the Appeasement</description>
         <name>adjustOrderItemSummaryInputRepresentation</name>
-        <apexClass>ConnectApi__AdjustOrderItemSummaryInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__AdjustOrderItemSummaryInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -580,7 +623,8 @@
     </variables>
     <variables>
         <name>AdjustOrderSummaryOutputRepresentation</name>
-        <apexClass>ConnectApi__AdjustOrderSummaryOutputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__AdjustOrderSummaryOutputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

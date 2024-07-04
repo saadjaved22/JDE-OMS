@@ -14,7 +14,9 @@ public with sharing class RestServiceSendRefund {
     return shipmentItems;
   }
 
-  public List<ShipmentRefundItemWrapper> convertReturnOrderLineItems(List<ReturnOrderLineItem> returnOrderLineItems) {
+  public List<ShipmentRefundItemWrapper> convertReturnOrderLineItems(
+    List<ReturnOrderLineItem> returnOrderLineItems
+  ) {
     List<ShipmentRefundItemWrapper> shipmentItems = new List<ShipmentRefundItemWrapper>();
 
     for (ReturnOrderLineItem item : returnOrderLineItems) {
@@ -108,7 +110,14 @@ public with sharing class RestServiceSendRefund {
   ) {
     System.debug('Refund sent to API: ' + JSONBody);
     HttpRequest req = new HttpRequest();
-    req.setEndpoint(endpoint.Base_URL__c + salesChannel + '/' + country + '/' + fulfilmentOrderID);
+    req.setEndpoint(
+      endpoint.Base_URL__c +
+        salesChannel +
+        '/' +
+        country +
+        '/' +
+        fulfilmentOrderID
+    );
     req.setMethod('POST');
     req.setBody(JSONBody);
     HTTPResponse res = new HTTPResponse();

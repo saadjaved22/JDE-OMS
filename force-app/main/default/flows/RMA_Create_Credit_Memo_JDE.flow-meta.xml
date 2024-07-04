@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Create_Credit_Memo</name>
@@ -8,13 +8,15 @@
         <actionName>createCreditMemoOrderSummary</actionName>
         <actionType>createCreditMemoOrderSummary</actionType>
         <faultConnector>
-            <targetReference>Create_Credit_Memo_Fault_Description</targetReference>
+            <targetReference
+      >Create_Credit_Memo_Fault_Description</targetReference>
         </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>creditMemoInput</name>
             <value>
-                <elementReference>creareCreditMemoInputRepresentation</elementReference>
+                <elementReference
+        >creareCreditMemoInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -24,7 +26,8 @@
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>createCreditMemoOutputRepresentation</assignToReference>
+            <assignToReference
+      >createCreditMemoOutputRepresentation</assignToReference>
             <name>creditMemoOutput</name>
         </outputParameters>
     </actionCalls>
@@ -39,13 +42,15 @@
             <targetReference>Add_to_ChangeOrderId_collection</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>Return_Return_Order_Item_Fault_Description</targetReference>
+            <targetReference
+      >Return_Return_Order_Item_Fault_Description</targetReference>
         </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>returnItemsInput</name>
             <value>
-                <elementReference>returnItemsInputRepresentation</elementReference>
+                <elementReference
+        >returnItemsInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -55,7 +60,8 @@
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>returnItemsOutputRepresentation</assignToReference>
+            <assignToReference
+      >returnItemsOutputRepresentation</assignToReference>
             <name>returnItemsOutput</name>
         </outputParameters>
     </actionCalls>
@@ -82,10 +88,12 @@
         <locationX>1344</locationX>
         <locationY>604</locationY>
         <assignmentItems>
-            <assignToReference>creareCreditMemoInputRepresentation.changeOrderIds</assignToReference>
+            <assignToReference
+      >creareCreditMemoInputRepresentation.changeOrderIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>returnItemsOutputRepresentation.changeOrderId</elementReference>
+                <elementReference
+        >returnItemsOutputRepresentation.changeOrderId</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -101,18 +109,21 @@
             <assignToReference>quantityToReturn</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Return_Order_Line_Items.QuantityReceived</elementReference>
+                <elementReference
+        >Return_Order_Line_Items.QuantityReceived</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>quantityToReturn</assignToReference>
             <operator>Subtract</operator>
             <value>
-                <elementReference>Return_Order_Line_Items.QuantityRejected</elementReference>
+                <elementReference
+        >Return_Order_Line_Items.QuantityRejected</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Does_Return_Order_Line_Item_Has_Quantity_To_Return</targetReference>
+            <targetReference
+      >Does_Return_Order_Line_Item_Has_Quantity_To_Return</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -137,17 +148,20 @@
         <locationX>1153</locationX>
         <locationY>411</locationY>
         <assignmentItems>
-            <assignToReference>returnItemsInputRepresentation.returnOrderItems</assignToReference>
+            <assignToReference
+      >returnItemsInputRepresentation.returnOrderItems</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>returnOrderItemList</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnItemsInputRepresentation.returnOrderItemDeliveryCharges</assignToReference>
+            <assignToReference
+      >returnItemsInputRepresentation.returnOrderItemDeliveryCharges</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>returnOrderItemDeliveryChargeList</elementReference>
+                <elementReference
+        >returnOrderItemDeliveryChargeList</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -160,45 +174,55 @@
         <locationX>1098</locationX>
         <locationY>838</locationY>
         <assignmentItems>
-            <assignToReference>returnOrderItemInputRepresentation.returnOrderLineItemId</assignToReference>
+            <assignToReference
+      >returnOrderItemInputRepresentation.returnOrderLineItemId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Return_Order_Line_Items.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderItemInputRepresentation.quantityReceived</assignToReference>
+            <assignToReference
+      >returnOrderItemInputRepresentation.quantityReceived</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Return_Order_Line_Items.QuantityReceived</elementReference>
+                <elementReference
+        >Return_Order_Line_Items.QuantityReceived</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderItemInputRepresentation.quantityRejected</assignToReference>
+            <assignToReference
+      >returnOrderItemInputRepresentation.quantityRejected</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Return_Order_Line_Items.QuantityRejected</elementReference>
+                <elementReference
+        >Return_Order_Line_Items.QuantityRejected</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderItemInputRepresentation.quantityReturned</assignToReference>
+            <assignToReference
+      >returnOrderItemInputRepresentation.quantityReturned</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>quantityToReturn</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderItemInputRepresentation.reasonForRejection</assignToReference>
+            <assignToReference
+      >returnOrderItemInputRepresentation.reasonForRejection</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Return_Order_Line_Items.ReasonForRejection</elementReference>
+                <elementReference
+        >Return_Order_Line_Items.ReasonForRejection</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderItemInputRepresentation.quantityToCancel</assignToReference>
+            <assignToReference
+      >returnOrderItemInputRepresentation.quantityToCancel</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Return_Order_Line_Items.QuantityRejected</elementReference>
+                <elementReference
+        >Return_Order_Line_Items.QuantityRejected</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -211,14 +235,16 @@
         <locationX>267</locationX>
         <locationY>965</locationY>
         <assignmentItems>
-            <assignToReference>returnOrderItemDeliveryCharge.returnOrderLineItemId</assignToReference>
+            <assignToReference
+      >returnOrderItemDeliveryCharge.returnOrderLineItemId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Return_Order_Line_Items.Id</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Create_Return_Order_Item_Delivery_Charge_List</targetReference>
+            <targetReference
+      >Create_Return_Order_Item_Delivery_Charge_List</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -227,10 +253,12 @@
         <locationX>267</locationX>
         <locationY>716</locationY>
         <assignmentItems>
-            <assignToReference>returnOrderItemDeliveryChargeList</assignToReference>
+            <assignToReference
+      >returnOrderItemDeliveryChargeList</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>returnOrderItemDeliveryCharge</elementReference>
+                <elementReference
+        >returnOrderItemDeliveryCharge</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -246,7 +274,8 @@
             <assignToReference>returnOrderItemList</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>returnOrderItemInputRepresentation</elementReference>
+                <elementReference
+        >returnOrderItemInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -269,14 +298,16 @@
             <assignToReference>errorDescription</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>We couldn&apos;t get the return order line items.</stringValue>
+                <stringValue
+        >We couldn&apos;t get the return order line items.</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>The Get Records flow element failed to get the return order line items.</stringValue>
+                <stringValue
+        >The Get Records flow element failed to get the return order line items.</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -292,7 +323,8 @@
             <assignToReference>errorDescription</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>The Return Return Order Items action failed.</stringValue>
+                <stringValue
+        >The Return Return Order Items action failed.</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -309,14 +341,16 @@
             <name>Are_There_Any_Return_Order_Line_Items_To_Return_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>isReturnOrderItemListNotEmpty</leftValueReference>
+                <leftValueReference
+        >isReturnOrderItemListNotEmpty</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Return_Items_Input_Representation</targetReference>
+                <targetReference
+        >Create_Return_Items_Input_Representation</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -341,7 +375,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Return_Order_Input_Item</targetReference>
+                <targetReference
+        >Create_Return_Order_Input_Item</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -356,14 +391,16 @@
             <name>Delivery_Charge</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Return_Order_Line_Items.Type</leftValueReference>
+                <leftValueReference
+        >Return_Order_Line_Items.Type</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Delivery Charge</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Return_Order_Item_Delivery_Charge</targetReference>
+                <targetReference
+        >Create_Return_Order_Item_Delivery_Charge</targetReference>
             </connector>
             <label>Delivery Charge</label>
         </rules>
@@ -371,14 +408,16 @@
             <name>Product_With_Quantity_Expected</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Return_Order_Line_Items.Type</leftValueReference>
+                <leftValueReference
+        >Return_Order_Line_Items.Type</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
                     <stringValue>Delivery Charge</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Return_Order_Line_Items.QuantityExpected</leftValueReference>
+                <leftValueReference
+        >Return_Order_Line_Items.QuantityExpected</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <elementReference>ZERO</elementReference>
@@ -392,7 +431,8 @@
     </decisions>
     <description>Removed ensure refunds element.</description>
     <environments>Default</environments>
-    <interviewLabel>RMA Create Credit Memo JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >RMA Create Credit Memo JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>RMA Create Credit Memo JDE</label>
     <loops>
         <name>Return_Order_Line_Items</name>
@@ -402,10 +442,12 @@
         <collectionReference>Get_Return_Order_Line_Items</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Filter_Valid_Return_Order_Line_Items</targetReference>
+            <targetReference
+      >Filter_Valid_Return_Order_Line_Items</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Are_There_Any_Return_Order_Line_Items_To_Return</targetReference>
+            <targetReference
+      >Are_There_Any_Return_Order_Line_Items_To_Return</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -476,7 +518,8 @@
         <label>Get Return Order Line Items</label>
         <locationX>544</locationX>
         <locationY>144</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Return_Order_Line_Items</targetReference>
         </connector>
@@ -506,7 +549,8 @@
     <start>
         <locationX>29</locationX>
         <locationY>50</locationY>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Status</field>
@@ -618,7 +662,8 @@
     </variables>
     <variables>
         <name>returnOrderItemDeliveryCharge</name>
-        <apexClass>ConnectApi__ReturnOrderItemDeliveryChargeInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__ReturnOrderItemDeliveryChargeInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -626,7 +671,8 @@
     </variables>
     <variables>
         <name>returnOrderItemDeliveryChargeList</name>
-        <apexClass>ConnectApi__ReturnOrderItemDeliveryChargeInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__ReturnOrderItemDeliveryChargeInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>

@@ -1,23 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ForecastingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultToPersonalCurrency>false</defaultToPersonalCurrency>
     <enableForecasts>true</enableForecasts>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>commitonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >commitonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>commit</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>closedonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >closedonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>closed</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>openpipeline</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >openpipeline</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>pipeline</sourceCategoryApiName>
             <weight>1.0</weight>
@@ -32,14 +35,16 @@
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>omittedonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >omittedonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>omitted</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>bestcaseforecast</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >bestcaseforecast</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>closed</sourceCategoryApiName>
             <weight>1.0</weight>
@@ -54,14 +59,16 @@
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>pipelineonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >pipelineonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>pipeline</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>commitforecast</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >commitforecast</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>closed</sourceCategoryApiName>
             <weight>1.0</weight>
@@ -72,7 +79,8 @@
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>bestcaseonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >bestcaseonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>best case</sourceCategoryApiName>
             <weight>1.0</weight>
@@ -93,8 +101,10 @@
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunities</masterLabel>
         <name>OpportunityRevenue</name>
         <opportunityListFieldsLabelMappings>
@@ -302,8 +312,10 @@
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunities</masterLabel>
         <name>OpportunityQuantity</name>
         <opportunityListFieldsLabelMappings>
@@ -511,8 +523,10 @@
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Product Families</masterLabel>
         <name>OpportunityLineItemRevenue</name>
         <opportunityListFieldsLabelMappings>
@@ -725,8 +739,10 @@
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Product Families</masterLabel>
         <name>OpportunityLineItemQuantity</name>
         <opportunityListFieldsLabelMappings>
@@ -934,8 +950,10 @@
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunity Revenue Product Date</masterLabel>
         <name>OpportunityRevenueProductDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1148,8 +1166,10 @@
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunity Quantity Product Date</masterLabel>
         <name>OpportunityQuantityProductDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1357,8 +1377,10 @@
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Line Item Revenue Product Date</masterLabel>
         <name>LineItemRevenueProductDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1571,8 +1593,10 @@
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Line Item Quantity Product Date</masterLabel>
         <name>LineItemQuantityProductDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1780,8 +1804,10 @@
         <isAmount>true</isAmount>
         <isAvailable>false</isAvailable>
         <isQuantity>false</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunity Revenue Schedule Date</masterLabel>
         <name>OpportunityRevenueScheduleDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1994,8 +2020,10 @@
         <isAmount>false</isAmount>
         <isAvailable>false</isAvailable>
         <isQuantity>true</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunity Quantity Schedule Date</masterLabel>
         <name>OpportunityQuantityScheduleDate</name>
         <opportunityListFieldsLabelMappings>
@@ -2203,8 +2231,10 @@
         <isAmount>true</isAmount>
         <isAvailable>false</isAvailable>
         <isQuantity>false</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Line Item Revenue Schedule Date</masterLabel>
         <name>LineItemRevenueScheduleDate</name>
         <opportunityListFieldsLabelMappings>
@@ -2417,8 +2447,10 @@
         <isAmount>false</isAmount>
         <isAvailable>false</isAvailable>
         <isQuantity>true</isQuantity>
-        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
-        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames
+    >bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Line Item Quantity Schedule Date</masterLabel>
         <name>LineItemQuantityScheduleDate</name>
         <opportunityListFieldsLabelMappings>

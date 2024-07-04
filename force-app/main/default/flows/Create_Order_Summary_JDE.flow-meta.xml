@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Create_Order_Summary_Action</name>
@@ -17,11 +17,13 @@
         <inputParameters>
             <name>createOrderSummaryInput</name>
             <value>
-                <elementReference>OrderSummaryInputRepresentation</elementReference>
+                <elementReference
+        >OrderSummaryInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>OrderSummaryOutputRepresentation</assignToReference>
+            <assignToReference
+      >OrderSummaryOutputRepresentation</assignToReference>
             <name>createOrderSummaryOutput</name>
         </outputParameters>
     </actionCalls>
@@ -32,21 +34,24 @@
         <locationX>933</locationX>
         <locationY>165</locationY>
         <assignmentItems>
-            <assignToReference>OrderSummaryInputRepresentation.orderId</assignToReference>
+            <assignToReference
+      >OrderSummaryInputRepresentation.orderId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OrderSummaryInputRepresentation.orderLifeCycleType</assignToReference>
+            <assignToReference
+      >OrderSummaryInputRepresentation.orderLifeCycleType</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Managed</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OrderSummaryInputRepresentation.businessModel</assignToReference>
+            <assignToReference
+      >OrderSummaryInputRepresentation.businessModel</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>B2C</stringValue>
@@ -69,7 +74,8 @@
             <name>orderSummaryExistYes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Existing_Order_Summary</leftValueReference>
+                <leftValueReference
+        >Get_Existing_Order_Summary</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -78,9 +84,11 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>removed Reservation but kept Payment Summary Update</description>
+    <description
+  >removed Reservation but kept Payment Summary Update</description>
     <environments>Default</environments>
-    <interviewLabel>Create Order Summary JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Create Order Summary JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Create Order Summary JDE</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -150,7 +158,8 @@
         <label>Get Existing Order Summary</label>
         <locationX>528</locationX>
         <locationY>166</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Does_Order_Summary_Exist</targetReference>
         </connector>
@@ -159,7 +168,8 @@
             <field>OrderNumber</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.OrderReferenceNumber</elementReference>
+                <elementReference
+        >$Record.OrderReferenceNumber</elementReference>
             </value>
         </filters>
         <filters>
@@ -186,7 +196,8 @@
         <label>Order Payment Summary</label>
         <locationX>794</locationX>
         <locationY>484</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Payment_Authorisation</targetReference>
         </connector>
@@ -195,7 +206,8 @@
             <field>OrderSummaryId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>OrderSummaryOutputRepresentation.orderSummaryId</elementReference>
+                <elementReference
+        >OrderSummaryOutputRepresentation.orderSummaryId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -207,7 +219,8 @@
         <label>Payment Authorisation</label>
         <locationX>661</locationX>
         <locationY>483</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Payment</targetReference>
         </connector>
@@ -245,7 +258,8 @@
         <object>Payment</object>
     </recordUpdates>
     <recordUpdates>
-        <description>transfer the value IsSubscriptionOrder from original Order to OrderSummary</description>
+        <description
+    >transfer the value IsSubscriptionOrder from original Order to OrderSummary</description>
         <name>Update_Subscription_Checkbox</name>
         <label>Update Subscription Checkbox</label>
         <locationX>933</locationX>
@@ -258,13 +272,15 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>OrderSummaryOutputRepresentation.orderSummaryId</elementReference>
+                <elementReference
+        >OrderSummaryOutputRepresentation.orderSummaryId</elementReference>
             </value>
         </filters>
         <inputAssignments>
             <field>IsSubscriptionOrder__c</field>
             <value>
-                <elementReference>$Record.IsSubscriptionOrder__c</elementReference>
+                <elementReference
+        >$Record.IsSubscriptionOrder__c</elementReference>
             </value>
         </inputAssignments>
         <object>OrderSummary</object>
@@ -273,7 +289,8 @@
     <start>
         <locationX>108</locationX>
         <locationY>61</locationY>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Status</field>
@@ -286,7 +303,7 @@
             <field>SalesChannelId</field>
             <operator>NotEqualTo</operator>
             <value>
-                <stringValue></stringValue>
+                <stringValue />
             </value>
         </filters>
         <object>Order</object>
@@ -307,7 +324,8 @@
     <textTemplates>
         <name>ErrorMessage</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;Something went wrong and Order Summary is not created. Please check if all necessary fields have information and correct data type.&lt;/p&gt;</text>
+        <text
+    >&lt;p&gt;Something went wrong and Order Summary is not created. Please check if all necessary fields have information and correct data type.&lt;/p&gt;</text>
     </textTemplates>
     <variables>
         <name>OrderSumIds</name>

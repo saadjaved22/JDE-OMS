@@ -1,5 +1,8 @@
 public with sharing class RestServiceReturnOrderWebshopReturn {
-  @invocableMethod(Callout=true Label='Return Order API Return callout to Webshop')
+  @invocableMethod(
+    Callout=true
+    Label='Return Order API Return callout to Webshop'
+  )
   public static void getData(List<RestServiceInvocableAction> items) {
     Boolean runAsync = false;
     Map<Id, Integer> itemMap = new Map<Id, Integer>();
@@ -20,7 +23,9 @@ public with sharing class RestServiceReturnOrderWebshopReturn {
         System.enqueueJob(new AsyncReturnOrderReturnWebshop(itemsToProcess));
       }
     } else {
-      AsyncReturnOrderReturnWebshop asyncReturnOrderReturn = new AsyncReturnOrderReturnWebshop(itemMap);
+      AsyncReturnOrderReturnWebshop asyncReturnOrderReturn = new AsyncReturnOrderReturnWebshop(
+        itemMap
+      );
       asyncReturnOrderReturn.execute(null);
     }
   }
@@ -122,9 +127,12 @@ public with sharing class RestServiceReturnOrderWebshopReturn {
           transactionID_s
         );
         String JSONBody = JSON.serialize(returnOrderObj);
-        String brand = orderMap.get(rOrder.OrderId).Magento_SalesChannel_Name__c;
-        String country = orderMap.get(rOrder.OrderId).SalesChannelCountryCode__c;
-        String orderReference = orderMap.get(rOrder.OrderId).OrderReferenceNumber;
+        String brand = orderMap.get(rOrder.OrderId)
+          .Magento_SalesChannel_Name__c;
+        String country = orderMap.get(rOrder.OrderId)
+          .SalesChannelCountryCode__c;
+        String orderReference = orderMap.get(rOrder.OrderId)
+          .OrderReferenceNumber;
 
         List<String> exceptionList = callAPI(
           JSONBody,
@@ -205,7 +213,9 @@ public with sharing class RestServiceReturnOrderWebshopReturn {
     ) {
       List<String> exceptionList = new List<String>();
       HttpRequest req = new HttpRequest();
-      req.setEndpoint(endpoint.Base_URL__c + brand + '/' + country + '/' + orderReference);
+      req.setEndpoint(
+        endpoint.Base_URL__c + brand + '/' + country + '/' + orderReference
+      );
       req.setMethod('POST');
       req.setBody(JSONBody);
 

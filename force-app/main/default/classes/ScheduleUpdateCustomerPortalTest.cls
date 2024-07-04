@@ -5,14 +5,12 @@ History
 */
 @isTest
 public with sharing class ScheduleUpdateCustomerPortalTest {
-    @IsTest
-    static void testScheduler(){
-        
-        Test.StartTest();
-            ScheduleUpdateCustomerPortal sh1 = new ScheduleUpdateCustomerPortal();      
-            String sch = '0 0 15 * * ?';
-            system.schedule('Test run schedulable', sch, sh1);
-        Test.stopTest();
-        
-    }
+  @IsTest
+  static void testScheduler() {
+    Test.StartTest();
+    ScheduleUpdateCustomerPortal sh1 = new ScheduleUpdateCustomerPortal();
+    String sch = '0 0 15 * * ?';
+    system.schedule('Test run schedulable', sch, sh1);
+    Test.stopTest();
+  }
 }

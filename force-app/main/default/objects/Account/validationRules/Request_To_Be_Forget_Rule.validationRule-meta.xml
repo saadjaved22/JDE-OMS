@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Request_To_Be_Forget_Rule</fullName>
     <active>true</active>
-    <description>This Rule prevents system to delete Consumer records which have Positive Loyalty Balance.</description>
-    <errorConditionFormula>if(Request_to_be_Forgotten__c &amp;&amp;   ISCHANGED(Request_to_be_Forgotten__c) &amp;&amp;  Loyalty_Total_Points__c &gt; 0, True,FALSE)</errorConditionFormula>
-    <errorMessage>Consumer has Positive Loyalty Balance and cannot be marked to delete</errorMessage>
+    <description
+  >This Rule prevents system to delete Consumer records which have Positive Loyalty Balance.</description>
+    <errorConditionFormula
+  >if(Request_to_be_Forgotten__c &amp;&amp;   ISCHANGED(Request_to_be_Forgotten__c) &amp;&amp;  Loyalty_Total_Points__c &gt; 0, True,FALSE)</errorConditionFormula>
+    <errorMessage
+  >Consumer has Positive Loyalty Balance and cannot be marked to delete</errorMessage>
 </ValidationRule>

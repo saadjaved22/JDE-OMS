@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Call_Credit_Refund_API</name>
@@ -17,7 +17,8 @@
     </actionCalls>
     <apiVersion>58.0</apiVersion>
     <environments>Default</environments>
-    <interviewLabel>Manual Send Credit Refund {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Manual Send Credit Refund {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Manual Send Credit Refund</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -51,7 +52,8 @@
         </connector>
         <fields>
             <name>CreditMemoText</name>
-            <fieldText>&lt;p&gt;Please Click on Send Appeasement Button to send this {!recordId.Credit_Memo__r.CreditMemoNumber} Credit Memo to Magento&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;Please Click on Send Appeasement Button to send this {!recordId.Credit_Memo__r.CreditMemoNumber} Credit Memo to Magento&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Send Appeasement</nextOrFinishButtonLabel>

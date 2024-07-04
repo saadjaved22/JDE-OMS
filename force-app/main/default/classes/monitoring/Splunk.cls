@@ -4,7 +4,13 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
   ID internalProcessExceptionID;
   String internalPENumber;
   String internalPEtransactionID;
-  public Splunk(String CMDTName, Id entityId, ID ProcessExceptionID, String PENumber, String PEtransactionID) {
+  public Splunk(
+    String CMDTName,
+    Id entityId,
+    ID ProcessExceptionID,
+    String PENumber,
+    String PEtransactionID
+  ) {
     internalCMDTName = CMDTName;
     internalentityId = entityId;
     internalProcessExceptionID = ProcessExceptionID;
@@ -23,7 +29,13 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
   }
 
   // CMDTName is required, rest is optional
-  private void createLog(String CMDTName, Id entityId, ID ProcessExceptionID, String PENumber, String PEtransactionID) {
+  private void createLog(
+    String CMDTName,
+    Id entityId,
+    ID ProcessExceptionID,
+    String PENumber,
+    String PEtransactionID
+  ) {
     // entityId can be lots of objects, get the type and the proper readable name
     String entityType = entityId.getSObjectType().getDescribe().getName();
     System.debug('entityType: ' + entityType);
@@ -32,7 +44,9 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
     String fulfilmentOrderId = '';
 
     //get the matching custom metadata (CMD)
-    Splunk_configuration__mdt cmd = Splunk_configuration__mdt.getInstance(CMDTName);
+    Splunk_configuration__mdt cmd = Splunk_configuration__mdt.getInstance(
+      CMDTName
+    );
     List<referenceFieldsWrapper> referenceFieldsList = new List<referenceFieldsWrapper>();
 
     // create the payload
@@ -40,7 +54,8 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
     log.category = 'B2C';
     log.environment = environment__c.getOrgDefaults().type__c; // get the environment value from the custom setting
     log.origin = 'Salesforce';
-    log.timestamp = Datetime.now().formatGmt('yyyy-MM-dd\'T\'HH:mm:ss.SSS') + 'Z';
+    log.timestamp =
+      Datetime.now().formatGmt('yyyy-MM-dd\'T\'HH:mm:ss.SSS') + 'Z';
     referenceFieldsWrapper referenceField = new referenceFieldsWrapper();
     log.transactionID = PEtransactionID;
 
@@ -61,7 +76,11 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
         LIMIT 1
       ];
       order = [
-        SELECT Id, SalesChannelCountryCode__c, SalesChannel.SalesChannelName, OrderReferenceNumber
+        SELECT
+          Id,
+          SalesChannelCountryCode__c,
+          SalesChannel.SalesChannelName,
+          OrderReferenceNumber
         FROM Order
         WHERE Id = :orderSummary.OriginalOrderId
         LIMIT 1
@@ -78,7 +97,11 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
       log.referenceFields = referenceFieldsList;
     } else if (entityType == 'Order') {
       order = [
-        SELECT Id, SalesChannelCountryCode__c, SalesChannel.SalesChannelName, OrderReferenceNumber
+        SELECT
+          Id,
+          SalesChannelCountryCode__c,
+          SalesChannel.SalesChannelName,
+          OrderReferenceNumber
         FROM Order
         WHERE Id = :entityId
         LIMIT 1
@@ -93,7 +116,13 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
     } else if (entityType == 'OCI_Commerce_API__c') {
       // if the reservation fails, we create this object type (since there is no order to link to)
       pe = [
-        SELECT Id, Category, Message, Description, CreatedDate, ExternalReference
+        SELECT
+          Id,
+          Category,
+          Message,
+          Description,
+          CreatedDate,
+          ExternalReference
         FROM ProcessException
         WHERE id = :ProcessExceptionID
         LIMIT 1
@@ -107,7 +136,10 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
         log.entityId = externalReferences[1];
         log.partner = externalReferences[0];
       }
-    } else if (entityType == 'OrderSummary' && CMDTName == 'Process_Exception') {
+    } else if (
+      entityType == 'OrderSummary' &&
+      CMDTName == 'Process_Exception'
+    ) {
       OrderSummary orderSummary = [
         SELECT id, OriginalOrderId
         FROM OrderSummary
@@ -115,7 +147,11 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
         LIMIT 1
       ];
       order = [
-        SELECT Id, SalesChannelCountryCode__c, SalesChannel.SalesChannelName, OrderReferenceNumber
+        SELECT
+          Id,
+          SalesChannelCountryCode__c,
+          SalesChannel.SalesChannelName,
+          OrderReferenceNumber
         FROM Order
         WHERE Id = :orderSummary.OriginalOrderId
         LIMIT 1
@@ -133,9 +169,15 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
       log.entityId = ProcessExceptionID;
       log.country = order.SalesChannelCountryCode__c;
       log.partner = order.SalesChannel.SalesChannelName;
-      log.timestamp = pe.CreatedDate.formatGmt('yyyy-MM-dd\'T\'HH:mm:ss.SSS') + 'Z';
+      log.timestamp =
+        pe.CreatedDate.formatGmt('yyyy-MM-dd\'T\'HH:mm:ss.SSS') + 'Z';
     } else if (entityType == 'Shipment') {
-      Shipment shipment = [SELECT OrderSummaryId FROM Shipment WHERE Id = :entityId LIMIT 1];
+      Shipment shipment = [
+        SELECT OrderSummaryId
+        FROM Shipment
+        WHERE Id = :entityId
+        LIMIT 1
+      ];
       OrderSummary orderSummary = [
         SELECT id, OriginalOrderId
         FROM OrderSummary
@@ -150,7 +192,11 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
       ];
       fulfilmentOrderId = forder.Fulfillment_Order_Id__c;
       order = [
-        SELECT Id, SalesChannelCountryCode__c, SalesChannel.SalesChannelName, OrderReferenceNumber
+        SELECT
+          Id,
+          SalesChannelCountryCode__c,
+          SalesChannel.SalesChannelName,
+          OrderReferenceNumber
         FROM Order
         WHERE Id = :orderSummary.OriginalOrderId
         LIMIT 1
@@ -207,7 +253,9 @@ public with sharing class Splunk implements Queueable, Database.AllowsCallouts {
 
     if (res.getStatusCode() != 200) {
       // TODO: error handling (what do you do if error logging fails? :))
-      Map<String, Object> m = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
+      Map<String, Object> m = (Map<String, Object>) JSON.deserializeUntyped(
+        res.getBody()
+      );
     }
   }
 

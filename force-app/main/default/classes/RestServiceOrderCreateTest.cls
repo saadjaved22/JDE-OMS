@@ -41,7 +41,10 @@ public class RestServiceOrderCreateTest {
       LIMIT 1
     ];
     if (sCList.size() == 0) {
-      SalesChannel salesChannel = new SalesChannel(ExternalChannelNumber = 'LDE_NL', SalesChannelName = 'LDE_NL');
+      SalesChannel salesChannel = new SalesChannel(
+        ExternalChannelNumber = 'LDE_NL',
+        SalesChannelName = 'LDE_NL'
+      );
       insert salesChannel;
     }
 
@@ -52,7 +55,10 @@ public class RestServiceOrderCreateTest {
       LIMIT 1
     ];
     if (locationGroups.size() == 0) {
-      LocationGroup locationGroup = new LocationGroup(ExternalReference = 'NL', LocationGroupName = 'NL');
+      LocationGroup locationGroup = new LocationGroup(
+        ExternalReference = 'NL',
+        LocationGroupName = 'NL'
+      );
       insert locationGroup;
     }
 

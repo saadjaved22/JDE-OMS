@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DepositCannotAcceptNegativePoints</fullName>
     <active>true</active>
-    <errorConditionFormula>AND ($Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c,AND( Transaction_Amount__c &lt;=0 , 
+    <errorConditionFormula
+  >AND ($Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c,AND( Transaction_Amount__c &lt;=0 , 
 ISPICKVAL(Loyalty_Transaction_Type__c, &quot;Compensation&quot;) || 
 ISPICKVAL(Loyalty_Transaction_Type__c, &quot;Deposit&quot;) || 
 ISPICKVAL(Loyalty_Transaction_Type__c, &quot;Returned&quot;)))</errorConditionFormula>

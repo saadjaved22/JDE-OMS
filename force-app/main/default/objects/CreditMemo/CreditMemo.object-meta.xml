@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>CancelEdit</actionName>
@@ -102,34 +102,59 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <searchLayouts>
-        <customTabListAdditionalFields>BillingAccount</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >BillingAccount</customTabListAdditionalFields>
         <customTabListAdditionalFields>Status</customTabListAdditionalFields>
-        <customTabListAdditionalFields>TotalAmount</customTabListAdditionalFields>
-        <customTabListAdditionalFields>TotalChargeAmount</customTabListAdditionalFields>
-        <customTabListAdditionalFields>TotalAdjustmentAmount</customTabListAdditionalFields>
-        <customTabListAdditionalFields>TotalTaxAmount</customTabListAdditionalFields>
-        <customTabListAdditionalFields>CreditDate</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>BillingAccount</lookupDialogsAdditionalFields>
+        <customTabListAdditionalFields
+    >TotalAmount</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >TotalChargeAmount</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >TotalAdjustmentAmount</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >TotalTaxAmount</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >CreditDate</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >BillingAccount</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Status</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>TotalAmount</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>TotalChargeAmount</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>TotalAdjustmentAmount</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>TotalTaxAmount</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>CreditDate</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>BillingAccount</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Status</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>TotalAmount</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>TotalChargeAmount</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>TotalAdjustmentAmount</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>TotalTaxAmount</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>CreditDate</lookupPhoneDialogsAdditionalFields>
-        <searchResultsAdditionalFields>BillingAccount</searchResultsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >TotalAmount</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >TotalChargeAmount</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >TotalAdjustmentAmount</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >TotalTaxAmount</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >CreditDate</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >BillingAccount</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >Status</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >TotalAmount</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >TotalChargeAmount</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >TotalAdjustmentAmount</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >TotalTaxAmount</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >CreditDate</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields
+    >BillingAccount</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Status</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>TotalAmount</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>TotalChargeAmount</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>TotalAdjustmentAmount</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>TotalTaxAmount</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>CreditDate</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >TotalAmount</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >TotalChargeAmount</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >TotalAdjustmentAmount</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >TotalTaxAmount</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >CreditDate</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
 </CustomObject>

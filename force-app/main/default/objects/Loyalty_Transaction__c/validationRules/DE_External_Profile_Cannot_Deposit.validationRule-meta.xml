@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DE_External_Profile_Cannot_Deposit</fullName>
     <active>true</active>
-    <description>DE External Identity User cannot do any non-Redeem loyalty transaction.</description>
+    <description
+  >DE External Identity User cannot do any non-Redeem loyalty transaction.</description>
     <errorConditionFormula>AND(
 NOT(ISPICKVAL(Loyalty_Transaction_Type__c, &quot;Redeem&quot;)),
 $Profile.Id = &quot;00e0Y000000RZR0&quot;
 )</errorConditionFormula>
-    <errorMessage>DE External Identity User cannot do any non-Redeem loyalty transaction.</errorMessage>
+    <errorMessage
+  >DE External Identity User cannot do any non-Redeem loyalty transaction.</errorMessage>
 </ValidationRule>

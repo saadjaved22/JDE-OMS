@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
     <decisions>
-        <description>Check if we are not including records with empty fields.</description>
+        <description
+    >Check if we are not including records with empty fields.</description>
         <name>Check_CM</name>
         <label>Check CM</label>
         <locationX>182</locationX>
@@ -30,10 +31,12 @@
         <expression>{!Loop_Through_CM.Rank__c}+1</expression>
         <scale>0</scale>
     </formulas>
-    <interviewLabel>Survey Result - Create Recommendation {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Survey Result - Create Recommendation {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Survey Result - Create Recommendation</label>
     <loops>
-        <description>We need to loop through all the labels in the CM, so we can create a survey result for each rank.</description>
+        <description
+    >We need to loop through all the labels in the CM, so we can create a survey result for each rank.</description>
         <name>Loop_Through_CM</name>
         <label>Loop Through CM</label>
         <locationX>50</locationX>
@@ -74,7 +77,8 @@
         <inputAssignments>
             <field>Name__c</field>
             <value>
-                <elementReference>Loop_Through_CM.Recommendation__c</elementReference>
+                <elementReference
+        >Loop_Through_CM.Recommendation__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -86,13 +90,15 @@
         <inputAssignments>
             <field>Survey_Campaign_Profile__c</field>
             <value>
-                <elementReference>$Record.Survey_Campaign_Profile__c</elementReference>
+                <elementReference
+        >$Record.Survey_Campaign_Profile__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Value__c</field>
             <value>
-                <elementReference>Loop_Through_CM.Recommendation_Value__c</elementReference>
+                <elementReference
+        >Loop_Through_CM.Recommendation_Value__c</elementReference>
             </value>
         </inputAssignments>
         <object>Survey_Result__c</object>
@@ -103,7 +109,8 @@
         <label>Get CM</label>
         <locationX>182</locationX>
         <locationY>335</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Check_CM</targetReference>
         </connector>

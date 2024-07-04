@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>53.0</apiVersion>
     <assignments>
@@ -7,10 +7,12 @@
         <locationX>548</locationX>
         <locationY>338</locationY>
         <assignmentItems>
-            <assignToReference>OCIInteractionFulfillOrderItems</assignToReference>
+            <assignToReference
+      >OCIInteractionFulfillOrderItems</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>OCIInteractionFulfillOrderItem</elementReference>
+                <elementReference
+        >OCIInteractionFulfillOrderItem</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -23,42 +25,50 @@
         <locationX>548</locationX>
         <locationY>530</locationY>
         <assignmentItems>
-            <assignToReference>OCIInteractionFulfillOrderItem.FromLocation__c</assignToReference>
+            <assignToReference
+      >OCIInteractionFulfillOrderItem.FromLocation__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>FOIs.FulfillmentOrder.FulfilledFromLocationId</elementReference>
+                <elementReference
+        >FOIs.FulfillmentOrder.FulfilledFromLocationId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIInteractionFulfillOrderItem.FulfillmentOrderItem__c</assignToReference>
+            <assignToReference
+      >OCIInteractionFulfillOrderItem.FulfillmentOrderItem__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>FOIs.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIInteractionFulfillOrderItem.Quantity__c</assignToReference>
+            <assignToReference
+      >OCIInteractionFulfillOrderItem.Quantity__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>GetCancelQuantity</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIInteractionFulfillOrderItem.Status__c</assignToReference>
+            <assignToReference
+      >OCIInteractionFulfillOrderItem.Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>REQUESTED</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIInteractionFulfillOrderItem.ToLocationGroup__c</assignToReference>
+            <assignToReference
+      >OCIInteractionFulfillOrderItem.ToLocationGroup__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>FOIs.OrderItemSummary.ReservedAtLocationId</elementReference>
+                <elementReference
+        >FOIs.OrderItemSummary.ReservedAtLocationId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIInteractionFulfillOrderItem.Type__c</assignToReference>
+            <assignToReference
+      >OCIInteractionFulfillOrderItem.Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>TRANSFER_CANCEL</stringValue>
@@ -74,7 +84,8 @@
         <locationX>858</locationX>
         <locationY>528</locationY>
         <assignmentItems>
-            <assignToReference>OCI_IFOI.OCIInteractionFulfillOrder__c</assignToReference>
+            <assignToReference
+      >OCI_IFOI.OCIInteractionFulfillOrder__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Interaction_Fulfill_Order</elementReference>
@@ -97,7 +108,8 @@
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>FOIs.OrderItemSummary.Type</leftValueReference>
+                <leftValueReference
+        >FOIs.OrderItemSummary.Type</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Order Product</stringValue>
@@ -122,14 +134,16 @@
         <locationX>293</locationX>
         <locationY>533</locationY>
         <defaultConnector>
-            <targetReference>OCI_Interaction_Fulfill_Order_Item</targetReference>
+            <targetReference
+      >OCI_Interaction_Fulfill_Order_Item</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>yes</defaultConnectorLabel>
         <rules>
             <name>Reservation_Location_is_Not_Set</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>FOIs.OrderItemSummary.ReservedAtLocationId</leftValueReference>
+                <leftValueReference
+        >FOIs.OrderItemSummary.ReservedAtLocationId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -145,10 +159,12 @@
     <formulas>
         <name>GetCancelQuantity</name>
         <dataType>Number</dataType>
-        <expression>{!FOIs.OrderItemSummary.QuantityNetOrdered} - {!FOIs.OrderItemSummary.QuantityShipped}</expression>
+        <expression
+    >{!FOIs.OrderItemSummary.QuantityNetOrdered} - {!FOIs.OrderItemSummary.QuantityShipped}</expression>
         <scale>0</scale>
     </formulas>
-    <interviewLabel>Prep Fulfillment Order for Transfer Back JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Prep Fulfillment Order for Transfer Back JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Prep Fulfillment Order for Transfer Back JDE</label>
     <loops>
         <name>FOIs</name>
@@ -169,7 +185,8 @@
         <label>OCI IFOI</label>
         <locationX>856</locationX>
         <locationY>330</locationY>
-        <collectionReference>OCIInteractionFulfillOrderItems</collectionReference>
+        <collectionReference
+    >OCIInteractionFulfillOrderItems</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>set_parent</targetReference>
@@ -318,7 +335,8 @@
         <label>Fulfillment Order Products</label>
         <locationX>305</locationX>
         <locationY>255</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>FOIs</targetReference>
         </connector>
@@ -340,7 +358,8 @@
         <connector>
             <targetReference>Fulfillment_Order_Products</targetReference>
         </connector>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>or</filterLogic>
         <filters>
             <field>Status</field>

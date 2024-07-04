@@ -19,7 +19,9 @@ public with sharing class RestServiceFulfilmentOrder {
         System.enqueueJob(new AsyncFulfillmentOrder(itemsToProcess));
       }
     } else {
-      AsyncFulfillmentOrder asyncFulfillmentOrder = new AsyncFulfillmentOrder(itemMap);
+      AsyncFulfillmentOrder asyncFulfillmentOrder = new AsyncFulfillmentOrder(
+        itemMap
+      );
       asyncFulfillmentOrder.execute(null);
     }
   }
@@ -182,13 +184,36 @@ public with sharing class RestServiceFulfilmentOrder {
         String fulfilmentOrderID_s = String.valueOf(
           salesChannelStoreId + '-' + orderReferenceNumber + '-0' + 1
         );
-        List<OrderItem> orderItems = getOrderItemsByOrderId(oItemList, order.Id);
-        String JSONBody = JSON.serialize(constructJSON(fOrder, order, orderItems, transactionID, fulfilmentOrderID_s));
+        List<OrderItem> orderItems = getOrderItemsByOrderId(
+          oItemList,
+          order.Id
+        );
+        String JSONBody = JSON.serialize(
+          constructJSON(
+            fOrder,
+            order,
+            orderItems,
+            transactionID,
+            fulfilmentOrderID_s
+          )
+        );
         String brand = order.Magento_SalesChannel_Name__c;
         String country = order.SalesChannelCountryCode__c;
 
-        List<String> exceptionList = callApi(JSONBody, brand, country, orderReferenceNumber, fOrder, transactionID);
-        updateTransactionId(fOrder, transactionID, fulfilmentOrderID_s, salesChannelExternalReference);
+        List<String> exceptionList = callApi(
+          JSONBody,
+          brand,
+          country,
+          orderReferenceNumber,
+          fOrder,
+          transactionID
+        );
+        updateTransactionId(
+          fOrder,
+          transactionID,
+          fulfilmentOrderID_s,
+          salesChannelExternalReference
+        );
 
         if (exceptionList.size() > 0) {
           API_Exception__c apiExceptionObj = new API_Exception__c();
@@ -210,7 +235,10 @@ public with sharing class RestServiceFulfilmentOrder {
       update fOrderList;
     }
 
-    private List<OrderItem> getOrderItemsByOrderId(List<OrderItem> allOrderItems, Id orderId) {
+    private List<OrderItem> getOrderItemsByOrderId(
+      List<OrderItem> allOrderItems,
+      Id orderId
+    ) {
       List<OrderItem> returnObj = new List<OrderItem>();
       for (OrderItem orderItem : allOrderItems) {
         if (orderItem.OrderId == orderId) {
@@ -283,13 +311,18 @@ public with sharing class RestServiceFulfilmentOrder {
       return fOrderWrapper;
     }
 
-    private List<cls_orderItems> processOrderItems(Order order, List<OrderItem> oItemList) {
+    private List<cls_orderItems> processOrderItems(
+      Order order,
+      List<OrderItem> oItemList
+    ) {
       Map<String, cls_orderItems> orderitemsWrapperList = new Map<String, cls_orderItems>();
 
       Integer aggregatedLineID = 1;
       for (Integer i = 0; i < oItemList.size(); i++) {
         if (orderitemsWrapperList.containsKey(oItemList[i].SKU__c)) {
-          cls_orderItems oitemWrapper = orderitemsWrapperList.get(oItemList[i].SKU__c);
+          cls_orderItems oitemWrapper = orderitemsWrapperList.get(
+            oItemList[i].SKU__c
+          );
           Integer quantity = Integer.valueOf(oitemWrapper.quantity);
           quantity += Integer.valueOf(oItemList[i].Quantity);
           oitemWrapper.quantity = String.valueOf(quantity);
@@ -297,7 +330,9 @@ public with sharing class RestServiceFulfilmentOrder {
         } else {
           cls_orderItems oitemWrapper = new cls_orderItems();
           oitemWrapper.aggregatedLineID = String.valueOf(aggregatedLineID);
-          oitemWrapper.quantity = String.valueOf(Integer.valueOf(oItemList[i].Quantity));
+          oitemWrapper.quantity = String.valueOf(
+            Integer.valueOf(oItemList[i].Quantity)
+          );
           oitemWrapper.sku = oItemList[i].SKU__c;
           oitemWrapper.productName = oItemList[i].Product2.Name;
           orderitemsWrapperList.put(oItemList[i].SKU__c, oitemWrapper);
@@ -313,7 +348,11 @@ public with sharing class RestServiceFulfilmentOrder {
       for (cls_orderItems oi : orderitemsWrapperList.values()) {
         lineIds = new List<String>();
         if (itemCount != 0) {
-          for (integer j = itemCount + 1; j <= Integer.valueOf(oi.quantity) + itemCount; j++) {
+          for (
+            integer j = itemCount + 1;
+            j <= Integer.valueOf(oi.quantity) + itemCount;
+            j++
+          ) {
             lineIds.add(String.valueOf(j));
             curNumber = j;
           }
@@ -341,7 +380,14 @@ public with sharing class RestServiceFulfilmentOrder {
       List<String> exceptionList = new List<String>();
       System.debug('Fulfillment Order sent to API: ' + JSONBody);
       HttpRequest req = new HttpRequest();
-      req.setEndpoint(endpoint.Base_URL__c + brand + '/' + country + '/' + orderReferenceNumber);
+      req.setEndpoint(
+        endpoint.Base_URL__c +
+          brand +
+          '/' +
+          country +
+          '/' +
+          orderReferenceNumber
+      );
       req.setMethod('POST');
       req.setBody(JSONBody);
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Create_Fulfillment_Order</name>
@@ -29,21 +29,25 @@
         <locationX>1726</locationX>
         <locationY>1126</locationY>
         <assignmentItems>
-            <assignToReference>OrderItemSummaryInputRepresentation.orderItemSummaryId</assignToReference>
+            <assignToReference
+      >OrderItemSummaryInputRepresentation.orderItemSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Delivery_Charges_Loop.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OrderItemSummaryInputRepresentation.quantity</assignToReference>
+            <assignToReference
+      >OrderItemSummaryInputRepresentation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Delivery_Charges_Loop.QuantityAvailableToFulfill</elementReference>
+                <elementReference
+        >Delivery_Charges_Loop.QuantityAvailableToFulfill</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Fulfillment_Group_Input_Delivery_Charge</targetReference>
+            <targetReference
+      >Fulfillment_Group_Input_Delivery_Charge</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -52,10 +56,12 @@
         <locationX>2752</locationX>
         <locationY>242</locationY>
         <assignmentItems>
-            <assignToReference>OrderDeliveryGroupSummaryIdsCount</assignToReference>
+            <assignToReference
+      >OrderDeliveryGroupSummaryIdsCount</assignToReference>
             <operator>AssignCount</operator>
             <value>
-                <elementReference>OrderDeliveryGroupSummaryIds</elementReference>
+                <elementReference
+        >OrderDeliveryGroupSummaryIds</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -71,7 +77,8 @@
             <assignToReference>OrderDeliveryGroupSummaryIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>Order_Delivery_Groups_Loop.Id</elementReference>
+                <elementReference
+        >Order_Delivery_Groups_Loop.Id</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -100,10 +107,12 @@
         <locationX>1901</locationX>
         <locationY>1126</locationY>
         <assignmentItems>
-            <assignToReference>FulfillmentGroupInputRepresentation.orderItemSummaries</assignToReference>
+            <assignToReference
+      >FulfillmentGroupInputRepresentation.orderItemSummaries</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>OrderItemSummaryInputRepresentation</elementReference>
+                <elementReference
+        >OrderItemSummaryInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -119,7 +128,8 @@
             <assignToReference>LocationId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Delivery_Group_Products_Loop.ReservedAtLocationId</elementReference>
+                <elementReference
+        >Delivery_Group_Products_Loop.ReservedAtLocationId</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -132,10 +142,12 @@
         <locationX>2052</locationX>
         <locationY>796</locationY>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderInputRepresentation.fulfillmentGroups</assignToReference>
+            <assignToReference
+      >FulfillmentOrderInputRepresentation.fulfillmentGroups</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>FulfillmentGroupInputRepresentation</elementReference>
+                <elementReference
+        >FulfillmentGroupInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -148,10 +160,12 @@
         <locationX>2053</locationX>
         <locationY>616</locationY>
         <assignmentItems>
-            <assignToReference>MultipleFulfillmentOrderInputList.fulfillmentOrders</assignToReference>
+            <assignToReference
+      >MultipleFulfillmentOrderInputList.fulfillmentOrders</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>FulfillmentOrderInputRepresentation</elementReference>
+                <elementReference
+        >FulfillmentOrderInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -164,14 +178,17 @@
         <locationX>1223</locationX>
         <locationY>1035</locationY>
         <assignmentItems>
-            <assignToReference>FulfillmentGroupInputRepresentation.orderItemSummaries</assignToReference>
+            <assignToReference
+      >FulfillmentGroupInputRepresentation.orderItemSummaries</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>OrderItemSummaryInputRepresentation</elementReference>
+                <elementReference
+        >OrderItemSummaryInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>FulfillmentGroupInputRepresentation.fulfilledFromLocationId</assignToReference>
+            <assignToReference
+      >FulfillmentGroupInputRepresentation.fulfilledFromLocationId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>LocationId</elementReference>
@@ -190,7 +207,7 @@
             <assignToReference>LocationId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue></stringValue>
+                <stringValue />
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -208,45 +225,53 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderInputRepresentation.fulfillmentGroups</assignToReference>
+            <assignToReference
+      >FulfillmentOrderInputRepresentation.fulfillmentGroups</assignToReference>
             <operator>RemoveAll</operator>
             <value>
-                <elementReference>FulfillmentOrderInputRepresentation.fulfillmentGroups</elementReference>
+                <elementReference
+        >FulfillmentOrderInputRepresentation.fulfillmentGroups</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderInputRepresentation.orderDeliveryGroupSummaryId</assignToReference>
+            <assignToReference
+      >FulfillmentOrderInputRepresentation.orderDeliveryGroupSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Order_Delivery_Groups_Loop.Id</elementReference>
+                <elementReference
+        >Order_Delivery_Groups_Loop.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderInputRepresentation.orderSummaryId</assignToReference>
+            <assignToReference
+      >FulfillmentOrderInputRepresentation.orderSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.OrderSummaryId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>FulfillmentGroupInputRepresentation.orderItemSummaries</assignToReference>
+            <assignToReference
+      >FulfillmentGroupInputRepresentation.orderItemSummaries</assignToReference>
             <operator>RemoveAll</operator>
             <value>
-                <elementReference>FulfillmentGroupInputRepresentation.orderItemSummaries</elementReference>
+                <elementReference
+        >FulfillmentGroupInputRepresentation.orderItemSummaries</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>FulfillmentGroupInputRepresentation.fulfilledFromLocationId</assignToReference>
+            <assignToReference
+      >FulfillmentGroupInputRepresentation.fulfilledFromLocationId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue></stringValue>
+                <stringValue />
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>LocationGroupId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue></stringValue>
+                <stringValue />
             </value>
         </assignmentItems>
         <connector>
@@ -278,7 +303,8 @@
             <assignToReference>SyncEnabled</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Location_Group.ShouldSyncWithOci</elementReference>
+                <elementReference
+        >Location_Group.ShouldSyncWithOci</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -298,17 +324,21 @@
         <locationX>1089</locationX>
         <locationY>1090</locationY>
         <assignmentItems>
-            <assignToReference>OrderItemSummaryInputRepresentation.orderItemSummaryId</assignToReference>
+            <assignToReference
+      >OrderItemSummaryInputRepresentation.orderItemSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Delivery_Group_Products_Loop.Id</elementReference>
+                <elementReference
+        >Delivery_Group_Products_Loop.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OrderItemSummaryInputRepresentation.quantity</assignToReference>
+            <assignToReference
+      >OrderItemSummaryInputRepresentation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Delivery_Group_Products_Loop.QuantityAvailableToFulfill</elementReference>
+                <elementReference
+        >Delivery_Group_Products_Loop.QuantityAvailableToFulfill</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -321,35 +351,40 @@
         <locationX>2951</locationX>
         <locationY>442</locationY>
         <assignmentItems>
-            <assignToReference>OrderSummaryRoutingSchedule.OrderSummaryId</assignToReference>
+            <assignToReference
+      >OrderSummaryRoutingSchedule.OrderSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.OrderSummaryId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OrderSummaryRoutingSchedule.ScheduleStatus</assignToReference>
+            <assignToReference
+      >OrderSummaryRoutingSchedule.ScheduleStatus</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>SCHEDULED</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OrderSummaryRoutingSchedule.ScheduledDatetime</assignToReference>
+            <assignToReference
+      >OrderSummaryRoutingSchedule.ScheduledDatetime</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OrderSummaryRoutingSchedule.OutboundConnectionFailedAttempts__c</assignToReference>
+            <assignToReference
+      >OrderSummaryRoutingSchedule.OutboundConnectionFailedAttempts__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <numberValue>0.0</numberValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OrderSummaryRoutingSchedule.OrderDeliveryGroupSummaryId__c</assignToReference>
+            <assignToReference
+      >OrderSummaryRoutingSchedule.OrderDeliveryGroupSummaryId__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Delivery_Groups</elementReference>
@@ -365,7 +400,8 @@
         <locationX>3136</locationX>
         <locationY>442</locationY>
         <assignmentItems>
-            <assignToReference>OrderSummaryRoutingScheduleCollection</assignToReference>
+            <assignToReference
+      >OrderSummaryRoutingScheduleCollection</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>OrderSummaryRoutingSchedule</elementReference>
@@ -388,7 +424,8 @@
             <name>Any_BOPIS_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>FulfillmentGroupInputRepresentation.orderItemSummaries</leftValueReference>
+                <leftValueReference
+        >FulfillmentGroupInputRepresentation.orderItemSummaries</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -420,7 +457,8 @@
             <name>Any_BOPIS_Inputs_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>MultipleFulfillmentOrderInputList.fulfillmentOrders</leftValueReference>
+                <leftValueReference
+        >MultipleFulfillmentOrderInputList.fulfillmentOrders</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -467,7 +505,8 @@
             <name>Any_Delivery_Groups_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>OrderDeliveryGroupSummaryIdsCount</leftValueReference>
+                <leftValueReference
+        >OrderDeliveryGroupSummaryIdsCount</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -492,10 +531,12 @@
             <name>Delivery_Group_in_List_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>OrderDeliveryGroupSummaryIds</leftValueReference>
+                <leftValueReference
+        >OrderDeliveryGroupSummaryIds</leftValueReference>
                 <operator>Contains</operator>
                 <rightValue>
-                    <elementReference>Order_Delivery_Groups_Loop.Id</elementReference>
+                    <elementReference
+          >Order_Delivery_Groups_Loop.Id</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -545,11 +586,12 @@
                 <leftValueReference>LocationId</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Product_Fulfillment_Locations_Match</targetReference>
+                <targetReference
+        >Product_Fulfillment_Locations_Match</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -567,7 +609,8 @@
             <name>Is_Product_BOPIS_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Delivery_Group_Products_Loop.ReservedAtLocationId</leftValueReference>
+                <leftValueReference
+        >Delivery_Group_Products_Loop.ReservedAtLocationId</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
                     <stringValue>131</stringValue>
@@ -595,7 +638,7 @@
                 <leftValueReference>LocationGroupId</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </rightValue>
             </conditions>
             <connector>
@@ -635,7 +678,8 @@
         <locationX>527</locationX>
         <locationY>1144</locationY>
         <defaultConnector>
-            <targetReference>Process_Exception_Location_Mismatch</targetReference>
+            <targetReference
+      >Process_Exception_Location_Mismatch</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -645,7 +689,8 @@
                 <leftValueReference>LocationId</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>Delivery_Group_Products_Loop.ReservedAtLocationId</elementReference>
+                    <elementReference
+          >Delivery_Group_Products_Loop.ReservedAtLocationId</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -667,7 +712,8 @@
             <name>Reserved_at_Location_Specified</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Delivery_Group_Products_Loop.ReservedAtLocationId</leftValueReference>
+                <leftValueReference
+        >Delivery_Group_Products_Loop.ReservedAtLocationId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -734,19 +780,23 @@
     <formulas>
         <name>GetLocationMismatchErrorMessage</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE({!$Label.FlowErrors_locationGroupMismatchErrorMessage}, &apos;{0}&apos;, {!Delivery_Group_Products_Loop.StockKeepingUnit})</expression>
+        <expression
+    >SUBSTITUTE({!$Label.FlowErrors_locationGroupMismatchErrorMessage}, &apos;{0}&apos;, {!Delivery_Group_Products_Loop.StockKeepingUnit})</expression>
     </formulas>
     <formulas>
         <name>GetReservationNotSetErrorMessage</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE({!$Label.FlowErrors_reservedAtLocationIdIsNotSetErrorMessage}, &apos;{0}&apos;, {!Delivery_Group_Products_Loop.StockKeepingUnit})</expression>
+        <expression
+    >SUBSTITUTE({!$Label.FlowErrors_reservedAtLocationIdIsNotSetErrorMessage}, &apos;{0}&apos;, {!Delivery_Group_Products_Loop.StockKeepingUnit})</expression>
     </formulas>
     <formulas>
         <name>GetUnsyncedLocationErrorMessage</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE({!$Label.FlowErrors_locationGroupIsNotEnabledErrorMessage}, &apos;{0}&apos;, {!LocationId})</expression>
+        <expression
+    >SUBSTITUTE({!$Label.FlowErrors_locationGroupIsNotEnabledErrorMessage}, &apos;{0}&apos;, {!LocationId})</expression>
     </formulas>
-    <interviewLabel>Routing Step 1: Schedule Routing JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Routing Step 1: Schedule Routing JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Routing Step 1: Schedule Routing JDE</label>
     <loops>
         <name>Delivery_Charges_Loop</name>
@@ -795,7 +845,8 @@
         <label>Fulfillment Order Inputs</label>
         <locationX>2459</locationX>
         <locationY>597</locationY>
-        <collectionReference>MultipleFulfillmentOrderInputList.fulfillmentOrders</collectionReference>
+        <collectionReference
+    >MultipleFulfillmentOrderInputList.fulfillmentOrders</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Create_Fulfillment_Order</targetReference>
@@ -809,7 +860,8 @@
         <label>Fulfillment Orders</label>
         <locationX>2844</locationX>
         <locationY>807</locationY>
-        <collectionReference>Create_Fulfillment_Order.fulfillmentOrderOutput.fulfillmentOrderIds</collectionReference>
+        <collectionReference
+    >Create_Fulfillment_Order.fulfillmentOrderOutput.fulfillmentOrderIds</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Set_Fulfillment_Order_Source</targetReference>
@@ -887,7 +939,8 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.Unable_To_Create_Fulfillment_Order</elementReference>
+                <elementReference
+        >$Label.Unable_To_Create_Fulfillment_Order</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -934,13 +987,15 @@
         <inputAssignments>
             <field>Description</field>
             <value>
-                <elementReference>GetLocationMismatchErrorMessage</elementReference>
+                <elementReference
+        >GetLocationMismatchErrorMessage</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.FlowErrors_locationGroupMismatchErrorDescription</elementReference>
+                <elementReference
+        >$Label.FlowErrors_locationGroupMismatchErrorDescription</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -987,13 +1042,15 @@
         <inputAssignments>
             <field>Description</field>
             <value>
-                <elementReference>GetReservationNotSetErrorMessage</elementReference>
+                <elementReference
+        >GetReservationNotSetErrorMessage</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.FlowErrors_reservedAtLocationIdIsNotSetErrorDescription</elementReference>
+                <elementReference
+        >$Label.FlowErrors_reservedAtLocationIdIsNotSetErrorDescription</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1040,13 +1097,15 @@
         <inputAssignments>
             <field>Description</field>
             <value>
-                <elementReference>GetUnsyncedLocationErrorMessage</elementReference>
+                <elementReference
+        >GetUnsyncedLocationErrorMessage</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.FlowErrors_locationGroupIsNotEnabledErrorDescription</elementReference>
+                <elementReference
+        >$Label.FlowErrors_locationGroupIsNotEnabledErrorDescription</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1075,7 +1134,8 @@
         <label>Delivery Charges</label>
         <locationX>1679</locationX>
         <locationY>708</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Any_Delivery_Charges</targetReference>
         </connector>
@@ -1084,7 +1144,8 @@
             <field>OrderDeliveryGroupSummaryId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Order_Delivery_Groups_Loop.Id</elementReference>
+                <elementReference
+        >Order_Delivery_Groups_Loop.Id</elementReference>
             </value>
         </filters>
         <filters>
@@ -1112,16 +1173,19 @@
         <label>Delivery Group Products</label>
         <locationX>405</locationX>
         <locationY>475</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Initialize_Fulfillment_Order_Inputs</targetReference>
+            <targetReference
+      >Initialize_Fulfillment_Order_Inputs</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>OrderDeliveryGroupSummaryId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Order_Delivery_Groups_Loop.Id</elementReference>
+                <elementReference
+        >Order_Delivery_Groups_Loop.Id</elementReference>
             </value>
         </filters>
         <filters>
@@ -1152,7 +1216,8 @@
         <label>Location</label>
         <locationX>606</locationX>
         <locationY>1418</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Location_Details</targetReference>
         </connector>
@@ -1161,7 +1226,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Delivery_Group_Products_Loop.ReservedAtLocationId</elementReference>
+                <elementReference
+        >Delivery_Group_Products_Loop.ReservedAtLocationId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -1177,7 +1243,8 @@
         <label>Location Group</label>
         <locationX>629</locationX>
         <locationY>1526</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Location_Group_Details</targetReference>
         </connector>
@@ -1200,7 +1267,8 @@
         <label>Order Delivery Groups</label>
         <locationX>177</locationX>
         <locationY>259</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Order_Delivery_Groups_Loop</targetReference>
         </connector>
@@ -1300,7 +1368,8 @@
     </variables>
     <variables>
         <name>MultipleFulfillmentOrderInputList</name>
-        <apexClass>ConnectApi__MultipleFulfillmentOrderInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__MultipleFulfillmentOrderInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

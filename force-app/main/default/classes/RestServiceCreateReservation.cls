@@ -19,7 +19,10 @@ public with sharing class RestServiceCreateReservation {
     grp.reservations = new List<Reservation>();
     for (RestServiceOrderCreate.orderItemWrapper orderItem : orderItems) {
       if (orderItem.type != 'bundle' && orderItem.type != 'subscription') {
-        Reservation reservation = getExistingReservation(grp.reservations, orderItem.sku);
+        Reservation reservation = getExistingReservation(
+          grp.reservations,
+          orderItem.sku
+        );
         if (reservation == null) {
           reservation = new Reservation();
           reservation.sku = orderItem.sku;
@@ -31,10 +34,18 @@ public with sharing class RestServiceCreateReservation {
       }
     }
     reservationObj.groups.add(grp);
-    return callApi(JSON.serialize(reservationObj, true), orderReferenceNumber, salesChannel, transactionID);
+    return callApi(
+      JSON.serialize(reservationObj, true),
+      orderReferenceNumber,
+      salesChannel,
+      transactionID
+    );
   }
 
-  private static Reservation getExistingReservation(List<Reservation> reservations, String sku) {
+  private static Reservation getExistingReservation(
+    List<Reservation> reservations,
+    String sku
+  ) {
     for (Reservation reservation : reservations) {
       if (reservation.sku == sku) {
         return reservation;
@@ -43,7 +54,12 @@ public with sharing class RestServiceCreateReservation {
     return null;
   }
 
-  private static Boolean callApi(String JSONBody, String orderNumber, String salesChannel, String transactionID) {
+  private static Boolean callApi(
+    String JSONBody,
+    String orderNumber,
+    String salesChannel,
+    String transactionID
+  ) {
     API_Endpoint__c endpoint = [
       SELECT Base_URL__c
       FROM API_Endpoint__c
@@ -62,10 +78,16 @@ public with sharing class RestServiceCreateReservation {
       HTTPResponse res = http.send(req);
       String responseBody = res.getBody();
 
-      ReservationResponse reservationResponse = parseReservationResponse(responseBody);
+      ReservationResponse reservationResponse = parseReservationResponse(
+        responseBody
+      );
       if (!reservationResponse.success) {
         // reservation failed , creating Process Exception Record
-        OCI_Commerce_API__c APIsettings = [SELECT Id FROM OCI_Commerce_API__c LIMIT 1];
+        OCI_Commerce_API__c APIsettings = [
+          SELECT Id
+          FROM OCI_Commerce_API__c
+          LIMIT 1
+        ];
 
         ProcessException processExc = new ProcessException();
         processExc.Status = 'New';
@@ -87,7 +109,11 @@ public with sharing class RestServiceCreateReservation {
       }
     } catch (Exception ex) {
       // reservation failed , creating Process Exception Record
-      OCI_Commerce_API__c APIsettings = [SELECT Id FROM OCI_Commerce_API__c LIMIT 1];
+      OCI_Commerce_API__c APIsettings = [
+        SELECT Id
+        FROM OCI_Commerce_API__c
+        LIMIT 1
+      ];
 
       ProcessException processExc = new ProcessException();
       processExc.Status = 'New';
@@ -106,7 +132,10 @@ public with sharing class RestServiceCreateReservation {
   }
 
   private static ReservationResponse parseReservationResponse(String json) {
-    return (ReservationResponse) System.JSON.deserialize(json, ReservationResponse.class);
+    return (ReservationResponse) System.JSON.deserialize(
+      json,
+      ReservationResponse.class
+    );
   }
 
   public class ReservationRequest {

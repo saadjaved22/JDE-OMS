@@ -72,7 +72,13 @@ public with sharing class RestServiceReturnOrder {
         WHERE id IN :internalMap.keySet()
       ];
       List<ReturnOrderLineItem> allReturnOrderItemList = [
-        SELECT id, QuantityExpected, OrderItem.SKU__c, OrderItem.Product2.Name, ReasonForReturn, ReturnOrderId
+        SELECT
+          id,
+          QuantityExpected,
+          OrderItem.SKU__c,
+          OrderItem.Product2.Name,
+          ReasonForReturn,
+          ReturnOrderId
         FROM ReturnOrderLineItem
         WHERE ReturnOrderId IN :internalMap.keySet() AND TypeCode != 'Charge'
       ];
@@ -109,12 +115,19 @@ public with sharing class RestServiceReturnOrder {
           allReturnOrderItemList,
           rOrder.Id
         );
-        returnOrderWrapper returnOrderObj = constructJSON(rOrder, returnOrderItems, orderMap.get(rOrder.OrderId));
+        returnOrderWrapper returnOrderObj = constructJSON(
+          rOrder,
+          returnOrderItems,
+          orderMap.get(rOrder.OrderId)
+        );
         String JSONBody = JSON.serialize(returnOrderObj);
         String transactionID_s = returnOrderObj.transactionID;
-        String brand = orderMap.get(rOrder.OrderId).Magento_SalesChannel_Name__c;
-        String country = orderMap.get(rOrder.OrderId).SalesChannelCountryCode__c;
-        String orderReference = orderMap.get(rOrder.OrderId).OrderReferenceNumber;
+        String brand = orderMap.get(rOrder.OrderId)
+          .Magento_SalesChannel_Name__c;
+        String country = orderMap.get(rOrder.OrderId)
+          .SalesChannelCountryCode__c;
+        String orderReference = orderMap.get(rOrder.OrderId)
+          .OrderReferenceNumber;
 
         List<String> exceptionList = callAPI(
           JSONBody,
@@ -198,7 +211,9 @@ public with sharing class RestServiceReturnOrder {
     ) {
       List<String> exceptionList = new List<String>();
       HttpRequest req = new HttpRequest();
-      req.setEndpoint(endpoint.Base_URL__c + brand + '/' + country + '/' + orderReference);
+      req.setEndpoint(
+        endpoint.Base_URL__c + brand + '/' + country + '/' + orderReference
+      );
       req.setMethod('POST');
       req.setBody(JSONBody);
 
@@ -232,7 +247,11 @@ public with sharing class RestServiceReturnOrder {
       return exceptionList;
     }
 
-    public void updateReturnOrder(ReturnOrder returnOrder, String transactionID_s, String apiJson_s) {
+    public void updateReturnOrder(
+      ReturnOrder returnOrder,
+      String transactionID_s,
+      String apiJson_s
+    ) {
       returnOrder.Transaction_ID__c = transactionID_s;
       returnOrder.API_JSON__c = apiJson_s;
     }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>CancelEdit</actionName>
@@ -89,25 +89,40 @@
     <externalSharingModel>Private</externalSharingModel>
     <searchLayouts>
         <customTabListAdditionalFields>Status</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FulfilledToName</customTabListAdditionalFields>
-        <customTabListAdditionalFields>FulfilledFromLocation</customTabListAdditionalFields>
-        <customTabListAdditionalFields>OrderSummary</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >FulfilledToName</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >FulfilledFromLocation</customTabListAdditionalFields>
+        <customTabListAdditionalFields
+    >OrderSummary</customTabListAdditionalFields>
         <customTabListAdditionalFields>Invoice</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>Status</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>FulfilledToName</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>FulfilledFromLocation</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>OrderSummary</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >FulfilledToName</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >FulfilledFromLocation</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields
+    >OrderSummary</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Invoice</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Status</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>FulfilledToName</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>FulfilledFromLocation</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>OrderSummary</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Invoice</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>FulfilledToPhone</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >Status</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >FulfilledToName</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >FulfilledFromLocation</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >OrderSummary</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >Invoice</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields
+    >FulfilledToPhone</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>Status</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>FulfilledToName</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>FulfilledFromLocation</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>OrderSummary</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >FulfilledToName</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >FulfilledFromLocation</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields
+    >OrderSummary</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Invoice</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
