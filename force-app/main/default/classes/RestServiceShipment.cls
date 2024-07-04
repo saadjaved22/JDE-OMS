@@ -35,8 +35,12 @@ global with sharing class RestServiceShipment {
     if (
       existingShipments[0].get('totalShipped') != null &&
       fulfilmentOrderItems[0].get('totalQuantity') != null &&
-      Decimal.valueOf(String.valueOf(existingShipments[0].get('totalShipped'))) >=
-      Decimal.valueOf(String.valueOf(fulfilmentOrderItems[0].get('totalQuantity')))
+      Decimal.valueOf(
+        String.valueOf(existingShipments[0].get('totalShipped'))
+      ) >=
+      Decimal.valueOf(
+        String.valueOf(fulfilmentOrderItems[0].get('totalQuantity'))
+      )
     ) {
       exceptionsList.add('This Fulfilment Order is Already Fully Shipped');
 
@@ -59,7 +63,13 @@ global with sharing class RestServiceShipment {
       }
     } else {
       List<FulfillmentOrderLineItem> fOrderItems = [
-        SELECT id, OrderItemId, OrderItem.SKU__c, OrderItemSummaryId, Product2Id, OriginalQuantity
+        SELECT
+          id,
+          OrderItemId,
+          OrderItem.SKU__c,
+          OrderItemSummaryId,
+          Product2Id,
+          OriginalQuantity
         FROM FulfillmentOrderLineItem
         WHERE FulfillmentOrderId = :fOrder.id AND TypeCode != 'Charge'
         ORDER BY UnitPrice DESC
@@ -103,13 +113,23 @@ global with sharing class RestServiceShipment {
       List<ShipmentItem> existingShipmentItems = [
         SELECT Id, Quantity, FulfillmentOrderLineItemId
         FROM ShipmentItem
-        WHERE ShipmentId IN (SELECT Id FROM Shipment WHERE FulfillmentOrderId = :fOrder.Id)
+        WHERE
+          ShipmentId IN (
+            SELECT Id
+            FROM Shipment
+            WHERE FulfillmentOrderId = :fOrder.Id
+          )
       ];
 
       List<DeclinedShipmentItem__c> existingDeclinedShipmentItems = [
         SELECT Id, Quantity__c, FulfillmentOrderProductId__c
         FROM DeclinedShipmentItem__c
-        WHERE DeclinedShipmentId__c IN (SELECT Id FROM DeclinedShipment__c WHERE FulfillmentOrderId__c = :fOrder.Id)
+        WHERE
+          DeclinedShipmentId__c IN (
+            SELECT Id
+            FROM DeclinedShipment__c
+            WHERE FulfillmentOrderId__c = :fOrder.Id
+          )
       ];
 
       createShipmentObj(
@@ -160,19 +180,30 @@ global with sharing class RestServiceShipment {
       shippedItemsHelper sih = orderItemMap.get(fOrderItem.OrderItem.SKU__c);
       if (sih != null) {
         // get existing shipments
-        List<ShipmentItem> existingFoiShipmentItems = getShipmentItemsByFoiId(existingShipmentItems, fOrderItem.Id);
+        List<ShipmentItem> existingFoiShipmentItems = getShipmentItemsByFoiId(
+          existingShipmentItems,
+          fOrderItem.Id
+        );
         List<DeclinedShipmentItem__c> existingFoiDeclinedShipmentItems = getDeclinedShipmentItemsByFoiId(
           existingDeclinedShipmentItems,
           fOrderItem.Id
         );
         // set the quantity that we need to divide
-        Integer quantityLeftToDivide = Integer.valueOf(fOrderItem.OriginalQuantity);
+        Integer quantityLeftToDivide = Integer.valueOf(
+          fOrderItem.OriginalQuantity
+        );
         // subtract any existing shipments (declined or normal)
         for (ShipmentItem existingFoiShipmentItem : existingFoiShipmentItems) {
-          quantityLeftToDivide -= Integer.valueOf(existingFoiShipmentItem.Quantity);
+          quantityLeftToDivide -= Integer.valueOf(
+            existingFoiShipmentItem.Quantity
+          );
         }
-        for (DeclinedShipmentItem__c existingFoiDeclinedShipmentItem : existingFoiDeclinedShipmentItems) {
-          quantityLeftToDivide -= Integer.valueOf(existingFoiDeclinedShipmentItem.Quantity__c);
+        for (
+          DeclinedShipmentItem__c existingFoiDeclinedShipmentItem : existingFoiDeclinedShipmentItems
+        ) {
+          quantityLeftToDivide -= Integer.valueOf(
+            existingFoiDeclinedShipmentItem.Quantity__c
+          );
         }
 
         // if the declined quantity is higher than what is in this fulfillment lineitem,
@@ -238,7 +269,10 @@ global with sharing class RestServiceShipment {
       Shipment shipmentObj = new Shipment();
       shipmentObj.FulfillmentOrderId = fOrder.id;
       shipmentObj.Status = 'Shipped';
-      shipmentObj.ShipToName = orderList[0].ShippingFirstName__c + ' ' + orderList[0].ShippingLastName__c;
+      shipmentObj.ShipToName =
+        orderList[0].ShippingFirstName__c +
+        ' ' +
+        orderList[0].ShippingLastName__c;
       shipmentObj.CurrencyIsoCode = orderList[0].CurrencyIsoCode;
       shipmentObj.OrderSummaryId = fOrder.OrderSummaryId;
       shipmentObj.ShipToCity = orderList[0].ShippingCity;
@@ -282,7 +316,9 @@ global with sharing class RestServiceShipment {
         exceptionsList.add(String.valueOf(ex.getMessage()));
       }
 
-      for (DeclinedShipmentItem__c declinedShipmentItem : declinedShipmentItems) {
+      for (
+        DeclinedShipmentItem__c declinedShipmentItem : declinedShipmentItems
+      ) {
         declinedShipmentItem.DeclinedShipmentId__c = declinedShipmentObj.Id;
         if (declinedShipmentObj.Quantity__c == null) {
           declinedShipmentObj.Quantity__c = declinedShipmentItem.Quantity__c;
@@ -303,7 +339,10 @@ global with sharing class RestServiceShipment {
     }
   }
 
-  private static List<ShipmentItem> getShipmentItemsByFoiId(List<ShipmentItem> shipmentItems, ID fulfillmentItemID) {
+  private static List<ShipmentItem> getShipmentItemsByFoiId(
+    List<ShipmentItem> shipmentItems,
+    ID fulfillmentItemID
+  ) {
     List<ShipmentItem> foundShipmentItems = new List<ShipmentItem>();
     for (ShipmentItem shipmentItem : shipmentItems) {
       if (shipmentItem.FulfillmentOrderLineItemId == fulfillmentItemID) {
@@ -319,19 +358,29 @@ global with sharing class RestServiceShipment {
   ) {
     List<DeclinedShipmentItem__c> foundShipmentItems = new List<DeclinedShipmentItem__c>();
     for (DeclinedShipmentItem__c declinedShipmentItem : declinedShipmentItems) {
-      if (declinedShipmentItem.FulfillmentOrderProductId__c == fulfillmentItemID) {
+      if (
+        declinedShipmentItem.FulfillmentOrderProductId__c == fulfillmentItemID
+      ) {
         foundShipmentItems.add(declinedShipmentItem);
       }
     }
     return foundShipmentItems;
   }
 
-  private static void updateFulfillmentItemStatus(FulfillmentOrder fOrder, List<FulfillmentOrderLineItem> fOrderItems) {
+  private static void updateFulfillmentItemStatus(
+    FulfillmentOrder fOrder,
+    List<FulfillmentOrderLineItem> fOrderItems
+  ) {
     // retrieve all objects again from database after updates
     List<ShipmentItem> shipmentItems = [
       SELECT Id, Quantity, FulfillmentOrderLineItemId
       FROM ShipmentItem
-      WHERE ShipmentId IN (SELECT Id FROM Shipment WHERE FulfillmentOrderId = :fOrder.Id)
+      WHERE
+        ShipmentId IN (
+          SELECT Id
+          FROM Shipment
+          WHERE FulfillmentOrderId = :fOrder.Id
+        )
     ];
 
     List<DeclinedShipment__c> declinedShipments = [
@@ -343,10 +392,20 @@ global with sharing class RestServiceShipment {
     List<DeclinedShipmentItem__c> declinedShipmentItems = [
       SELECT Id, Quantity__c, FulfillmentOrderProductId__c
       FROM DeclinedShipmentItem__c
-      WHERE DeclinedShipmentId__c IN (SELECT Id FROM DeclinedShipment__c WHERE FulfillmentOrderId__c = :fOrder.Id)
+      WHERE
+        DeclinedShipmentId__c IN (
+          SELECT Id
+          FROM DeclinedShipment__c
+          WHERE FulfillmentOrderId__c = :fOrder.Id
+        )
     ];
 
-    OrderSummary orderSummary = [SELECT Id, Status FROM OrderSummary WHERE Id = :fOrder.OrderSummaryId LIMIT 1];
+    OrderSummary orderSummary = [
+      SELECT Id, Status
+      FROM OrderSummary
+      WHERE Id = :fOrder.OrderSummaryId
+      LIMIT 1
+    ];
 
     List<OrderItemSummary> orderItemSummaryList = [
       SELECT Id, QuantityShipped, Declined_Quantity__c
@@ -366,8 +425,13 @@ global with sharing class RestServiceShipment {
     List<ConnectApi.FulfillmentOrderLineItemInputRepresentation> FOLIRList = new List<ConnectApi.FulfillmentOrderLineItemInputRepresentation>();
 
     for (FulfillmentOrderLineItem fOrderItem : fOrderItems) {
-      OrderItemSummary oiSummary = oiSummaryLookupMap.get(fOrderItem.OrderItemSummaryId);
-      List<ShipmentItem> fShipmentItems = getShipmentItemsByFoiId(shipmentItems, fOrderItem.Id);
+      OrderItemSummary oiSummary = oiSummaryLookupMap.get(
+        fOrderItem.OrderItemSummaryId
+      );
+      List<ShipmentItem> fShipmentItems = getShipmentItemsByFoiId(
+        shipmentItems,
+        fOrderItem.Id
+      );
       List<DeclinedShipmentItem__c> fDeclinedShipmentItems = getDeclinedShipmentItemsByFoiId(
         declinedShipmentItems,
         fOrderItem.Id
@@ -391,7 +455,9 @@ global with sharing class RestServiceShipment {
       // if quantity to fulfill is 0, everything is fulfilled so we can continue
       if (quantityToFulfill != 0) {
         // deduct cancelled items and prep them for cancellation call to OCI
-        for (DeclinedShipmentItem__c fDeclinedShipmentItem : fDeclinedShipmentItems) {
+        for (
+          DeclinedShipmentItem__c fDeclinedShipmentItem : fDeclinedShipmentItems
+        ) {
           quantityToFulfill -= fDeclinedShipmentItem.Quantity__c;
           QuantityToCancel += fDeclinedShipmentItem.Quantity__c;
         }
@@ -440,7 +506,10 @@ global with sharing class RestServiceShipment {
         // and cancel the FulfillmentOrderLineItems
         ConnectApi.FulfillmentOrderLineItemsToCancelInputRepresentation FOIR = new ConnectApi.FulfillmentOrderLineItemsToCancelInputRepresentation();
         FOIR.fulfillmentOrderLIneItemsToCancel = FOLIRList;
-        ConnectApi.FulfillmentOrder.cancelFulfillmentOrderLineItems(fOrder.Id, FOIR);
+        ConnectApi.FulfillmentOrder.cancelFulfillmentOrderLineItems(
+          fOrder.Id,
+          FOIR
+        );
       }
     } else {
       // we did not receive updates on all products yet, mark order as incomplete

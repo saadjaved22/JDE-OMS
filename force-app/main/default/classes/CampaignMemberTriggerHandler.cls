@@ -6,39 +6,39 @@
 History
     @Fixed by Wunderman Thompson  09/2022
 */
-public class CampaignMemberTriggerHandler  {
+public class CampaignMemberTriggerHandler {
+  public static final String LOYALTY_TRANSACTION_TYPE = 'Campaign Reward';
+  public static final String LOYALTY_SOURCE = 'Campaign';
 
-    public static final String LOYALTY_TRANSACTION_TYPE = 'Campaign Reward';
-    public static final String LOYALTY_SOURCE = 'Campaign';
+  public static void onBeforeInsert(List<CampaignMember> CampaignMemList) {
+    customerAccount(CampaignMemList);
+  }
 
-    
-    public static void onBeforeInsert(List<CampaignMember> CampaignMemList){
-        customerAccount(CampaignMemList);   
+  public static void onBeforeUpdate(List<CampaignMember> CampaignMemList) {
+    customerAccount(CampaignMemList);
+  }
+  public static void customerAccount(List<CampaignMember> CampaignMemList) {
+    Set<Id> contId = new Set<Id>();
+    for (CampaignMember campMemList : CampaignMemList) {
+      contId.add(campMemList.ContactId);
     }
-    
-    public static void onBeforeUpdate(List<CampaignMember> CampaignMemList){
-        customerAccount(CampaignMemList);
+    if (!contId.isEmpty()) {
+      Map<Id, Contact> contMap = new Map<Id, Contact>(
+        [SELECT Id, AccountId FROM Contact WHERE Id IN :contId]
+      );
+      for (CampaignMember cMemList : CampaignMemList) {
+        if (cMemList.Customer__c == null) {
+          try {
+            cMemList.Customer__c = contMap.get(cMemList.ContactId).AccountId;
+          } catch (Exception e) {
+            System.debug('Exception while updating the customer__c field' + e);
+          }
+        }
+      }
     }
-    public static void customerAccount(List<CampaignMember> CampaignMemList){        
-        Set<Id> contId = new Set<Id>();
-        for(CampaignMember campMemList : CampaignMemList){
-            contId.add(campMemList.ContactId);
-        }
-        if(!contId.isEmpty()){
-            Map<Id, Contact> contMap = new Map<Id, Contact>([SELECT Id,AccountId FROM Contact WHERE Id IN: contId]);
-            for(CampaignMember cMemList: CampaignMemList){
-                if(cMemList.Customer__c == null){
-                    try {
-                        cMemList.Customer__c = contMap.get(cMemList.ContactId).AccountId;
-                    } catch (Exception e) {
-                        System.debug('Exception while updating the customer__c field'+e);
-                    }
-                }
-            }
-        }
-   }
+  }
 
-    /*
+  /*
     public static void onAfterInsert( List<CampaignMember> campaignMembers ){
         for ( CampaignMember member: campaignMembers ){
             createLoyaltyTransaction( member );
@@ -115,6 +115,5 @@ public class CampaignMemberTriggerHandler  {
     private static void saveLoyaltyTransaction( Loyalty_Transaction__c loyaltyTransaction ){
         insert loyaltyTransaction;
         System.debug( 'LoyaltyTransaction iserted. LoyaltyTransaction:' + loyaltyTransaction );
-    } */ 
-    
+    } */
 }

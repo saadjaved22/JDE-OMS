@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
         <itemInstances>
@@ -11,13 +11,16 @@
                     <name>variant</name>
                     <value>linear</value>
                 </componentInstanceProperties>
-                <componentName>runtime_sales_pathassistant:pathAssistant</componentName>
-                <identifier>runtime_sales_pathassistant_pathAssistant</identifier>
+                <componentName
+        >runtime_sales_pathassistant:pathAssistant</componentName>
+                <identifier
+        >runtime_sales_pathassistant_pathAssistant</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>runtime_commerce_oms:processException</componentName>
+                <componentName
+        >runtime_commerce_oms:processException</componentName>
                 <identifier>oms_processexception</identifier>
             </componentInstance>
         </itemInstances>
@@ -68,7 +71,8 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>runtime_commerce_oms:deliveryGroup</componentName>
+                <componentName
+        >runtime_commerce_oms:deliveryGroup</componentName>
                 <identifier>oms_deliveryGroup</identifier>
             </componentInstance>
         </itemInstances>
@@ -82,13 +86,16 @@
                     <name>columns</name>
                     <valueList>
                         <valueListItems>
-                            <value>OrderSummary.TotalProductAmountWithTax.TotalProductAmountWithTax</value>
+                            <value
+              >OrderSummary.TotalProductAmountWithTax.TotalProductAmountWithTax</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>OrderSummary.TotalAdjDeliveryAmtWithTax.TotalAdjDeliveryAmtWithTax</value>
+                            <value
+              >OrderSummary.TotalAdjDeliveryAmtWithTax.TotalAdjDeliveryAmtWithTax</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>OrderSummary.GrandTotalAmount.GrandTotalAmount</value>
+                            <value
+              >OrderSummary.GrandTotalAmount.GrandTotalAmount</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -112,13 +119,16 @@
                     <name>vatColumns</name>
                     <valueList>
                         <valueListItems>
-                            <value>OrderSummary.TotalProductAmountWithTax.TotalProductAmountWithTax</value>
+                            <value
+              >OrderSummary.TotalProductAmountWithTax.TotalProductAmountWithTax</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>OrderSummary.TotalAdjDeliveryAmtWithTax.TotalAdjDeliveryAmtWithTax</value>
+                            <value
+              >OrderSummary.TotalAdjDeliveryAmtWithTax.TotalAdjDeliveryAmtWithTax</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>OrderSummary.GrandTotalAmount.GrandTotalAmount</value>
+                            <value
+              >OrderSummary.GrandTotalAmount.GrandTotalAmount</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>

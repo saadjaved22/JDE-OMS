@@ -90,8 +90,16 @@ public class RestServiceCreateReservationTest {
       true
     );
     // Verify the result
-    ProcessException processException = [SELECT Id FROM ProcessException WHERE Category = 'Transfer Reservation'];
-    System.assertNotEquals(null, processException, 'Process exception should be inserted.');
+    ProcessException processException = [
+      SELECT Id
+      FROM ProcessException
+      WHERE Category = 'Transfer Reservation'
+    ];
+    System.assertNotEquals(
+      null,
+      processException,
+      'Process exception should be inserted.'
+    );
     System.assertEquals(false, result, 'Result should be false');
   }
 

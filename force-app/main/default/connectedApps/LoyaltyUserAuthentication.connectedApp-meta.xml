@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
     <contactEmail>pdc.jde.ao.salesforce@accenture.com</contactEmail>
-    <description>This app is Used by DE Episerver to authenticate Consumer credentials</description>
+    <description
+  >This app is Used by DE Episerver to authenticate Consumer credentials</description>
     <label>LoyaltyUserAuthentication</label>
     <oauthConfig>
         <callbackUrl>https://jdesf.azurewebsites.net/en/afterconnection/
@@ -20,7 +21,8 @@ https://www.blokker.nl/douweegberts/authorize
 https://blokker.nl/douweegberts/authorize
 https://www.spaarprogramma.de.nl/_sfhandlelogin
 https://www.spaarprogramma.de.nl</callbackUrl>
-        <consumerKey>3MVG9HxRZv05HarRwV.u4PoISlUZxWNRRJhYqS0PhXZ6zu9vNrCmqoHdXyH.uPLxEASXq2Z3wcDQMhHtZGvtd</consumerKey>
+        <consumerKey
+    >3MVG9HxRZv05HarRwV.u4PoISlUZxWNRRJhYqS0PhXZ6zu9vNrCmqoHdXyH.uPLxEASXq2Z3wcDQMhHtZGvtd</consumerKey>
         <isAdminApproved>true</isAdminApproved>
         <isClientCredentialEnabled>false</isClientCredentialEnabled>
         <isCodeCredentialEnabled>false</isCodeCredentialEnabled>

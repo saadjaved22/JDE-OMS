@@ -13,8 +13,19 @@ public class APILoggingUtilTest {
     String transactionId = 'TESTTRANSACTIONID';
     // Call the method
     Test.startTest();
-    APILoggingUtil.createProcessException(message, description, order, category, transactionId);
-    ProcessException pe = [SELECT id, TransactionId__c FROM ProcessException ORDER BY createddate DESC LIMIT 1];
+    APILoggingUtil.createProcessException(
+      message,
+      description,
+      order,
+      category,
+      transactionId
+    );
+    ProcessException pe = [
+      SELECT id, TransactionId__c
+      FROM ProcessException
+      ORDER BY createddate DESC
+      LIMIT 1
+    ];
     Test.stopTest();
     System.assertEquals('TESTTRANSACTIONID', pe.TransactionId__c);
   }
@@ -32,8 +43,21 @@ public class APILoggingUtilTest {
     HttpResponse res = new HttpResponse();
     // Call the method
     Test.startTest();
-    APILoggingUtil.createProcessException(message, description, order, category, transactionId, req, res);
-    ProcessException pe = [SELECT id, TransactionId__c FROM ProcessException ORDER BY createddate DESC LIMIT 1];
+    APILoggingUtil.createProcessException(
+      message,
+      description,
+      order,
+      category,
+      transactionId,
+      req,
+      res
+    );
+    ProcessException pe = [
+      SELECT id, TransactionId__c
+      FROM ProcessException
+      ORDER BY createddate DESC
+      LIMIT 1
+    ];
     Test.stopTest();
     System.assertEquals('TESTTRANSACTIONID', pe.TransactionId__c);
   }
@@ -54,8 +78,21 @@ public class APILoggingUtilTest {
     HttpResponse res = new HttpResponse();
     // Call the method
     Test.startTest();
-    APILoggingUtil.createProcessException(message, description, fOrder, category, transactionId, req, res);
-    ProcessException pe = [SELECT id, TransactionId__c FROM ProcessException ORDER BY createddate DESC LIMIT 1];
+    APILoggingUtil.createProcessException(
+      message,
+      description,
+      fOrder,
+      category,
+      transactionId,
+      req,
+      res
+    );
+    ProcessException pe = [
+      SELECT id, TransactionId__c
+      FROM ProcessException
+      ORDER BY createddate DESC
+      LIMIT 1
+    ];
     Test.stopTest();
     System.assertEquals('TESTTRANSACTIONID', pe.TransactionId__c);
   }
@@ -70,7 +107,8 @@ public class APILoggingUtilTest {
     List<RestServiceShipment.orderItemWrapper> shippingOrderItems = new List<RestServiceShipment.orderItemWrapper>();
     RestServiceShipment.orderItemWrapper shippingOrderItem = new RestServiceShipment.orderItemWrapper();
     shippingOrderItem.aggregatedLineID = '1';
-    shippingOrderItem.sku = ((Product2) results.get('product')).StockKeepingUnit;
+    shippingOrderItem.sku = ((Product2) results.get('product'))
+      .StockKeepingUnit;
     shippingOrderItem.shippedQuantity = '1';
     shippingOrderItem.declinedQuantity = '0';
     shippingOrderItems.add(shippingOrderItem);
@@ -82,7 +120,12 @@ public class APILoggingUtilTest {
       shippingOrderItems
     );
 
-    Shipment shipment = [SELECT Id, FulfillmentOrderId FROM Shipment WHERE FulfillmentOrderId = :fOrder.Id LIMIT 1];
+    Shipment shipment = [
+      SELECT Id, FulfillmentOrderId
+      FROM Shipment
+      WHERE FulfillmentOrderId = :fOrder.Id
+      LIMIT 1
+    ];
     Test.setMock(HttpCalloutMock.class, new SplunkAPIMock());
     String message = 'test message';
     String description = 'test description';
@@ -96,7 +139,8 @@ public class APILoggingUtilTest {
     processExc.Status = 'New';
     processExc.Severity = 'Low';
     processExc.AttachedToId = shipment.FulfillmentOrderId;
-    processExc.ExternalReference = ((Order) results.get('order')).OrderReferenceNumber;
+    processExc.ExternalReference = ((Order) results.get('order'))
+      .OrderReferenceNumber;
     processExc.TransactionId__c = transactionId;
     processExc.Priority = 'Low';
     processExc.Category = category;

@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>URL_To_Voucher__c</fullName>
-    <description>URL to the HighCo Voucher. Only applicable for the HighCo Vouchers.</description>
+    <description
+  >URL to the HighCo Voucher. Only applicable for the HighCo Vouchers.</description>
     <externalId>false</externalId>
-    <inlineHelpText>URL to the HighCo Voucher. Only applicable for the HighCo Vouchers.</inlineHelpText>
+    <inlineHelpText
+  >URL to the HighCo Voucher. Only applicable for the HighCo Vouchers.</inlineHelpText>
     <label>URL To Voucher</label>
     <length>400</length>
     <trackTrending>false</trackTrending>

@@ -26,7 +26,11 @@ global with sharing class RestServiceOrderCreate {
     orderItemWrapper[] orderItems,
     paymentWrapper[] payment
   ) {
-    List<Order> existingOrderList = [SELECT id FROM Order WHERE OrderReferenceNumber = :orderReferenceNumber];
+    List<Order> existingOrderList = [
+      SELECT id
+      FROM Order
+      WHERE OrderReferenceNumber = :orderReferenceNumber
+    ];
 
     if (existingOrderList.size() > 0) {
       ProcessException processExc = new ProcessException();
@@ -38,8 +42,15 @@ global with sharing class RestServiceOrderCreate {
       processExc.Priority = 'Low';
       processExc.Category = 'Place Order';
       processExc.Message = 'Duplicate order ' + orderReferenceNumber;
-      processExc.Description = 'Order Reference Number: ' + OrderReferenceNumber + ' already exists in OMS';
-      exceptionList.add('Order Reference Number: ' + OrderReferenceNumber + ' already exists in OMS');
+      processExc.Description =
+        'Order Reference Number: ' +
+        OrderReferenceNumber +
+        ' already exists in OMS';
+      exceptionList.add(
+        'Order Reference Number: ' +
+          OrderReferenceNumber +
+          ' already exists in OMS'
+      );
 
       try {
         insert processExc;
@@ -65,11 +76,19 @@ global with sharing class RestServiceOrderCreate {
       if (!reservationSucceeded) {
         // if reservation fails, we skip the order creation and return an error message.
         exceptionList.add('Reservation failed, order has NOT been created');
-        SendFailedReservationMessage(transactionID, originalOrderID, orderReferenceNumber, salesChannel.salesChannel);
+        SendFailedReservationMessage(
+          transactionID,
+          originalOrderID,
+          orderReferenceNumber,
+          salesChannel.salesChannel
+        );
       } else {
         String brand = salesChannel.salesChannel;
         String country = salesChannel.countryCode;
-        String externalACCID = account.emailAddress + country + salesChannel.storeName;
+        String externalACCID =
+          account.emailAddress +
+          country +
+          salesChannel.storeName;
         Boolean isGuestOrder = Boolean.valueOf(account.isGuestCheckout);
 
         // Create a new account or use the existing one
@@ -176,7 +195,11 @@ global with sharing class RestServiceOrderCreate {
     );
   }
 
-  public static ID getAccount(accountWrapper account, String fullBrandName, String exID) {
+  public static ID getAccount(
+    accountWrapper account,
+    String fullBrandName,
+    String exID
+  ) {
     ID accID;
 
     List<Account> existingAccs = [
@@ -223,10 +246,17 @@ global with sharing class RestServiceOrderCreate {
 
   public static SalesChannel getSalesChannel(salesChannelWrapper salesChannel) {
     SalesChannel salesChannelObj;
-    String salesChannelName = salesChannel.salesChannelID + '_' + salesChannel.countryCode;
+    String salesChannelName =
+      salesChannel.salesChannelID +
+      '_' +
+      salesChannel.countryCode;
 
     List<SalesChannel> sCList = [
-      SELECT id, Location_Group__c, Location_Group__r.ExternalReference, SalesChannelName
+      SELECT
+        id,
+        Location_Group__c,
+        Location_Group__r.ExternalReference,
+        SalesChannelName
       FROM SalesChannel
       WHERE ExternalChannelNumber LIKE :salesChannelName
       LIMIT 1
@@ -285,7 +315,10 @@ global with sharing class RestServiceOrderCreate {
     orderObj.EffectiveDate = Date.valueOf(orderedDate);
     orderObj.OrderReferenceNumber = orderReferenceNumber;
     orderObj.OriginalOrderReference__c = originalOrderID;
-    orderObj.SalesChannelExternalReference__c = salesChannel.salesChannelID + '_' + salesChannel.countryCode;
+    orderObj.SalesChannelExternalReference__c =
+      salesChannel.salesChannelID +
+      '_' +
+      salesChannel.countryCode;
     orderObj.SalesChannelStoreID__c = salesChannel.salesChannelID;
     orderObj.SalesChannelCountryCode__c = salesChannel.countryCode;
     orderObj.Name = name;
@@ -304,7 +337,8 @@ global with sharing class RestServiceOrderCreate {
       // deliveryMethod == 'pickuppoint' (SFOMS-253)
       orderObj.ShippingStreet = shippingAddress.street.substringBefore(',');
       orderObj.ShippingStreet1__c = shippingAddress.street.substringBefore(',');
-      orderObj.ShippingStreet2__c = shippingAddress.street.substringAfter(',').trim();
+      orderObj.ShippingStreet2__c = shippingAddress.street.substringAfter(',')
+        .trim();
     }
     orderObj.ShippingStreet3__c = shippingAddress.street3;
     orderObj.ShippingHouseName__c = shippingAddress.houseName;
@@ -382,7 +416,10 @@ global with sharing class RestServiceOrderCreate {
     return orderId;
   }
 
-  private static ID GetDeliveryMethodId(String deliveryMethod, String countryCode) {
+  private static ID GetDeliveryMethodId(
+    String deliveryMethod,
+    String countryCode
+  ) {
     String externalReference;
     if (deliveryMethod == 'home') {
       externalReference = 'Home_' + countryCode;
@@ -398,7 +435,10 @@ global with sharing class RestServiceOrderCreate {
     return orderDeliveryMethod.Id;
   }
 
-  public static Product2 getDeliveryProduct(String deliveryMethod, String countryCode) {
+  public static Product2 getDeliveryProduct(
+    String deliveryMethod,
+    String countryCode
+  ) {
     ID orderDeliveryMethodId = GetDeliveryMethodId(deliveryMethod, countryCode);
     return [
       SELECT id, name
@@ -439,10 +479,16 @@ global with sharing class RestServiceOrderCreate {
     shippingLineItem.TotalLineAmount = Decimal.valueOf(netShippingFee);
 
     OrderItemTaxLineItem shippingTaxObj = new OrderItemTaxLineItem();
-    shippingTaxObj.Amount = Decimal.valueOf(grossShippingFee) - Decimal.valueOf(netShippingFee);
+    shippingTaxObj.Amount =
+      Decimal.valueOf(grossShippingFee) - Decimal.valueOf(netShippingFee);
     shippingTaxObj.Name = 'Tax';
-    if (Decimal.valueOf(grossShippingFee) != 0 && Decimal.valueOf(netShippingFee) != 0) {
-      shippingTaxObj.Rate = (Decimal.valueOf(grossShippingFee) / Decimal.valueOf(netShippingFee)) - 1;
+    if (
+      Decimal.valueOf(grossShippingFee) != 0 &&
+      Decimal.valueOf(netShippingFee) != 0
+    ) {
+      shippingTaxObj.Rate =
+        (Decimal.valueOf(grossShippingFee) / Decimal.valueOf(netShippingFee)) -
+        1;
     } else {
       shippingTaxObj.Rate = 0.0;
     }
@@ -455,7 +501,9 @@ global with sharing class RestServiceOrderCreate {
     return shippingMapper;
   }
 
-  private static Map<String, Product2> createOrRetrieveProducts(orderItemWrapper[] orderitems) {
+  private static Map<String, Product2> createOrRetrieveProducts(
+    orderItemWrapper[] orderitems
+  ) {
     Map<String, Product2> productMap = new Map<String, Product2>();
     List<String> productSkus = new List<String>();
     for (orderItemWrapper orderItem : orderItems) {
@@ -513,7 +561,11 @@ global with sharing class RestServiceOrderCreate {
     Id locationGroupId
   ) {
     ID deliveryMethodId = GetDeliveryMethodId(deliveryMethod, countryCode);
-    ID deliveryGroupId = createDeliveryGroup(orderId, deliveryMethodId, shippingAddress);
+    ID deliveryGroupId = createDeliveryGroup(
+      orderId,
+      deliveryMethodId,
+      shippingAddress
+    );
     Map<String, Product2> productMap = createOrRetrieveProducts(orderItems);
 
     List<OrderItem> orderItemsList = new List<OrderItem>();
@@ -551,7 +603,9 @@ global with sharing class RestServiceOrderCreate {
           OrderItem orderItemObj = new OrderItem();
           orderItemObj.OrderId = orderId;
           orderItemObj.ItemId__c = orderItem.itemID;
-          orderItemObj.GrossUnitPrice = Decimal.valueOf(orderItem.grossUnitPrice);
+          orderItemObj.GrossUnitPrice = Decimal.valueOf(
+            orderItem.grossUnitPrice
+          );
           orderItemObj.Product2Id = product.Id;
           orderItemObj.Quantity = Decimal.valueOf(orderItem.quantity);
           orderItemObj.Type = 'Order Product';
@@ -561,7 +615,9 @@ global with sharing class RestServiceOrderCreate {
           orderItemObj.SKU__c = orderItem.sku;
           orderItemObj.OrderDeliveryGroupId = deliveryGroupId;
           orderItemObj.ReservedAtLocationId = locationGroupId;
-          orderItemObj.TotalLineAmount = Decimal.valueOf(orderItem.totalLineAmount);
+          orderItemObj.TotalLineAmount = Decimal.valueOf(
+            orderItem.totalLineAmount
+          );
 
           orderItemsList.add(orderItemObj);
 
@@ -594,7 +650,9 @@ global with sharing class RestServiceOrderCreate {
 
       if (orderItemMappingList.size() > 0) {
         for (Integer i = 0; i < orderItemMappingList.size(); i++) {
-          orderItemMappingList[i].orderItemTaxLineItem.OrderItemId = orderItemMappingList[i].orderItem.id;
+          orderItemMappingList[i]
+            .orderItemTaxLineItem.OrderItemId = orderItemMappingList[i]
+            .orderItem.id;
           taxObjList.add(orderItemMappingList[i].orderItemTaxLineItem);
         }
 
@@ -614,19 +672,29 @@ global with sharing class RestServiceOrderCreate {
             orderItemMappingList[i].orderItemAdjustments != null &&
             orderItemMappingList[i].orderItemAdjustments.size() > 0
           ) {
-            for (Integer j = 0; j < orderItemMappingList[i].orderItemAdjustments.size(); j++) {
+            for (
+              Integer j = 0;
+              j < orderItemMappingList[i].orderItemAdjustments.size();
+              j++
+            ) {
               OrderItemAdjustmentLineItem adjstObj = new OrderItemAdjustmentLineItem();
-              adjstObj.Amount = Decimal.valueof(orderItemMappingList[i].orderItemAdjustments[j].amount);
+              adjstObj.Amount = Decimal.valueof(
+                orderItemMappingList[i].orderItemAdjustments[j].amount
+              );
               adjstObj.name = 'Adjustment';
               adjstObj.OrderItemId = orderItemMappingList[i].orderItem.id;
               adjsmntList.add(adjstObj);
 
               OrderItemTaxLineItem taxObj = new OrderItemTaxLineItem();
               taxObj.Amount = Decimal.valueof(
-                orderItemMappingList[i].orderItemAdjustments[j].orderItemAdjustmentTax.amount
+                orderItemMappingList[i]
+                  .orderItemAdjustments[j]
+                  .orderItemAdjustmentTax.amount
               );
               taxObj.Rate = Decimal.valueof(
-                orderItemMappingList[i].orderItemAdjustments[j].orderItemAdjustmentTax.rate
+                orderItemMappingList[i]
+                  .orderItemAdjustments[j]
+                  .orderItemAdjustmentTax.rate
               );
               taxObj.Type = 'Actual';
               taxObj.Name = 'Tax';
@@ -652,9 +720,14 @@ global with sharing class RestServiceOrderCreate {
 
           for (integer i = 0; i < orderItemAdjustmentsMappingList.size(); i++) {
             orderItemAdjustmentsMappingList[i]
-              .orderItemTaxLineItem.OrderItemAdjustmentLineItemId = orderItemAdjustmentsMappingList[i]
+              .orderItemTaxLineItem.OrderItemAdjustmentLineItemId = orderItemAdjustmentsMappingList[
+                i
+              ]
               .orderItemAdjustment.id;
-            orderItemAdjustmentsMappingList[i].orderItemTaxLineItem.OrderItemId = orderItemAdjustmentsMappingList[i]
+            orderItemAdjustmentsMappingList[i]
+              .orderItemTaxLineItem.OrderItemId = orderItemAdjustmentsMappingList[
+                i
+              ]
               .orderItemId;
           }
 
@@ -690,12 +763,19 @@ global with sharing class RestServiceOrderCreate {
     }
   }
 
-  public static Id createDeliveryGroup(ID orderId, Id deliveryMthdId, addressWrapper shippingAddress) {
+  public static Id createDeliveryGroup(
+    ID orderId,
+    Id deliveryMthdId,
+    addressWrapper shippingAddress
+  ) {
     OrderDeliveryGroup deliveryGroupObj = new OrderDeliveryGroup();
     deliveryGroupObj.EmailAddress = shippingAddress.emailAddress;
     deliveryGroupObj.DeliverToCity = shippingAddress.city;
     deliveryGroupObj.DeliverToCountry = shippingAddress.country;
-    deliveryGroupObj.DeliverToName = shippingAddress.firstName + ' ' + shippingAddress.lastName;
+    deliveryGroupObj.DeliverToName =
+      shippingAddress.firstName +
+      ' ' +
+      shippingAddress.lastName;
     deliveryGroupObj.DeliverToPostalCode = shippingAddress.postalCode;
     deliveryGroupObj.DeliverToState = shippingAddress.state;
     deliveryGroupObj.DeliverToStreet = createStreet(shippingAddress);
@@ -714,7 +794,12 @@ global with sharing class RestServiceOrderCreate {
     return deliveryGroupObj.Id;
   }
 
-  public static void createPayments(ID accID, ID orderID, string orderCurrency, paymentWrapper[] payment) {
+  public static void createPayments(
+    ID accID,
+    ID orderID,
+    string orderCurrency,
+    paymentWrapper[] payment
+  ) {
     CardPaymentMethod cardPayObj = new CardPaymentMethod();
     cardPayObj.ProcessingMode = 'External';
     cardPayObj.PaymentMethodDetails = payment[0].method;
@@ -926,7 +1011,9 @@ global with sharing class RestServiceOrderCreate {
 
     String JSONBody = JSON.serialize(wrapper);
     HttpRequest req = new HttpRequest();
-    req.setEndpoint(endpoint.Base_URL__c + salesChannel + '/' + originalOrderID);
+    req.setEndpoint(
+      endpoint.Base_URL__c + salesChannel + '/' + originalOrderID
+    );
     req.setMethod('POST');
     req.setBody(JSONBody);
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
         <fullName>AccountType</fullName>
@@ -22,7 +22,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>AgeAndDateMisMatch</shortDescription>
-        <value>Let op: Aanmelden voor Mijn D.E kan alleen als je 12 jaar of ouder bent.</value>
+        <value
+    >Let op: Aanmelden voor Mijn D.E kan alleen als je 12 jaar of ouder bent.</value>
     </labels>
     <labels>
         <fullName>AgeLimitCheck</fullName>
@@ -141,7 +142,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>ConsentTextPart1</shortDescription>
-        <value>Ja, ik word graag op de hoogte gehouden van toekomstige aanbiedingen, acties, evenementen, nieuwe producten en ander nieuws over Douwe Egberts</value>
+        <value
+    >Ja, ik word graag op de hoogte gehouden van toekomstige aanbiedingen, acties, evenementen, nieuwe producten en ander nieuws over Douwe Egberts</value>
     </labels>
     <labels>
         <fullName>ConsentTextPart2</fullName>
@@ -157,7 +159,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>ConsentTextPart3</shortDescription>
-        <value>Je geeft ons hiermee toestemming om je data te verwerken in lijn met de Europese data beschermings wetgeving</value>
+        <value
+    >Je geeft ons hiermee toestemming om je data te verwerken in lijn met de Europese data beschermings wetgeving</value>
     </labels>
     <labels>
         <fullName>ConsentTextPart4</fullName>
@@ -180,7 +183,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Consent text</shortDescription>
-        <value>Ja, ik wil regelmatig gepersonaliseerde berichten ontvangen over Douwe Egberts inclusief de producten, aanbiedingen en enquêtes. Ik zal e-mails en andere berichten ontvangen (online en op sociale media) op basis van mijn interesses en consumentengedrag (bijvoorbeeld cookies, trackers, aankoopgegevens). Om deze toestemming op elk moment in te trekken of voorkeuren te wijzigen, klikt u op de afmeldlink in een e-mail of in uw accountvoorkeuren. Zie ons</value>
+        <value
+    >Ja, ik wil regelmatig gepersonaliseerde berichten ontvangen over Douwe Egberts inclusief de producten, aanbiedingen en enquêtes. Ik zal e-mails en andere berichten ontvangen (online en op sociale media) op basis van mijn interesses en consumentengedrag (bijvoorbeeld cookies, trackers, aankoopgegevens). Om deze toestemming op elk moment in te trekken of voorkeuren te wijzigen, klikt u op de afmeldlink in een e-mail of in uw accountvoorkeuren. Zie ons</value>
     </labels>
     <labels>
         <fullName>ConsumerExist</fullName>
@@ -224,7 +228,8 @@
     </labels>
     <labels>
         <fullName>DECommunityUserNamePostFix</fullName>
-        <categories>This variable is used to append &quot;.de.nl&quot; to username entered by Community User</categories>
+        <categories
+    >This variable is used to append &quot;.de.nl&quot; to username entered by Community User</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>DECommunityUserNamePostFix</shortDescription>
@@ -279,7 +284,8 @@
         <fullName>DE_Confirmation_Email_Template_Reminder_ID</fullName>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>DE Confirmation Email Template Reminder ID</shortDescription>
+        <shortDescription
+    >DE Confirmation Email Template Reminder ID</shortDescription>
         <value>00X1v000000zMt9EAE</value>
     </labels>
     <labels>
@@ -295,7 +301,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>DE password invalid</shortDescription>
-        <value>Je wachtwoord moet uit minimaal 8 tekens bestaan, inclusief: 1 letter, 1 cijfer en ten minste één van deze speciale tekens !@#$%^&amp;*()_+-={}[]\\|;:\&apos;,.?/`~&gt;&lt;</value>
+        <value
+    >Je wachtwoord moet uit minimaal 8 tekens bestaan, inclusief: 1 letter, 1 cijfer en ten minste één van deze speciale tekens !@#$%^&amp;*()_+-={}[]\\|;:\&apos;,.?/`~&gt;&lt;</value>
     </labels>
     <labels>
         <fullName>DateOfBirthMissing</fullName>
@@ -378,7 +385,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>FirstNameLettersOnly</shortDescription>
-        <value>Alleen letters zijn toegestaan voor het invullen van je naam.</value>
+        <value
+    >Alleen letters zijn toegestaan voor het invullen van je naam.</value>
     </labels>
     <labels>
         <fullName>FutureDateMessage</fullName>
@@ -386,7 +394,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>FutureDateMessage</shortDescription>
-        <value>De geboortedatum is in de toekomst, selecteer de juiste datum</value>
+        <value
+    >De geboortedatum is in de toekomst, selecteer de juiste datum</value>
     </labels>
     <labels>
         <fullName>GenderMissing</fullName>
@@ -465,7 +474,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>LastNameLettersOnly</shortDescription>
-        <value>Alleen letters zijn toegestaan voor het invullen van je naam.</value>
+        <value
+    >Alleen letters zijn toegestaan voor het invullen van je naam.</value>
     </labels>
     <labels>
         <fullName>LastNameMissing</fullName>
@@ -518,7 +528,8 @@
         <categories>MoveLoyaltyTransactions</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>Move Loyalty Transactions Authorization</shortDescription>
+        <shortDescription
+    >Move Loyalty Transactions Authorization</shortDescription>
         <value>00G1v000005NuRb</value>
     </labels>
     <labels>
@@ -551,7 +562,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>PasswordMinimumCriteria</shortDescription>
-        <value>Je wachtwoord moet uit minimaal 8 tekens bestaan, inclusief: 1 letter, 1 cijfer en ten minste één van deze speciale tekens !@#$%^&amp;*()_+-={}[]\\|;:\&apos;,.?/`~&gt;&lt;</value>
+        <value
+    >Je wachtwoord moet uit minimaal 8 tekens bestaan, inclusief: 1 letter, 1 cijfer en ten minste één van deze speciale tekens !@#$%^&amp;*()_+-={}[]\\|;:\&apos;,.?/`~&gt;&lt;</value>
     </labels>
     <labels>
         <fullName>PasswordMisMatch</fullName>
@@ -729,7 +741,8 @@ aanmelding van ons hebt ontvangen.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>UserExist</shortDescription>
-        <value>Dit e-mailadres is al gebruikt voor een Mijn D.E aanmelding</value>
+        <value
+    >Dit e-mailadres is al gebruikt voor een Mijn D.E aanmelding</value>
     </labels>
     <labels>
         <fullName>UserLoginFailMessage</fullName>
@@ -737,7 +750,8 @@ aanmelding van ons hebt ontvangen.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>UserLoginFailMessage</shortDescription>
-        <value>De combinatie van het e-mailadres en het wachtwoord is niet bij ons bekend.
+        <value
+    >De combinatie van het e-mailadres en het wachtwoord is niet bij ons bekend.
 &lt;br&gt;
 LET OP: na meerdere verkeerde inlogpogingen wordt je account uit veiligheid vergrendeld.</value>
     </labels>
@@ -747,7 +761,8 @@ LET OP: na meerdere verkeerde inlogpogingen wordt je account uit veiligheid verg
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>UserLoginLocked</shortDescription>
-        <value>Vanwege te veel mislukte inlogpogingen is je account momenteel voor de veiligheid vergrendeld.
+        <value
+    >Vanwege te veel mislukte inlogpogingen is je account momenteel voor de veiligheid vergrendeld.
 Om je account te ontgrendelen, moet je je wachtwoord opnieuw instellen.</value>
     </labels>
     <labels>
@@ -814,6 +829,7 @@ Om je account te ontgrendelen, moet je je wachtwoord opnieuw instellen.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>userIsInactive</shortDescription>
-        <value>Je account is momenteel voor de veiligheid vergrendeld. Om je account te ontgrendelen moet je je wachtwoord opnieuw instellen.</value>
+        <value
+    >Je account is momenteel voor de veiligheid vergrendeld. Om je account te ontgrendelen moet je je wachtwoord opnieuw instellen.</value>
     </labels>
 </CustomLabels>

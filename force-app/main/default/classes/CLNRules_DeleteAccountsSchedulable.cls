@@ -9,11 +9,9 @@ History
 *********************************************************************/
 
 global class CLNRules_DeleteAccountsSchedulable implements Schedulable {
-    
-    global void execute(SchedulableContext sc) {
-        CLNRules_DeleteAccounts b = new CLNRules_DeleteAccounts();
-        
-        database.executebatch(b,200);
-    }
-   
+  global void execute(SchedulableContext sc) {
+    CLNRules_DeleteAccounts b = new CLNRules_DeleteAccounts();
+
+    database.executebatch(b, 200);
+  }
 }

@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <layouts>
         <layout>Account Layout</layout>
         <sections>
-            <label></label>
+            <label />
             <section>Favorite Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Net Promotor Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Opt-in Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Opt-out Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Previous Orders Detail</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Registration Details</section>
         </sections>
     </layouts>
@@ -31,71 +31,71 @@
         <layout>JDE DTC Marketing - Minimum Access</layout>
         <layoutType>PersonAccount</layoutType>
         <sections>
-            <label></label>
+            <label />
             <section>Consumer Email Behaviour</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Favorite Drinks</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Confirmation Completion Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Confirmation Completion Email Send Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Consent Withdrawal Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Double Opt-in Email Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Registration Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Individual Email Result</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Net Promotor Detail</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Opt-in and Opt-out URLs</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Opt-in/Opt-out Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Order Insights</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Past Orders Overview</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Products Ordered in Past</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Record Deletion</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Registration Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Sample Requests</section>
         </sections>
     </layouts>
@@ -103,71 +103,71 @@
         <layout>Person Account Layout</layout>
         <layoutType>PersonAccount</layoutType>
         <sections>
-            <label></label>
+            <label />
             <section>Consumer Email Behaviour</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Favorite Drinks</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Confirmation Completion Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Confirmation Completion Email Send Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Consent Withdrawal Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Double Opt-in Email Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Registration Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Individual Email Result</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Net Promotor Detail</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Opt-in and Opt-out URLs</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Opt-in/Opt-out Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Order Insights</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Past Orders Overview</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Products Ordered in Past</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Record Deletion</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Registration Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Sample Requests</section>
         </sections>
     </layouts>
@@ -175,128 +175,128 @@
         <layout>Person Account Layout ADMIN</layout>
         <layoutType>PersonAccount</layoutType>
         <sections>
-            <label></label>
+            <label />
             <section>Consumer Email Behaviour</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Favorite Drinks</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Confirmation Completion Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Confirmation Completion Email Send Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Consent Withdrawal Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Double Opt-in Email Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>GDPR Registration Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Individual Email Result</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Net Promotor Detail</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Opt-in and Opt-out URLs</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Opt-in/Opt-out Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Order Insights</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Past Orders Overview</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Products Ordered in Past</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Record Deletion</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Registration Details</section>
         </sections>
         <sections>
-            <label></label>
+            <label />
             <section>Sample Requests</section>
         </sections>
     </layouts>
     <quickActions>
-        <label></label>
+        <label />
         <name>Child_Account</name>
     </quickActions>
     <recordTypes>
-        <label></label>
+        <label />
         <name>Business_Account</name>
     </recordTypes>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>Billing_Street_Format</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>Commercial_Consent_Status_change</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>No_Future_Date_on_Opt_In_Confirmation_Da</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>No_Future_Dates_in_Opt_in_Request_Date</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>No_Future_Dates_in_Opt_out_Request_Date</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>Postal_Code_Format</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>Request_To_Be_Forget_Rule</name>
     </validationRules>
     <webLinks>
-        <label></label>
+        <label />
         <name>ForceDelete</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label />
         <name>GoogleMaps</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label />
         <name>GoogleNews</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label />
         <name>GoogleSearch</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label />
         <name>Resend_Confirmation_Email</name>
     </webLinks>
 </CustomObjectTranslation>

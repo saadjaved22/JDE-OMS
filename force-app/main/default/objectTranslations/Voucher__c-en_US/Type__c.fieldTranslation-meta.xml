@@ -1,57 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label></label>
+    <label />
     <name>Type__c</name>
     <picklistValues>
         <masterLabel>Free Gift</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Hidden Gift</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Item Percentage Off</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Item Target Price</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Item Value Off</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>ItemPercentageOffDiscount</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Order Percentage Off</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Order Value Off</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>OrderValueOffDiscount</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Other</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Shipping Percentage Off</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Shipping Target Price</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Shipping Value Off</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
 </CustomFieldTranslation>

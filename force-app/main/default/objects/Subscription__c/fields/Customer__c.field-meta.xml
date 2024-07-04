@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer__c</fullName>
-    <description>The link to the Consumer. The link to the customer can be created by Boomi via the External Id of the Customer.</description>
+    <description
+  >The link to the Consumer. The link to the customer can be created by Boomi via the External Id of the Customer.</description>
     <externalId>false</externalId>
     <label>Customer</label>
     <referenceTo>Account</referenceTo>

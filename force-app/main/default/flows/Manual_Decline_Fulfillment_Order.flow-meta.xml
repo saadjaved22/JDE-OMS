@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Cancel_Fulfillment_Order_Item</name>
@@ -23,7 +23,8 @@
         <inputParameters>
             <name>fulfillmentOrderLineItemsToCancelInput</name>
             <value>
-                <elementReference>FulfillmentOrderLineItemsToCancelInputRepresentation</elementReference>
+                <elementReference
+        >FulfillmentOrderLineItemsToCancelInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -35,10 +36,12 @@
         <locationX>661</locationX>
         <locationY>338</locationY>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderLineItemsToCancelInputRepresentation.fulfillmentOrderLineItemsToCancel</assignToReference>
+            <assignToReference
+      >FulfillmentOrderLineItemsToCancelInputRepresentation.fulfillmentOrderLineItemsToCancel</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>FulfillmentOrderLineItemInputRepresentation</elementReference>
+                <elementReference
+        >FulfillmentOrderLineItemInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -51,14 +54,17 @@
         <locationX>662</locationX>
         <locationY>496</locationY>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderLineItemInputRepresentation.fulfillmentOrderLineItemId</assignToReference>
+            <assignToReference
+      >FulfillmentOrderLineItemInputRepresentation.fulfillmentOrderLineItemId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Fulfillment_Order_Products.Id</elementReference>
+                <elementReference
+        >Fulfillment_Order_Products.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderLineItemInputRepresentation.quantity</assignToReference>
+            <assignToReference
+      >FulfillmentOrderLineItemInputRepresentation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>QuantityToCancel</elementReference>
@@ -214,12 +220,14 @@
             <label>yes</label>
         </rules>
     </decisions>
-    <description>screenflow for OPS to decline any remaining items that cannot be fulfilled.</description>
+    <description
+  >screenflow for OPS to decline any remaining items that cannot be fulfilled.</description>
     <environments>Default</environments>
     <formulas>
         <name>QuantityToCancel</name>
         <dataType>Number</dataType>
-        <expression>{!prepare_IR.QuantityNetOrdered} - {!prepare_IR.QuantityShipped}</expression>
+        <expression
+    >{!prepare_IR.QuantityNetOrdered} - {!prepare_IR.QuantityShipped}</expression>
         <scale>0</scale>
     </formulas>
     <interviewLabel>Cancel Order {!$Flow.CurrentDateTime}</interviewLabel>
@@ -283,7 +291,8 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <stringValue>Cancel Order failed. The Credit Memo and Refund are most likely not created.</stringValue>
+                <stringValue
+        >Cancel Order failed. The Credit Memo and Refund are most likely not created.</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -318,7 +327,8 @@
         <label>Fulfillment Order Products</label>
         <locationX>528</locationX>
         <locationY>498</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>FOLIR</targetReference>
         </connector>
@@ -346,7 +356,8 @@
         <label>Order Product Summaries</label>
         <locationX>339</locationX>
         <locationY>205</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>prepare_IR</targetReference>
         </connector>
@@ -383,7 +394,8 @@
         </connector>
         <fields>
             <name>text</name>
-            <fieldText>&lt;p&gt;Are you sure you want to cancel all remaining products in this order?&lt;/p&gt;&lt;p&gt;All products not yet shipped will be cancelled and refunded to the customer.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This cannot be undone!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;Are you sure you want to cancel all remaining products in this order?&lt;/p&gt;&lt;p&gt;All products not yet shipped will be cancelled and refunded to the customer.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This cannot be undone!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Confirm Cancel Order</nextOrFinishButtonLabel>
@@ -400,7 +412,8 @@
         <allowPause>false</allowPause>
         <fields>
             <name>noproducts</name>
-            <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;There are no products to cancel in this Fulfillment Order.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;There are no products to cancel in this Fulfillment Order.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Ok</nextOrFinishButtonLabel>
@@ -433,7 +446,8 @@
     </variables>
     <variables>
         <name>FulfillmentOrderLineItemInputRepresentation</name>
-        <apexClass>ConnectApi__FulfillmentOrderLineItemInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderLineItemInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -441,7 +455,8 @@
     </variables>
     <variables>
         <name>FulfillmentOrderLineItemsToCancelInputRepresentation</name>
-        <apexClass>ConnectApi__FulfillmentOrderLineItemsToCancelInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderLineItemsToCancelInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

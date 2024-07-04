@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Create_Invoice</name>
@@ -39,7 +39,8 @@
         <inputParameters>
             <name>ensureFundsAsyncInput</name>
             <value>
-                <elementReference>EnsureFundsAsyncInputRepresentation</elementReference>
+                <elementReference
+        >EnsureFundsAsyncInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -57,10 +58,12 @@
         <locationX>1918</locationX>
         <locationY>405</locationY>
         <assignmentItems>
-            <assignToReference>EnsureFundsAsyncInputRepresentation.invoiceId</assignToReference>
+            <assignToReference
+      >EnsureFundsAsyncInputRepresentation.invoiceId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>FulfillmentOrderInvoiceOutput.invoiceId</elementReference>
+                <elementReference
+        >FulfillmentOrderInvoiceOutput.invoiceId</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -73,7 +76,8 @@
         <locationX>2054</locationX>
         <locationY>664</locationY>
         <assignmentItems>
-            <assignToReference>ProcessExceptionRecord.Message</assignToReference>
+            <assignToReference
+      >ProcessExceptionRecord.Message</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Label.Ensure_Funds_Error</elementReference>
@@ -89,7 +93,8 @@
         <locationX>1504</locationX>
         <locationY>664</locationY>
         <assignmentItems>
-            <assignToReference>ProcessExceptionRecord.Message</assignToReference>
+            <assignToReference
+      >ProcessExceptionRecord.Message</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Label.Create_Invoice_Error</elementReference>
@@ -105,42 +110,48 @@
         <locationX>1778</locationX>
         <locationY>664</locationY>
         <assignmentItems>
-            <assignToReference>ProcessExceptionRecord.AttachedToId</assignToReference>
+            <assignToReference
+      >ProcessExceptionRecord.AttachedToId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ProcessExceptionRecord.OrderSummaryId</assignToReference>
+            <assignToReference
+      >ProcessExceptionRecord.OrderSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.OrderSummaryId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ProcessExceptionRecord.Severity</assignToReference>
+            <assignToReference
+      >ProcessExceptionRecord.Severity</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>High</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ProcessExceptionRecord.Priority</assignToReference>
+            <assignToReference
+      >ProcessExceptionRecord.Priority</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>High</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ProcessExceptionRecord.Category</assignToReference>
+            <assignToReference
+      >ProcessExceptionRecord.Category</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>Invoicing</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ProcessExceptionRecord.Description</assignToReference>
+            <assignToReference
+      >ProcessExceptionRecord.Description</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.FaultMessage</elementReference>
@@ -185,14 +196,16 @@
             <name>Item_Type_Product</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Fulfillment_Order_Items_Loop.TypeCode</leftValueReference>
+                <leftValueReference
+        >Fulfillment_Order_Items_Loop.TypeCode</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Product</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Fulfillment_Order_Items_Loop.Quantity</leftValueReference>
+                <leftValueReference
+        >Fulfillment_Order_Items_Loop.Quantity</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -210,21 +223,24 @@
         <locationX>1176</locationX>
         <locationY>859</locationY>
         <defaultConnector>
-            <targetReference>Interaction_Fulfill_Order_Item_Location</targetReference>
+            <targetReference
+      >Interaction_Fulfill_Order_Item_Location</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Location</defaultConnectorLabel>
         <rules>
             <name>Reserved_At_Location_Group</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Order_Item.ReservedAtLocationId</leftValueReference>
+                <leftValueReference
+        >Order_Item.ReservedAtLocationId</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
                     <stringValue>0gh</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Interaction_Fulfill_Order_Item_Location_Group</targetReference>
+                <targetReference
+        >Interaction_Fulfill_Order_Item_Location_Group</targetReference>
             </connector>
             <label>Location Group</label>
         </rules>
@@ -258,7 +274,8 @@
         <dataType>DateTime</dataType>
         <expression>{!$Flow.CurrentDateTime}</expression>
     </formulas>
-    <interviewLabel>Create Invoice, Ensure Funds JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Create Invoice, Ensure Funds JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Create Invoice, Ensure Funds JDE</label>
     <loops>
         <name>Fulfillment_Order_Items_Loop</name>
@@ -298,7 +315,8 @@
         <label>Interaction Fulfill Order</label>
         <locationX>920</locationX>
         <locationY>405</locationY>
-        <assignRecordIdToReference>OCIInteractionFulfillOrderId</assignRecordIdToReference>
+        <assignRecordIdToReference
+    >OCIInteractionFulfillOrderId</assignRecordIdToReference>
         <connector>
             <targetReference>Fulfillment_Order_Items_Loop</targetReference>
         </connector>
@@ -345,25 +363,29 @@
         <inputAssignments>
             <field>FromLocation__c</field>
             <value>
-                <elementReference>Order_Item.ReservedAtLocationId</elementReference>
+                <elementReference
+        >Order_Item.ReservedAtLocationId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>FulfillmentOrderItem__c</field>
             <value>
-                <elementReference>Fulfillment_Order_Items_Loop.Id</elementReference>
+                <elementReference
+        >Fulfillment_Order_Items_Loop.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OCIInteractionFulfillOrder__c</field>
             <value>
-                <elementReference>OCIInteractionFulfillOrderId</elementReference>
+                <elementReference
+        >OCIInteractionFulfillOrderId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Quantity__c</field>
             <value>
-                <elementReference>Fulfillment_Order_Items_Loop.Quantity</elementReference>
+                <elementReference
+        >Fulfillment_Order_Items_Loop.Quantity</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -375,7 +397,8 @@
         <inputAssignments>
             <field>ToLocation__c</field>
             <value>
-                <elementReference>$Record.FulfilledFromLocationId</elementReference>
+                <elementReference
+        >$Record.FulfilledFromLocationId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -398,25 +421,29 @@
         <inputAssignments>
             <field>FromLocationGroup__c</field>
             <value>
-                <elementReference>Order_Item.ReservedAtLocationId</elementReference>
+                <elementReference
+        >Order_Item.ReservedAtLocationId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>FulfillmentOrderItem__c</field>
             <value>
-                <elementReference>Fulfillment_Order_Items_Loop.Id</elementReference>
+                <elementReference
+        >Fulfillment_Order_Items_Loop.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OCIInteractionFulfillOrder__c</field>
             <value>
-                <elementReference>OCIInteractionFulfillOrderId</elementReference>
+                <elementReference
+        >OCIInteractionFulfillOrderId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Quantity__c</field>
             <value>
-                <elementReference>Fulfillment_Order_Items_Loop.Quantity</elementReference>
+                <elementReference
+        >Fulfillment_Order_Items_Loop.Quantity</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -428,7 +455,8 @@
         <inputAssignments>
             <field>ToLocation__c</field>
             <value>
-                <elementReference>$Record.FulfilledFromLocationId</elementReference>
+                <elementReference
+        >$Record.FulfilledFromLocationId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -452,7 +480,8 @@
         <label>Fulfillment Order Items</label>
         <locationX>701</locationX>
         <locationY>405</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Interaction_Fulfill_Order</targetReference>
         </connector>
@@ -473,7 +502,8 @@
         <label>Invoice</label>
         <locationX>1635</locationX>
         <locationY>406</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Zero_Balance</targetReference>
         </connector>
@@ -482,7 +512,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>FulfillmentOrderInvoiceOutput.invoiceId</elementReference>
+                <elementReference
+        >FulfillmentOrderInvoiceOutput.invoiceId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -496,7 +527,8 @@
         <label>Order Item</label>
         <locationX>939</locationX>
         <locationY>857</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Reserved_At</targetReference>
         </connector>
@@ -505,7 +537,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Fulfillment_Order_Items_Loop.OrderItemSummaryId</elementReference>
+                <elementReference
+        >Fulfillment_Order_Items_Loop.OrderItemSummaryId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -517,7 +550,8 @@
     <start>
         <locationX>372</locationX>
         <locationY>50</locationY>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>StatusCategory</field>
@@ -558,7 +592,8 @@
     </variables>
     <variables>
         <name>FulfillmentOrderInvoiceOutput</name>
-        <apexClass>ConnectApi__FulfillmentOrderInvoiceOutputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderInvoiceOutputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

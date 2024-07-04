@@ -1,213 +1,204 @@
-.THIS  .login-icon {
-    color:#ccc;font-size:22px;
+.THIS .login-icon {
+  color: #ccc;
+  font-size: 22px;
 }
 
-.THIS  button.sfdc_button {
-    width: 100%;
-    height: 42px;
-    margin: 0 0 15px 0;
-    color: #fff;
-    background: #C10318;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    border: none;
-    outline: none;
-    white-space: nowrap;
-    font-size: 18px;
-    box-shadow: none;
-    font-family: 'Van Condensed', sans-serif;
-    font-weight: 300;
-    line-height: 42px;
-    border-radius: 3px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    transition: all 0.2s ease-out;
+.THIS button.sfdc_button {
+  width: 100%;
+  height: 42px;
+  margin: 0 0 15px 0;
+  color: #fff;
+  background: #c10318;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  font-size: 18px;
+  box-shadow: none;
+  font-family: "Van Condensed", sans-serif;
+  font-weight: 300;
+  line-height: 42px;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: all 0.2s ease-out;
 }
 
 .THIS .uiButton--default .label {
-    color: #fff;
-    text-shadow:none;
+  color: #fff;
+  text-shadow: none;
 }
 
 .THIS button:hover {
-    background:#A80013;
-    cursor:pointer;
+  background: #a80013;
+  cursor: pointer;
 }
 
 .THIS button.sfdc_button:disabled {
-    background:#9F9F9F;
-    cursor:inherit;
+  background: #9f9f9f;
+  cursor: inherit;
 }
 
 .THIS label {
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .THIS #sfdc_username_container {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .THIS input {
-    margin: 4px 0 15px 0;
-    padding: 0 10px;
-    border: 1px solid #9F9F9F;
-    width: 100%;
-    height: 42px;
-    font-size: 14px;
+  margin: 4px 0 15px 0;
+  padding: 0 10px;
+  border: 1px solid #9f9f9f;
+  width: 100%;
+  height: 42px;
+  font-size: 14px;
 }
 
 .THIS input::placeholder {
-    color: #9F9F9F;
-    font-weight: 300;
-    font-size: 14px;
+  color: #9f9f9f;
+  font-weight: 300;
+  font-size: 14px;
 }
 
-.THIS  a.forgotLink {
- 	color: #000000;
-    font-family: 'Van Condensed',sans-serif;
-    font-size: 16px;
-    text-align: left;
-    display: block;
-    text-decoration: none;
-    margin: -5px 0 0px 0;
+.THIS a.forgotLink {
+  color: #000000;
+  font-family: "Van Condensed", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  display: block;
+  text-decoration: none;
+  margin: -5px 0 0px 0;
 }
-.THIS  a.forgotLink:hover {
-    color:#777;
-    text-decoration: none;
+.THIS a.forgotLink:hover {
+  color: #777;
+  text-decoration: none;
 }
 
 .THIS #sfdc_forgot a.forgotLink:after {
-    content: '';
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 0 0 -2px 4px;
-    background-image: url('/resource/MinjDEarrow');
-    background-size: 100% 100%;
-    filter: grayscale(100%);
-    
-    
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 0 -2px 4px;
+  background-image: url("/resource/MinjDEarrow");
+  background-size: 100% 100%;
+  filter: grayscale(100%);
 }
 
-
 .THIS #sfdc_forgot a.registrationLink {
-    color: #C10318;
-    font-family: 'Van Condensed',sans-serif;
-    display: block;
-    text-align: left;
-    font-size: 16px;
-    margin-bottom: 20px;
+  color: #c10318;
+  font-family: "Van Condensed", sans-serif;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .THIS #sfdc_forgot a.helpLink {
-	color: #C10318;
-	font-family: 'Van Condensed',sans-serif;
-    display: block;
-    text-align: left;
-    font-size: 16px;
-    margin-bottom: 20px;
+  color: #c10318;
+  font-family: "Van Condensed", sans-serif;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .THIS #sfdc_forgot a.helpLink:hover {
-    color:#777;
-    text-decoration: none;
-    
-} 
-
+  color: #777;
+  text-decoration: none;
+}
 
 .THIS #sfdc_forgot a.helpLink:after {
-    content: '';
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 0 0 -2px 4px;
-    background-image: url('/resource/MinjDEarrow');
-    background-size: 100% 100%;
-    filter: grayscale(100%);
-    
-    
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 0 -2px 4px;
+  background-image: url("/resource/MinjDEarrow");
+  background-size: 100% 100%;
+  filter: grayscale(100%);
 }
 
 .THIS #sfdc_forgot a.registrationLink:hover {
-    color: #A80013;
-    
-} 
-
+  color: #a80013;
+}
 
 .THIS #sfdc_forgot a.registrationLink:after {
-    content: '';
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 0 0 -2px 4px;
-	background-image: url('/resource/MinjDEarrow');
-    background-size: 100% 100%;
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 0 -2px 4px;
+  background-image: url("/resource/MinjDEarrow");
+  background-size: 100% 100%;
 }
 
 .THIS label.uiLabel-hidden {
-    display:none;
+  display: none;
 }
 
 .THIS .error {
-    background: #f8f0f1;
-    color: #C10318;
-    border: 1px solid #C10318;
-    border-radius: 3px;
-    font-family: 'Van Condensed',sans-serif;
-    display: block;
-    text-align: left;
-    font-size: 16px;
-    width: 100%;
-    line-height: 20px;
-    height: auto;
-    padding: 10px;
-    margin: 10px 0;
-    position: relative;
+  background: #f8f0f1;
+  color: #c10318;
+  border: 1px solid #c10318;
+  border-radius: 3px;
+  font-family: "Van Condensed", sans-serif;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  width: 100%;
+  line-height: 20px;
+  height: auto;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
 }
 
-@media (max-width: 410px){
-    .THIS #recaptchaContainer{
-        margin: 0 -12px;
-    }
+@media (max-width: 410px) {
+  .THIS #recaptchaContainer {
+    margin: 0 -12px;
+  }
 }
 
-@media (max-width: 330px){
-    .THIS #recaptchaContainer{
-        margin: 0 -22px;
-    }
+@media (max-width: 330px) {
+  .THIS #recaptchaContainer {
+    margin: 0 -22px;
+  }
 }
 .THIS .sfdc_button_loading {
-
-    width: 100%;
-    height: 42px;
-    margin: 0 0 15px 0;
-    color: #fff;
-    background: #C10318;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    border: none;
-    outline: none;
-    white-space: nowrap;
-    font-size: 18px;
-    box-shadow: none;
-    font-family: 'Van Condensed', sans-serif;
-    font-weight: 300;
-    line-height: 42px;
-    border-radius: 3px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    transition: all 0.2s ease-out;
+  width: 100%;
+  height: 42px;
+  margin: 0 0 15px 0;
+  color: #fff;
+  background: #c10318;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  font-size: 18px;
+  box-shadow: none;
+  font-family: "Van Condensed", sans-serif;
+  font-weight: 300;
+  line-height: 42px;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: all 0.2s ease-out;
 }
 
 .THIS .lds-roller,

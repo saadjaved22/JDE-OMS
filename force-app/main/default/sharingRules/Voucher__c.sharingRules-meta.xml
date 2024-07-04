@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <sharingCriteriaRules>
         <fullName>Sharing_Rule_JDE_DTC_Marketing</fullName>
@@ -22,7 +22,7 @@
             <group>JDE_Global_Marketing_and_Support</group>
         </sharedTo>
         <sharedFrom>
-            <allInternalUsers></allInternalUsers>
+            <allInternalUsers />
         </sharedFrom>
     </sharingOwnerRules>
 </SharingRules>

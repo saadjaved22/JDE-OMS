@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Transfer_Reservation</name>
@@ -17,11 +17,13 @@
         <inputParameters>
             <name>ociTransferReservationInput</name>
             <value>
-                <elementReference>TransferReservationInputRepresentation</elementReference>
+                <elementReference
+        >TransferReservationInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>TransferReservationOutputRepresenation</assignToReference>
+            <assignToReference
+      >TransferReservationOutputRepresenation</assignToReference>
             <name>ociTransferReservationOutput</name>
         </outputParameters>
     </actionCalls>
@@ -64,14 +66,17 @@
         <locationX>772</locationX>
         <locationY>674</locationY>
         <assignmentItems>
-            <assignToReference>TransferReservationInputRepresentation.transferRecords</assignToReference>
+            <assignToReference
+      >TransferReservationInputRepresentation.transferRecords</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>SingleTransferReservationInputRepresentation</elementReference>
+                <elementReference
+        >SingleTransferReservationInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Interaction_Fulfillment_Order_Items_Loop</targetReference>
+            <targetReference
+      >Interaction_Fulfillment_Order_Items_Loop</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -80,45 +85,57 @@
         <locationX>573</locationX>
         <locationY>675</locationY>
         <assignmentItems>
-            <assignToReference>SingleTransferReservationInputRepresentation.actionRequestId</assignToReference>
+            <assignToReference
+      >SingleTransferReservationInputRepresentation.actionRequestId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Fulfillment_Order_Items_Loop.Id</elementReference>
+                <elementReference
+        >Interaction_Fulfillment_Order_Items_Loop.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleTransferReservationInputRepresentation.externalRefId</assignToReference>
+            <assignToReference
+      >SingleTransferReservationInputRepresentation.externalRefId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Fulfillment_Order_Items_Loop.OCIInteractionFulfillOrder__r.Name</elementReference>
+                <elementReference
+        >Interaction_Fulfillment_Order_Items_Loop.OCIInteractionFulfillOrder__r.Name</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleTransferReservationInputRepresentation.fromLocationIdentifier</assignToReference>
+            <assignToReference
+      >SingleTransferReservationInputRepresentation.fromLocationIdentifier</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Fulfillment_Order_Items_Loop.FromLocation__r.ExternalReference</elementReference>
+                <elementReference
+        >Interaction_Fulfillment_Order_Items_Loop.FromLocation__r.ExternalReference</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleTransferReservationInputRepresentation.toLocationGroupIdentifier</assignToReference>
+            <assignToReference
+      >SingleTransferReservationInputRepresentation.toLocationGroupIdentifier</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Fulfillment_Order_Items_Loop.ToLocationGroup__r.ExternalReference</elementReference>
+                <elementReference
+        >Interaction_Fulfillment_Order_Items_Loop.ToLocationGroup__r.ExternalReference</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleTransferReservationInputRepresentation.stockKeepingUnit</assignToReference>
+            <assignToReference
+      >SingleTransferReservationInputRepresentation.stockKeepingUnit</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Fulfillment_Order_Items_Loop.FulfillmentOrderItem__r.OrderItemSummary.Product2.StockKeepingUnit</elementReference>
+                <elementReference
+        >Interaction_Fulfillment_Order_Items_Loop.FulfillmentOrderItem__r.OrderItemSummary.Product2.StockKeepingUnit</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>SingleTransferReservationInputRepresentation.quantity</assignToReference>
+            <assignToReference
+      >SingleTransferReservationInputRepresentation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Interaction_Fulfillment_Order_Items_Loop.Quantity__c</elementReference>
+                <elementReference
+        >Interaction_Fulfillment_Order_Items_Loop.Quantity__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -155,7 +172,7 @@
                 <leftValueReference>ExceptionMessage</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </rightValue>
             </conditions>
             <conditions>
@@ -166,7 +183,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Is_FO_Rejected_and_Not_In_Store_Pickup</targetReference>
+                <targetReference
+        >Is_FO_Rejected_and_Not_In_Store_Pickup</targetReference>
             </connector>
             <label>No</label>
         </rules>
@@ -184,10 +202,12 @@
             <name>Failure_Limit_Reached_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.ConnectionFailedAttempts__c</leftValueReference>
+                <leftValueReference
+        >$Record.ConnectionFailedAttempts__c</leftValueReference>
                 <operator>GreaterThanOrEqualTo</operator>
                 <rightValue>
-                    <elementReference>MAX_OCI_CONN_FAIL_ATTEMPTS</elementReference>
+                    <elementReference
+          >MAX_OCI_CONN_FAIL_ATTEMPTS</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -209,14 +229,16 @@
             <name>Yes_Is_FO_Canceled</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrder__r.StatusCategory</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrder__r.StatusCategory</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>CANCELLED</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Interaction_Fulfillment_Order_Items</targetReference>
+                <targetReference
+        >Interaction_Fulfillment_Order_Items</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -227,14 +249,16 @@
         <locationX>162</locationX>
         <locationY>642</locationY>
         <defaultConnector>
-            <targetReference>Interaction_Fulfillment_Order_Items</targetReference>
+            <targetReference
+      >Interaction_Fulfillment_Order_Items</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes_Is_FO_Rejected</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrder__r.StatusCategory</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrder__r.StatusCategory</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>REJECTED</stringValue>
@@ -259,21 +283,24 @@
             <name>Yes_Is_FO_Rejected_and_Not_In_Store_Pickup</name>
             <conditionLogic>(1 OR 3) AND 2</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrder__r.StatusCategory</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrder__r.StatusCategory</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>REJECTED</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrder__r.Type</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrder__r.Type</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
                     <stringValue>In Store Pickup</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrder__r.Status</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrder__r.Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Pick Complete</stringValue>
@@ -291,21 +318,24 @@
         <locationX>362</locationX>
         <locationY>689</locationY>
         <defaultConnector>
-            <targetReference>Interaction_Fulfillment_Order_Items</targetReference>
+            <targetReference
+      >Interaction_Fulfillment_Order_Items</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes_Is_In_Store_Pickup</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrder__r.Type</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrder__r.Type</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>In Store Pickup</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Process_Exception_Rejected_In_Store_Pickup</targetReference>
+                <targetReference
+        >Process_Exception_Rejected_In_Store_Pickup</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -323,14 +353,17 @@
             <name>Yes_Routing_Attempt_Limit_Reached</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrder__r.OrderSummary.RoutingAttempts</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrder__r.OrderSummary.RoutingAttempts</leftValueReference>
                 <operator>GreaterThanOrEqualTo</operator>
                 <rightValue>
-                    <elementReference>MAX_NUMBER_OF_ROUTING_ATTEMPTS</elementReference>
+                    <elementReference
+          >MAX_NUMBER_OF_ROUTING_ATTEMPTS</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Process_Exception_Rejection_Limit_Reached</targetReference>
+                <targetReference
+        >Process_Exception_Rejection_Limit_Reached</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -345,7 +378,8 @@
     <formulas>
         <name>Increment_Order_Summary_Routing_Attempts</name>
         <dataType>Number</dataType>
-        <expression>{!$Record.FulfillmentOrder__r.OrderSummary.RoutingAttempts} + 1</expression>
+        <expression
+    >{!$Record.FulfillmentOrder__r.OrderSummary.RoutingAttempts} + 1</expression>
         <scale>0</scale>
     </formulas>
     <formulas>
@@ -353,14 +387,16 @@
         <dataType>DateTime</dataType>
         <expression>NOW() + (1/24)</expression>
     </formulas>
-    <interviewLabel>Transfer Back Reservation &amp; Schedule Rerouting JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Transfer Back Reservation &amp; Schedule Rerouting JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Transfer Back Reservation &amp; Schedule Rerouting JDE</label>
     <loops>
         <name>Error_Responses</name>
         <label>Error Responses</label>
         <locationX>1234</locationX>
         <locationY>468</locationY>
-        <collectionReference>TransferReservationOutputRepresenation.errors</collectionReference>
+        <collectionReference
+    >TransferReservationOutputRepresenation.errors</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Exception_Message</targetReference>
@@ -374,7 +410,8 @@
         <label>Interaction Fulfillment Order Items</label>
         <locationX>682</locationX>
         <locationY>469</locationY>
-        <collectionReference>Interaction_Fulfillment_Order_Items</collectionReference>
+        <collectionReference
+    >Interaction_Fulfillment_Order_Items</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Transfer_Reservation_Input</targetReference>
@@ -413,13 +450,15 @@
         <inputAssignments>
             <field>OrderDeliveryGroupSummaryId__c</field>
             <value>
-                <elementReference>OrderDeliveryGroupSummaryNumber</elementReference>
+                <elementReference
+        >OrderDeliveryGroupSummaryNumber</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummary.Id</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummary.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -443,7 +482,8 @@
         <locationX>1152</locationX>
         <locationY>912</locationY>
         <connector>
-            <targetReference>Abandon_Interaction_Fulfillment_Order</targetReference>
+            <targetReference
+      >Abandon_Interaction_Fulfillment_Order</targetReference>
         </connector>
         <inputAssignments>
             <field>AttachedToId</field>
@@ -460,7 +500,8 @@
         <inputAssignments>
             <field>Description</field>
             <value>
-                <elementReference>$Label.OCIConnectionFailedAttempts</elementReference>
+                <elementReference
+        >$Label.OCIConnectionFailedAttempts</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -472,7 +513,8 @@
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -525,13 +567,15 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.OCITransferReservationError</elementReference>
+                <elementReference
+        >$Label.OCITransferReservationError</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -581,13 +625,15 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.FlowErrors_FORejectedInStorePickupErrorMessage</elementReference>
+                <elementReference
+        >$Label.FlowErrors_FORejectedInStorePickupErrorMessage</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummary.Id</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummary.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -622,7 +668,8 @@
         <inputAssignments>
             <field>AttachedToId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -634,19 +681,22 @@
         <inputAssignments>
             <field>Description</field>
             <value>
-                <elementReference>$Label.Reservation_Rejection_Limit_Reached_Description</elementReference>
+                <elementReference
+        >$Label.Reservation_Rejection_Limit_Reached_Description</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.Reservation_Rejection_Limit_Reached_Message</elementReference>
+                <elementReference
+        >$Label.Reservation_Rejection_Limit_Reached_Message</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -663,9 +713,11 @@
         <label>Interaction Fulfillment Order Items</label>
         <locationX>376</locationX>
         <locationY>469</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Interaction_Fulfillment_Order_Items_Loop</targetReference>
+            <targetReference
+      >Interaction_Fulfillment_Order_Items_Loop</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -684,7 +736,8 @@
         <label>Order Delivery Group Summary</label>
         <locationX>1847</locationX>
         <locationY>834</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Order_Summary_Routing_Schedule</targetReference>
         </connector>
@@ -693,12 +746,14 @@
             <field>OrderSummaryId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
             </value>
         </filters>
         <object>OrderDeliveryGroupSummary</object>
         <outputAssignments>
-            <assignToReference>OrderDeliveryGroupSummaryNumber</assignToReference>
+            <assignToReference
+      >OrderDeliveryGroupSummaryNumber</assignToReference>
             <field>Id</field>
         </outputAssignments>
     </recordLookups>
@@ -760,7 +815,8 @@
         <inputAssignments>
             <field>ConnectionFailedAttempts__c</field>
             <value>
-                <elementReference>Increment_Connection_Failed_Attempts</elementReference>
+                <elementReference
+        >Increment_Connection_Failed_Attempts</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -795,7 +851,8 @@
     <start>
         <locationX>50</locationX>
         <locationY>50</locationY>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Status__c</field>
@@ -830,7 +887,8 @@
     <textTemplates>
         <name>Error_Message_Template</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>[SKU: {!Error_Responses.details.stockKeepingUnit} - {!Error_Responses.message}]</text>
+        <text
+    >[SKU: {!Error_Responses.details.stockKeepingUnit} - {!Error_Responses.message}]</text>
     </textTemplates>
     <variables>
         <name>ExceptionMessage</name>
@@ -848,7 +906,8 @@
     </variables>
     <variables>
         <name>SingleTransferReservationInputRepresentation</name>
-        <apexClass>ConnectApi__OCITransferReservationSingleInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCITransferReservationSingleInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -856,7 +915,8 @@
     </variables>
     <variables>
         <name>TransferReservationInputRepresentation</name>
-        <apexClass>ConnectApi__OCITransferReservationInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCITransferReservationInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -864,7 +924,8 @@
     </variables>
     <variables>
         <name>TransferReservationOutputRepresenation</name>
-        <apexClass>ConnectApi__OCITransferReservationOutputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCITransferReservationOutputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>SalesforceObj85ee364071776c0c89fe9a50b40a1733_FireJBTrigger</name>
-        <label>SalesforceObj85ee364071776c0c89fe9a50b40a1733_FireJBTrigger</label>
+        <label
+    >SalesforceObj85ee364071776c0c89fe9a50b40a1733_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
@@ -10,7 +11,8 @@
         <inputParameters>
             <name>ContactKey</name>
             <value>
-                <stringValue>{&quot;relationshipIdName&quot;:&quot;Contact__c&quot;,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Contact&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
+                <stringValue
+        >{&quot;relationshipIdName&quot;:&quot;Contact__c&quot;,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Contact&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -28,7 +30,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObj85ee364071776c0c89fe9a50b40a1733</stringValue>
+                <stringValue
+        >SalesforceObj85ee364071776c0c89fe9a50b40a1733</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -52,27 +55,32 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:Contact__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Email&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Loyalty__c&quot;,&quot;CreatedDate&quot;,&quot;Loyalty_Source__c&quot;,&quot;Transaction_Amount__c&quot;,&quot;Total_Loyalty_Points__c&quot;,&quot;Loyalty_Notes_Reference__c&quot;,&quot;Loyalty_Transaction_Type__c&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Loyalty_Consumer__r&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:Loyalty_Consumer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Brand__c&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Country__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:Contact__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Email&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Loyalty__c&quot;,&quot;CreatedDate&quot;,&quot;Loyalty_Source__c&quot;,&quot;Transaction_Amount__c&quot;,&quot;Total_Loyalty_Points__c&quot;,&quot;Loyalty_Notes_Reference__c&quot;,&quot;Loyalty_Transaction_Type__c&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Loyalty_Consumer__r&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:Loyalty_Consumer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Brand__c&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Country__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <actionCalls>
         <name>SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_FireJBTrigger</name>
-        <label>SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_FireJBTrigger</label>
+        <label
+    >SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
         </faultConnector>
         <inputParameters>
             <name>ContactKey</name>
             <value>
-                <stringValue>{&quot;relationshipIdName&quot;:&quot;Contact__c&quot;,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Contact&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
+                <stringValue
+        >{&quot;relationshipIdName&quot;:&quot;Contact__c&quot;,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Contact&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -90,7 +98,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</stringValue>
+                <stringValue
+        >SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -114,19 +123,23 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:Contact__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Email&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Loyalty__c&quot;,&quot;CreatedDate&quot;,&quot;Loyalty_Source__c&quot;,&quot;Transaction_Amount__c&quot;,&quot;Total_Loyalty_Points__c&quot;,&quot;Loyalty_Notes_Reference__c&quot;,&quot;Loyalty_Transaction_Type__c&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Loyalty_Consumer__r&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:Loyalty_Consumer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Brand__c&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Country__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Contact__r&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:Contact__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Email&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Loyalty__c&quot;,&quot;CreatedDate&quot;,&quot;Loyalty_Source__c&quot;,&quot;Transaction_Amount__c&quot;,&quot;Total_Loyalty_Points__c&quot;,&quot;Loyalty_Notes_Reference__c&quot;,&quot;Loyalty_Transaction_Type__c&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Loyalty_Consumer__r&quot;,&quot;dePrefix&quot;:&quot;Loyalty_Transaction__c:Loyalty_Consumer__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Brand__c&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Country__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>49.0</apiVersion>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</name>
-        <label>JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Parameters_ContactKey_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.Contact__c</leftValueReference>
@@ -135,10 +148,12 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <label>JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Parameters_Null</name>
+            <name
+      >JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -148,22 +163,28 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Parameters_Null</label>
+            <label
+      >JB_SalesforceObj85ee364071776c0c89fe9a50b40a1733_Parameters_Null</label>
         </rules>
     </decisions>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</name>
-        <label>JB_Decision_Null_Check_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Parameters_ContactKey_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.Contact__c</leftValueReference>
@@ -173,12 +194,15 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
+                <targetReference
+        >JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
             </connector>
-            <label>JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Parameters_Null</name>
+            <name
+      >JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -188,9 +212,11 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Parameters_Null</label>
+            <label
+      >JB_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_Parameters_Null</label>
         </rules>
     </decisions>
     <decisions>
@@ -203,14 +229,16 @@
             <name>SalesforceObj85ee364071776c0c89fe9a50b40a1733</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
-                <leftValueReference>new_object.Loyalty_Transaction_Type__c</leftValueReference>
+                <leftValueReference
+        >new_object.Loyalty_Transaction_Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Redeem</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObj85ee364071776c0c89fe9a50b40a1733_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObj85ee364071776c0c89fe9a50b40a1733_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObj85ee364071776c0c89fe9a50b40a1733</label>
         </rules>
@@ -221,28 +249,32 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObj85ee364071776c0c89fe9a50b40a1733</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
-                <leftValueReference>new_object.Loyalty_Transaction_Type__c</leftValueReference>
+                <leftValueReference
+        >new_object.Loyalty_Transaction_Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Deposit</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObjfedd5826e777eff4bafad1c3ec4671f3_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</label>
         </rules>
     </decisions>
     <label>JBSystemFlow_Loyalty_Transaction_c</label>
     <processType>AutoLaunchedFlow</processType>
-    <startElementReference>JB_Decision_Null_Check_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</startElementReference>
+    <startElementReference
+  >JB_Decision_Null_Check_SalesforceObjfedd5826e777eff4bafad1c3ec4671f3</startElementReference>
     <status>Active</status>
     <variables>
         <name>new_object</name>

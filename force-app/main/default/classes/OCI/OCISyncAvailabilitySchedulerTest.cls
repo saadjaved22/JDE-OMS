@@ -1,14 +1,17 @@
 @isTest
 public class OCISyncAvailabilitySchedulerTest {
-    @isTest
-    static void testExecute() {
-        OCI_Commerce_API__c apiSettingsTestData = OCITestDataFactory.createOCICommerceAPITestData(null, null);
-        Test.setMock(HttpCalloutMock.class, new OCICommerceAPIMock());
+  @isTest
+  static void testExecute() {
+    OCI_Commerce_API__c apiSettingsTestData = OCITestDataFactory.createOCICommerceAPITestData(
+      null,
+      null
+    );
+    Test.setMock(HttpCalloutMock.class, new OCICommerceAPIMock());
 
-        OCISyncAvailabilityScheduler scheduler = new OCISyncAvailabilityScheduler();
+    OCISyncAvailabilityScheduler scheduler = new OCISyncAvailabilityScheduler();
 
-        Test.startTest();
-        scheduler.execute(null);
-        Test.stopTest();
-    }
+    Test.startTest();
+    scheduler.execute(null);
+    Test.stopTest();
+  }
 }

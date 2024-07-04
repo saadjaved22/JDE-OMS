@@ -1,207 +1,273 @@
 /**
-* REST endpoint to allow linking Account with Campaign
-*
-* @author piotr.tugeman@emark.com
-*/
+ * REST endpoint to allow linking Account with Campaign
+ *
+ * @author piotr.tugeman@emark.com
+ */
 @RestResource(urlMapping='/v1/linkAccountCampaign')
 global with sharing class LinkAccountCampaignRESTResource {
-	
-	public static final String SUCCESS_LINKED = 'Account and Campaign linked.';
-	public static final String SUCCESS_STATUS_UPDATED = 'Account and Campaign already linked. Updating status and preference.';
-	public static final String ERROR_INSUFFICIENT_DATA = 'Can\'t link Account with Campaign - insufficient incoming data. Missing field from request: ';
-	public static final String ERROR_ACCOUNT_DOES_NOT_EXIST = 'Can\'t link Account with Campaign. Account does not exist. Account from request: ';
-	public static final String ERROR_CAMPAIGN_DOES_NOT_EXIST = 'Can\'t link Account with Campaign. Campaign does not exist. Campaign from request: ';
-	
-	/*
+  public static final String SUCCESS_LINKED = 'Account and Campaign linked.';
+  public static final String SUCCESS_STATUS_UPDATED = 'Account and Campaign already linked. Updating status and preference.';
+  public static final String ERROR_INSUFFICIENT_DATA = 'Can\'t link Account with Campaign - insufficient incoming data. Missing field from request: ';
+  public static final String ERROR_ACCOUNT_DOES_NOT_EXIST = 'Can\'t link Account with Campaign. Account does not exist. Account from request: ';
+  public static final String ERROR_CAMPAIGN_DOES_NOT_EXIST = 'Can\'t link Account with Campaign. Campaign does not exist. Campaign from request: ';
+
+  /*
 	@HttpGet
 	global static List<Campaign> getAllCampaigns() {
 		return CampaignSelector.getAllCampaignsWithMembers();
 	}*/
 
-	@HttpPost
-	global static FullResponse linkAccountWithCampaign() {
+  @HttpPost
+  global static FullResponse linkAccountWithCampaign() {
+    RestRequest request = RestContext.request;
+    System.debug(
+      'Incoming request uri: ' +
+        request.requestURI +
+        ' parh:' +
+        request.resourcePath +
+        'headers:' +
+        request.headers +
+        ' body: ' +
+        request.requestBody
+    );
+    FullRequest parsedRequest = readDataFrom(request);
+    system.debug('parsedRequest' + parsedRequest);
+    Account account = findAccountInDatabase(parsedRequest.account);
+    Campaign campaign = findCampaignInDatabase(parsedRequest.campaign);
 
-		RestRequest request = RestContext.request;
-		System.debug('Incoming request uri: ' + request.requestURI + ' parh:' + request.resourcePath + 'headers:' + request.headers + ' body: ' + request.requestBody);
-		FullRequest parsedRequest = readDataFrom( request );
-		system.debug('parsedRequest' + parsedRequest);
-		Account account = findAccountInDatabase( parsedRequest.account );
-		Campaign campaign = findCampaignInDatabase( parsedRequest.campaign );
+    CampaignMember existingCampaignMember = checkIfLinked(account, campaign);
+    String newStatus = getMemberStatus(parsedRequest);
+    String preference = getMemberPreference(parsedRequest);
 
-		CampaignMember existingCampaignMember = checkIfLinked(account, campaign);
-		String newStatus = getMemberStatus( parsedRequest );
-        String preference = getMemberPreference ( parsedRequest );
+    FullResponse response;
+    // update:
+    if (null != existingCampaignMember) {
+      existingCampaignMember = updateCampaignMemberStatus(
+        existingCampaignMember,
+        newStatus,
+        preference
+      );
 
-		FullResponse response;
-		// update:
-		if ( null != existingCampaignMember ){
-			existingCampaignMember = updateCampaignMemberStatus( existingCampaignMember, newStatus, preference );
-			
-			System.debug( 'Account with ExternalID=[' + account.External_Id__c + '] was already linked with Campaign=[' + campaign.Id +']. Updating status. CampaginMember=' + existingCampaignMember );
-			response = generateResponse( account, existingCampaignMember, SUCCESS_STATUS_UPDATED );    
-		}
-		// linking:
-		else {
-			CampaignMember createdMember = link( account, campaign, newStatus, preference );
+      System.debug(
+        'Account with ExternalID=[' +
+          account.External_Id__c +
+          '] was already linked with Campaign=[' +
+          campaign.Id +
+          ']. Updating status. CampaginMember=' +
+          existingCampaignMember
+      );
+      response = generateResponse(
+        account,
+        existingCampaignMember,
+        SUCCESS_STATUS_UPDATED
+      );
+    }
+    // linking:
+    else {
+      CampaignMember createdMember = link(
+        account,
+        campaign,
+        newStatus,
+        preference
+      );
 
-			System.debug( 'Account with ExternalID=[' + account.External_Id__c + '] was linked with Campaign=[' + campaign.Id +']');
-			response = generateResponse( account, createdMember, SUCCESS_LINKED );    
-		}
+      System.debug(
+        'Account with ExternalID=[' +
+          account.External_Id__c +
+          '] was linked with Campaign=[' +
+          campaign.Id +
+          ']'
+      );
+      response = generateResponse(account, createdMember, SUCCESS_LINKED);
+    }
 
-		System.debug('Sending response: ' + response);
-		return response;        
-	}
+    System.debug('Sending response: ' + response);
+    return response;
+  }
 
-	private static FullRequest readDataFrom (RestRequest request){
+  private static FullRequest readDataFrom(RestRequest request) {
+    String requestBody = request.requestBody.toString();
+    FullRequest fullRequest = (FullRequest) JSON.deserialize(
+      requestBody,
+      FullRequest.class
+    );
 
-		String requestBody = request.requestBody.toString();
-		FullRequest fullRequest = (FullRequest) JSON.deserialize(requestBody, FullRequest.class);
+    checkMandatoryFields(fullRequest);
 
-		checkMandatoryFields(fullRequest);
+    return fullRequest;
+  }
 
-		return fullRequest; 
-	}
+  private static void checkMandatoryFields(FullRequest fullRequest) {
+    RESTRequestAccount account = fullRequest.account;
+    system.debug('account' + account);
+    system.debug('account' + account.externalId);
+    if (String.isEmpty(account.externalId)) {
+      throw new CalloutException(
+        ERROR_INSUFFICIENT_DATA + 'account.externalId=' + account.externalId
+      );
+    }
 
-	private static void checkMandatoryFields( FullRequest fullRequest){
+    RESTRequestCampaign campaign = fullRequest.campaign;
 
-		RESTRequestAccount account = fullRequest.account;
-		system.debug('account' + account);
-        system.debug('account' + account.externalId);
-		if ( String.isEmpty( account.externalId ) ){
-			throw new CalloutException(ERROR_INSUFFICIENT_DATA +'account.externalId=' + account.externalId);
-		}
+    if (String.isEmpty(campaign.externalId)) {
+      throw new CalloutException(
+        ERROR_INSUFFICIENT_DATA + 'campaign.externalId=' + campaign.externalId
+      );
+    }
+  }
 
-		RESTRequestCampaign campaign = fullRequest.campaign;
+  private static Account findAccountInDatabase(RESTRequestAccount restAccount) {
+    String externalId = restAccount.externalId;
 
-		if ( String.isEmpty( campaign.externalId ) ){
-			throw new CalloutException(ERROR_INSUFFICIENT_DATA + 'campaign.externalId=' + campaign.externalId);
-		}
-	}
+    Account existingAccount = AccountSelector.getAccountByExternalId(
+      externalId
+    );
 
-	private static Account findAccountInDatabase ( RESTRequestAccount restAccount ){
-		String externalId = restAccount.externalId;
+    if (null == existingAccount) {
+      throw new CalloutException(ERROR_ACCOUNT_DOES_NOT_EXIST + restAccount);
+    }
 
-		Account existingAccount = AccountSelector.getAccountByExternalId( externalId );
+    return existingAccount;
+  }
 
-		if (null == existingAccount){
-			throw new CalloutException(ERROR_ACCOUNT_DOES_NOT_EXIST + restAccount);
-		}
+  private static Campaign findCampaignInDatabase(
+    RESTRequestCampaign restCampaign
+  ) {
+    String externalId = restCampaign.externalId;
 
-		return existingAccount;
-	}
+    Campaign existingCampaign = CampaignSelector.getCampaignByExternalId(
+      externalId
+    );
 
-	private static Campaign findCampaignInDatabase ( RESTRequestCampaign restCampaign ){
-		String externalId = restCampaign.externalId; 
+    if (null == existingCampaign) {
+      throw new CalloutException(ERROR_CAMPAIGN_DOES_NOT_EXIST + restCampaign);
+    }
 
-		Campaign existingCampaign = CampaignSelector.getCampaignByExternalId( externalId );
+    return existingCampaign;
+  }
+  private static CampaignMember checkIfLinked(
+    Account account,
+    Campaign campaign
+  ) {
+    String campaignId = campaign.Id;
+    String contactId = account.PersonContactId;
 
-		if ( null == existingCampaign ){
-			throw new CalloutException(ERROR_CAMPAIGN_DOES_NOT_EXIST + restCampaign);
-		}
+    CampaignMember existingMember = CampaignSelector.getCampaignMember(
+      campaignId,
+      contactId
+    );
 
-		return existingCampaign;
-	}
-	private static CampaignMember checkIfLinked(Account account, Campaign campaign){
-		String campaignId = campaign.Id;
-		String contactId = account.PersonContactId;
+    return existingMember;
+  }
 
-		CampaignMember existingMember = CampaignSelector.getCampaignMember( campaignId, contactId);
+  private static String getMemberStatus(FullRequest fullResponse) {
+    String status = fullResponse.campaign.memberStatus;
 
-		return existingMember;
-	}
+    return status;
+  }
 
-	private static String getMemberStatus(FullRequest fullResponse){
-		String status = fullResponse.campaign.memberStatus;
+  private static String getMemberPreference(FullRequest fullResponse) {
+    String preference = fullResponse.campaign.preference;
 
-		return status;
-	}
-    
-    private static String getMemberPreference(FullRequest fullResponse){
-		String preference = fullResponse.campaign.preference;
+    return preference;
+  }
 
-		return preference;
-	}
+  private static CampaignMember updateCampaignMemberStatus(
+    CampaignMember campaignMember,
+    String status,
+    String preference
+  ) {
+    campaignMember.Status = status;
+    campaignMember.Preference__c = preference;
+    upsert campaignMember;
 
-	private static CampaignMember updateCampaignMemberStatus( CampaignMember campaignMember, String status, String preference ){
-		campaignMember.Status = status;
-        campaignMember.Preference__c = preference;
-		upsert campaignMember;
-        
-		
-		// check real status after insertion:
-		CampaignMember updatedMember = CampaignSelector.getCampaignMember( campaignMember.CampaignId, campaignMember.ContactId );
+    // check real status after insertion:
+    CampaignMember updatedMember = CampaignSelector.getCampaignMember(
+      campaignMember.CampaignId,
+      campaignMember.ContactId
+    );
 
-		return updatedMember;	
-	}
+    return updatedMember;
+  }
 
-	private static CampaignMember link ( Account account, Campaign campaign, String status, String preference ){
-		CampaignMember member = new CampaignMember();
-		member.ContactId = account.PersonContactId;
-		member.CampaignId = campaign.Id;
-		member.Status = status;
-        member.Preference__c = preference;
-		insert member;
+  private static CampaignMember link(
+    Account account,
+    Campaign campaign,
+    String status,
+    String preference
+  ) {
+    CampaignMember member = new CampaignMember();
+    member.ContactId = account.PersonContactId;
+    member.CampaignId = campaign.Id;
+    member.Status = status;
+    member.Preference__c = preference;
+    insert member;
 
-		// check real status after insertion:
-		CampaignMember insertedMember = CampaignSelector.getCampaignMember( member.CampaignId, member.ContactId );
+    // check real status after insertion:
+    CampaignMember insertedMember = CampaignSelector.getCampaignMember(
+      member.CampaignId,
+      member.ContactId
+    );
 
-		return insertedMember;	
-		
-	}
+    return insertedMember;
+  }
 
-	private static FullResponse generateResponse( Account account, CampaignMember campaignMember, String message ){
-		FullResponse response = new FullResponse();
-        
-        RESTResponseAccount responseAccount = new RESTResponseAccount();
-        responseAccount.externalId = account.External_Id__c;
-        
-        RESTResponseCampaign responseCampaign = new RESTResponseCampaign();
-        Campaign campaign = CampaignSelector.getCampaignById ( campaignMember.CampaignId );
-        responseCampaign.externalId = campaign.External_Id__c;
-        responseCampaign.memberStatus = campaignMember.Status;
-        responseCampaign.preference = campaignMember.Preference__c;
+  private static FullResponse generateResponse(
+    Account account,
+    CampaignMember campaignMember,
+    String message
+  ) {
+    FullResponse response = new FullResponse();
 
-        
-        response.account = responseAccount;
-        response.campaign = responseCampaign;
-        response.success = true;
-        response.message = message;
+    RESTResponseAccount responseAccount = new RESTResponseAccount();
+    responseAccount.externalId = account.External_Id__c;
 
-        return response;
-	}
+    RESTResponseCampaign responseCampaign = new RESTResponseCampaign();
+    Campaign campaign = CampaignSelector.getCampaignById(
+      campaignMember.CampaignId
+    );
+    responseCampaign.externalId = campaign.External_Id__c;
+    responseCampaign.memberStatus = campaignMember.Status;
+    responseCampaign.preference = campaignMember.Preference__c;
 
-	//==========Inner classes used for serialization/deserialization of request/response bodies =========================================
-	public class FullRequest{
-		private RESTRequestAccount account;
-		private RestRequestCampaign campaign;
-	}
+    response.account = responseAccount;
+    response.campaign = responseCampaign;
+    response.success = true;
+    response.message = message;
 
-	public class RESTRequestAccount {
-		private String externalId;
-	}
+    return response;
+  }
 
-	public class RESTRequestCampaign{
-		private String externalId;
-		private String memberStatus;
-        private String preference;
-	}
+  //==========Inner classes used for serialization/deserialization of request/response bodies =========================================
+  public class FullRequest {
+    private RESTRequestAccount account;
+    private RestRequestCampaign campaign;
+  }
 
-	global class FullResponse{
-		public Boolean success;
-		public String message;
-		public RESTResponseAccount account;
-		public RESTResponseCampaign campaign;
-	}
+  public class RESTRequestAccount {
+    private String externalId;
+  }
 
-	public class RESTResponseAccount {
-		public String externalId;
-	}
-	
-	public class RESTResponseCampaign {
-		public String externalId;
-		public String memberStatus;
-        public String preference;
+  public class RESTRequestCampaign {
+    private String externalId;
+    private String memberStatus;
+    private String preference;
+  }
 
-        
-	}
+  global class FullResponse {
+    public Boolean success;
+    public String message;
+    public RESTResponseAccount account;
+    public RESTResponseCampaign campaign;
+  }
+
+  public class RESTResponseAccount {
+    public String externalId;
+  }
+
+  public class RESTResponseCampaign {
+    public String externalId;
+    public String memberStatus;
+    public String preference;
+  }
 }

@@ -5,9 +5,9 @@
 History
     fixed by Wunderman Thompson  09/2022
 */
-global class ScheduleUpdateCustomerPortal implements Schedulable{
-	global void execute(SchedulableContext SC) {
-        UpdateCustomerPortalForAccount bat = new UpdateCustomerPortalForAccount();
-       	Database.executeBatch(bat);
-   }
+global class ScheduleUpdateCustomerPortal implements Schedulable {
+  global void execute(SchedulableContext SC) {
+    UpdateCustomerPortalForAccount bat = new UpdateCustomerPortalForAccount();
+    Database.executeBatch(bat);
+  }
 }

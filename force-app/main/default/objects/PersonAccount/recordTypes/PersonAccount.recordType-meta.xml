@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>PersonAccount</fullName>
     <active>true</active>
@@ -1075,7 +1075,8 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Jacobs Espresso Ristretto Tripack %28Bundle DE%29</fullName>
+            <fullName
+      >Jacobs Espresso Ristretto Tripack %28Bundle DE%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1527,11 +1528,13 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Tassimo l%27Or Espresso Delizioso %28Bundle ES%29</fullName>
+            <fullName
+      >Tassimo l%27Or Espresso Delizioso %28Bundle ES%29</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Tassimo l%27Or Espresso Fortissima %28Bundle ES%29</fullName>
+            <fullName
+      >Tassimo l%27Or Espresso Fortissima %28Bundle ES%29</fullName>
             <default>false</default>
         </values>
         <values>

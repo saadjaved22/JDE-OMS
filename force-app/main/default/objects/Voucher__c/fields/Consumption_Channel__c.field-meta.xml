@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Consumption_Channel__c</fullName>
-    <description>This field is for marketing cloud to determine which email type needs to be sent: DTC Code or Button with Hyperlink to URL (MdC).</description>
+    <description
+  >This field is for marketing cloud to determine which email type needs to be sent: DTC Code or Button with Hyperlink to URL (MdC).</description>
     <externalId>false</externalId>
-    <inlineHelpText>This field is for marketing cloud to determine which email type needs to be sent: DTC Code or Button with Hyperlink to URL (MdC).</inlineHelpText>
+    <inlineHelpText
+  >This field is for marketing cloud to determine which email type needs to be sent: DTC Code or Button with Hyperlink to URL (MdC).</inlineHelpText>
     <label>Consumption Channel</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

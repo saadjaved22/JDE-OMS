@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
     <baseObject>Charity__c</baseObject>
     <category>admin</category>
@@ -180,7 +180,8 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Loyalty_Transaction__c.Loyalty_Transaction_Created_Date_Time__c</field>
+            <field
+      >Loyalty_Transaction__c.Loyalty_Transaction_Created_Date_Time__c</field>
             <table>Charity__c.Donations__r</table>
         </columns>
         <columns>

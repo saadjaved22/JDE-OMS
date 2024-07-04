@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Cancel_Fulfillment_Order_Item</name>
@@ -14,7 +14,8 @@
         <inputParameters>
             <name>fulfillmentOrderLineItemsToCancelInput</name>
             <value>
-                <elementReference>SingleFulfillmentOrderLineItemsToCancelInputRepresentation</elementReference>
+                <elementReference
+        >SingleFulfillmentOrderLineItemsToCancelInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -32,10 +33,12 @@
         <locationX>176</locationX>
         <locationY>518</locationY>
         <assignmentItems>
-            <assignToReference>SingleFulfillmentOrderLineItemsToCancelInputRepresentation.fulfillmentOrderLineItemsToCancel</assignToReference>
+            <assignToReference
+      >SingleFulfillmentOrderLineItemsToCancelInputRepresentation.fulfillmentOrderLineItemsToCancel</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>FulfillmentOrderLineItemInputRepresentation</elementReference>
+                <elementReference
+        >FulfillmentOrderLineItemInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -48,25 +51,29 @@
         <locationX>176</locationX>
         <locationY>398</locationY>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderLineItemInputRepresentation.fulfillmentOrderLineItemId</assignToReference>
+            <assignToReference
+      >FulfillmentOrderLineItemInputRepresentation.fulfillmentOrderLineItemId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>FOItemId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>FulfillmentOrderLineItemInputRepresentation.quantity</assignToReference>
+            <assignToReference
+      >FulfillmentOrderLineItemInputRepresentation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>declinedQuantity</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>FOLineItemsToCancelInputRepresentation</targetReference>
+            <targetReference
+      >FOLineItemsToCancelInputRepresentation</targetReference>
         </connector>
     </assignments>
     <environments>Default</environments>
-    <interviewLabel>Fulfilment Order Cancel or Reject {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Fulfilment Order Cancel or Reject {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Fulfilment Order Cancel or Reject</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -124,9 +131,11 @@
         <label>Fulfillment Order Items</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>FulfillmentOrderLineItemInputRepresentationAssign</targetReference>
+            <targetReference
+      >FulfillmentOrderLineItemInputRepresentationAssign</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -159,7 +168,8 @@
         <label>Get Fulfillment Order</label>
         <locationX>176</locationX>
         <locationY>158</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Fulfillment_Order_Items</targetReference>
         </connector>
@@ -187,7 +197,8 @@
     <textTemplates>
         <name>PossibleReasonForError</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;Please check Fulfilment order status. If Status == Fulfilled you won&apos;t be able to modify anything in the order (eg cancel lines). &lt;/p&gt;</text>
+        <text
+    >&lt;p&gt;Please check Fulfilment order status. If Status == Fulfilled you won&apos;t be able to modify anything in the order (eg cancel lines). &lt;/p&gt;</text>
     </textTemplates>
     <variables>
         <name>declinedQuantity</name>
@@ -206,7 +217,8 @@
     </variables>
     <variables>
         <name>FulfillmentOrderLineItemInputRepresentation</name>
-        <apexClass>ConnectApi__FulfillmentOrderLineItemInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderLineItemInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
@@ -214,7 +226,8 @@
     </variables>
     <variables>
         <name>FulfillmentOrderLineItemsInputRepresentation</name>
-        <apexClass>ConnectApi__FulfillmentOrderLineItemInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderLineItemInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
@@ -222,7 +235,8 @@
     </variables>
     <variables>
         <name>FulfillmentOrderLineItemsToCancelInputRepresentation</name>
-        <apexClass>ConnectApi__FulfillmentOrderLineItemsToCancelInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderLineItemsToCancelInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>true</isCollection>
         <isInput>true</isInput>
@@ -237,7 +251,8 @@
     </variables>
     <variables>
         <name>SingleFulfillmentOrderLineItemsToCancelInputRepresentation</name>
-        <apexClass>ConnectApi__FulfillmentOrderLineItemsToCancelInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__FulfillmentOrderLineItemsToCancelInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

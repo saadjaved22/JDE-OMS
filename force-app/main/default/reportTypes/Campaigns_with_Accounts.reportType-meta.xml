@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
     <baseObject>Account</baseObject>
     <category>campaigns</category>
@@ -2271,17 +2271,20 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Account_Consent_Registration_Date__c</field>
+            <field
+      >CreatedBy.Account.Account_Consent_Registration_Date__c</field>
             <table>Account.Contacts.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Account_Consent_Registration_IP_Address__c</field>
+            <field
+      >CreatedBy.Account.Account_Consent_Registration_IP_Address__c</field>
             <table>Account.Contacts.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Account_Consent_Registration_Source_URL__c</field>
+            <field
+      >CreatedBy.Account.Account_Consent_Registration_Source_URL__c</field>
             <table>Account.Contacts.CampaignMembers</table>
         </columns>
         <columns>
@@ -2496,7 +2499,8 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Confirmation_Completion_Email_Address__c</field>
+            <field
+      >CreatedBy.Account.Confirmation_Completion_Email_Address__c</field>
             <table>Account.Contacts.CampaignMembers</table>
         </columns>
         <columns>
@@ -2551,7 +2555,8 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Double_Opt_in_Reminder_Email_Send_Date__c</field>
+            <field
+      >CreatedBy.Account.Double_Opt_in_Reminder_Email_Send_Date__c</field>
             <table>Account.Contacts.CampaignMembers</table>
         </columns>
         <columns>
@@ -3554,17 +3559,20 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Account_Consent_Registration_Date__c</field>
+            <field
+      >CreatedBy.Account.Account_Consent_Registration_Date__c</field>
             <table>Account.Contacts.CampaignMembers.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Account_Consent_Registration_IP_Address__c</field>
+            <field
+      >CreatedBy.Account.Account_Consent_Registration_IP_Address__c</field>
             <table>Account.Contacts.CampaignMembers.CampaignMembers</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Account_Consent_Registration_Source_URL__c</field>
+            <field
+      >CreatedBy.Account.Account_Consent_Registration_Source_URL__c</field>
             <table>Account.Contacts.CampaignMembers.CampaignMembers</table>
         </columns>
         <columns>
@@ -3779,7 +3787,8 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Confirmation_Completion_Email_Address__c</field>
+            <field
+      >CreatedBy.Account.Confirmation_Completion_Email_Address__c</field>
             <table>Account.Contacts.CampaignMembers.CampaignMembers</table>
         </columns>
         <columns>
@@ -3834,7 +3843,8 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Account.Double_Opt_in_Reminder_Email_Send_Date__c</field>
+            <field
+      >CreatedBy.Account.Double_Opt_in_Reminder_Email_Send_Date__c</field>
             <table>Account.Contacts.CampaignMembers.CampaignMembers</table>
         </columns>
         <columns>

@@ -1,41 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label></label>
+    <label />
     <name>Payment_Method__c</name>
     <picklistValues>
         <masterLabel>Carte Bleue</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Debit Card Maestro</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>GiroPay</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Master Card</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Other</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>PayPal</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Sofort</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Visa Card</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>iDEAL</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
 </CustomFieldTranslation>

@@ -11,11 +11,12 @@ public with sharing class RestServiceShipmentTest {
     List<RestServiceShipment.orderItemWrapper> shippingOrderItems = new List<RestServiceShipment.orderItemWrapper>();
     RestServiceShipment.orderItemWrapper shippingOrderItem = new RestServiceShipment.orderItemWrapper();
     shippingOrderItem.aggregatedLineID = '1';
-    shippingOrderItem.sku = ((Product2) results.get('product')).StockKeepingUnit;
+    shippingOrderItem.sku = ((Product2) results.get('product'))
+      .StockKeepingUnit;
     shippingOrderItem.shippedQuantity = '1';
     shippingOrderItem.declinedQuantity = '0';
     shippingOrderItems.add(shippingOrderItem);
-	Test.startTest();
+    Test.startTest();
     RestServiceShipment.createShipment(
       ((Order) results.get('order')).OrderReferenceNumber,
       fOrder.Fulfillment_Order_Id__c,
@@ -31,6 +32,6 @@ public with sharing class RestServiceShipmentTest {
       '2342341242123423',
       shippingOrderItems
     );
-	Test.stopTest();
+    Test.stopTest();
   }
 }

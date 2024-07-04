@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>53.0</apiVersion>
     <assignments>
@@ -47,14 +47,16 @@
             <name>In_Store_Pickup</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrderLineItem.FulfillmentOrder.Type</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrderLineItem.FulfillmentOrder.Type</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>In Store Pickup</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.OrderItemSummary.ReservedAtLocationId</leftValueReference>
+                <leftValueReference
+        >$Record.OrderItemSummary.ReservedAtLocationId</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
                     <stringValue>131</stringValue>
@@ -73,7 +75,8 @@
             <name>Yes_Is_a_Product</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.OrderItemSummary.Type</leftValueReference>
+                <leftValueReference
+        >$Record.OrderItemSummary.Type</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Order Product</stringValue>
@@ -98,14 +101,16 @@
             <name>Yes_Is_Rejection</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrderLineItem.RejectedQuantity__c</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrderLineItem.RejectedQuantity__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.FulfillmentOrderLineItem.RejectedQuantity__c</leftValueReference>
+                <leftValueReference
+        >$Record.FulfillmentOrderLineItem.RejectedQuantity__c</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -127,7 +132,8 @@
             <name>Is_Reship_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Fulfillment_Order.IsReship</leftValueReference>
+                <leftValueReference
+        >Fulfillment_Order.IsReship</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -145,14 +151,17 @@
         <locationX>297</locationX>
         <locationY>613</locationY>
         <defaultConnector>
-            <targetReference>Fulfill_To_Location_For_In_Store_Pickup</targetReference>
+            <targetReference
+      >Fulfill_To_Location_For_In_Store_Pickup</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Reservation Location is Set</defaultConnectorLabel>
+        <defaultConnectorLabel
+    >Reservation Location is Set</defaultConnectorLabel>
         <rules>
             <name>Reservation_Location_is_Not_Set</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.OrderItemSummary.ReservedAtLocationId</leftValueReference>
+                <leftValueReference
+        >$Record.OrderItemSummary.ReservedAtLocationId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -168,10 +177,12 @@
     <formulas>
         <name>GetCancelQuantity</name>
         <dataType>Number</dataType>
-        <expression>{!$Record.OldQuantity} -  {!$Record.NewQuantity}</expression>
+        <expression
+    >{!$Record.OldQuantity} -  {!$Record.NewQuantity}</expression>
         <scale>2</scale>
     </formulas>
-    <interviewLabel>Prep Fulfillment OrderItem for Transfer Back JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Prep Fulfillment OrderItem for Transfer Back JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Prep Fulfillment OrderItem for Transfer Back JDE</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -209,7 +220,8 @@
         <inputAssignments>
             <field>FulfillmentOrder__c</field>
             <value>
-                <elementReference>$Record.FulfillmentOrderLineItem.FulfillmentOrderId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrderLineItem.FulfillmentOrderId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -241,13 +253,15 @@
         <inputAssignments>
             <field>FromLocation__c</field>
             <value>
-                <elementReference>$Record.FulfillmentOrderLineItem.FulfillmentOrder.FulfilledFromLocationId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrderLineItem.FulfillmentOrder.FulfilledFromLocationId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>FulfillmentOrderItem__c</field>
             <value>
-                <elementReference>$Record.FulfillmentOrderLineItemId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrderLineItemId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -271,7 +285,8 @@
         <inputAssignments>
             <field>ToLocationGroup__c</field>
             <value>
-                <elementReference>$Record.OrderItemSummary.ReservedAtLocationId</elementReference>
+                <elementReference
+        >$Record.OrderItemSummary.ReservedAtLocationId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -291,7 +306,8 @@
         <inputAssignments>
             <field>AttachedToId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrderLineItem.FulfillmentOrderId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrderLineItem.FulfillmentOrderId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -303,25 +319,29 @@
         <inputAssignments>
             <field>Description</field>
             <value>
-                <elementReference>$Label.FlowErrors_reservedAtLocationIdIsNotSetErrorDescription</elementReference>
+                <elementReference
+        >$Label.FlowErrors_reservedAtLocationIdIsNotSetErrorDescription</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>ExternalReference</field>
             <value>
-                <elementReference>$Record.FulfillmentOrderLineItemId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrderLineItemId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.FlowErrors_reservedAtLocationIdIsNotSetErrorMessage</elementReference>
+                <elementReference
+        >$Label.FlowErrors_reservedAtLocationIdIsNotSetErrorMessage</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>$Record.OrderItemSummary.OrderSummaryId</elementReference>
+                <elementReference
+        >$Record.OrderItemSummary.OrderSummaryId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -350,7 +370,8 @@
         <label>Fulfillment Order</label>
         <locationX>177</locationX>
         <locationY>452</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Is_a_Product</targetReference>
         </connector>
@@ -359,7 +380,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.FulfillmentOrderLineItem.FulfillmentOrderId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrderLineItem.FulfillmentOrderId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>

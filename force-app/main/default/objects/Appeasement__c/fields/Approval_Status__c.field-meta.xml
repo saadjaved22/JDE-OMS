@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Approval_Status__c</fullName>
     <description>For bigger appeasements, an approval is required</description>
     <externalId>false</externalId>
-    <inlineHelpText>For bigger appeasements, an approval is required</inlineHelpText>
+    <inlineHelpText
+  >For bigger appeasements, an approval is required</inlineHelpText>
     <label>Approval Status</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

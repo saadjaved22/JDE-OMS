@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Tassimo_RO_Import__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>Checkbox that determines that records came from Tassimo RO Import.</description>
+    <description
+  >Checkbox that determines that records came from Tassimo RO Import.</description>
     <externalId>false</externalId>
     <label>Tassimo RO Import</label>
     <trackHistory>false</trackHistory>

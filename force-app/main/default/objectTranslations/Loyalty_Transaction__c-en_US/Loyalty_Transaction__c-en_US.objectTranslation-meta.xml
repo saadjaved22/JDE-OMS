@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
@@ -11,37 +11,37 @@
     <layouts>
         <layout>Loyalty Transaction Layout</layout>
         <sections>
-            <label></label>
+            <label />
             <section>Custom Links</section>
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>CorrectionAndTransfer</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>DE_External_Profile_Cannot_Deposit</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>DepositCannotAcceptNegativePoints</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>RedeemPointMoreThanTotalPoints</name>
     </validationRules>
     <validationRules>
-        <errorMessage></errorMessage>
+        <errorMessage />
         <name>Transaction_Amount_Greater_Than_75000</name>
     </validationRules>
     <webLinks>
-        <label></label>
+        <label />
         <name>Move_Loyalty_Transactions</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label />
         <name>New_Transaction</name>
     </webLinks>
 </CustomObjectTranslation>

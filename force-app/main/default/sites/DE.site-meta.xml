@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
     <active>true</active>
     <allowGuestPaymentsApi>false</allowGuestPaymentsApi>
@@ -11,12 +11,14 @@
     <authorizationRequiredPage>CommunitiesLogin</authorizationRequiredPage>
     <bandwidthExceededPage>BandwidthExceeded</bandwidthExceededPage>
     <browserXssProtection>true</browserXssProtection>
-    <cachePublicVisualforcePagesInProxyServers>true</cachePublicVisualforcePagesInProxyServers>
+    <cachePublicVisualforcePagesInProxyServers
+  >true</cachePublicVisualforcePagesInProxyServers>
     <changePasswordPage>DECommunityChangePassword</changePasswordPage>
     <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
     <contentSniffingProtection>true</contentSniffingProtection>
     <customWebAddresses>
-        <certificate>DELoyaltyPRODWithCertificateFromCertificateAuthority</certificate>
+        <certificate
+    >DELoyaltyPRODWithCertificateFromCertificateAuthority</certificate>
         <domainName>mijn.de.nl</domainName>
         <primary>true</primary>
     </customWebAddresses>
@@ -28,10 +30,12 @@
     <indexPage>CommunitiesLanding</indexPage>
     <masterLabel>DE</masterLabel>
     <redirectToCustomDomain>false</redirectToCustomDomain>
-    <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
+    <referrerPolicyOriginWhenCrossOrigin
+  >true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
     <siteAdmin>batch.apex@jdecoffee.com</siteAdmin>
-    <siteGuestRecordDefaultOwner>marketingclouduser@marketingcloud.com</siteGuestRecordDefaultOwner>
+    <siteGuestRecordDefaultOwner
+  >marketingclouduser@marketingcloud.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
     <subdomain>jde</subdomain>
 </CustomSite>

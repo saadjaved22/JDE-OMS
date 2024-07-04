@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>RedeemPointMoreThanTotalPoints</fullName>
     <active>true</active>
-    <description>This validation rule throw exception if redeem points are more than total points</description>
-    <errorConditionFormula>AND ($Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c,AND(  (ABS(Transaction_Amount__c)  &gt;  Loyalty__r.Loyalty_Total_Points__c ||
+    <description
+  >This validation rule throw exception if redeem points are more than total points</description>
+    <errorConditionFormula
+  >AND ($Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c,AND(  (ABS(Transaction_Amount__c)  &gt;  Loyalty__r.Loyalty_Total_Points__c ||
 Transaction_Amount__c &gt;0), 
 ISPICKVAL(Loyalty_Transaction_Type__c, &quot;Redeem&quot;)))</errorConditionFormula>
     <errorDisplayField>CurrencyIsoCode</errorDisplayField>

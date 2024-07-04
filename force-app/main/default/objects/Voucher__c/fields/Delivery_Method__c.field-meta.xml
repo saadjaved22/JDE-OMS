@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Delivery_Method__c</fullName>
-    <description>Used by marketing cloud to determine if a voucher mail needs to be sent or the customer has printed the voucher on the website (MdC).</description>
+    <description
+  >Used by marketing cloud to determine if a voucher mail needs to be sent or the customer has printed the voucher on the website (MdC).</description>
     <externalId>false</externalId>
-    <inlineHelpText>Used by marketing cloud to determine if a voucher mail needs to be sent or the customer has printed the voucher on the website (MdC).</inlineHelpText>
+    <inlineHelpText
+  >Used by marketing cloud to determine if a voucher mail needs to be sent or the customer has printed the voucher on the website (MdC).</inlineHelpText>
     <label>Delivery Method</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

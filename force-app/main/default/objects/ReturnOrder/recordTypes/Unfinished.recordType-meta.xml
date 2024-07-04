@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Unfinished</fullName>
     <active>true</active>
-    <description>This return order has been refunded, but not yet exported to Magento or the LSP.</description>
+    <description
+  >This return order has been refunded, but not yet exported to Magento or the LSP.</description>
     <label>Unfinished</label>
     <picklistValues>
         <picklist>ShipmentType</picklist>

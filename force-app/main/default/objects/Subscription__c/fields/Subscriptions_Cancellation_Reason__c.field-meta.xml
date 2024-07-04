@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Subscriptions_Cancellation_Reason__c</fullName>
     <externalId>false</externalId>
@@ -27,7 +27,8 @@
                 <label>Manually cancelled by admin.</label>
             </value>
             <value>
-                <fullName>I didn’t have enough space to store all the packs</fullName>
+                <fullName
+        >I didn’t have enough space to store all the packs</fullName>
                 <default>false</default>
                 <isActive>false</isActive>
                 <label>I didn’t have enough space to store all the packs</label>

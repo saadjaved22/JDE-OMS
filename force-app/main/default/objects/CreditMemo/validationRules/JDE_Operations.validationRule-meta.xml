@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>JDE_Operations</fullName>
     <active>true</active>
     <description>Total Amount can not be greater than 150 Euros</description>
-    <errorConditionFormula>AND( TotalChargeAmount &gt; 150 , $Permission.JDE_Operations )</errorConditionFormula>
+    <errorConditionFormula
+  >AND( TotalChargeAmount &gt; 150 , $Permission.JDE_Operations )</errorConditionFormula>
     <errorMessage>Total Amount cant be Less than 150 Euros</errorMessage>
 </ValidationRule>

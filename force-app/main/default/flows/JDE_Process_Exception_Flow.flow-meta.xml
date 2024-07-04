@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Call_apex_to_make_Fulfilment_Order_API_Callout</name>
@@ -77,7 +77,8 @@
                 <leftValueReference>$Record.Message</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Fulfilment Order API callout is Failed</stringValue>
+                    <stringValue
+          >Fulfilment Order API callout is Failed</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -88,7 +89,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Call_apex_to_make_Fulfilment_Order_API_Callout</targetReference>
+                <targetReference
+        >Call_apex_to_make_Fulfilment_Order_API_Callout</targetReference>
             </connector>
             <label>Checking if Fulfilment Order API callout is failed</label>
         </rules>
@@ -115,13 +117,15 @@
             <label>Checking if Shipment Order API Callout is Failed</label>
         </rules>
         <rules>
-            <name>Checking_if_Declined_Shipment_Refund_Api_Callout_is_failed</name>
+            <name
+      >Checking_if_Declined_Shipment_Refund_Api_Callout_is_failed</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Message</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Declined Shipment / Refund API callout is Failed</stringValue>
+                    <stringValue
+          >Declined Shipment / Refund API callout is Failed</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -132,12 +136,15 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Call_Declined_Shipment_API_Callout</targetReference>
+                <targetReference
+        >Call_Declined_Shipment_API_Callout</targetReference>
             </connector>
-            <label>Checking if Declined Shipment / Refund Api Callout is failed</label>
+            <label
+      >Checking if Declined Shipment / Refund Api Callout is failed</label>
         </rules>
     </decisions>
-    <description>Add SalesChannelExternalReferenceNumber to the ProcessException object.</description>
+    <description
+  >Add SalesChannelExternalReferenceNumber to the ProcessException object.</description>
     <environments>Default</environments>
     <formulas>
         <name>CalculateRetry</name>
@@ -151,7 +158,8 @@
         <expression>{!$Record.Retries__c} + 1</expression>
         <scale>2</scale>
     </formulas>
-    <interviewLabel>JDE Process Exception Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >JDE Process Exception Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>JDE Process Exception Flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -177,7 +185,8 @@
         <label>Get Order Details</label>
         <locationX>506</locationX>
         <locationY>276</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Update_Process_Exception</targetReference>
         </connector>
@@ -206,12 +215,14 @@
         <locationX>506</locationX>
         <locationY>384</locationY>
         <connector>
-            <targetReference>Process_Exception_if_API_is_Failed</targetReference>
+            <targetReference
+      >Process_Exception_if_API_is_Failed</targetReference>
         </connector>
         <inputAssignments>
             <field>SalesChannelExternalReferenceNumber__c</field>
             <value>
-                <elementReference>Get_Order_Details.SalesChannel.ExternalChannelNumber</elementReference>
+                <elementReference
+        >Get_Order_Details.SalesChannel.ExternalChannelNumber</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -224,7 +235,7 @@
             <field>Id</field>
             <operator>NotEqualTo</operator>
             <value>
-                <stringValue></stringValue>
+                <stringValue />
             </value>
         </filters>
         <object>ProcessException</object>

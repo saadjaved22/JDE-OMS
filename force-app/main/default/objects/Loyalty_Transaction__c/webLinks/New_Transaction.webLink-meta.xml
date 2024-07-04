@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>New_Transaction</fullName>
     <availability>online</availability>
-    <description>It is a custom button used to populate loyalty and total loyalty points</description>
+    <description
+  >It is a custom button used to populate loyalty and total loyalty points</description>
     <displayType>massActionButton</displayType>
     <linkType>javascript</linkType>
     <masterLabel>New Transaction</masterLabel>

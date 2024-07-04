@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <layouts>
         <layout>Lead Layout</layout>
         <sections>
-            <label></label>
+            <label />
             <section>Marketing Cloud</section>
         </sections>
     </layouts>
     <webLinks>
-        <label></label>
+        <label />
         <name>GoogleMaps</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label />
         <name>GoogleNews</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label />
         <name>GoogleSearch</name>
     </webLinks>
 </CustomObjectTranslation>

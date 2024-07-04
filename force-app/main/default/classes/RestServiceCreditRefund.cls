@@ -22,7 +22,6 @@ public with sharing class RestServiceCreditRefund {
   private class AsyncCreditRefund implements Queueable, Database.AllowsCallouts {
     private List<Id> ids;
     private List<ProcessException> processExceptions;
- 
 
     public AsyncCreditRefund(List<Id> creditMemoIds) {
       ids = creditMemoIds;
@@ -39,7 +38,10 @@ public with sharing class RestServiceCreditRefund {
       List<ID> orderSummaryIds = new List<ID>();
 
       for (CreditMemo cr : creditMemoList) {
-        if (cr.ReferenceEntityId.getSObjectType().getDescribe().getName() == 'OrderSummary') {
+        if (
+          cr.ReferenceEntityId.getSObjectType().getDescribe().getName() ==
+          'OrderSummary'
+        ) {
           orderSummaryIds.add(cr.ReferenceEntityId);
         }
       }
@@ -105,10 +107,19 @@ public with sharing class RestServiceCreditRefund {
           oItems
         );
         String JSONBody = JSON.serialize(creditMemoWrapper);
-        String brand = creditRefundMapper.get(cr.id).Magento_SaleChannel_Name__c;
-        String country = creditRefundMapper.get(cr.id).SalesChannel_Country_Code__c;
+        String brand = creditRefundMapper.get(cr.id)
+          .Magento_SaleChannel_Name__c;
+        String country = creditRefundMapper.get(cr.id)
+          .SalesChannel_Country_Code__c;
         String orderReference = creditRefundMapper.get(cr.id).OrderNumber;
-        callAPI(JSONBody, brand, country, orderReference, cr.id, transactionID_s);
+        callAPI(
+          JSONBody,
+          brand,
+          country,
+          orderReference,
+          cr.id,
+          transactionID_s
+        );
 
         updateCreditMemo(cr, JSONBody, transactionID_s);
       }
@@ -126,12 +137,14 @@ public with sharing class RestServiceCreditRefund {
       OrderSummary orderSummary,
       String transactionID_s,
       List<OrderItem> oItems
-      ) {
+    ) {
       List<creditRefundItemsWrapper> creditLineList = new List<creditRefundItemsWrapper>();
 
       for (OrderItem oi : oItems) {
         for (CreditMemoLine crLine : creditMemoLines) {
-          if (crLine.Product2.StockKeepingUnit == oi.Product2.StockKeepingUnit) {
+          if (
+            crLine.Product2.StockKeepingUnit == oi.Product2.StockKeepingUnit
+          ) {
             creditRefundItemsWrapper creditLineWrapper = new creditRefundItemsWrapper();
             creditLineWrapper.itemID = oi.ItemId__c;
             creditLineWrapper.sku = crLine.Product2.StockKeepingUnit;
@@ -146,7 +159,9 @@ public with sharing class RestServiceCreditRefund {
       creditRefundWrapper.salesChannel = orderSummary.Magento_SaleChannel_Name__c;
       creditRefundWrapper.originalOrderID = orderSummary.OrderNumber;
       creditRefundWrapper.orderReferenceNumber = orderSummary.OrderNumber;
-      creditRefundWrapper.refundAmount = String.valueOf(creditMemo.TotalAmountWithTax);
+      creditRefundWrapper.refundAmount = String.valueOf(
+        creditMemo.TotalAmountWithTax
+      );
       creditRefundWrapper.shippingRefund = 'false';
       creditRefundWrapper.invoiceID = orderSummary.Order_Invoice_Id__c;
       creditRefundWrapper.orderItems = creditLineList;
@@ -154,7 +169,10 @@ public with sharing class RestServiceCreditRefund {
       return creditRefundWrapper;
     }
 
-    private List<CreditMemoLine> getCreditLines(List<CreditMemoLine> creditMemoLines, ID crId) {
+    private List<CreditMemoLine> getCreditLines(
+      List<CreditMemoLine> creditMemoLines,
+      ID crId
+    ) {
       List<CreditMemoLine> creditLineList = new List<CreditMemoLine>();
 
       for (CreditMemoLine crList : creditMemoLines) {
@@ -184,7 +202,9 @@ public with sharing class RestServiceCreditRefund {
         LIMIT 1
       ];
       HttpRequest req = new HttpRequest();
-      req.setEndpoint(endpoint.Base_URL__c + brand + '/' + country + '/' + orderReference);
+      req.setEndpoint(
+        endpoint.Base_URL__c + brand + '/' + country + '/' + orderReference
+      );
       req.setMethod('POST');
       req.setBody(JSONBody);
 
@@ -199,7 +219,12 @@ public with sharing class RestServiceCreditRefund {
       if (res.getStatusCode() != 200) {
         //api callout is failed, creating process exception records
         //first find OS that this creditMemo is related to
-        CreditMemo credMemo = [SELECT ReferenceEntityId FROM CreditMemo WHERE Id = :crId LIMIT 1];
+        CreditMemo credMemo = [
+          SELECT ReferenceEntityId
+          FROM CreditMemo
+          WHERE Id = :crId
+          LIMIT 1
+        ];
         Id osId = (credMemo == null ? null : credMemo.ReferenceEntityId);
 
         ProcessException processExc = new ProcessException();
@@ -219,12 +244,13 @@ public with sharing class RestServiceCreditRefund {
         processExceptions.add(processExc);
         exceptions.add('Credit Refund API callout to Magento has failed');
       }
-
-      
     }
 
-   
-    public void updateCreditMemo(CreditMemo creditMemo, String JSON, String transactionId) {
+    public void updateCreditMemo(
+      CreditMemo creditMemo,
+      String JSON,
+      String transactionId
+    ) {
       creditMemo.API_JSON_Body__c = JSON;
       creditMemo.Transaction_ID__c = transactionId;
     }

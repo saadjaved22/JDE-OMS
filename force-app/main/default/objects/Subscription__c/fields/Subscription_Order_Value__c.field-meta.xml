@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Subscription_Order_Value__c</fullName>
-    <description>Total Value of all the Order Line items related to the order. The field ‘Paid Price inc VAT’ of the Order Item is used for Calculation.</description>
+    <description
+  >Total Value of all the Order Line items related to the order. The field ‘Paid Price inc VAT’ of the Order Item is used for Calculation.</description>
     <externalId>false</externalId>
     <label>Subscription Order Value</label>
     <precision>18</precision>

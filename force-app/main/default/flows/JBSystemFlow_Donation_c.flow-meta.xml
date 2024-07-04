@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>SalesforceObja7a20d869a07cae6f7de9d0498fb8239_FireJBTrigger</name>
-        <label>SalesforceObja7a20d869a07cae6f7de9d0498fb8239_FireJBTrigger</label>
+        <label
+    >SalesforceObja7a20d869a07cae6f7de9d0498fb8239_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
@@ -35,7 +36,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObja7a20d869a07cae6f7de9d0498fb8239</stringValue>
+                <stringValue
+        >SalesforceObja7a20d869a07cae6f7de9d0498fb8239</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -59,31 +61,38 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Donation__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;CreatedDate&quot;,&quot;Donated_Points__c&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;DonorContact__r&quot;,&quot;dePrefix&quot;:&quot;Donation__c:DonorContact__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Email&quot;,&quot;FirstName&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Charity__c&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Charity__r&quot;,&quot;dePrefix&quot;:&quot;Donation__c:Charity__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Donor__r&quot;,&quot;dePrefix&quot;:&quot;Donation__c:Donor__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Opt_out_URL__c&quot;,&quot;Consent_Status__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Donation__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;CreatedDate&quot;,&quot;Donated_Points__c&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;DonorContact__r&quot;,&quot;dePrefix&quot;:&quot;Donation__c:DonorContact__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Email&quot;,&quot;FirstName&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Charity__c&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Charity__r&quot;,&quot;dePrefix&quot;:&quot;Donation__c:Charity__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;]},{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Account&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;Donor__r&quot;,&quot;dePrefix&quot;:&quot;Donation__c:Donor__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Opt_out_URL__c&quot;,&quot;Consent_Status__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>49.0</apiVersion>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObja7a20d869a07cae6f7de9d0498fb8239</name>
-        <label>JB_Decision_Null_Check_SalesforceObja7a20d869a07cae6f7de9d0498fb8239</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObja7a20d869a07cae6f7de9d0498fb8239</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObja7a20d869a07cae6f7de9d0498fb8239</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Parameters_ContactKey_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
-                <leftValueReference>new_object.DonorContact__c</leftValueReference>
+                <leftValueReference
+        >new_object.DonorContact__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <label>JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Parameters_Null</name>
+            <name
+      >JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -93,9 +102,11 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Parameters_Null</label>
+            <label
+      >JB_SalesforceObja7a20d869a07cae6f7de9d0498fb8239_Parameters_Null</label>
         </rules>
     </decisions>
     <decisions>
@@ -115,14 +126,16 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObja7a20d869a07cae6f7de9d0498fb8239_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObja7a20d869a07cae6f7de9d0498fb8239_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObja7a20d869a07cae6f7de9d0498fb8239</label>
         </rules>
     </decisions>
     <label>JBSystemFlow_Donation_c</label>
     <processType>AutoLaunchedFlow</processType>
-    <startElementReference>JB_Decision_Null_Check_SalesforceObja7a20d869a07cae6f7de9d0498fb8239</startElementReference>
+    <startElementReference
+  >JB_Decision_Null_Check_SalesforceObja7a20d869a07cae6f7de9d0498fb8239</startElementReference>
     <status>Active</status>
     <variables>
         <name>new_object</name>

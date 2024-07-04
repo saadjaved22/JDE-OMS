@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
     <assignments>
@@ -7,7 +7,8 @@
         <locationX>2090</locationX>
         <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummaryCollection</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummaryCollection</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>InteractionOrderItemSummary</elementReference>
@@ -26,7 +27,8 @@
             <assignToReference>ProcessExceptionInput.Message</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Label.Cannot_Create_And_Release_Error</elementReference>
+                <elementReference
+        >$Label.Cannot_Create_And_Release_Error</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -46,7 +48,8 @@
         <locationX>1745</locationX>
         <locationY>651</locationY>
         <assignmentItems>
-            <assignToReference>InteractionOrderSummaryInput.Type__c</assignToReference>
+            <assignToReference
+      >InteractionOrderSummaryInput.Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>CREATE_RESERVATION</stringValue>
@@ -62,35 +65,41 @@
         <locationX>1051</locationX>
         <locationY>283</locationY>
         <assignmentItems>
-            <assignToReference>InteractionOrderSummaryInput.Status__c</assignToReference>
+            <assignToReference
+      >InteractionOrderSummaryInput.Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>REQUESTED</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderSummaryInput.OrderSummary__c</assignToReference>
+            <assignToReference
+      >InteractionOrderSummaryInput.OrderSummary__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Get_Order_Summary.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderSummaryInput.OrderDeliveryGroupSummary__c</assignToReference>
+            <assignToReference
+      >InteractionOrderSummaryInput.OrderDeliveryGroupSummary__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Order_Delivery_Group_Summary.Id</elementReference>
+                <elementReference
+        >Get_Order_Delivery_Group_Summary.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderSummaryInput.ConnectionFailAttempts__c</assignToReference>
+            <assignToReference
+      >InteractionOrderSummaryInput.ConnectionFailAttempts__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <numberValue>0.0</numberValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderSummaryInput.Schedule__c</assignToReference>
+            <assignToReference
+      >InteractionOrderSummaryInput.Schedule__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>GetScheduleTime</elementReference>
@@ -106,42 +115,50 @@
         <locationX>1882</locationX>
         <locationY>504</locationY>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.OrderItemSummary__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.OrderItemSummary__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Get_Order_Item_Summary.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.Quantity__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.Quantity__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Order_Item_Summary.QuantityCanceled</elementReference>
+                <elementReference
+        >Get_Order_Item_Summary.QuantityCanceled</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.FromLocationGroup__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.FromLocationGroup__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Order_Item_Summary.ReservedAtLocationId</elementReference>
+                <elementReference
+        >Get_Order_Item_Summary.ReservedAtLocationId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.ToLocationGroup__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.ToLocationGroup__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue></stringValue>
+                <stringValue />
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.Type__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>RELEASE_RESERVATION</stringValue>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Add_Order_Item_Summaries_to_Collection</targetReference>
+            <targetReference
+      >Add_Order_Item_Summaries_to_Collection</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -150,42 +167,50 @@
         <locationX>1888</locationX>
         <locationY>650</locationY>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.OrderItemSummary__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.OrderItemSummary__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Get_Order_Item_Summary.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.Quantity__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.Quantity__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Order_Item_Summary.QuantityOrdered</elementReference>
+                <elementReference
+        >Get_Order_Item_Summary.QuantityOrdered</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.ToLocationGroup__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.ToLocationGroup__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Order_Item_Summary.ReservedAtLocationId</elementReference>
+                <elementReference
+        >Get_Order_Item_Summary.ReservedAtLocationId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.FromLocationGroup__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.FromLocationGroup__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue></stringValue>
+                <stringValue />
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>InteractionOrderItemSummary.Type__c</assignToReference>
+            <assignToReference
+      >InteractionOrderItemSummary.Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>CREATE_RESERVATION</stringValue>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Add_Order_Item_Summaries_to_Collection</targetReference>
+            <targetReference
+      >Add_Order_Item_Summaries_to_Collection</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -194,7 +219,8 @@
         <locationX>1742</locationX>
         <locationY>503</locationY>
         <assignmentItems>
-            <assignToReference>InteractionOrderSummaryInput.Type__c</assignToReference>
+            <assignToReference
+      >InteractionOrderSummaryInput.Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue>RELEASE_RESERVATION</stringValue>
@@ -213,11 +239,13 @@
             <assignToReference>ProcessExceptionInput.Message</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Label.No_Reservation_Location_For_Item_Error</elementReference>
+                <elementReference
+        >$Label.No_Reservation_Location_For_Item_Error</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ProcessExceptionInput.AttachedToId</assignToReference>
+            <assignToReference
+      >ProcessExceptionInput.AttachedToId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Change_Order_Items.Id</elementReference>
@@ -244,7 +272,8 @@
             <name>Has_Order_Products</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>InteractionOrderItemSummaryCollection</leftValueReference>
+                <leftValueReference
+        >InteractionOrderItemSummaryCollection</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -266,7 +295,8 @@
             <name>Change_Order</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.RelatedOrderType</leftValueReference>
+                <leftValueReference
+        >$Record.RelatedOrderType</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Change Order</stringValue>
@@ -298,14 +328,16 @@
             <name>Not_Valid</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Order_Item_Summary.ReservedAtLocationId</leftValueReference>
+                <leftValueReference
+        >Get_Order_Item_Summary.ReservedAtLocationId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Get_Order_Item_Summary.ReservedAtLocationId</leftValueReference>
+                <leftValueReference
+        >Get_Order_Item_Summary.ReservedAtLocationId</leftValueReference>
                 <operator>WasSet</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -330,7 +362,8 @@
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Order_Product_SummaryChanges.ChangeType</leftValueReference>
+                <leftValueReference
+        >Get_Order_Product_SummaryChanges.ChangeType</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Return</stringValue>
@@ -355,14 +388,16 @@
             <name>Valid</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>InteractionOrderSummaryInput.Type__c</leftValueReference>
+                <leftValueReference
+        >InteractionOrderSummaryInput.Type__c</leftValueReference>
                 <operator>WasSet</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>InteractionOrderSummaryInput.Type__c</leftValueReference>
+                <leftValueReference
+        >InteractionOrderSummaryInput.Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>CREATE_RESERVATION</stringValue>
@@ -387,14 +422,16 @@
             <name>Valid_0</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>InteractionOrderSummaryInput.Type__c</leftValueReference>
+                <leftValueReference
+        >InteractionOrderSummaryInput.Type__c</leftValueReference>
                 <operator>WasSet</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>InteractionOrderSummaryInput.Type__c</leftValueReference>
+                <leftValueReference
+        >InteractionOrderSummaryInput.Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>RELEASE_RESERVATION</stringValue>
@@ -426,7 +463,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_Order_Product_SummaryChanges</targetReference>
+                <targetReference
+        >Get_Order_Product_SummaryChanges</targetReference>
             </connector>
             <label>Product</label>
         </rules>
@@ -444,14 +482,16 @@
             <name>Item_Added</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Change_Order_Items.RelatedOrderItemId</leftValueReference>
+                <leftValueReference
+        >Change_Order_Items.RelatedOrderItemId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Change_Order_Items.Quantity</leftValueReference>
+                <leftValueReference
+        >Change_Order_Items.Quantity</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -466,14 +506,16 @@
             <name>Item_Removed</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Change_Order_Items.RelatedOrderItemId</leftValueReference>
+                <leftValueReference
+        >Change_Order_Items.RelatedOrderItemId</leftValueReference>
                 <operator>WasSet</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Change_Order_Items.Quantity</leftValueReference>
+                <leftValueReference
+        >Change_Order_Items.Quantity</leftValueReference>
                 <operator>LessThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -491,7 +533,8 @@
         <dataType>DateTime</dataType>
         <expression>{!$Flow.CurrentDateTime}</expression>
     </formulas>
-    <interviewLabel>Create or Release Reservation JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Create or Release Reservation JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Create or Release Reservation JDE</label>
     <loops>
         <name>Change_Order_Items</name>
@@ -512,7 +555,8 @@
         <label>Interaction Order Item Inputs</label>
         <locationX>2189</locationX>
         <locationY>397</locationY>
-        <collectionReference>InteractionOrderItemSummaryCollection</collectionReference>
+        <collectionReference
+    >InteractionOrderItemSummaryCollection</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Interaction_Order_Item</targetReference>
@@ -548,7 +592,8 @@
         <inputAssignments>
             <field>AttachedToId</field>
             <value>
-                <elementReference>ProcessExceptionInput.AttachedToId</elementReference>
+                <elementReference
+        >ProcessExceptionInput.AttachedToId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -560,7 +605,8 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>ProcessExceptionInput.Message</elementReference>
+                <elementReference
+        >ProcessExceptionInput.Message</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -610,7 +656,8 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>ProcessExceptionInput.Message</elementReference>
+                <elementReference
+        >ProcessExceptionInput.Message</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -657,31 +704,36 @@
         <inputAssignments>
             <field>OrderDeliveryGroupSummary__c</field>
             <value>
-                <elementReference>InteractionOrderSummaryInput.OrderDeliveryGroupSummary__c</elementReference>
+                <elementReference
+        >InteractionOrderSummaryInput.OrderDeliveryGroupSummary__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OrderSummary__c</field>
             <value>
-                <elementReference>InteractionOrderSummaryInput.OrderSummary__c</elementReference>
+                <elementReference
+        >InteractionOrderSummaryInput.OrderSummary__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Schedule__c</field>
             <value>
-                <elementReference>InteractionOrderSummaryInput.Schedule__c</elementReference>
+                <elementReference
+        >InteractionOrderSummaryInput.Schedule__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Status__c</field>
             <value>
-                <elementReference>InteractionOrderSummaryInput.Status__c</elementReference>
+                <elementReference
+        >InteractionOrderSummaryInput.Status__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Type__c</field>
             <value>
-                <elementReference>InteractionOrderSummaryInput.Type__c</elementReference>
+                <elementReference
+        >InteractionOrderSummaryInput.Type__c</elementReference>
             </value>
         </inputAssignments>
         <object>OCIInteractionOrderSummary__c</object>
@@ -698,7 +750,8 @@
         <inputAssignments>
             <field>FromLocationGroup__c</field>
             <value>
-                <elementReference>Interaction_Order_Item_Inputs.FromLocationGroup__c</elementReference>
+                <elementReference
+        >Interaction_Order_Item_Inputs.FromLocationGroup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -710,31 +763,36 @@
         <inputAssignments>
             <field>OrderItemSummary__c</field>
             <value>
-                <elementReference>Interaction_Order_Item_Inputs.OrderItemSummary__c</elementReference>
+                <elementReference
+        >Interaction_Order_Item_Inputs.OrderItemSummary__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Quantity__c</field>
             <value>
-                <elementReference>Interaction_Order_Item_Inputs.Quantity__c</elementReference>
+                <elementReference
+        >Interaction_Order_Item_Inputs.Quantity__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Status__c</field>
             <value>
-                <elementReference>InteractionOrderSummaryInput.Status__c</elementReference>
+                <elementReference
+        >InteractionOrderSummaryInput.Status__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>ToLocationGroup__c</field>
             <value>
-                <elementReference>Interaction_Order_Item_Inputs.ToLocationGroup__c</elementReference>
+                <elementReference
+        >Interaction_Order_Item_Inputs.ToLocationGroup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Type__c</field>
             <value>
-                <elementReference>InteractionOrderItemSummary.Type__c</elementReference>
+                <elementReference
+        >InteractionOrderItemSummary.Type__c</elementReference>
             </value>
         </inputAssignments>
         <object>OCIInteractionOrderItemSummary__c</object>
@@ -745,7 +803,8 @@
         <label>Get Change Order Items</label>
         <locationX>527</locationX>
         <locationY>283</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Order_Summary</targetReference>
         </connector>
@@ -766,7 +825,8 @@
         <label>Get Order Delivery Group Summary</label>
         <locationX>907</locationX>
         <locationY>283</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Interaction_Order_Input</targetReference>
         </connector>
@@ -787,7 +847,8 @@
         <label>Get Order Item Summaries</label>
         <locationX>787</locationX>
         <locationY>283</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Order_Delivery_Group_Summary</targetReference>
         </connector>
@@ -808,7 +869,8 @@
         <label>Get Order Item Summary</label>
         <locationX>1179</locationX>
         <locationY>780</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Has_Reservation_Location</targetReference>
         </connector>
@@ -817,7 +879,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Order_Product_SummaryChanges.OrderItemSummaryId</elementReference>
+                <elementReference
+        >Get_Order_Product_SummaryChanges.OrderItemSummaryId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -831,7 +894,8 @@
         <label>Get Order Product Summary Changes</label>
         <locationX>839</locationX>
         <locationY>782</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Is_Return</targetReference>
         </connector>
@@ -854,7 +918,8 @@
         <label>Get Order Summary</label>
         <locationX>656</locationX>
         <locationY>283</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Order_Item_Summaries</targetReference>
         </connector>
@@ -875,7 +940,8 @@
         <label>GetChangeOrder</label>
         <locationX>393</locationX>
         <locationY>283</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Change_Order_Items</targetReference>
         </connector>

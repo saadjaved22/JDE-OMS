@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Create_Return_Order</name>
@@ -17,11 +17,13 @@
         <inputParameters>
             <name>returnOrderInput</name>
             <value>
-                <elementReference>returnOrderInputRepresentation</elementReference>
+                <elementReference
+        >returnOrderInputRepresentation</elementReference>
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>returnOrderOutputRepresentation</assignToReference>
+            <assignToReference
+      >returnOrderOutputRepresentation</assignToReference>
             <name>returnOrderOutput</name>
         </outputParameters>
     </actionCalls>
@@ -73,7 +75,8 @@
         <inputParameters>
             <name>Id</name>
             <value>
-                <elementReference>returnOrderOutputRepresentation.returnOrderId</elementReference>
+                <elementReference
+        >returnOrderOutputRepresentation.returnOrderId</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -100,10 +103,12 @@
         <locationX>1365</locationX>
         <locationY>628</locationY>
         <assignmentItems>
-            <assignToReference>changeInputRepresentation.changeItems</assignToReference>
+            <assignToReference
+      >changeInputRepresentation.changeItems</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>changeItemInputRepresentation</elementReference>
+                <elementReference
+        >changeItemInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -137,7 +142,8 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>changeItem.shippingReductionFlag</assignToReference>
+            <assignToReference
+      >changeItem.shippingReductionFlag</assignToReference>
             <operator>Assign</operator>
             <value>
                 <booleanValue>false</booleanValue>
@@ -153,31 +159,37 @@
         <locationX>1222</locationX>
         <locationY>628</locationY>
         <assignmentItems>
-            <assignToReference>changeItemInputRepresentation.orderItemSummaryId</assignToReference>
+            <assignToReference
+      >changeItemInputRepresentation.orderItemSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>changeItem.orderItemSummaryId</elementReference>
+                <elementReference
+        >changeItem.orderItemSummaryId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>changeItemInputRepresentation.quantity</assignToReference>
+            <assignToReference
+      >changeItemInputRepresentation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>changeItem.quantity</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>changeItemInputRepresentation.reason</assignToReference>
+            <assignToReference
+      >changeItemInputRepresentation.reason</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>changeItem.reason</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>changeItemInputRepresentation.shippingReductionFlag</assignToReference>
+            <assignToReference
+      >changeItemInputRepresentation.shippingReductionFlag</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>changeItem.shippingReductionFlag</elementReference>
+                <elementReference
+        >changeItem.shippingReductionFlag</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -209,14 +221,16 @@
             <assignToReference>errorMessage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Invocable_Message</elementReference>
+                <elementReference
+        >Error_Output_Invocable_Message</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Invocable_Action_Image</elementReference>
+                <elementReference
+        >Error_Output_Invocable_Action_Image</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -239,21 +253,24 @@
             <assignToReference>errorMessage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_NoItemsToReturn</elementReference>
+                <elementReference
+        >Error_Output_NoItemsToReturn</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageTitle</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_NoItemsToReturn_Header</elementReference>
+                <elementReference
+        >Error_Output_NoItemsToReturn_Header</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_NoItemsToReturn_Image</elementReference>
+                <elementReference
+        >Error_Output_NoItemsToReturn_Image</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -283,7 +300,8 @@
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Unmanaged_Order_Image</elementReference>
+                <elementReference
+        >Error_Output_Unmanaged_Order_Image</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -322,7 +340,8 @@
             <assignToReference>Refund.Amount</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Return_Order.GrandTotalAmount</elementReference>
+                <elementReference
+        >Get_Return_Order.GrandTotalAmount</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -364,14 +383,16 @@
             <assignToReference>Refund.Balance</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Return_Order.GrandTotalAmount</elementReference>
+                <elementReference
+        >Get_Return_Order.GrandTotalAmount</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Refund.CurrencyIsoCode</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Order_Payment_Summary.CurrencyIsoCode</elementReference>
+                <elementReference
+        >Order_Payment_Summary.CurrencyIsoCode</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -384,28 +405,33 @@
         <locationX>1847</locationX>
         <locationY>423</locationY>
         <assignmentItems>
-            <assignToReference>returnOrderInputRepresentation.returnOrderLineItems</assignToReference>
+            <assignToReference
+      >returnOrderInputRepresentation.returnOrderLineItems</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>returnOrderLineItemInputRepresentation</elementReference>
+                <elementReference
+        >returnOrderLineItemInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderInputRepresentation.orderSummaryId</assignToReference>
+            <assignToReference
+      >returnOrderInputRepresentation.orderSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Get_Order_Summary.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderInputRepresentation.status</assignToReference>
+            <assignToReference
+      >returnOrderInputRepresentation.status</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>returnOrderInputStatus</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderInputRepresentation.returnOrderLifeCycleType</assignToReference>
+            <assignToReference
+      >returnOrderInputRepresentation.returnOrderLifeCycleType</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>returnOrderLifeCycleType</elementReference>
@@ -421,28 +447,34 @@
         <locationX>1670</locationX>
         <locationY>423</locationY>
         <assignmentItems>
-            <assignToReference>returnOrderLineItemInputRepresentation.orderItemSummaryId</assignToReference>
+            <assignToReference
+      >returnOrderLineItemInputRepresentation.orderItemSummaryId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Items_to_Return.orderItemSummaryId</elementReference>
+                <elementReference
+        >Items_to_Return.orderItemSummaryId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderLineItemInputRepresentation.reasonForReturn</assignToReference>
+            <assignToReference
+      >returnOrderLineItemInputRepresentation.reasonForReturn</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Items_to_Return.reason</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderLineItemInputRepresentation.canReduceShipping</assignToReference>
+            <assignToReference
+      >returnOrderLineItemInputRepresentation.canReduceShipping</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Items_to_Return.shippingReductionFlag</elementReference>
+                <elementReference
+        >Items_to_Return.shippingReductionFlag</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>returnOrderLineItemInputRepresentation.quantityExpected</assignToReference>
+            <assignToReference
+      >returnOrderLineItemInputRepresentation.quantityExpected</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Items_to_Return.quantity</elementReference>
@@ -564,21 +596,24 @@
             <assignToReference>errorMessage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Unmanaged_Order</elementReference>
+                <elementReference
+        >Error_Output_Unmanaged_Order</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageTitle</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Unmanaged_Order_Title</elementReference>
+                <elementReference
+        >Error_Output_Unmanaged_Order_Title</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Unmanaged_Order_Image</elementReference>
+                <elementReference
+        >Error_Output_Unmanaged_Order_Image</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -601,14 +636,16 @@
             <assignToReference>errorMessageTitle</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Wrong_Entity_Header</elementReference>
+                <elementReference
+        >Error_Output_Wrong_Entity_Header</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>errorMessageImage</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Error_Output_Wrong_Entity_Image</elementReference>
+                <elementReference
+        >Error_Output_Wrong_Entity_Image</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -617,7 +654,8 @@
     </assignments>
     <choices>
         <name>Option_1</name>
-        <choiceText>Option 1: refund the customer now, and process the return later?</choiceText>
+        <choiceText
+    >Option 1: refund the customer now, and process the return later?</choiceText>
         <dataType>Number</dataType>
         <value>
             <numberValue>1.0</numberValue>
@@ -625,7 +663,8 @@
     </choices>
     <choices>
         <name>Option_2</name>
-        <choiceText>Option 2: process both the return and the refund to the customer immediately?</choiceText>
+        <choiceText
+    >Option 2: process both the return and the refund to the customer immediately?</choiceText>
         <dataType>Number</dataType>
         <value>
             <numberValue>2.0</numberValue>
@@ -635,35 +674,40 @@
         <name>Confirmation_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
         <name>Error_Output_Invocable_Action_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
         <name>Error_Output_NoItemsToReturn_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
         <name>Error_Output_Unmanaged_Order_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
         <name>Error_Output_Wrong_Entity_Image</name>
         <dataType>String</dataType>
         <value>
-            <stringValue>/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
+            <stringValue
+      >/_slds/images/illustrations/empty-states/desertSmall.svg</stringValue>
         </value>
     </constants>
     <constants>
@@ -751,7 +795,8 @@
             <name>Yes_Is_LSP</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Permission_Set_Assignment</leftValueReference>
+                <leftValueReference
+        >Get_Permission_Set_Assignment</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -780,14 +825,16 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Get_Order_Summary.OrderLifeCycleType</leftValueReference>
+                <leftValueReference
+        >Get_Order_Summary.OrderLifeCycleType</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>UNMANAGED</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Set_Unmanaged_Order_Error_Message</targetReference>
+                <targetReference
+        >Set_Unmanaged_Order_Error_Message</targetReference>
             </connector>
             <label>Unmanaged Order</label>
         </rules>
@@ -817,7 +864,8 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Set_Wrong_Entity_Error_Message</targetReference>
+                <targetReference
+        >Set_Wrong_Entity_Error_Message</targetReference>
             </connector>
             <label>Not Valid</label>
         </rules>
@@ -849,22 +897,27 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Handle_Return_Order_Post_Actions</targetReference>
+                <targetReference
+        >Handle_Return_Order_Post_Actions</targetReference>
             </connector>
             <label>yes</label>
         </rules>
     </decisions>
-    <description>Allows service agent to manually Return products, Return Order is created. Customized for different roles. SalesChannelExternalReferenceNumber mapping added.</description>
+    <description
+  >Allows service agent to manually Return products, Return Order is created. Customized for different roles. SalesChannelExternalReferenceNumber mapping added.</description>
     <environments>Default</environments>
-    <interviewLabel>Manual RMA Return Item JDE {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <interviewLabel
+  >Manual RMA Return Item JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun
+  >true</isAdditionalPermissionRequiredToRun>
     <label>Return and Refund</label>
     <loops>
         <name>Change_Item_Assignment_Loop</name>
         <label>Change Item Assignment Loop</label>
         <locationX>1030</locationX>
         <locationY>392</locationY>
-        <assignNextValueToReference>selectedOrderItem</assignNextValueToReference>
+        <assignNextValueToReference
+    >selectedOrderItem</assignNextValueToReference>
         <collectionReference>selectedOrderItemSummaries</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -883,10 +936,12 @@
         <collectionReference>changeItems</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Change_Item_Input_Representation_Assignment</targetReference>
+            <targetReference
+      >Change_Item_Input_Representation_Assignment</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Return_Order_Item_Summaries_Preview</targetReference>
+            <targetReference
+      >Return_Order_Item_Summaries_Preview</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
@@ -954,7 +1009,8 @@
         <label>Get Order Item Summary</label>
         <locationX>293</locationX>
         <locationY>179</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Are_Any_Items_To_Return</targetReference>
         </connector>
@@ -993,7 +1049,8 @@
         <label>Get Order Summary</label>
         <locationX>161</locationX>
         <locationY>171</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>isValid</targetReference>
         </connector>
@@ -1017,7 +1074,8 @@
         <label>Get Permission Set Assignment</label>
         <locationX>566</locationX>
         <locationY>500</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Has_Access_to_LSP_Permissions</targetReference>
         </connector>
@@ -1048,7 +1106,8 @@
         <label>Get Permission Set Id</label>
         <locationX>439</locationX>
         <locationY>186</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Permission_Set_Loop</targetReference>
         </connector>
@@ -1067,7 +1126,8 @@
             <field>Name</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>LSP_EMPLOYEE_FOR_SF_PLATFORM_PERM_SET_NAME</elementReference>
+                <elementReference
+        >LSP_EMPLOYEE_FOR_SF_PLATFORM_PERM_SET_NAME</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
@@ -1079,9 +1139,11 @@
         <label>Get Related Fulfillment Order</label>
         <locationX>2266</locationX>
         <locationY>274</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Set_SalesChannel_External_Reference_on_Return_Order</targetReference>
+            <targetReference
+      >Set_SalesChannel_External_Reference_on_Return_Order</targetReference>
         </connector>
         <faultConnector>
             <targetReference>No_Items_Error_Message_0</targetReference>
@@ -1091,7 +1153,8 @@
             <field>OrderSummaryId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Return_Order.OrderSummaryId</elementReference>
+                <elementReference
+        >Get_Return_Order.OrderSummaryId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -1103,7 +1166,8 @@
         <label>Get Return Order</label>
         <locationX>2175</locationX>
         <locationY>588</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Refund_Ass</targetReference>
         </connector>
@@ -1115,7 +1179,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>returnOrderOutputRepresentation.returnOrderId</elementReference>
+                <elementReference
+        >returnOrderOutputRepresentation.returnOrderId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -1127,7 +1192,8 @@
         <label>Order Payment Summary</label>
         <locationX>2330</locationX>
         <locationY>489</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Return_Order</targetReference>
         </connector>
@@ -1171,19 +1237,22 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>returnOrderOutputRepresentation.returnOrderId</elementReference>
+                <elementReference
+        >returnOrderOutputRepresentation.returnOrderId</elementReference>
             </value>
         </filters>
         <inputAssignments>
             <field>SalesChannelExternalReferenceNumber__c</field>
             <value>
-                <elementReference>Get_Order_Summary.SalesChannel.ExternalChannelNumber</elementReference>
+                <elementReference
+        >Get_Order_Summary.SalesChannel.ExternalChannelNumber</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>SourceLocationId</field>
             <value>
-                <elementReference>Get_Related_Fulfillment_Order.FulfilledFromLocationId</elementReference>
+                <elementReference
+        >Get_Related_Fulfillment_Order.FulfilledFromLocationId</elementReference>
             </value>
         </inputAssignments>
         <object>ReturnOrder</object>
@@ -1198,12 +1267,14 @@
         <allowPause>false</allowPause>
         <fields>
             <name>ConfirmationImageDisplay</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;{!confirmationImage}&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;{!confirmationImage}&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>ConfirmationHeading</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;You&apos;re all set! The return succeeded.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;You&apos;re all set! The return succeeded.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1222,7 +1293,8 @@
                     <elementReference>$Flow.ActiveStages</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
         </fields>
         <showFooter>false</showFooter>
@@ -1238,12 +1310,14 @@
         <allowPause>false</allowPause>
         <fields>
             <name>Error_Output_Message_Image</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;{!errorMessageImage}&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;{!errorMessageImage}&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Error_Output_Message</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;{!errorMessageTitle}&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;{!errorMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;{!errorMessageTitle}&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;{!errorMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -1262,7 +1336,8 @@
         </connector>
         <fields>
             <name>PreviewChangesHeading</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 18px; color: rgb(62, 62, 60);&quot;&gt;Review your selections. If everything looks good, you&apos;re ready to submit!&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 18px; color: rgb(62, 62, 60);&quot;&gt;Review your selections. If everything looks good, you&apos;re ready to submit!&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1296,15 +1371,18 @@
             <inputParameters>
                 <name>selectedOrderItemSummaries</name>
                 <value>
-                    <elementReference>selectedOrderItemSummaries</elementReference>
+                    <elementReference
+          >selectedOrderItemSummaries</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
         </fields>
         <fields>
             <name>Refund_Option_Selected</name>
-            <fieldText>&lt;p&gt;Selected option for refund: {!Would_you_like_to}&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p&gt;Selected option for refund: {!Would_you_like_to}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
@@ -1345,7 +1423,8 @@
                     <elementReference>$Flow.ActiveStages</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
         </fields>
         <showFooter>false</showFooter>
@@ -1364,7 +1443,8 @@
         </connector>
         <fields>
             <name>ProductSelectionHeading</name>
-            <fieldText>&lt;p class=&quot;ql-indent-1&quot; style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 18px; color: rgb(62, 62, 60);&quot;&gt;Select from these available items to return.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p class=&quot;ql-indent-1&quot; style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 18px; color: rgb(62, 62, 60);&quot;&gt;Select from these available items to return.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1380,7 +1460,8 @@
             <inputParameters>
                 <name>selectedOrderItemSummaries</name>
                 <value>
-                    <elementReference>selectedOrderItemSummaries</elementReference>
+                    <elementReference
+          >selectedOrderItemSummaries</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1395,10 +1476,12 @@
                     <elementReference>Get_Order_Summary</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
-                <assignToReference>selectedOrderItemSummaries</assignToReference>
+                <assignToReference
+        >selectedOrderItemSummaries</assignToReference>
                 <name>selectedOrderItemSummaries</name>
             </outputParameters>
         </fields>
@@ -1424,7 +1507,8 @@
                     <elementReference>isError</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
                 <assignToReference>isError</assignToReference>
@@ -1447,7 +1531,8 @@
         </connector>
         <fields>
             <name>ReasonsSelectionHeading</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(62, 62, 60); font-size: 18px; background-color: rgb(255, 255, 255);&quot;&gt;Select the quantity to return and the return reason.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText
+      >&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(62, 62, 60); font-size: 18px; background-color: rgb(255, 255, 255);&quot;&gt;Select the quantity to return and the return reason.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1457,7 +1542,8 @@
             <inputParameters>
                 <name>selectedOrderItemSummaries</name>
                 <value>
-                    <elementReference>selectedOrderItemSummaries</elementReference>
+                    <elementReference
+          >selectedOrderItemSummaries</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1478,7 +1564,8 @@
                     <elementReference>Get_Order_Summary</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
                 <assignToReference>changeItems</assignToReference>
@@ -1507,7 +1594,8 @@
                     <elementReference>isError</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
                 <assignToReference>isError</assignToReference>
@@ -1533,7 +1621,8 @@
             <choiceReferences>Option_1</choiceReferences>
             <choiceReferences>Option_2</choiceReferences>
             <dataType>Number</dataType>
-            <defaultSelectedChoiceReference>Option_1</defaultSelectedChoiceReference>
+            <defaultSelectedChoiceReference
+      >Option_1</defaultSelectedChoiceReference>
             <fieldText>Would you like to:</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>true</isRequired>
@@ -1561,7 +1650,8 @@
                     <elementReference>$Flow.ActiveStages</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn
+      >UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1630,7 +1720,8 @@
         </inputAssignments>
     </subflows>
     <subflows>
-        <description>Check if partial return to decide the shipping reduction flag.</description>
+        <description
+    >Check if partial return to decide the shipping reduction flag.</description>
         <name>Validate_Return_Items</name>
         <label>Validate Return Items</label>
         <locationX>1272</locationX>
@@ -1659,13 +1750,15 @@
     <textTemplates>
         <name>Error_Output_Invocable_Message</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>Close this window and check the order summary page for updated information.</text>
+        <text
+    >Close this window and check the order summary page for updated information.</text>
     </textTemplates>
     <textTemplates>
         <description>Order Payment Summary record missing</description>
         <name>Error_Output_no_OPS</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;No Payment was found for this order, therefore we cannot do a refund.&lt;/p&gt;</text>
+        <text
+    >&lt;p&gt;No Payment was found for this order, therefore we cannot do a refund.&lt;/p&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>Error_Output_no_OPS_title</name>
@@ -1675,7 +1768,8 @@
     <textTemplates>
         <name>Error_Output_NoItemsToReturn</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>When an order has items you can return, you&apos;ll find them here.</text>
+        <text
+    >When an order has items you can return, you&apos;ll find them here.</text>
     </textTemplates>
     <textTemplates>
         <name>Error_Output_NoItemsToReturn_Header</name>
@@ -1695,7 +1789,8 @@
     <textTemplates>
         <name>Error_Output_Wrong_Entity</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>This is where you&apos;d return items from an order. To return an order, start from the order summary page.</text>
+        <text
+    >This is where you&apos;d return items from an order. To return an order, start from the order summary page.</text>
     </textTemplates>
     <textTemplates>
         <name>Error_Output_Wrong_Entity_Header</name>
@@ -1843,7 +1938,8 @@
     </variables>
     <variables>
         <name>returnOrderLineItemInputRepresentation</name>
-        <apexClass>ConnectApi__ReturnOrderLineItemInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__ReturnOrderLineItemInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

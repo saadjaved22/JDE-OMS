@@ -1,5 +1,8 @@
 public with sharing class RestServiceReturnOrderWebshopRefund {
-  @invocableMethod(Callout=true Label='Return Order API Refund callout to Webshop')
+  @invocableMethod(
+    Callout=true
+    Label='Return Order API Refund callout to Webshop'
+  )
   public static void getData(List<RestServiceInvocableAction> items) {
     Map<Id, Integer> itemMap = new Map<Id, Integer>();
     for (RestServiceInvocableAction item : items) {
@@ -18,7 +21,9 @@ public with sharing class RestServiceReturnOrderWebshopRefund {
         System.enqueueJob(new AsyncReturnOrderRefundWebshop(itemsToProcess));
       }
     } else {
-      AsyncReturnOrderRefundWebshop asyncReturnOrderRefund = new AsyncReturnOrderRefundWebshop(itemMap);
+      AsyncReturnOrderRefundWebshop asyncReturnOrderRefund = new AsyncReturnOrderRefundWebshop(
+        itemMap
+      );
       asyncReturnOrderRefund.execute(null);
     }
   }
@@ -52,7 +57,12 @@ public with sharing class RestServiceReturnOrderWebshopRefund {
         WHERE id IN :internalMap.keySet()
       ];
       List<ReturnOrderLineItem> allReturnOrderItemList = [
-        SELECT id, QuantityExpected, OrderItem.SKU__c, ReturnOrderId, OrderItem.ItemId__c
+        SELECT
+          id,
+          QuantityExpected,
+          OrderItem.SKU__c,
+          ReturnOrderId,
+          OrderItem.ItemId__c
         FROM ReturnOrderLineItem
         WHERE ReturnOrderId IN :internalMap.keySet() AND TypeCode != 'Charge'
       ];
@@ -85,7 +95,11 @@ public with sharing class RestServiceReturnOrderWebshopRefund {
       }
 
       List<OrderItemSummary> allOrderItemSummaries = [
-        SELECT QuantityOrdered, QuantityReturnInitiated, Declined_Quantity__c, OrderSummaryId
+        SELECT
+          QuantityOrdered,
+          QuantityReturnInitiated,
+          Declined_Quantity__c,
+          OrderSummaryId
         FROM OrderItemSummary
         WHERE OrderSummaryId IN :orderSummaryIds AND TypeCode != 'Charge'
       ];
@@ -112,7 +126,11 @@ public with sharing class RestServiceReturnOrderWebshopRefund {
 
         Boolean hasNotFullyReturnedItems = false;
         for (OrderItemSummary oiSummary : orderItemSummaries) {
-          if ((oiSummary.QuantityOrdered - oiSummary.Declined_Quantity__c - oiSummary.QuantityReturnInitiated) > 0) {
+          if (
+            (oiSummary.QuantityOrdered -
+            oiSummary.Declined_Quantity__c -
+            oiSummary.QuantityReturnInitiated) > 0
+          ) {
             hasNotFullyReturnedItems = true;
             // once we find an item that is not fully cancelled we can break the loop
             break;
@@ -121,12 +139,15 @@ public with sharing class RestServiceReturnOrderWebshopRefund {
 
         String transactionID_s = TransactionId.generateID();
 
-        String orderReferenceNumber = orderMap.get(rOrder.OrderId).OrderReferenceNumber;
-        String originalOrderID = orderMap.get(rOrder.OrderId).OriginalOrderReference__c;
+        String orderReferenceNumber = orderMap.get(rOrder.OrderId)
+          .OrderReferenceNumber;
+        String originalOrderID = orderMap.get(rOrder.OrderId)
+          .OriginalOrderReference__c;
         String countryCode = orderMap.get(rOrder.OrderId).CountryCode__c;
         String invoiceID = orderMap.get(rOrder.OrderId).InvoiceID__c;
         String returnOrderId = rOrder.ReturnOrderNumber;
-        String salesChannel = orderMap.get(rOrder.OrderId).Magento_SalesChannel_Name__c;
+        String salesChannel = orderMap.get(rOrder.OrderId)
+          .Magento_SalesChannel_Name__c;
         String transactionID = TransactionId.generateID();
 
         RestServiceSendRefund refund = new RestServiceSendRefund();

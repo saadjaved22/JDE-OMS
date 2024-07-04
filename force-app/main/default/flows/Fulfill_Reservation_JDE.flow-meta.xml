@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>OCI_Fulfill_Reservation</name>
@@ -17,7 +17,8 @@
         <inputParameters>
             <name>ociFulfillReservationInput</name>
             <value>
-                <elementReference>OCIFulfillReservationInputList</elementReference>
+                <elementReference
+        >OCIFulfillReservationInputList</elementReference>
             </value>
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -29,38 +30,45 @@
         <locationX>707</locationX>
         <locationY>696</locationY>
         <assignmentItems>
-            <assignToReference>OCIFulfillReservationSingleInputRepresentation.quantity</assignToReference>
+            <assignToReference
+      >OCIFulfillReservationSingleInputRepresentation.quantity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Items_to_Fulfill.Quantity__c</elementReference>
+                <elementReference
+        >Items_to_Fulfill.Quantity__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIFulfillReservationSingleInputRepresentation.stockKeepingUnit</assignToReference>
+            <assignToReference
+      >OCIFulfillReservationSingleInputRepresentation.stockKeepingUnit</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Order_Item.StockKeepingUnit</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIFulfillReservationSingleInputRepresentation.actionRequestId</assignToReference>
+            <assignToReference
+      >OCIFulfillReservationSingleInputRepresentation.actionRequestId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Items_to_Fulfill.Id</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIFulfillReservationSingleInputRepresentation.externalRefId</assignToReference>
+            <assignToReference
+      >OCIFulfillReservationSingleInputRepresentation.externalRefId</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Items_to_Fulfill.Name</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OCIFulfillReservationSingleInputRepresentation.locationIdentifier</assignToReference>
+            <assignToReference
+      >OCIFulfillReservationSingleInputRepresentation.locationIdentifier</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.FulfilledFromLocation.ExternalReference</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.FulfilledFromLocation.ExternalReference</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -73,10 +81,12 @@
         <locationX>706</locationX>
         <locationY>560</locationY>
         <assignmentItems>
-            <assignToReference>OCIFulfillReservationInputList.fulfillmentRecords</assignToReference>
+            <assignToReference
+      >OCIFulfillReservationInputList.fulfillmentRecords</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>OCIFulfillReservationSingleInputRepresentation</elementReference>
+                <elementReference
+        >OCIFulfillReservationSingleInputRepresentation</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -89,10 +99,12 @@
         <locationX>1397</locationX>
         <locationY>601</locationY>
         <assignmentItems>
-            <assignToReference>OCIFulfillReservationOutputRepresentation</assignToReference>
+            <assignToReference
+      >OCIFulfillReservationOutputRepresentation</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>OCI_Fulfill_Reservation.ociFulfillReservationOutput</elementReference>
+                <elementReference
+        >OCI_Fulfill_Reservation.ociFulfillReservationOutput</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -108,7 +120,8 @@
             <assignToReference>ItemCount</assignToReference>
             <operator>AssignCount</operator>
             <value>
-                <elementReference>OCIFulfillReservationInputList.fulfillmentRecords</elementReference>
+                <elementReference
+        >OCIFulfillReservationInputList.fulfillmentRecords</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -132,7 +145,8 @@
             <name>Any_Inputs_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>OCIFulfillReservationInputList.fulfillmentRecords</leftValueReference>
+                <leftValueReference
+        >OCIFulfillReservationInputList.fulfillmentRecords</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -164,10 +178,12 @@
             <name>Failure_Limit_Reached_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.ConnectionFailedAttempts__c</leftValueReference>
+                <leftValueReference
+        >$Record.ConnectionFailedAttempts__c</leftValueReference>
                 <operator>GreaterThanOrEqualTo</operator>
                 <rightValue>
-                    <elementReference>MaxOCIConnectionFailAttempts</elementReference>
+                    <elementReference
+          >MaxOCIConnectionFailAttempts</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -189,14 +205,16 @@
             <name>IsSuccess</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>OCI_Fulfill_Reservation.ociFulfillReservationOutput.success</leftValueReference>
+                <leftValueReference
+        >OCI_Fulfill_Reservation.ociFulfillReservationOutput.success</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Succeed_Interaction_Fulfill_Order</targetReference>
+                <targetReference
+        >Succeed_Interaction_Fulfill_Order</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -211,16 +229,19 @@
     <formulas>
         <name>Offset_NOW_by_Failed_Attempts_plus_One_Hour</name>
         <dataType>DateTime</dataType>
-        <expression>NOW() + (({!$Record.ConnectionFailedAttempts__c}+1)*(1/24))</expression>
+        <expression
+    >NOW() + (({!$Record.ConnectionFailedAttempts__c}+1)*(1/24))</expression>
     </formulas>
-    <interviewLabel>Fulfill Reservation JDE {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Fulfill Reservation JDE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Fulfill Reservation JDE</label>
     <loops>
         <name>Items_to_Fulfill</name>
         <label>Items to Fulfill</label>
         <locationX>638</locationX>
         <locationY>382</locationY>
-        <collectionReference>Interaction_Fulfill_Order_Items</collectionReference>
+        <collectionReference
+    >Interaction_Fulfill_Order_Items</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Fulfillment_Order_Item</targetReference>
@@ -234,7 +255,8 @@
         <label>Reservations</label>
         <locationX>1397</locationX>
         <locationY>745</locationY>
-        <collectionReference>OCIFulfillReservationOutputRepresentation.errors</collectionReference>
+        <collectionReference
+    >OCIFulfillReservationOutputRepresentation.errors</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Process_Exception_Fulfill</targetReference>
@@ -285,13 +307,15 @@
         <inputAssignments>
             <field>Message</field>
             <value>
-                <elementReference>$Label.OCIConnectionFailedAttempts</elementReference>
+                <elementReference
+        >$Label.OCIConnectionFailedAttempts</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -338,7 +362,8 @@
         <inputAssignments>
             <field>OrderSummaryId</field>
             <value>
-                <elementReference>$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
+                <elementReference
+        >$Record.FulfillmentOrder__r.OrderSummaryId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -361,7 +386,8 @@
         <label>Fulfillment Order Item</label>
         <locationX>553</locationX>
         <locationY>558</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Order_Item</targetReference>
         </connector>
@@ -370,7 +396,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Items_to_Fulfill.FulfillmentOrderItem__c</elementReference>
+                <elementReference
+        >Items_to_Fulfill.FulfillmentOrderItem__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -384,7 +411,8 @@
         <label>Interaction Fulfill Order Items</label>
         <locationX>452</locationX>
         <locationY>382</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Items_to_Fulfill</targetReference>
         </connector>
@@ -423,7 +451,8 @@
         <label>Order Item</label>
         <locationX>553</locationX>
         <locationY>696</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Fulfill_Reservation_Input</targetReference>
         </connector>
@@ -432,7 +461,8 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Fulfillment_Order_Item.OrderItemSummaryId</elementReference>
+                <elementReference
+        >Fulfillment_Order_Item.OrderItemSummaryId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -505,7 +535,8 @@
         <inputAssignments>
             <field>Schedule__c</field>
             <value>
-                <elementReference>Offset_NOW_by_Failed_Attempts_plus_One_Hour</elementReference>
+                <elementReference
+        >Offset_NOW_by_Failed_Attempts_plus_One_Hour</elementReference>
             </value>
         </inputAssignments>
         <object>OCIInteractionFulfillOrder__c</object>
@@ -534,7 +565,8 @@
     <start>
         <locationX>326</locationX>
         <locationY>53</locationY>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria
+    >true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Type__c</field>
@@ -555,7 +587,8 @@
         <scheduledPaths>
             <name>OCI_Interaction_Fulfill_Order_Schedule</name>
             <connector>
-                <targetReference>Interaction_Fulfill_Order_Items</targetReference>
+                <targetReference
+        >Interaction_Fulfill_Order_Items</targetReference>
             </connector>
             <label>Scheduled Fulfill Time</label>
             <offsetNumber>0</offsetNumber>
@@ -587,7 +620,8 @@
     </variables>
     <variables>
         <name>OCIFulfillReservationInputList</name>
-        <apexClass>ConnectApi__OCIFulfillReservationInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCIFulfillReservationInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -595,7 +629,8 @@
     </variables>
     <variables>
         <name>OCIFulfillReservationOutputRepresentation</name>
-        <apexClass>ConnectApi__OCIFulfillReservationOutputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCIFulfillReservationOutputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -603,7 +638,8 @@
     </variables>
     <variables>
         <name>OCIFulfillReservationSingleInputRepresentation</name>
-        <apexClass>ConnectApi__OCIFulfillReservationSingleInputRepresentation</apexClass>
+        <apexClass
+    >ConnectApi__OCIFulfillReservationSingleInputRepresentation</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

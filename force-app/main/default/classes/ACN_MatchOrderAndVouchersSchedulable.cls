@@ -7,12 +7,10 @@ History :
 *********************************************************************/
 
 global class ACN_MatchOrderAndVouchersSchedulable implements Schedulable {
-    
-    global void execute(SchedulableContext sc) {
-        ACN_MatchOrderAndVouchers b = new ACN_MatchOrderAndVouchers ();
-        
-        database.executebatch(b,50);
-        //used for ACN_MatchOrderAndVouchersSchedulable TESTING
-    }
-   
+  global void execute(SchedulableContext sc) {
+    ACN_MatchOrderAndVouchers b = new ACN_MatchOrderAndVouchers();
+
+    database.executebatch(b, 50);
+    //used for ACN_MatchOrderAndVouchersSchedulable TESTING
+  }
 }

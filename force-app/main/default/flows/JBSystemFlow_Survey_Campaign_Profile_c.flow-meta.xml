@@ -1,23 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_FireJBTrigger</name>
-        <label>SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_FireJBTrigger</label>
+        <label
+    >SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
         </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>ContactKey</name>
             <value>
-                <stringValue>{&quot;relationshipIdName&quot;:&quot;ContactId__c&quot;,&quot;relationshipName&quot;:&quot;ContactId__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Contact&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
+                <stringValue
+        >{&quot;relationshipIdName&quot;:&quot;ContactId__c&quot;,&quot;relationshipName&quot;:&quot;ContactId__r&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;Contact&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -35,7 +39,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</stringValue>
+                <stringValue
+        >SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -59,13 +64,15 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;ContactId__r&quot;,&quot;dePrefix&quot;:&quot;Survey_Campaign_Profile__c:ContactId__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Email&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Salutation&quot;,&quot;CreatedDate&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Survey_Campaign_Profile__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Feedback__c&quot;,&quot;CreatedDate&quot;,&quot;campaignprofileid__c&quot;,&quot;Last_Payload_Date__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;ContactId__r&quot;,&quot;dePrefix&quot;:&quot;Survey_Campaign_Profile__c:ContactId__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Email&quot;,&quot;LastName&quot;,&quot;FirstName&quot;,&quot;Salutation&quot;,&quot;CreatedDate&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Survey_Campaign_Profile__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Feedback__c&quot;,&quot;CreatedDate&quot;,&quot;campaignprofileid__c&quot;,&quot;Last_Payload_Date__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <actionCalls>
         <name>SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_FireJBTrigger</name>
-        <label>SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_FireJBTrigger</label>
+        <label
+    >SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_FireJBTrigger</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
@@ -98,7 +105,8 @@
         <inputParameters>
             <name>EventDefinitionKey</name>
             <value>
-                <stringValue>SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</stringValue>
+                <stringValue
+        >SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -122,22 +130,27 @@
         <inputParameters>
             <name>EventDataConfig</name>
             <value>
-                <stringValue>{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;ContactId__r&quot;,&quot;dePrefix&quot;:&quot;Survey_Campaign_Profile__c:ContactId__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Email&quot;,&quot;LastName&quot;,&quot;AccountId&quot;,&quot;FirstName&quot;,&quot;Salutation&quot;,&quot;CreatedDate&quot;,&quot;CreatedById&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Survey_Campaign_Profile__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;CreatedDate&quot;,&quot;Feedback__c&quot;,&quot;ContactId__c&quot;,&quot;CampaignId__c&quot;,&quot;campaignprofileid__c&quot;]}]}</stringValue>
+                <stringValue
+        >{&quot;objects&quot;:[{&quot;relationshipIdName&quot;:null,&quot;referenceObject&quot;:&quot;Contact&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;ContactId__r&quot;,&quot;dePrefix&quot;:&quot;Survey_Campaign_Profile__c:ContactId__r:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;Email&quot;,&quot;LastName&quot;,&quot;AccountId&quot;,&quot;FirstName&quot;,&quot;Salutation&quot;,&quot;CreatedDate&quot;,&quot;CreatedById&quot;,&quot;HasOptedOutOfEmail&quot;]},{&quot;relationshipIdName&quot;:&quot;&quot;,&quot;referenceObject&quot;:&quot;&quot;,&quot;isPolymorphic&quot;:false,&quot;relationshipName&quot;:&quot;&quot;,&quot;dePrefix&quot;:&quot;Survey_Campaign_Profile__c:&quot;,&quot;fields&quot;:[&quot;Id&quot;,&quot;Name&quot;,&quot;CreatedDate&quot;,&quot;Feedback__c&quot;,&quot;ContactId__c&quot;,&quot;CampaignId__c&quot;,&quot;campaignprofileid__c&quot;]}]}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>49.0</apiVersion>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</name>
-        <label>JB_Decision_Null_Check_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_ContactKey_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.ContactId__c</leftValueReference>
@@ -147,12 +160,15 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
+                <targetReference
+        >JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
             </connector>
-            <label>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_Null</name>
+            <name
+      >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -162,12 +178,15 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_Null</label>
+            <label
+      >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_Not_Null</name>
+            <name
+      >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_Not_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -177,19 +196,24 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_State_change_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_State_change_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_Not_Null</label>
+            <label
+      >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Parameters_Not_Null</label>
         </rules>
     </decisions>
     <decisions>
-        <name>JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</name>
-        <label>JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</label>
+        <name
+    >JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</name>
+        <label
+    >JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_ContactKey_Null</name>
+            <name
+      >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_ContactKey_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>new_object.ContactId__c</leftValueReference>
@@ -198,10 +222,12 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <label>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_ContactKey_Null</label>
+            <label
+      >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_Null</name>
+            <name
+      >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -211,12 +237,15 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_Null</label>
+            <label
+      >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_Null</label>
         </rules>
         <rules>
-            <name>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_Not_Null</name>
+            <name
+      >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_Not_Null</name>
             <conditionLogic>1</conditionLogic>
             <conditions>
                 <leftValueReference>old_object</leftValueReference>
@@ -226,9 +255,11 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_State_change_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_State_change_Decision</targetReference>
             </connector>
-            <label>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_Not_Null</label>
+            <label
+      >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Parameters_Not_Null</label>
         </rules>
     </decisions>
     <decisions>
@@ -237,7 +268,8 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -251,29 +283,35 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>new_object.CampaignId__c</leftValueReference>
+                <leftValueReference
+        >new_object.CampaignId__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>7011v000001UZwBAAW</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</label>
         </rules>
     </decisions>
     <decisions>
-        <name>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_State_change_Decision</name>
-        <label>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_State_change_Decision</label>
+        <name
+    >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_State_change_Decision</name>
+        <label
+    >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_State_change_Decision</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
+            <targetReference
+      >JB_Decision_Null_Check_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>State_Change_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</name>
+            <name
+      >State_Change_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</name>
             <conditionLogic>NOT  (1 AND 2)</conditionLogic>
             <conditions>
                 <leftValueReference>old_object.ContactId__c</leftValueReference>
@@ -283,16 +321,19 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>old_object.CampaignId__c</leftValueReference>
+                <leftValueReference
+        >old_object.CampaignId__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>7011v000001UZwBAAW</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5_Decision</targetReference>
             </connector>
-            <label>State_Change_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</label>
+            <label
+      >State_Change_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</label>
         </rules>
     </decisions>
     <decisions>
@@ -312,26 +353,31 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>new_object.CampaignId__c</leftValueReference>
+                <leftValueReference
+        >new_object.CampaignId__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>7011v000001UZwBAAW</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_FireJBTrigger</targetReference>
+                <targetReference
+        >SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_FireJBTrigger</targetReference>
             </connector>
             <label>SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</label>
         </rules>
     </decisions>
     <decisions>
-        <name>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_State_change_Decision</name>
-        <label>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_State_change_Decision</label>
+        <name
+    >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_State_change_Decision</name>
+        <label
+    >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_State_change_Decision</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>State_Change_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</name>
+            <name
+      >State_Change_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</name>
             <conditionLogic>NOT  (1 AND 2)</conditionLogic>
             <conditions>
                 <leftValueReference>old_object.ContactId__c</leftValueReference>
@@ -341,21 +387,25 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>old_object.CampaignId__c</leftValueReference>
+                <leftValueReference
+        >old_object.CampaignId__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>7011v000001UZwBAAW</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Decision</targetReference>
+                <targetReference
+        >JB_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9_Decision</targetReference>
             </connector>
-            <label>State_Change_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</label>
+            <label
+      >State_Change_SalesforceObje158693aa3e9bf776a3e6b8fd2f433c9</label>
         </rules>
     </decisions>
     <label>JBSystemFlow_Survey_Campaign_Profile_c</label>
     <processType>AutoLaunchedFlow</processType>
-    <startElementReference>JB_Decision_Null_Check_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</startElementReference>
+    <startElementReference
+  >JB_Decision_Null_Check_SalesforceObj37f323cda7189c9aa1190d07d5d0a7d5</startElementReference>
     <status>Obsolete</status>
     <variables>
         <name>new_object</name>

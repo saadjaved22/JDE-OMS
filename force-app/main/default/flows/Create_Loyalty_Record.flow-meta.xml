@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>49.0</apiVersion>
     <assignments>
@@ -7,7 +7,8 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <assignToReference
+      >myVariable_waitStartTimeVariable</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
@@ -76,28 +77,33 @@
             <label>Create Loyalty Record</label>
         </rules>
     </decisions>
-    <description>Create Loyalty record when person account Brand is equal to Loyalty is created in the system</description>
+    <description
+  >Create Loyalty record when person account Brand is equal to Loyalty is created in the system</description>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c != true</stringValue>
+                <stringValue
+        >$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c != true</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>{!$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c} != true</expression>
+        <expression
+    >{!$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c} != true</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>if((ISCHANGED([Account].Type__c)  &amp;&amp; ISPICKVAL([Account].Type__c, &quot;Loyalty&quot;)) || (ISNEW() &amp;&amp; ISPICKVAL([Account].Type__c, &quot;Loyalty&quot;)) , TRUE,FALSE)</stringValue>
+                <stringValue
+        >if((ISCHANGED([Account].Type__c)  &amp;&amp; ISPICKVAL([Account].Type__c, &quot;Loyalty&quot;)) || (ISNEW() &amp;&amp; ISPICKVAL([Account].Type__c, &quot;Loyalty&quot;)) , TRUE,FALSE)</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_3</name>
         <dataType>Boolean</dataType>
-        <expression>if((ISCHANGED({!myVariable_current.Type__c})  &amp;&amp; ISPICKVAL({!myVariable_current.Type__c}, &quot;Loyalty&quot;)) || (ISNEW() &amp;&amp; ISPICKVAL({!myVariable_current.Type__c}, &quot;Loyalty&quot;)) , TRUE,FALSE)</expression>
+        <expression
+    >if((ISCHANGED({!myVariable_current.Type__c})  &amp;&amp; ISPICKVAL({!myVariable_current.Type__c}, &quot;Loyalty&quot;)) || (ISNEW() &amp;&amp; ISPICKVAL({!myVariable_current.Type__c}, &quot;Loyalty&quot;)) , TRUE,FALSE)</expression>
     </formulas>
     <interviewLabel>Create_Loyalty_Record-6_InterviewLabel</interviewLabel>
     <label>Create Loyalty Record</label>
@@ -153,7 +159,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -164,7 +170,8 @@
             </processMetadataValues>
             <field>External_Id__c</field>
             <value>
-                <elementReference>myVariable_current.External_Id__c</elementReference>
+                <elementReference
+        >myVariable_current.External_Id__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -258,7 +265,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -307,7 +314,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -323,7 +330,8 @@
         </inputAssignments>
         <object>Account</object>
     </recordUpdates>
-    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <startElementReference
+  >myVariable_waitStartTimeAssignment</startElementReference>
     <status>Obsolete</status>
     <variables>
         <name>myVariable_current</name>

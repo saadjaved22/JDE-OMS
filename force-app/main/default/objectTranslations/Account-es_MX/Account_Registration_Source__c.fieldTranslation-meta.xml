@@ -1,41 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label></label>
+    <label />
     <name>Account_Registration_Source__c</name>
     <picklistValues>
         <masterLabel>Blokker POS</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Customer Service</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>DE.NL</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>External Database</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Intershop</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Local Database</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>MDC.FR</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Other</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
     <picklistValues>
         <masterLabel>Sampling Form</masterLabel>
-        <translation></translation>
+        <translation />
     </picklistValues>
 </CustomFieldTranslation>

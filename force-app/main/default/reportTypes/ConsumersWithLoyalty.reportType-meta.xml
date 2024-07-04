@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
     <baseObject>Account</baseObject>
     <category>accounts</category>
     <deployed>true</deployed>
-    <description>This report will list all those customers who does not have loyalty card.</description>
+    <description
+  >This report will list all those customers who does not have loyalty card.</description>
     <join>
         <outerJoin>true</outerJoin>
         <relationship>Loyalty__r</relationship>

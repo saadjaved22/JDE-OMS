@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <processMetadataValues>
@@ -205,23 +205,27 @@
             <label>External Id Change</label>
         </rules>
     </decisions>
-    <description>This process flow will create Consumer User/Will Update Email Address at User and Opt Our URL</description>
+    <description
+  >This process flow will create Consumer User/Will Update Email Address at User and Opt Our URL</description>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c != true</stringValue>
+                <stringValue
+        >$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c != true</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>{!$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c} != true</expression>
+        <expression
+    >{!$Setup.ProcessBuilderSettings__c.AccountProcessBuilder__c} != true</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>ISPICKVAL([Account].Account_Registration_Source__c  , &quot;Blokker POS&quot;) 
+                <stringValue
+        >ISPICKVAL([Account].Account_Registration_Source__c  , &quot;Blokker POS&quot;) 
 
 &amp;&amp;
  
@@ -230,7 +234,8 @@ ISNEW()</stringValue>
         </processMetadataValues>
         <name>formula_myRule_3</name>
         <dataType>Boolean</dataType>
-        <expression>ISPICKVAL({!myVariable_current.Account_Registration_Source__c}  , &quot;Blokker POS&quot;) 
+        <expression
+    >ISPICKVAL({!myVariable_current.Account_Registration_Source__c}  , &quot;Blokker POS&quot;) 
 
 &amp;&amp;
  
@@ -347,7 +352,7 @@ ISPICKVAL({!myVariable_current.Type__c} , &quot;Loyalty&quot;)</expression>
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -396,7 +401,7 @@ ISPICKVAL({!myVariable_current.Type__c} , &quot;Loyalty&quot;)</expression>
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue />
                 </value>
             </processMetadataValues>
             <processMetadataValues>

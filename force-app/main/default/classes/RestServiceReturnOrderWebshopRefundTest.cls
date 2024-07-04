@@ -18,10 +18,15 @@ public with sharing class RestServiceReturnOrderWebshopRefundTest {
 
     ReturnOrder returnOrder = new ReturnOrder();
     returnOrder.AccountId = ((Account) results.get('account')).Id;
-    returnOrder.DestinationLocationId = ((Schema.Location) results.get('location')).Id;
-    returnOrder.SourceLocationId = ((Schema.Location) results.get('location')).Id;
+    returnOrder.DestinationLocationId = ((Schema.Location) results.get(
+        'location'
+      ))
+      .Id;
+    returnOrder.SourceLocationId = ((Schema.Location) results.get('location'))
+      .Id;
     returnOrder.OrderId = ((Order) results.get('order')).id;
-    returnOrder.OrderSummaryId = ((OrderSummary) results.get('orderSummary')).Id;
+    returnOrder.OrderSummaryId = ((OrderSummary) results.get('orderSummary'))
+      .Id;
     returnOrder.Status = 'Submitted';
     insert returnOrder;
 
@@ -39,7 +44,10 @@ public with sharing class RestServiceReturnOrderWebshopRefundTest {
     ids.add(action);
 
     test.startTest();
-    Test.setMock(HttpCalloutMock.class, new RestServiceReturnOrderWebshopRefundCalloutMock());
+    Test.setMock(
+      HttpCalloutMock.class,
+      new RestServiceReturnOrderWebshopRefundCalloutMock()
+    );
     RestServiceReturnOrderWebshopRefund.getData(ids);
     test.stopTest();
   }
@@ -62,10 +70,15 @@ public with sharing class RestServiceReturnOrderWebshopRefundTest {
 
     ReturnOrder returnOrder = new ReturnOrder();
     returnOrder.AccountId = ((Account) results.get('account')).Id;
-    returnOrder.DestinationLocationId = ((Schema.Location) results.get('location')).Id;
-    returnOrder.SourceLocationId = ((Schema.Location) results.get('location')).Id;
+    returnOrder.DestinationLocationId = ((Schema.Location) results.get(
+        'location'
+      ))
+      .Id;
+    returnOrder.SourceLocationId = ((Schema.Location) results.get('location'))
+      .Id;
     returnOrder.OrderId = ((Order) results.get('order')).id;
-    returnOrder.OrderSummaryId = ((OrderSummary) results.get('orderSummary')).Id;
+    returnOrder.OrderSummaryId = ((OrderSummary) results.get('orderSummary'))
+      .Id;
     returnOrder.Status = 'Submitted';
     insert returnOrder;
 
@@ -83,7 +96,10 @@ public with sharing class RestServiceReturnOrderWebshopRefundTest {
     ids.add(action);
 
     test.startTest();
-    Test.setMock(HttpCalloutMock.class, new RestServiceReturnOrderWebshopRefundFailedCalloutMock());
+    Test.setMock(
+      HttpCalloutMock.class,
+      new RestServiceReturnOrderWebshopRefundFailedCalloutMock()
+    );
     RestServiceReturnOrderWebshopRefund.getData(ids);
     test.stopTest();
   }

@@ -1,5 +1,9 @@
-<apex:page standardController="Account" extensions="ResendConfirmationEmail" action="{!ResendEmail}">
-    <apex:form >
-        <apex:inputHidden value="{!Account.Id}"/>
-    </apex:form>
+<apex:page
+  standardController="Account"
+  extensions="ResendConfirmationEmail"
+  action="{!ResendEmail}"
+>
+  <apex:form>
+    <apex:inputHidden value="{!Account.Id}" />
+  </apex:form>
 </apex:page>

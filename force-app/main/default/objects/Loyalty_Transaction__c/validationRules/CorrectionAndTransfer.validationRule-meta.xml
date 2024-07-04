@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CorrectionAndTransfer</fullName>
     <active>true</active>
-    <errorConditionFormula>AND ($Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c,AND( IF(Transaction_Amount__c&lt;0,(ABS(Transaction_Amount__c) &gt; Loyalty__r.Loyalty_Total_Points__c),false), 
+    <errorConditionFormula
+  >AND ($Setup.ProcessBuilderSettings__c.LoyaltyTransactionProcessBuilder__c,AND( IF(Transaction_Amount__c&lt;0,(ABS(Transaction_Amount__c) &gt; Loyalty__r.Loyalty_Total_Points__c),false), 
 ISPICKVAL(Loyalty_Transaction_Type__c, &quot;Correction&quot;)|| 
 ISPICKVAL(Loyalty_Transaction_Type__c, &quot;Transfer&quot;)))</errorConditionFormula>
     <errorDisplayField>CurrencyIsoCode</errorDisplayField>

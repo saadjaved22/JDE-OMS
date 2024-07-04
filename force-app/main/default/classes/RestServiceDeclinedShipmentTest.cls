@@ -23,7 +23,8 @@ public class RestServiceDeclinedShipmentTest {
     List<RestServiceShipment.orderItemWrapper> shippingOrderItems = new List<RestServiceShipment.orderItemWrapper>();
     RestServiceShipment.orderItemWrapper shippingOrderItem = new RestServiceShipment.orderItemWrapper();
     shippingOrderItem.aggregatedLineID = '1';
-    shippingOrderItem.sku = ((Product2) results.get('product')).StockKeepingUnit;
+    shippingOrderItem.sku = ((Product2) results.get('product'))
+      .StockKeepingUnit;
     shippingOrderItem.shippedQuantity = '0';
     shippingOrderItem.declinedQuantity = '1';
     shippingOrderItems.add(shippingOrderItem);
@@ -75,7 +76,8 @@ public class RestServiceDeclinedShipmentTest {
     List<RestServiceShipment.orderItemWrapper> shippingOrderItems = new List<RestServiceShipment.orderItemWrapper>();
     RestServiceShipment.orderItemWrapper shippingOrderItem = new RestServiceShipment.orderItemWrapper();
     shippingOrderItem.aggregatedLineID = '1';
-    shippingOrderItem.sku = ((Product2) results.get('product')).StockKeepingUnit;
+    shippingOrderItem.sku = ((Product2) results.get('product'))
+      .StockKeepingUnit;
     shippingOrderItem.shippedQuantity = '0';
     shippingOrderItem.declinedQuantity = '1';
     shippingOrderItems.add(shippingOrderItem);
@@ -99,7 +101,10 @@ public class RestServiceDeclinedShipmentTest {
     action.RetryNumber = 0;
     declinedShipmentIds.add(action);
     Test.startTest();
-    Test.setMock(HttpCalloutMock.class, new DeclinedShipmentFailedCalloutMock());
+    Test.setMock(
+      HttpCalloutMock.class,
+      new DeclinedShipmentFailedCalloutMock()
+    );
     RestServiceDeclinedShipment.getData(declinedShipmentIds);
     Test.stopTest();
   }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>49.0</apiVersion>
     <assignments>
@@ -49,7 +49,8 @@
             <assignToReference>ErrorMsg</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>&apos;You are not authorized to Move Transactions to another Customer&apos;</stringValue>
+                <stringValue
+        >&apos;You are not authorized to Move Transactions to another Customer&apos;</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -94,21 +95,24 @@
         <locationX>465</locationX>
         <locationY>815</locationY>
         <assignmentItems>
-            <assignToReference>TransactionToBeMoved.Loyalty_Consumer__c</assignToReference>
+            <assignToReference
+      >TransactionToBeMoved.Loyalty_Consumer__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>ToAccountId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>TransactionToBeMoved.Loyalty__c</assignToReference>
+            <assignToReference
+      >TransactionToBeMoved.Loyalty__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>LoyaltyToId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>TransactionToBeMoved.Loyalty_Transaction_Type__c</assignToReference>
+            <assignToReference
+      >TransactionToBeMoved.Loyalty_Transaction_Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>TransactionType</elementReference>
@@ -149,7 +153,8 @@
         <locationX>273</locationX>
         <locationY>560</locationY>
         <defaultConnector>
-            <targetReference>Look_Up_All_Transactions_to_be_Migrated</targetReference>
+            <targetReference
+      >Look_Up_All_Transactions_to_be_Migrated</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
         <rules>
@@ -201,26 +206,30 @@
     <formulas>
         <name>CustomLabelGroupId</name>
         <dataType>String</dataType>
-        <expression>{!$Label.Move_Loyalty_Transactions_Authorization}</expression>
+        <expression
+    >{!$Label.Move_Loyalty_Transactions_Authorization}</expression>
     </formulas>
     <formulas>
         <name>DescriptionOldAccount</name>
         <dataType>String</dataType>
-        <expression>{!OldAccountDescription} &amp; &apos; Transactions Moved to Account with External Id via the Move Transaction Functionality: &apos; &amp; {!To_Account} &amp; &apos; . Done by user with username: &apos; &amp; {!$User.Username} &amp;&apos; on &apos; &amp; TEXT($Flow.CurrentDate) &amp; &apos;.&apos;</expression>
+        <expression
+    >{!OldAccountDescription} &amp; &apos; Transactions Moved to Account with External Id via the Move Transaction Functionality: &apos; &amp; {!To_Account} &amp; &apos; . Done by user with username: &apos; &amp; {!$User.Username} &amp;&apos; on &apos; &amp; TEXT($Flow.CurrentDate) &amp; &apos;.&apos;</expression>
     </formulas>
     <formulas>
         <name>TransactionType</name>
         <dataType>String</dataType>
         <expression>{!$Label.TransactionType}</expression>
     </formulas>
-    <interviewLabel>JDE - Move Loyalty Transactions to other Consumer {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >JDE - Move Loyalty Transactions to other Consumer {!$Flow.CurrentDateTime}</interviewLabel>
     <label>JDE - Move Loyalty Transactions to other Consumer</label>
     <loops>
         <name>Loop_Through_Transactions</name>
         <label>Loop Through Transactions</label>
         <locationX>463</locationX>
         <locationY>708</locationY>
-        <assignNextValueToReference>TransactionToBeMoved</assignNextValueToReference>
+        <assignNextValueToReference
+    >TransactionToBeMoved</assignNextValueToReference>
         <collectionReference>TransactionsToBeMoved</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -236,7 +245,8 @@
         <label>Get Old Description</label>
         <locationX>687</locationX>
         <locationY>579</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Update_Description_Old_Account</targetReference>
         </connector>
@@ -259,7 +269,8 @@
         <label>Look Up All Transactions to be Migrated</label>
         <locationX>269</locationX>
         <locationY>658</locationY>
-        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Through_Transactions</targetReference>
         </connector>
@@ -282,7 +293,8 @@
         <label>Query Account Based on INPUT External Id</label>
         <locationX>446</locationX>
         <locationY>329</locationY>
-        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>To_Accound_Found</targetReference>
         </connector>
@@ -305,7 +317,8 @@
         <label>Query Loyalty Record</label>
         <locationX>453</locationX>
         <locationY>553</locationY>
-        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loyalty_Record_Found</targetReference>
         </connector>
@@ -328,7 +341,8 @@
         <label>Verify Authorization</label>
         <locationX>255</locationX>
         <locationY>20</locationY>
-        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Welcome</targetReference>
         </connector>
@@ -396,11 +410,13 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Query_Account_Based_on_INPUT_External_Id</targetReference>
+            <targetReference
+      >Query_Account_Based_on_INPUT_External_Id</targetReference>
         </connector>
         <fields>
             <name>FromAccount</name>
-            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;The Account where ALL the transactions will be moved FROM is:&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;{!ExternalIdFromAccount}&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; &lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Fill the External Id of the target Account in the field below:&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldText
+      >&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;The Account where ALL the transactions will be moved FROM is:&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;{!ExternalIdFromAccount}&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; &lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Fill the External Id of the target Account in the field below:&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -408,7 +424,8 @@
             <dataType>String</dataType>
             <fieldText>External Id TO Account</fieldText>
             <fieldType>InputField</fieldType>
-            <helpText>Fill in the External Id of the Account the Transactions need to be migrated to.</helpText>
+            <helpText
+      >Fill in the External Id of the Account the Transactions need to be migrated to.</helpText>
             <isRequired>true</isRequired>
         </fields>
         <showFooter>true</showFooter>
@@ -442,7 +459,8 @@
         <allowPause>false</allowPause>
         <fields>
             <name>successmsg</name>
-            <fieldText>The transactions have successfully moved to the new Account with External Id: {!To_Account}</fieldText>
+            <fieldText
+      >The transactions have successfully moved to the new Account with External Id: {!To_Account}</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>

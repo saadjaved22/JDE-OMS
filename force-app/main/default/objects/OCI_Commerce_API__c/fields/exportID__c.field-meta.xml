@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>exportID__c</fullName>
-    <description>ID to retrieve the requested availability export from OCI. If empty or expired, it will be set by an export request.</description>
+    <description
+  >ID to retrieve the requested availability export from OCI. If empty or expired, it will be set by an export request.</description>
     <externalId>false</externalId>
-    <inlineHelpText>ID to retrieve the requested availability export from OCI. If empty or expired, it will be set by an export request.</inlineHelpText>
+    <inlineHelpText
+  >ID to retrieve the requested availability export from OCI. If empty or expired, it will be set by an export request.</inlineHelpText>
     <label>exportID</label>
     <length>255</length>
     <required>false</required>
